@@ -1,0 +1,387 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.14.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Training a model on cifar10 Using KAMONOHASHI - KAMONOHASHI</title>
+<meta name="description" content="Kamonohashi is an platform for developing AI models, such as Deep Learning. Try KAMONOHASHI and enjoy developing AI models!">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="KAMONOHASHI">
+<meta property="og:title" content="Training a model on cifar10 Using KAMONOHASHI">
+<meta property="og:url" content="/tutorial/cifar10">
+
+
+
+
+  <meta property="og:image" content="/assets/images/logo_002.png">
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="/tutorial/cifar10">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": null,
+      "logo": "/assets/images/logo_002.png"
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="KAMONOHASHI Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">KAMONOHASHI</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://github.com/KAMONOHASHI" >GitHub</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/" >Docs</a>
+            </li><li class="masthead__menu-item">
+              <a href="/posts/" >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/contact/" >Contact</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://twitter.com/Kamonohashi_kqi" >Twitter</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/tutorial" itemprop="item"><span itemprop="name">Tutorial</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">Training a model on cifar10 Using KAMONOHASHI</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Training a model on cifar10 Using KAMONOHASHI">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Training a model on cifar10 Using KAMONOHASHI
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h1 id="はじめに">はじめに</h1>
+<p>このチュートリアルは、KAMONOHASHIプラットフォームを使用する方法を説明することを目的としています。具体的には、KAMONOHASHIを使用して次のことを行う方法について説明します。</p>
+
+<ul>
+  <li>データをアップロードする</li>
+  <li>データセットを作成する</li>
+  <li>ジョブを実行する</li>
+  <li>TensorBoardでジョブの状況を表示する</li>
+  <li>ジョブのログをダウンロードする</li>
+</ul>
+
+<h1 id="データをアップロードする">データをアップロードする</h1>
+
+<h2 id="データをダウンロードする">データをダウンロードする</h2>
+<p>このチュートリアルでは、<a href="https://www.cs.toronto.edu/~kriz/cifar.html">cifar10データセット</a>を使用します。cifar10は、カラー画像のデータセットです。</p>
+<ul>
+  <li>画像サイズは32 x 32px</li>
+  <li>10クラスの画像がそれぞれ6000枚、計60000枚の画像がある</li>
+  <li>そのうち50000枚が学習データ、10000枚がテストデータ</li>
+  <li>クラスはairplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck</li>
+</ul>
+
+<p><a href="http://www.cs.toronto.edu/~kriz/cifar-10-binary.tar.gz">cifar10のデータセットページ</a>からダウンロードしてください。</p>
+
+<h2 id="データを解凍する">データを解凍する</h2>
+<p>このデータセットは解凍すると、</p>
+
+<ul>
+  <li>data_batch_1.bin</li>
+  <li>…</li>
+  <li>data_batch_5.bin</li>
+  <li>test_batch.bin</li>
+</ul>
+
+<p>というファイルに分割されます。それぞれのbinファイルは、32x32x3の画像データが1万枚ずつ含まれています。
+画像1枚あたり、先頭1バイトがラベル + 32x32x3バイトが画素情報という構成になっており、これが先頭から1万個結合されているのがbinファイルです。</p>
+
+<h2 id="データをkamonohashiにアップロードする">データをKAMONOHASHIにアップロードする</h2>
+<p>データが用意できたらKAMONOHASHIにアップロードしましょう。GUIまたはコマンドラインインターフェイス（CLI）を使用してKAMONOHASHI上にデータを作成します。
+データは一度に複数ファイルを登録することも可能です。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; kqi data create -name "dataの名前" -d "uploadするデータのpath"
+</code></pre></div></div>
+
+<p><img src="/assets/images/data-create.PNG" alt="データアップロード" /></p>
+
+<p>登録したデータは、データの一覧画面で確認できます。</p>
+
+<p><img src="/assets/images/data-index.png" alt="データ一覧" /></p>
+
+<h1 id="データセットを作成する">データセットを作成する</h1>
+<p>アップロードしたデータをtraining用、test用にまとめます。</p>
+
+<p><img src="/assets/images/dataset.PNG" alt="データセットアップロード" /></p>
+
+<h1 id="ジョブを実行する">ジョブを実行する</h1>
+<p>ジョブは KAMONOHASHI が管理するクラスタに計算を実行するための最小単位を表します。
+ジョブを起動すると KAMONOHASHI はクラスタから指定されたCPU、メモリ、GPUリソースを確保し、Dockerコンテナを起動し計算環境を用意します。ユーザはこの環境を利用し、任意の計算を行うことができます。
+ジョブはCLI、GUIの両方から起動できます。
+GUIでジョブを起動するには[ジョブ管理]を選択し、新規登録ボタンから行います。
+詳細は<a href="/docs/user/#ジョブ">User Guide</a>を参照してください。</p>
+
+<h2 id="step1">step1</h2>
+<p>ジョブ名を記入し、先ほど登録したデータセットを選択します。
+<img src="/assets/images/job-step1.PNG" alt="ジョブ1" /></p>
+
+<h2 id="step2">step2</h2>
+<p>フレームワークとモデルを選択し、実行コマンドを記述します。
+<img src="/assets/images/job-step2.PNG" alt="ジョブ2" /></p>
+
+<h2 id="step3">step3</h2>
+<p>必要なリソースを指定します。
+<img src="/assets/images/job-step3.PNG" alt="ジョブ3" /></p>
+
+<h2 id="step4">step4</h2>
+<p>オプションとして追記したい項目があれば追記し実行ボタンを押します。
+<img src="/assets/images/job-run.PNG" alt="ジョブ4" /></p>
+
+<p>ステータスがRunningになったら学習中という意味です。
+<img src="/assets/images/job-running.PNG" alt="ジョブ4" /></p>
+
+<h1 id="tensorboardで学習の状況を確認する">Tensorboardで学習の状況を確認する</h1>
+<p>実行中のジョブを選択し、編集画面を開きます。
+<img src="/assets/images/job-edit.PNG" alt="ジョブ確認" />
+Tensorboardの起動ボタンを押し、開きます。
+<img src="/assets/images/tensorboard.PNG" alt="Tensorboard確認" /></p>
+<h2 id="学習のログを確認する">学習のログを確認する</h2>
+<p>学習中でもログをダウンロードして確認することができます。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; kqi job download-log JobID
+</code></pre></div></div>
+<p>GUIからは添付ファイル欄からログがダウンロードできることに加え、
+コンテナに出力したファイルを確認することができます。
+<img src="/assets/images/job-edit.PNG" alt="ジョブ確認" />
+<img src="/assets/images/container-files.PNG" alt="コンテナ出力ファイル" /></p>
+
+<h1 id="おわりに">おわりに</h1>
+<p>このように、KAMONOHASHIでは、簡単に学習を開始することができます。</p>
+
+<p>本チュートリアルでは、KAMONOHASHIを用いて、単一のGPUノードでモデルをトレーニングしました。
+KAMONOHASHIでは簡単に学習を開始でき・学習を管理できることで、
+チームでのAI開発がはかどります！</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+    <ul class="social-icons">
+      
+  
+      
+        
+          
+            <li><a href="/privacy-policy/" rel="nofollow noopener noreferrer"><i class="fa fa-lock" aria-hidden="true"></i> Privacy Policy</a></li>
+          
+        
+      
+  
+      <li><a href="/feed.xml"></a></li>
+    </ul>
+  </div>
+  
+  <div class="page__footer-copyright">KAMONOHASHIは新日鉄住金ソリューションズ株式会社の登録商標です。 
+    KAMONOHASHI (ロゴ) は新日鉄住金ソリューションズ株式会社の登録商標です。 
+    <br>その他、本文記載の会社名および製品名は、それぞれ各社の商標または登録商標です。 
+     </div>
+  <div class="page__footer-copyright">&copy; 2019 KAMONOHASHI. </div>
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+  <script>
+  window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#eaf7f7",
+        "text": "#5c7291"
+      },
+      "button": {
+        "background": "#56cbdb",
+        "text": "#ffffff"
+      }
+    },
+    "theme": "classic",
+    "content": {
+      "href": "https://kamonohashi.ai/privacy-policy-cookie-policy/"
+    }
+  })});
+  </script>  
+  
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

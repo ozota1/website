@@ -1,0 +1,717 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.14.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>CLI Guide - KAMONOHASHI</title>
+<meta name="description" content="Kamonohashi is an platform for developing AI models, such as Deep Learning. Try KAMONOHASHI and enjoy developing AI models!">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="KAMONOHASHI">
+<meta property="og:title" content="CLI Guide">
+<meta property="og:url" content="/docs/cli/">
+
+
+
+
+  <meta property="og:image" content="/assets/images/logo_002.png">
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="/docs/cli/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": null,
+      "logo": "/assets/images/logo_002.png"
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="KAMONOHASHI Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">KAMONOHASHI</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://github.com/KAMONOHASHI" >GitHub</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/" >Docs</a>
+            </li><li class="masthead__menu-item">
+              <a href="/posts/" >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/contact/" >Contact</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://twitter.com/Kamonohashi_kqi" >Twitter</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/docs" itemprop="item"><span itemprop="name">Docs</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">CLI Guide</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/docs/get-started"><span class="nav__sub-title">Get started</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/get-started/#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB" class="">はじめに</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/get-started/#%E5%89%8D%E6%8F%90" class="">前提</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/get-started/#%E4%BA%8B%E5%89%8D%E6%BA%96%E5%82%99" class="">事前準備</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/get-started/#%E3%83%86%E3%83%8A%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" class="">テナントについて</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/get-started/#%E3%83%A6%E3%83%BC%E3%82%B6" class="">ユーザ</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/get-started/#%E3%83%8E%E3%83%BC%E3%83%89" class="">ノード</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/get-started/#%E3%81%8A%E3%82%8F%E3%82%8A%E3%81%AB" class="">おわりに</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/docs/user"><span class="nav__sub-title">User Guide</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/user/#%E6%9C%AC%E6%9B%B8%E3%81%AE%E7%9B%AE%E7%9A%84" class="">本書の目的</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/user/#%E5%89%8D%E6%8F%90" class="">前提</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/user/#%E6%A6%82%E8%A6%81" class="">概要</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/user/#%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3" class="">ログイン</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/user/#%E3%83%A6%E3%83%BC%E3%82%B6%E6%83%85%E5%A0%B1%E8%A8%AD%E5%AE%9A" class="">ユーザ情報設定</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/user/#%E3%83%87%E3%83%BC%E3%82%BF%E7%AE%A1%E7%90%86" class="">データ管理</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/user/#%E5%89%8D%E5%87%A6%E7%90%86%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" class="">前処理について</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/user/#%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88%E7%AE%A1%E7%90%86" class="">データセット管理</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/user/#%E3%82%B8%E3%83%A7%E3%83%96%E7%AE%A1%E7%90%86" class="">ジョブ管理</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/docs/admin/"><span class="nav__sub-title">Admin Guide</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/admin/#%E6%9C%AC%E6%9B%B8%E3%81%AE%E7%9B%AE%E7%9A%84" class="">本書の目的</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/admin/#%E5%89%8D%E6%8F%90" class="">前提</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/admin/#%E3%83%86%E3%83%8A%E3%83%B3%E3%83%88" class="">テナント</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/admin/#%E3%83%A6%E3%83%BC%E3%82%B6" class="">ユーザ</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/admin/#%E3%83%AD%E3%83%BC%E3%83%AB" class="">ロール</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/admin/#%E3%83%8E%E3%83%BC%E3%83%89" class="">ノード</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/admin/#%E3%82%AF%E3%82%A9%E3%83%BC%E3%82%BF" class="">クォータ</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/admin/#%E3%83%AA%E3%82%BD%E3%83%BC%E3%82%B9" class="">リソース</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/admin/#%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC" class="">メニュー</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/docs/cli/"><span class="nav__sub-title">CLI Guide</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/cli/#%E6%9C%AC%E6%9B%B8%E3%81%AE%E7%9B%AE%E7%9A%84" class="">本書の目的</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/cli/#%E5%89%8D%E6%8F%90" class="">前提</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/cli/#CLI%E3%81%AE%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95" class="">CLIの使用方法</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/tutorial/"><span class="nav__sub-title">Example & Tutorial</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/tutorial/cifar10" class="">Training a model on cifar10 Using KAMONOHASHI</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="CLI Guide">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">CLI Guide
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>本ドキュメントは2019.2.28時点の情報である。</p>
+<h1 id="本書の目的">本書の目的</h1>
+
+<p>本書では、KAMONOHASHIを使用する人物を対象として、KAMONOHASHIのコマンドラインツールをインストールして使用するまでの手順を説明する事を目的としている。</p>
+
+<h1 id="前提">前提</h1>
+
+<p>読者がLinux、Python、Windows の基本的な知識を持つことを前提としている。</p>
+
+<p>また、CLIの動作確認済み環境を下表に示す。
+OSには 動作済みの Python バージョンおよび pip がインストールされており、パスが通っていること。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>項目</th>
+      <th>バージョン</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>OS</td>
+      <td>Ubuntu 16.04、Windows 10</td>
+    </tr>
+    <tr>
+      <td>Python</td>
+      <td>バージョン2.7、もしくは3.5以上</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="cliの使用方法">CLIの使用方法</h1>
+
+<h2 id="cliインストール">CLIインストール</h2>
+
+<h3 id="インストールコマンド">インストールコマンド</h3>
+<p>端末のコンソールから以下のコマンドを実行する。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> pip <span class="nb">install </span>kamonohashi-cli
+</code></pre></div></div>
+
+<h3 id="初期設定">初期設定</h3>
+<p>CLIを利用するために、KAMONOHASHI にログインする。</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> kqi account login
+</code></pre></div></div>
+
+<p>上記コマンドを実行すると、サーバー名、ユーザ名、パスワードの入力プロンプトが表示される。必要な情報を入力し、ログインすると
+以降必要な設定情報が書き込まれて CLI が利用可能となる。サーバー名等の情報は管理者より提供される。</p>
+
+<h2 id="cli使用方法">CLI使用方法</h2>
+<p>KAMONOHASHIのコマンドは</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> kqi &lt;サブコマンド&gt; &lt;操作&gt; オプション
+</code></pre></div></div>
+<p>という構成になっている。
+コマンドの使用方法はヘルプオプション(-h)で確認できる。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> kqi <span class="nt">-h</span>
+</code></pre></div></div>
+
+<p>下表に一覧と概要を示す。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>コマンド　</th>
+      <th>説明　</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>kqi account</td>
+      <td>アカウントに関連するコマンド</td>
+    </tr>
+    <tr>
+      <td>kqi data</td>
+      <td>データの登録・更新・削除などを行うコマンド</td>
+    </tr>
+    <tr>
+      <td>kqi preprocessing</td>
+      <td>前処理情報の登録・更新・削除などを行うコマンド</td>
+    </tr>
+    <tr>
+      <td>kqi dataset</td>
+      <td>データセットの登録・更新・削除などを行うコマンド</td>
+    </tr>
+    <tr>
+      <td>kqi job</td>
+      <td>ジョブの作成・実行・停止などを行うコマンド</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>また、各コマンドについても詳細をヘルプオプション(-h)で確認できる。<br />
+job コマンドの使用方法を確認している例を以下に挙げる。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> kqi job <span class="nt">-h</span>
+</code></pre></div></div>
+
+<p>コマンドの引数についても同様にヘルプオプションで(-h)確認できる。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> kqi job create <span class="nt">-h</span>
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+    <ul class="social-icons">
+      
+  
+      
+        
+          
+            <li><a href="/privacy-policy/" rel="nofollow noopener noreferrer"><i class="fa fa-lock" aria-hidden="true"></i> Privacy Policy</a></li>
+          
+        
+      
+  
+      <li><a href="/feed.xml"></a></li>
+    </ul>
+  </div>
+  
+  <div class="page__footer-copyright">KAMONOHASHIは新日鉄住金ソリューションズ株式会社の登録商標です。 
+    KAMONOHASHI (ロゴ) は新日鉄住金ソリューションズ株式会社の登録商標です。 
+    <br>その他、本文記載の会社名および製品名は、それぞれ各社の商標または登録商標です。 
+     </div>
+  <div class="page__footer-copyright">&copy; 2019 KAMONOHASHI. </div>
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+  <script>
+  window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#eaf7f7",
+        "text": "#5c7291"
+      },
+      "button": {
+        "background": "#56cbdb",
+        "text": "#ffffff"
+      }
+    },
+    "theme": "classic",
+    "content": {
+      "href": "https://kamonohashi.ai/privacy-policy-cookie-policy/"
+    }
+  })});
+  </script>  
+  
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
