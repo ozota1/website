@@ -1,1 +1,1 @@
-Sitemap: https://kamonohashi.ai/sitemap.xml
+Sitemap: https://kamonohashi.github.io/sitemap.xml
