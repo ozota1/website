@@ -1,0 +1,91 @@
+main:
+  - title: "Docs"
+    url: /docs/
+  - title: "Posts"
+    url: /posts/
+  - title: "Contact"
+    url: /contact/
+  - title: "Twitter"
+    url: "https://twitter.com/Kamonohashi_kqi"
+docs:
+  - title: Get started
+    url: /docs/get-started
+    children:
+      - title: "はじめに"
+        url: /docs/get-started/#はじめに
+      - title: "前提"
+        url: /docs/get-started/#前提
+      - title: "事前準備"
+        url: /docs/get-started/#事前準備
+      - title: "テナントについて"
+        url: /docs/get-started/#テナントについて
+      - title: "ユーザ"
+        url: /docs/get-started/#ユーザ
+      - title: "ノード"
+        url: /docs/get-started/#ノード
+      - title: "おわりに"
+        url: /docs/get-started/#おわりに
+  - title: User Guide
+    url: /docs/user
+    children:
+      - title: "本書の目的"
+        url: /docs/user/#本書の目的
+      - title: "前提"
+        url: /docs/user/#前提
+      - title: "概要"
+        url: /docs/user/#概要
+      - title: "ログイン"
+        url: /docs/user/#ログイン
+      - title: "ユーザ情報設定"
+        url: /docs/user/#ユーザ情報設定
+      - title: "データ管理"
+        url: /docs/user/#データ管理
+      - title: "前処理について"
+        url: /docs/user/#前処理について
+      - title: "データセット管理"
+        url: /docs/user/#データセット管理
+      - title: "ジョブ管理"
+        url: /docs/user/#ジョブ管理
+  - title: Admin Guide
+    url: /docs/admin/
+    children:
+      - title: "本書の目的"
+        url: /docs/admin/#本書の目的
+      - title: "前提"
+        url: /docs/admin/#前提
+      - title: "テナント"
+        url: /docs/admin/#テナント
+      - title: "ユーザ"
+        url: /docs/admin/#ユーザ
+      - title: "ロール"
+        url: /docs/admin/#ロール
+      - title: "ノード"
+        url: /docs/admin/#ノード
+      - title: "クォータ"
+        url: /docs/admin/#クォータ
+      - title: "リソース"
+        url: /docs/admin/#リソース
+      - title: "メニュー"
+        url: /docs/admin/#メニュー
+  - title: CLI Guide
+    url: /docs/cli/
+    children:
+      - title: "本書の目的"
+        url: /docs/cli/#本書の目的
+      - title: "前提"
+        url: /docs/cli/#前提
+      - title: "CLIの使用方法"
+        url: /docs/cli/#CLIの使用方法
+  - title: Example & Tutorial
+    url: /tutorial/
+    children:
+      - title: "Training a model on cifar10 Using KAMONOHASHI"
+        url: /tutorial/cifar10
+tutorials:
+  - title: Tutorial
+    url: /tutorial/
+    children:
+      - title: "Training a model on cifar10 Using KAMONOHASHI"
+        url: /tutorial/cifar10
+
+
