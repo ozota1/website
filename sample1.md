@@ -12,22 +12,22 @@ permalink: /tutorial/cifar10
 # はじめに
 このチュートリアルは、KAMONOHASHIプラットフォームを使用する方法を説明することを目的としています。具体的には、KAMONOHASHIを使用して次のことを行う方法について説明します。
 
- - データをアップロードする
- - データセットを作成する
- - ジョブを実行する
- - TensorBoardでジョブの状況を表示する
- - ジョブのログをダウンロードする
+ 1. データをアップロードする
+ 1. データセットを作成する
+ 1. ジョブを実行する
+ 1. TensorBoardでジョブの状況を表示する
+ 1. ジョブのログを確認する
 
 # データをアップロードする
 
-## データをダウンロードする
-このチュートリアルでは、[cifar10データセット](https://www.cs.toronto.edu/~kriz/cifar.html)を使用します。cifar10は、カラー画像のデータセットです。
+## cifar-10データセットををダウンロードする
+このチュートリアルでは、[cifar-10データセット](https://www.cs.toronto.edu/~kriz/cifar.html)を使用します。cifar10は、カラー画像のデータセットです。
  - 画像サイズは32 x 32px
  - 10クラスの画像がそれぞれ6000枚、計60000枚の画像がある
  - そのうち50000枚が学習データ、10000枚がテストデータ
  - クラスはairplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck
  
-[cifar10のデータセットページ](http://www.cs.toronto.edu/~kriz/cifar-10-binary.tar.gz)からダウンロードしてください。
+[cifar-10のデータセットページ](http://www.cs.toronto.edu/~kriz/cifar-10-binary.tar.gz)からダウンロードしてください。
 
 ## データを解凍する
 このデータセットは解凍すると、
@@ -42,7 +42,6 @@ permalink: /tutorial/cifar10
 
 ## データをKAMONOHASHIにアップロードする
 データが用意できたらKAMONOHASHIにアップロードしましょう。GUIまたはコマンドラインインターフェイス（CLI）を使用してKAMONOHASHI上にデータを作成します。
-データは一度に複数ファイルを登録することも可能です。
 
 ```
 > kqi data create -name "dataの名前" -d "uploadするデータのpath"
@@ -56,12 +55,13 @@ permalink: /tutorial/cifar10
 
 # データセットを作成する
 アップロードしたデータをtraining用、test用にまとめます。
+下図では、data_batchをtrain、test_batchをtestに移動させています。
 
 ![データセットアップロード](/assets/images/dataset.PNG)
 
 
 # ジョブを実行する
-ジョブは KAMONOHASHI が管理するクラスタに計算を実行するための最小単位を表します。
+ジョブは KAMONOHASHI が管理するクラスタで計算を実行するための最小単位を表します。
 ジョブを起動すると KAMONOHASHI はクラスタから指定されたCPU、メモリ、GPUリソースを確保し、Dockerコンテナを起動し計算環境を用意します。ユーザはこの環境を利用し、任意の計算を行うことができます。
 ジョブはCLI、GUIの両方から起動できます。
 GUIでジョブを起動するには[ジョブ管理]を選択し、新規登録ボタンから行います。
@@ -92,13 +92,18 @@ GUIでジョブを起動するには[ジョブ管理]を選択し、新規登録
 ![ジョブ確認](/assets/images/job-edit.PNG)
 Tensorboardの起動ボタンを押し、開きます。
 ![Tensorboard確認](/assets/images/tensorboard.PNG)
-## 学習のログを確認する
-学習中でもログをダウンロードして確認することができます。
+
+注意：TensorBoard表示する場合、モデルのpythonファイル中にTensorboard出力する的なプログラムを書く必要があります。
+
+
+# ジョブのログを確認する
+学習実行中でもログをダウンロードして確認することができます。
 
 ```
 > kqi job download-log JobID
 ```
-GUIからは添付ファイル欄からログがダウンロードできることに加え、
+
+また、GUIからは添付ファイル欄からログがダウンロードできることに加え、
 コンテナに出力したファイルを確認することができます。
 ![ジョブ確認](/assets/images/job-edit.PNG)
 ![コンテナ出力ファイル](/assets/images/container-files.PNG)
@@ -107,5 +112,4 @@ GUIからは添付ファイル欄からログがダウンロードできるこ�
 このように、KAMONOHASHIでは、簡単に学習を開始することができます。
 
 本チュートリアルでは、KAMONOHASHIを用いて、単一のGPUノードでモデルをトレーニングしました。
-KAMONOHASHIでは簡単に学習を開始でき・学習を管理できることで、
-チームでのAI開発がはかどります！
+KAMONOHASHIでは簡単に学習を開始・管理できるため、チームでのAI開発がはかどります！
