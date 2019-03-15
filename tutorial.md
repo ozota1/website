@@ -11,8 +11,8 @@ sidebar:
 feature_row1:
   - image_path: /assets/images/illust_neuralNetwork01_bl.png
     alt: "placeholder image 1"
-    title: "Training a model on cifar10 Using KAMONOHASHI"
-    excerpt: "cifar10データセットをKAMONOHASHIを使用して学習させます。"
+    title: "Training a model on cifar-10 Using KAMONOHASHI"
+    excerpt: "cifar-10データセットをKAMONOHASHIを使用して学習させます。"
     url: "/tutorial/cifar10"
     btn_label: "Read More"
     btn_class: "btn--primary"
