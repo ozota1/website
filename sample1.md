@@ -4,7 +4,7 @@
 
 layout: single
 classes: wide
-title: "Training a model on cifar10 Using KAMONOHASHI"
+title: "Training a model on cifar-10 Using KAMONOHASHI"
 permalink: /tutorial/cifar10
 
 ---
@@ -20,7 +20,7 @@ permalink: /tutorial/cifar10
 
 # データをアップロードする
 
-## cifar-10データセットををダウンロードする
+## cifar-10データをダウンロードする
 このチュートリアルでは、[cifar-10データセット](https://www.cs.toronto.edu/~kriz/cifar.html)を使用します。cifar10は、カラー画像のデータセットです。
  - 画像サイズは32 x 32px
  - 10クラスの画像がそれぞれ6000枚、計60000枚の画像がある

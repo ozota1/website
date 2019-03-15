@@ -88,7 +88,7 @@ Deep learningのモデル開発には、複雑な環境構・計算リソース�
             </div>
             <div id="index__btn">
             <!-- <p><a href="https://github.com/KAMONOHASHI" class="btn btn--primary">GitHubをみる</a></p> -->
-            <!-- <p><a href="/tutorial/" class="btn btn--primary">Tutorialをみる</a></p> -->
+            <p><a href="/tutorial/" class="btn btn--primary">Tutorialをみる</a></p>
             </div>
         </div>
       </div>
