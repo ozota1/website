@@ -79,13 +79,13 @@ docs:
   - title: Example & Tutorial
     url: /tutorial/
     children:
-      - title: "Training a model on cifar10 Using KAMONOHASHI"
+      - title: "Training a model on cifar-10 Using KAMONOHASHI"
         url: /tutorial/cifar10
 tutorials:
   - title: Tutorial
     url: /tutorial/
     children:
-      - title: "Training a model on cifar10 Using KAMONOHASHI"
+      - title: "Training a model on cifar-10 Using KAMONOHASHI"
         url: /tutorial/cifar10
 
 
