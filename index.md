@@ -126,5 +126,5 @@ Deep learningのモデル開発には、複雑な環境構・計算リソース�
 KAMONOHASHI についてのお問合せは、下記からどうぞ。担当者よりご連絡させていただきます。 
 
 ```
-kamonohashi-support@jp.nssol.nssmc.com
+kamonohashi-support@jp.nssol.nipponsteel.com
 ```
