@@ -14,7 +14,7 @@ KAMONOHASHI についてのお問合せは、以下メールアドレスから�
 担当者よりご連絡させていただきます。 お気軽にご連絡ください。
 
 ```
-kamonohashi-support@jp.nssol.nssmc.com
+kamonohashi-support@jp.nssol.nipponsteel.com
 ```
 
 ## 個人情報 についてのお問い合わせ
@@ -29,5 +29,5 @@ kamonohashi-support@jp.nssol.nssmc.com
 
 担当者よりご連絡させていただきます。
 ```
-te-ty-security@jp.nssol.nssmc.com
+te-ty-security@jp.nssol.nipponsteel.com
 ```
