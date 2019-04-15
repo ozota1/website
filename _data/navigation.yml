@@ -64,7 +64,7 @@ tutorials:
   - title: Tutorial
     url: /tutorial/
     children:
-      - title: "Training a model on cifar-10 Using KAMONOHASHI"
+      - title: "Training a model on CIFAR-10 Using KAMONOHASHI"
         url: /tutorial/cifar10
 
 
