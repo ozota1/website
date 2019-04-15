@@ -28,7 +28,7 @@ feature_row1:
     title: "リソースの管理が大変"
     excerpt: "GPUはとても高額なのに、使用頻度はバラつきがあったり...効率よくリソースをシェアしたい！"
   - image_path: /assets/images/illust_job_manage.png
-    title: "ジョブの管理が大変"
+    title: "学習の管理が大変"
     excerpt: "学習に使用したデータ・モデルは手作業で管理。過去の学習条件を再現するのにもひと手間…"
 
 feature_row2:
@@ -41,7 +41,7 @@ feature_row2:
     title: "リソース一覧機能"
     excerpt: "学習用に用意されたリソースはKAMONOHASHIで一覧化。空き状況を常に確認することができ、チームでのAI開発がはかどります。"
   - image_path: /assets/images/job_manage2.png
-    title: "ジョブ管理機能"
+    title: "学習管理機能"
     excerpt: "学習に使用した諸々の設定は全てKAMONOHASHIが記録して一覧化。手書きや表計算ソフトでの転記はもう必要ありません。"
 
 feature_row3:
@@ -52,7 +52,7 @@ feature_row3:
   - image_path: /assets/images/resource_optimization.png
     alt: "placeholder image 2"
     title: "計算リソース稼働率の最適化"
-    excerpt: "KAMONOHASHIは各ジョブに対して、GPU単位でのリソース割り当てが可能です。リソースを最適な粒度で分割して割り振ることで稼働率を向上できます。また、特定のチームだけでリソースを独占されないように、利用上限を設定したり、ノードごとに利用できるチームを制限することも可能です。"
+    excerpt: "KAMONOHASHIは各学習に対して、GPU単位でのリソース割り当てが可能です。リソースを最適な粒度で分割して割り振ることで稼働率を向上できます。また、特定のチームだけでリソースを独占されないように、利用上限を設定したり、ノードごとに利用できるチームを制限することも可能です。"
 
 feature_row4:
   - image_path: /assets/images/illust_book2.png
@@ -81,10 +81,10 @@ feature_row4:
             <img src="/assets/images/logo_002.png" alt="placeholder image 0">
           </div>
         <div class="archive__item-body">
-            <h2 class="archive__item-title">Deep Learning 開発者を煩雑な作業から解放！</h2>
+            <h2 class="archive__item-title">2019年5月、KAMONOHASHI OSS化決定！</h2>
             <div class="archive__item-excerpt">
               <p>KAMONOHASHIは、Deep Learningのモデル開発を効率的に行うためのAI開発プラットフォームです。
-Deep learningのモデル開発には、複雑な環境構・計算リソースの確保・大量に発生するデータや学習履歴の管理といった、煩雑な作業が多く存在します。KAMONOHASHIはこれらの作業を削減し、AI開発者がモデル開発に集中できる環境を提供します。 <br><br>AI開発プロセスを最大限に効率化し、最高のモデル開発を体験してみませんか。</p>
+Deep learningのモデル開発には、複雑な環境構築・計算リソースの確保・大量に発生するデータや学習履歴の管理といった、煩雑な作業が多く存在します。KAMONOHASHIはこれらの作業を削減し、AI開発者がモデル開発に集中できる環境を提供します。 <br><br>AI開発プロセスを最大限に効率化し、最高のモデル開発を体験してみませんか。</p>
             </div>
             <div id="index__btn">
             <!-- <p><a href="https://github.com/KAMONOHASHI" class="btn btn--primary">GitHubをみる</a></p> -->
@@ -109,14 +109,14 @@ Deep learningのモデル開発には、複雑な環境構・計算リソース�
 <h2 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 　管理も楽々
 </h2>
-<div id="feature_row3">
+<div class="feature_row3">
 {% include feature_row id="feature_row3" type="left" %}
 </div>
 
-<!-- <h2 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
+<h2 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 　チュートリアルやマニュアルを完備
 </h2>
-{% include feature_row id="feature_row4" type="center" %} -->
+{% include feature_row id="feature_row4" type="center" %}
 
 <h2 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 　お問い合わせ

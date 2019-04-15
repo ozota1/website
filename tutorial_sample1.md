@@ -6,21 +6,21 @@ layout: single
 classes: wide
 title: "Training a model on cifar-10 Using KAMONOHASHI"
 permalink: /tutorial/cifar10
-
 ---
+
 
 # はじめに
 このチュートリアルは、KAMONOHASHIプラットフォームを使用する方法を説明することを目的としています。具体的には、KAMONOHASHIを使用して次のことを行う方法について説明します。
 
  1. データをアップロードする
  1. データセットを作成する
- 1. ジョブを実行する
- 1. TensorBoardでジョブの状況を表示する
- 1. ジョブのログを確認する
+ 1. 学習を実行する
+ 1. TensorBoardで学習の状況を表示する
+ 1. 学習のログを確認する
 
 # データをアップロードする
 
-## cifar-10データをダウンロードする
+## cifar-10データセットをダウンロードする
 このチュートリアルでは、[cifar-10データセット](https://www.cs.toronto.edu/~kriz/cifar.html)を使用します。cifar10は、カラー画像のデータセットです。
  - 画像サイズは32 x 32px
  - 10クラスの画像がそれぞれ6000枚、計60000枚の画像がある
@@ -60,15 +60,15 @@ permalink: /tutorial/cifar10
 ![データセットアップロード](/assets/images/dataset.PNG)
 
 
-# ジョブを実行する
-ジョブは KAMONOHASHI が管理するクラスタで計算を実行するための最小単位を表します。
-ジョブを起動すると KAMONOHASHI はクラスタから指定されたCPU、メモリ、GPUリソースを確保し、Dockerコンテナを起動し計算環境を用意します。ユーザはこの環境を利用し、任意の計算を行うことができます。
-ジョブはCLI、GUIの両方から起動できます。
-GUIでジョブを起動するには[ジョブ管理]を選択し、新規登録ボタンから行います。
-詳細は[User Guide](/docs/user/#ジョブ)を参照してください。
+# 学習を実行する
+学習は KAMONOHASHI が管理するクラスタで計算を実行するための最小単位を表します。
+学習を開始すると KAMONOHASHI はクラスタから指定されたCPU、メモリ、GPUリソースを確保し、Dockerコンテナを起動し計算環境を用意します。ユーザはこの環境を利用し、任意の計算を行うことができます。
+学習はCLI、GUIの両方から起動できます。
+GUIで学習を起動するには[学習管理]を選択し、新規登録ボタンから行います。
+詳細は[User Guide](/docs/user/#学習)を参照してください。
 
 ## step1
-ジョブ名を記入し、先ほど登録したデータセットを選択します。
+学習名を記入し、先ほど登録したデータセットを選択します。
 ![ジョブ1](/assets/images/job-step1.PNG)
 
 ## step2
@@ -84,23 +84,23 @@ GUIでジョブを起動するには[ジョブ管理]を選択し、新規登録
 ![ジョブ4](/assets/images/job-run.PNG)
 
 ステータスがRunningになったら学習中という意味です。
-![ジョブ4](/assets/images/job-running.PNG)
+
 
 
 # Tensorboardで学習の状況を確認する
-実行中のジョブを選択し、編集画面を開きます。
+実行中の学習を選択し、編集画面を開きます。
 ![ジョブ確認](/assets/images/job-edit.PNG)
 Tensorboardの起動ボタンを押し、開きます。
 ![Tensorboard確認](/assets/images/tensorboard.PNG)
 
-注意：TensorBoard表示する場合、モデルのpythonファイル中にTensorboard出力する的なプログラムを書く必要があります。
+注意：TensorBoardを表示する場合、モデルのpythonファイル中に対応するプログラムを書く必要があります。
 
 
-# ジョブのログを確認する
+# 学習のログを確認する
 学習実行中でもログをダウンロードして確認することができます。
 
 ```
-> kqi job download-log JobID
+> kqi training download-log trainingID
 ```
 
 また、GUIからは添付ファイル欄からログがダウンロードできることに加え、
