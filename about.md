@@ -13,7 +13,7 @@ permalink: /docs/about
 </h2>
  <div id="index__btn" style="width: 100%;">
     <p><a href="/docs/" class="btn btn--primary" >ドキュメントをみる</a></p>
-    <p><a href="/tutorial/" class="btn btn--primary" >Quick Start</a></p>
+    <p><a href="/tutorial/" class="btn btn--primary" >Tutorialをみる</a></p>
 </div>
 <div class="feature_row3">
 <div class="feature__wrapper">
