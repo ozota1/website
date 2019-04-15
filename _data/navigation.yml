@@ -1,6 +1,4 @@
 main:
-  - title: "GitHub"
-    url: "https://github.com/KAMONOHASHI"
   - title: "Docs"
     url: /docs/
   - title: "Posts"
