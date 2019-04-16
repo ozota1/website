@@ -155,7 +155,7 @@ KAMONOHASHIでは簡単に学習を開始・管理できるため、効率的な
 より詳しくKAMONOHASHIの使い方を知りたい場合は[How-to Guide](/docs/how-to/)を参照してください。
  -->
 
- <h2 style="font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
+<h2 style="font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 Coming soon
 </h2>    
 KAMONOHASHI のドキュメントについてのお問合せは、下記からどうぞ。担当者よりご連絡させていただきます。 
