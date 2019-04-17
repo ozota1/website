@@ -18,23 +18,23 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="KAMONOHASHI">
 <meta property="og:title" content="Install Guide">
-<meta property="og:url" content="http://localhost:4000/docs/beforequickstart/install">
+<meta property="og:url" content="https://kamonohashi.github.io/docs/beforequickstart/install">
 
 
 
 
-  <meta property="og:image" content="http://localhost:4000/assets/images/logo_002.png">
-
-
-
-
-
+  <meta property="og:image" content="https://kamonohashi.github.io/assets/images/logo_002.png">
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/docs/beforequickstart/install">
+
+
+
+
+
+<link rel="canonical" href="https://kamonohashi.github.io/docs/beforequickstart/install">
 
 
 
@@ -44,8 +44,8 @@
     {
       "@context": "http://schema.org",
       "@type": "Organization",
-      "url": "http://localhost:4000",
-      "logo": "http://localhost:4000/assets/images/logo_002.png"
+      "url": "https://KAMONOHASHI.github.io",
+      "logo": "https://kamonohashi.github.io/assets/images/logo_002.png"
     }
   </script>
 
@@ -405,88 +405,109 @@
         <h1 id="はじめに">はじめに</h1>
 <p>本書ではKAMONOHASHIのインストールについて説明します。</p>
 
+<p>※2019年4月段階の情報であり、OSS化時に変更になる可能性があります。</p>
+
 <h1 id="ベーシッククラスタの構築について">ベーシッククラスタの構築について</h1>
 
 <h2 id="構成について">構成について</h2>
-<p>KAMONOHASHIのクラスタは次の4コンポーネントで構成されます。</p>
+<p>KAMONOHASHIのクラスタは次の4種類のサーバーで構成されます</p>
 
-<p><img src="/assets/images/basic-cluster-arc.bmp" alt="アーキテクチャ" /></p>
+<p><img src="/assets/images/basic-cluster-machenes.png" alt="マシーン" /></p>
 
 <ul>
-  <li>Kubernetes: ディープラーニングのスケジューリング等に使用します</li>
+  <li>Kubernetes master: ディープラーニングの実行スケジューリング等に使用します</li>
   <li>Storage: データの保管に使用します</li>
-  <li>GPUサーバー: ディープラーニングの実行に使用します</li>
   <li>KAMONOHASHI: KAMONOHASHIのWEBシステムです</li>
+  <li>GPUサーバー: ディープラーニングの実行に使用します</li>
 </ul>
 
 <p>ベーシッククラスタ構成では、Kubernetes, Storage, KAMONOHASHI に1台ずつのマシンと、
-複数台のGPUサーバーを想定しています。</p>
+複数台のGPUサーバーを想定しています</p>
 
 <h1 id="構築の準備">構築の準備</h1>
 <ul>
-  <li>物理または仮想のマシンを3台、NVIDIA GPUを搭載したマシンを1台用意する</li>
-  <li>各マシン同士でマシン名の名前解決が出来るようにする</li>
-  <li>各マシンがインターネットアクセスが出来るようにする</li>
+  <li>物理または仮想のマシンを3台（Kubernetes, Storage, KAMONOHASHI　に使用）</li>
+  <li>NVIDIA GPUを搭載したマシンを1台以上用意する</li>
+  <li>全てのマシンに Ubuntu Server 16.04 をインストールする</li>
+  <li>全てのマシンに共通のアカウントでsshログインできるようにする
+    <ul>
+      <li>そのアカウントが全てのマシンでsudoできるようにする</li>
+    </ul>
+  </li>
+  <li>各マシン同士でホスト名の名前解決が出来るようにする
+    <ul>
+      <li>各マシンのホスト名をメモする。(ホスト名はOSにログインして<code class="highlighter-rouge">hostname</code>コマンドで確認できる)</li>
+    </ul>
+  </li>
+  <li>各マシンがインターネットアクセス出来るようにする</li>
 </ul>
 
 <h1 id="構築方法について">構築方法について</h1>
 <p>git cloneでdeploy-toolを取得し
-rootユーザーで次のコマンドを実行します。　（後日変更予定）</p>
-
+rootユーザーで次のコマンドを実行します　（後日変更予定）</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./deploy-basic-cluster.sh
 </code></pre></div></div>
-<p><img src="/assets/images/kqi-terminal.bmp" alt="ターミナル" /></p>
+<p><img src="/assets/images/kqi-terminal.png" alt="ターミナル" /></p>
 
-<p>対話形式で以下の項目の質問に答えます。
-各サーバー名はマシンのOS上で<code class="highlighter-rouge">hostname</code>コマンドを打つことで確認できます。</p>
+<p>対話形式で以下の項目の質問に答えます</p>
 <ul>
   <li>Kubernetes masterをデプロイするサーバ名</li>
-  <li>KAMONOHASHIをデプロイするサーバ名</li>
+  <li>KAMONOHASHIをデプロイするサーバ名
+    <ul>
+      <li>Kubernetes masterと同一は不可</li>
+    </ul>
+  </li>
   <li>Storageをデプロイするサーバ名</li>
   <li>GPU サーバ名
     <ul>
-      <li>,区切りで複数指定することができます</li>
-      <li>例: gpu1,gpu2,gpu3</li>
+      <li>,区切りで複数指定することが可能
+        <ul>
+          <li>例: gpu1,gpu2,gpu3</li>
+        </ul>
+      </li>
+      <li>Kubernetes masterと同一は不可</li>
     </ul>
   </li>
   <li>SSHユーザー名
     <ul>
-      <li>構築に使用するSSHユーザー名を指定してください</li>
-      <li>そのユーザーにはSSH後にSUDOを実行できる権限が必要です</li>
+      <li>構築の準備で用意したSSHユーザー名を指定</li>
     </ul>
   </li>
   <li>SSHパスワード
     <ul>
-      <li>SSHにパスワードを使用する場合は入力してください</li>
-      <li>SSH認証キー<code class="highlighter-rouge">~/.ssh/id_rsa</code>を用意している場合は何も入力せずにEnterを押してこの項目はスキップしてください</li>
+      <li>SSHにパスワードを使用する場合は入力</li>
+      <li>SSH認証キー<code class="highlighter-rouge">~/.ssh/id_rsa</code>を用意している場合は何も入力せずにEnterを押してこの項目はスキップ</li>
     </ul>
   </li>
   <li>SUDOパスワード
     <ul>
-      <li>パスワードなしでSUDO可能な場合は何も入力せずにEnterを押してこの項目はスキップしてください</li>
+      <li>パスワードなしでSUDO可能な場合は何も入力せずにEnterを押してこの項目をスキップ</li>
     </ul>
   </li>
-  <li>ブラウザアクセスホスト名
+  <li>KAMONOHASHIにブラウザでアクセスするURLはhttp://<KAMONOHASHI用ホスト名>でよいですか?
+</KAMONOHASHI用ホスト名>    <ul>
+      <li>デフォルトでは http://<KAMONOHASHI用ホスト名>でアクセスできます</KAMONOHASHI用ホスト名></li>
+      <li>クラウド等を利用し、別ホスト名でアクセスする必要がある場合にはnを入力し、別途設定する
+        <ul>
+          <li>例： http://aaa.bbb.ccc でブラウザアクセスする場合は<code class="highlighter-rouge">aaa.bbb.ccc</code>とする</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>プロキシを設定しますか？ [y/n]
     <ul>
-      <li>デフォルトでは http://<KAMONOHASHIをデプロイするサーバ名>でアクセスできます</KAMONOHASHIをデプロイするサーバ名></li>
-      <li>クラウド等を利用し、別ホスト名でアクセスする必要がある場合に使用する項目です</li>
-      <li>例： http://aaa.bbb.ccc でブラウザアクセスする場合は<code class="highlighter-rouge">aaa.bbb.ccc</code>になります</li>
+      <li>プロキシ環境にデプロイする場合は http_proxy, https_proxy, no_proxyを設定する</li>
+      <li>no_proxyは自動生成されるが、必要があれば追加で設定することが可能</li>
+      <li>備考: Proxy使用時には各サーバーの/etc/environmentのProxy設定を書き換えます</li>
+    </ul>
+  </li>
+  <li>nvidia-384 GPUドライバを自動インストールしますか？　[y/n]
+    <ul>
+      <li>GPU型番に合わせたドライバを別途インストールする場合は n</li>
+      <li>一律で nvidia-384 をインストールする場合は y</li>
     </ul>
   </li>
 </ul>
-
-<h1 id="インストール完了の確認">インストール完了の確認</h1>
-<p>上記で指定したブラウザアクセスホスト名(例: http://aaa.bbb.ccc)にアクセスします。</p>
-
-<p>KAMONOHASHIのログイン画面が表示されたことを確認できたら、インストールは完了です。</p>
-
-<p><img src="/assets/images/figure2.png" alt="ログイン" /></p>
-
-<h1 id="備考">備考</h1>
-<ul>
-  <li>Proxy使用時には各サーバーの/etc/environmentのProxy設定を書き換えます</li>
-</ul>
-
 
         
       </section>

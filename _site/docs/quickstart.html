@@ -18,23 +18,23 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="KAMONOHASHI">
 <meta property="og:title" content="Quick Start">
-<meta property="og:url" content="http://localhost:4000/docs/quickstart">
+<meta property="og:url" content="https://kamonohashi.github.io/docs/quickstart">
 
 
 
 
-  <meta property="og:image" content="http://localhost:4000/assets/images/logo_002.png">
-
-
-
-
-
+  <meta property="og:image" content="https://kamonohashi.github.io/assets/images/logo_002.png">
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/docs/quickstart">
+
+
+
+
+
+<link rel="canonical" href="https://kamonohashi.github.io/docs/quickstart">
 
 
 
@@ -44,8 +44,8 @@
     {
       "@context": "http://schema.org",
       "@type": "Organization",
-      "url": "http://localhost:4000",
-      "logo": "http://localhost:4000/assets/images/logo_002.png"
+      "url": "https://KAMONOHASHI.github.io",
+      "logo": "https://kamonohashi.github.io/assets/images/logo_002.png"
     }
   </script>
 
@@ -402,158 +402,151 @@
 
       <section class="page__content" itemprop="text">
         
-        <!-- 
-# はじめる前に
-このクイックスタートを始める前に、以下のKAMONOHASHIのセットアップが終わっていることを確認してください。
+        <h1 id="はじめる前に">はじめる前に</h1>
+<p>このクイックスタートを始める前に、以下のKAMONOHASHIのセットアップが終わっていることを確認してください。</p>
 
- 1. [KAMONOHASHIをインストールする](/docs/beforequickstart/install)
- 1. [KAMONOHASHIのセットアップする](/docs/beforequickstart/setup-tenant)
+<ol>
+  <li><a href="/docs/beforequickstart/install">KAMONOHASHIをインストールする</a></li>
+  <li><a href="/docs/beforequickstart/setup-tenant">KAMONOHASHIをセットアップする</a></li>
+</ol>
 
+<h1 id="はじめに">はじめに</h1>
+<p>※2019年4月段階の情報であり、OSS化時に変更になる可能性があります。</p>
 
-# はじめに
-クイックスタートでは、KAMONOHASHIを使用する方法について簡単に説明します。
-具体的にはKAMONOHASHIを使用して、機械学習手法を試す際によく用いられるcifar-10の画像分類モデルを学習させる方法を以下の手順に沿って説明します。
+<p>クイックスタートでは、KAMONOHASHIを使用する方法について簡単に説明します。
+具体的にはKAMONOHASHIを使用して、機械学習手法を試す際によく用いられるcifar-10の画像分類モデルを学習させる方法を以下の手順に沿って説明します。</p>
 
+<ol>
+  <li>データをアップロードする</li>
+  <li>データセットを作成する</li>
+  <li>学習を実行する</li>
+  <li>TensorBoardで学習の状況を表示する</li>
+  <li>学習のログを確認する</li>
+</ol>
 
- 1. データをアップロードする
- 1. データセットを作成する
- 1. 学習を実行する
- 1. TensorBoardで学習の状況を表示する
- 1. 学習のログを確認する
+<h1 id="データをアップロードする">データをアップロードする</h1>
+<p>KAMONOHASHIにデータをアップロードする流れを説明します。</p>
 
-# データをアップロードする
-KAMONOHASHIにデータをアップロードする流れを説明します。
+<h2 id="cifar-10データセットをダウンロードする">cifar-10データセットをダウンロードする</h2>
+<p>このクイックスタートでは、<a href="https://www.cs.toronto.edu/~kriz/cifar.html">cifar-10データセット</a><i class="material-icons blue">launch</i>を使用します。cifar10は、カラー画像のデータセットです。</p>
+<ul>
+  <li>画像サイズは32 x 32px</li>
+  <li>10クラスの画像がそれぞれ6000枚、計60000枚の画像がある</li>
+  <li>そのうち50000枚が学習データ、10000枚がテストデータ</li>
+  <li>クラスはairplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck</li>
+</ul>
 
-## cifar-10データセットをダウンロードする
-このクイックスタートでは、[cifar-10データセット](https://www.cs.toronto.edu/~kriz/cifar.html)<i class="material-icons" class="material-icons blue">launch</i>を使用します。cifar10は、カラー画像のデータセットです。
- - 画像サイズは32 x 32px
- - 10クラスの画像がそれぞれ6000枚、計60000枚の画像がある
- - そのうち50000枚が学習データ、10000枚がテストデータ
- - クラスはairplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck
- 
-[cifar-10のデータセットページ](http://www.cs.toronto.edu/~kriz/cifar-10-binary.tar.gz)<i class="material-icons" class="material-icons blue">launch</i>からKAMONOHASHIにアクセスできる端末にダウンロードしてください。
+<p><a href="http://www.cs.toronto.edu/~kriz/cifar-10-binary.tar.gz">cifar-10のデータセットページ</a><i class="material-icons blue">launch</i>からKAMONOHASHIにアクセスできる端末にダウンロードしてください。</p>
 
-## データを解凍する
-このデータセットは解凍すると、
+<h2 id="データを解凍する">データを解凍する</h2>
+<p>このデータセットは解凍すると、</p>
 
-- data_batch_1.bin
-- ...
-- data_batch_5.bin
-- test_batch.bin
+<ul>
+  <li>data_batch_1.bin</li>
+  <li>…</li>
+  <li>data_batch_5.bin</li>
+  <li>test_batch.bin</li>
+</ul>
 
-というファイルに分割されます。それぞれのbinファイルは、32x32x3の画像データが1万枚ずつ含まれています。
-画像1枚あたり、先頭1バイトがラベル + 32x32x3バイトが画素情報という構成になっており、これが先頭から1万個結合されているのがbinファイルです。
+<p>というファイルに分割されます。それぞれのbinファイルは、32x32x3の画像データが1万枚ずつ含まれています。
+画像1枚あたり、先頭1バイトがラベル + 32x32x3バイトが画素情報という構成になっており、これが先頭から1万個結合されているのがbinファイルです。</p>
 
-## データをKAMONOHASHIにアップロードする
-データが用意できたらKAMONOHASHIにアップロードしましょう。GUIまたはコマンドラインインターフェイス（CLI）を使用してKAMONOHASHI上にデータを作成します。
+<h2 id="データをkamonohashiにアップロードする">データをKAMONOHASHIにアップロードする</h2>
+<p>データが用意できたらKAMONOHASHIにアップロードしましょう。GUIまたはコマンドラインインターフェイス（CLI）を使用してKAMONOHASHI上にデータを作成します。</p>
 
-```
-> kqi data create -name "dataの名前" -d "uploadするデータのpath"
-```
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; kqi data create -name "dataの名前" -d "uploadするデータのpath"
+</code></pre></div></div>
 
-![データアップロード](/assets/images/data-create.PNG)
+<p><img src="/assets/images/data-create.PNG" alt="データアップロード" /></p>
 
-登録したデータは、データの一覧画面で確認できます。
+<p>登録したデータは、データの一覧画面で確認できます。</p>
 
-![データ一覧](/assets/images/data-index.png)
+<p><img src="/assets/images/data-index.png" alt="データ一覧" /></p>
 
-# データセットを作成する
-アップロードしたデータをtraining用、test用にまとめます。
-下図では、data_batchをtrain、test_batchをtestに移動させています。
+<h1 id="データセットを作成する">データセットを作成する</h1>
+<p>アップロードしたデータをtraining用、test用にまとめます。
+下図では、data_batchをtrain、test_batchをtestに移動させています。</p>
 
-![データセットアップロード](/assets/images/dataset.PNG)
+<p><img src="/assets/images/dataset.PNG" alt="データセットアップロード" /></p>
 
-
-# 学習を実行する
-学習は KAMONOHASHI が管理するクラスタで計算を実行するための最小単位を表します。
+<h1 id="学習を実行する">学習を実行する</h1>
+<p>学習は KAMONOHASHI が管理するクラスタで計算を実行するための最小単位を表します。
 学習を開始すると KAMONOHASHI はクラスタから指定されたCPU、メモリ、GPUリソースを確保し、Dockerコンテナを起動し計算環境を用意します。ユーザはこの環境を利用し、任意の計算を行うことができます。
 学習はCLI、GUIの両方から起動できます。
 GUIで学習を開始するには[学習管理]を選択し、新規登録ボタンから行います。
-詳細は[User Guide](/docs/user/#学習)を参照してください。
+詳細は<a href="/docs/user#学習">User Guide</a>を参照してください。</p>
 
-## step1
-学習名を記入し、先ほど登録したデータセットを選択します。
-![ジョブ1](/assets/images/job-step1.PNG)
+<h2 id="step1">step1</h2>
+<p>学習名を記入し、先ほど登録したデータセットを選択します。
+<img src="/assets/images/job-step1.PNG" alt="ジョブ1" /></p>
 
-## step2
-フレームワークとモデルを選択し、実行コマンドを記述します。
-![ジョブ2](/assets/images/job-step2.PNG)
-* コンテナイメージ[(https://cloud.docker.com/u/kamonohashi/repository/list)](https://cloud.docker.com/u/kamonohashi/repository/list)
-* モデル [(http://git.o.sysrdc.ns-sol.co.jp/kamonohashi/tensorflow_cifar10/tree/f6767332abb2fc07cf9e70b5d4827e048e946b46)](http://git.o.sysrdc.ns-sol.co.jp/kamonohashi/tensorflow_cifar10/tree/f6767332abb2fc07cf9e70b5d4827e048e946b46)
+<h2 id="step2">step2</h2>
+<p>フレームワークとモデルを選択し、実行コマンドを記述します。
+<img src="/assets/images/job-step2.PNG" alt="ジョブ2" /></p>
 
-* 実行コマンド例
-```
-python -u train.py \
+<ul>
+  <li>
+    <p>モデル のサンプルコード<a href="https://github.com/KAMONOHASHI/tutorial">(https://github.com/KAMONOHASHI/tutorial)</a></p>
+  </li>
+  <li>
+    <p>実行コマンド例</p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python -u train.py \
 --images /kqi/input/training \
 --anns /kqi/input/training \
 --train_log_dir /kqi/output/demo \
 --parameter_dir /kqi/output/demo \
 --max_steps=5000
-```
+</code></pre></div>    </div>
+  </li>
+</ul>
 
-## step3
-必要なリソースを指定します。
-![ジョブ3](/assets/images/job-step3.PNG)
+<h2 id="step3">step3</h2>
+<p>必要なリソースを指定します。
+<img src="/assets/images/job-step3.PNG" alt="ジョブ3" /></p>
 
-## step4
-オプションとして追記したい項目があれば追記し実行ボタンを押します。
-![ジョブ4](/assets/images/job-run.PNG)
+<h2 id="step4">step4</h2>
+<p>オプションとして追記したい項目があれば追記し実行ボタンを押します。
+<img src="/assets/images/job-run.PNG" alt="ジョブ4" /></p>
 
-ステータスがRunningになったら学習中という意味です。
+<p>ステータスがRunningになったら学習中という意味です。</p>
 
+<h1 id="学習の状況を確認する">学習の状況を確認する</h1>
 
+<h2 id="tensorboardで学習の状況を確認する">Tensorboardで学習の状況を確認する</h2>
 
-# 学習の状況を確認する
-
-## Tensorboardで学習の状況を確認する
-
-実行中の学習を選択し、編集画面を開きます。
-![ジョブ確認](/assets/images/job-edit.PNG)
+<p>実行中の学習を選択し、編集画面を開きます。
+<img src="/assets/images/job-edit.PNG" alt="ジョブ確認" />
 Tensorboardの起動ボタンを押し、開きます。
-![Tensorboard確認](/assets/images/tensorboard.PNG)
+<img src="/assets/images/tensorboard.PNG" alt="Tensorboard確認" /></p>
 
-注意：TensorBoardを表示する場合、モデルのpythonファイル中に対応するプログラムを書く必要があります。
+<p>注意：TensorBoardを表示する場合、モデルのpythonファイル中に対応するプログラムを書く必要があります。</p>
 
+<h2 id="学習の標準出力を確認する">学習の標準出力を確認する</h2>
 
+<p>学習実行中でも標準出力をダウンロードして確認することができます。</p>
 
-## 学習の標準出力を確認する
-
-学習実行中でも標準出力をダウンロードして確認することができます。
-
-```
-> kqi training download-log trainingID
-```
-
-GUIからは添付ファイル欄から標準出力がダウンロードできます。
-![ジョブ確認](/assets/images/job-edit.PNG)
-
-
-## 学習の正常終了を確認する
-学習が正常に終了すると、学習状態がCompletedになります。
-
-
-学習履歴画面のファイル一覧ボタンを押すと
-コンテナに出力したファイルを確認することができます。
-
-今回はstep数を5000としたため、5000step目のcheckpointが出力されていることが確認できます。
-
-
-# おわりに
-このように、KAMONOHASHIでは、簡単に学習を開始することができます。
-
-このクイックスタートでは、KAMONOHASHIを用いて、単一のGPUノードでモデルをトレーニングしました。
-KAMONOHASHIでは簡単に学習を開始・管理できるため、効率的なAI開発ができます！
-
-より詳しくKAMONOHASHIの使い方を知りたい場合は[How-to Guide](/docs/how-to/)を参照してください。
- -->
-
-<h2 style="font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
-Coming soon
-</h2>
-<p>KAMONOHASHI のドキュメントについてのお問合せは、下記からどうぞ。担当者よりご連絡させていただきます。</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kamonohashi-support@jp.nssol.nipponsteel.com
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; kqi training download-log trainingID
 </code></pre></div></div>
+
+<p>GUIからは添付ファイル欄から標準出力がダウンロードできます。
+<img src="/assets/images/job-edit.PNG" alt="ジョブ確認" /></p>
+
+<h2 id="学習の正常終了を確認する">学習の正常終了を確認する</h2>
+<p>学習が正常に終了すると、学習状態がCompletedになります。</p>
+
+<p>学習履歴画面のファイル一覧ボタンを押すと
+コンテナに出力したファイルを確認することができます。</p>
+
+<p>今回はstep数を5000としたため、5000step目のcheckpointが出力されていることが確認できます。</p>
+
+<h1 id="おわりに">おわりに</h1>
+<p>このように、KAMONOHASHIでは、簡単に学習を開始することができます。</p>
+
+<p>このクイックスタートでは、KAMONOHASHIを用いて、単一のGPUノードでモデルをトレーニングしました。
+KAMONOHASHIでは簡単に学習を開始・管理できるため、効率的なAI開発ができます！</p>
+
+<p>より詳しくKAMONOHASHIの使い方を知りたい場合は<a href="/docs/how-to/">How-to Guide</a>を参照してください。</p>
+
 
         
       </section>
