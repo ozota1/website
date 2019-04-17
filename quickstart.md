@@ -10,15 +10,19 @@ sidebar:
   nav: "docs"
 ---
 
-<!-- 
+
 # はじめる前に
+**※2019年4月段階の情報であり、2019年5月のOSS化時に変更になる可能性があります。**
+
 このクイックスタートを始める前に、以下のKAMONOHASHIのセットアップが終わっていることを確認してください。
 
  1. [KAMONOHASHIをインストールする](/docs/beforequickstart/install)
- 1. [KAMONOHASHIのセットアップする](/docs/beforequickstart/setup-tenant)
+ 1. [KAMONOHASHIをセットアップする](/docs/beforequickstart/setup-tenant)
 
 
 # はじめに
+
+
 クイックスタートでは、KAMONOHASHIを使用する方法について簡単に説明します。
 具体的にはKAMONOHASHIを使用して、機械学習手法を試す際によく用いられるcifar-10の画像分類モデルを学習させる方法を以下の手順に沿って説明します。
 
@@ -77,7 +81,7 @@ KAMONOHASHIにデータをアップロードする流れを説明します。
 学習を開始すると KAMONOHASHI はクラスタから指定されたCPU、メモリ、GPUリソースを確保し、Dockerコンテナを起動し計算環境を用意します。ユーザはこの環境を利用し、任意の計算を行うことができます。
 学習はCLI、GUIの両方から起動できます。
 GUIで学習を開始するには[学習管理]を選択し、新規登録ボタンから行います。
-詳細は[User Guide](/docs/user/#学習)を参照してください。
+詳細は[User Guide](/docs/how-to/user#学習)を参照してください。
 
 ## step1
 学習名を記入し、先ほど登録したデータセットを選択します。
@@ -86,8 +90,8 @@ GUIで学習を開始するには[学習管理]を選択し、新規登録ボタ
 ## step2
 フレームワークとモデルを選択し、実行コマンドを記述します。
 ![ジョブ2](/assets/images/job-step2.PNG)
-* コンテナイメージ[(https://cloud.docker.com/u/kamonohashi/repository/list)](https://cloud.docker.com/u/kamonohashi/repository/list)
-* モデル [(http://git.o.sysrdc.ns-sol.co.jp/kamonohashi/tensorflow_cifar10/tree/f6767332abb2fc07cf9e70b5d4827e048e946b46)](http://git.o.sysrdc.ns-sol.co.jp/kamonohashi/tensorflow_cifar10/tree/f6767332abb2fc07cf9e70b5d4827e048e946b46)
+
+* モデル のサンプルコード[(https://github.com/KAMONOHASHI/tutorial)](https://github.com/KAMONOHASHI/tutorial)
 
 * 実行コマンド例
 ```
@@ -153,13 +157,4 @@ GUIからは添付ファイル欄から標準出力がダウンロードでき�
 KAMONOHASHIでは簡単に学習を開始・管理できるため、効率的なAI開発ができます！
 
 より詳しくKAMONOHASHIの使い方を知りたい場合は[How-to Guide](/docs/how-to/)を参照してください。
- -->
 
-<h2 style="font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
-Coming soon
-</h2>    
-KAMONOHASHI のドキュメントについてのお問合せは、下記からどうぞ。担当者よりご連絡させていただきます。 
-
-```
-kamonohashi-support@jp.nssol.nipponsteel.com
-```

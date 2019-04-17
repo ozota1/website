@@ -13,14 +13,14 @@ sidebar:
 # はじめに
 本書は、KAMONOHASHIを使用を開始する読者を対象としており、
 KAMONOHASHIを手早く使用開始する方法について説明しています。
-各項は簡潔に書かれているため、詳細を知りたい場合は[Admin Guide](/docs/admin)を参照して下さい。
+各項は簡潔に書かれているため、詳細を知りたい場合は[Admin Guide](/docs/how-to/admin/)を参照して下さい。
 
 
 # 前提
 KAMONOHASHIのインストールが終了していることを前提にしています。
 インストールがまだの方は[インストールガイド](/docs/beforequickstart/install)を参照してください。
 
-また、操作を簡便にするため、テナントに紐づけるGitはGitHubを、RegistryはDockerHubを使用することを前提としています。カスタマイズをする場合は[Admin Guide](/docs/admin)を参照して下さい。
+また、操作を簡便にするため、テナントに紐づけるGitはGitHubを、RegistryはDockerHubを使用することを前提としています。カスタマイズをする場合は[Admin Guide](/docs/how-to/admin/)を参照して下さい。
 
 # テナント設定
 初期状態では、「Sandbox」という名前のテナントが既定で用意されています。
@@ -155,4 +155,4 @@ KAMONOHASHIの管理下に新しくノードを追加します。
 本書ではKAMONOHASHIを手早く使用開始できるように、既定テナントであるSandboxを編集しセットアップする方法について説明しました。
 これで、KAMONOHASHIを用いた学習をする準備が整いました。
 
-[チュートリアル](/tutorial/)や[ユーザーガイド](/docs/user)を参考にKAMONOHASHIを用いたAI開発を開始しましょう！
+[チュートリアル](/tutorial/)や[ユーザーガイド](/docs/how-to/user)を参考にKAMONOHASHIを用いたAI開発を開始しましょう！

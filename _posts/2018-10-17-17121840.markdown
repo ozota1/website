@@ -56,7 +56,7 @@ Deep Learningを用いたシステム開発の際に使用しているKAMONOHASH
 
 <h2 id="%E3%81%95%E3%81%84%E3%81%94%E3%81%AB">さいごに</h2>
 
-先月までKAMONOHASHIは開発者向けのカンファレンス・勉強会に参加し発表していました。(参考：[GTCの参加報告](https://kamonohashi.ai/kamonohashi/gtc-japan2018%E5%8F%82%E5%8A%A0%E5%A0%B1%E5%91%8A/ "GTCの参加報告")[TechPlayの参加報告](https://kamonohashi.ai/kamonohashi/techplay/ "TechPlayの参加報告"))
+先月までKAMONOHASHIは開発者向けのカンファレンス・勉強会に参加し発表していました。(参考：[GTCの参加報告](https://kamonohashi.ai/posts/gtc2018done "GTCの参加報告")[TechPlayの参加報告](https://kamonohashi.ai/posts/techplay "TechPlayの参加報告"))
 
 今回は、はじめて経営・経済系の学会に参加します。
 KAMONOHASHIとはまだまだ接点が薄い分野において、

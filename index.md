@@ -70,7 +70,21 @@ feature_row4:
     url: "/tutorial/"
     btn_label: "Tutorial"
     btn_class: "btn--primary"
-
+feature_row5:
+  - image_path: /assets/images/contact.png
+    alt: "placeholder image 1"
+    title: "お問い合わせ先"
+    excerpt: "```kamonohashi-support@jp.nssol.nipponsteel.com```"
+    url: "mailto:kamonohashi-support@jp.nssol.nipponsteel.com"
+    btn_label: "メールする"
+    btn_class: "btn--primary"
+  - image_path: /assets/images/kamo_pdf.png
+    alt: "placeholder image 1"
+    title: "リーフレット "
+    excerpt: "KAMONOHASHI　製品リーフレット (2019年4月)は以下からご覧になれます。"
+    url: "/assets/images/KAMONOHASHI_flyer.pdf"
+    btn_label: "ダウンロードする"
+    btn_class: "btn--primary"
 
 ---
 
@@ -119,12 +133,8 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 {% include feature_row id="feature_row4" type="center" %}
 
 <h2 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
-　お問い合わせ
+　お問い合わせ・参考資料
 </h2>  
-  
-<!-- KAMONOHASHI についてのお問合せは、下記のお問い合わせフォームからどうぞ。担当者よりご連絡させていただきます。  -->
-KAMONOHASHI についてのお問合せは、下記からどうぞ。担当者よりご連絡させていただきます。 
 
-```
-kamonohashi-support@jp.nssol.nipponsteel.com
-```
+
+{% include feature_row id="feature_row5" type="center" %}

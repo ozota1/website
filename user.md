@@ -24,13 +24,13 @@ sidebar:
 # 概要
 
 KAMONOHASHIの利用者は以下の操作を行える。
-* [ログイン](/docs/how-to/user/#ログイン)
-* [データを管理する](/docs/how-to/user/#データ管理)
-* [前処理を行う](/docs/how-to/user/#前処理管理)
-* [データセットを作成・管理する](/docs/how-to/user/#データセット管理)
-* [学習を実行・管理する](/docs/how-to/user/#学習管理)
-* [学習の結果を確認する](/docs/how-to/user/#学習の確認)
-* [推論を実行・管理する](/docs/how-to/user/#推論管理)
+* [ログイン](/docs/how-to/user#ログイン)
+* [データを管理する](/docs/how-to/user#データ管理)
+* [前処理を行う](/docs/how-to/user#前処理管理)
+* [データセットを作成・管理する](/docs/how-to/user#データセット管理)
+* [学習を実行・管理する](/docs/how-to/user#学習管理)
+* [学習の結果を確認する](/docs/how-to/user#学習の確認)
+* [推論を実行・管理する](/docs/how-to/user#推論管理)
 
 
 KAMONOHASHIの利用者の想定操作をまとめた図を以下に示す。

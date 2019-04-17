@@ -26,14 +26,7 @@ feature_row1:
     btn_class: "btn--primary"
 ---
 
-<!-- {% include feature_row id="feature_row0" type="left" %}
-{% include feature_row id="feature_row1" type="left" %} -->
+{% include feature_row id="feature_row0" type="left" %}
+{% include feature_row id="feature_row1" type="left" %}
 
-<h2 style="font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
-Coming soon
-</h2>    
-KAMONOHASHI のドキュメントについてのお問合せは、下記からどうぞ。担当者よりご連絡させていただきます。 
 
-```
-kamonohashi-support@jp.nssol.nipponsteel.com
-```

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://kamonohashi.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kamonohashi.github.io/" rel="alternate" type="text/html" /><updated>2019-04-17T13:46:30+09:00</updated><id>https://kamonohashi.github.io/feed.xml</id><title type="html">KAMONOHASHI</title><subtitle>KAMONOHASHI(カモノハシ)は、Deep Learningのモデル開発を効率的に行うためのAI開発プラットフォームです。 AI開発プロセスを最大限に効率化し、最高のモデル開発を体験してみませんか。</subtitle><entry><title type="html">経営情報学会参加報告</title><link href="https://kamonohashi.github.io/posts/jasmindone" rel="alternate" type="text/html" title="経営情報学会参加報告" /><published>2018-10-23T14:46:00+09:00</published><updated>2018-10-23T14:46:00+09:00</updated><id>https://kamonohashi.github.io/posts/23144624</id><content type="html" xml:base="https://kamonohashi.github.io/posts/jasmindone">&lt;p&gt; &lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://kamonohashi.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kamonohashi.github.io/" rel="alternate" type="text/html" /><updated>2019-04-17T20:31:52+09:00</updated><id>https://kamonohashi.github.io/feed.xml</id><title type="html">KAMONOHASHI</title><subtitle>KAMONOHASHI(カモノハシ)は、Deep Learningのモデル開発を効率的に行うためのAI開発プラットフォームです。 AI開発プロセスを最大限に効率化し、最高のモデル開発を体験してみませんか。</subtitle><entry><title type="html">経営情報学会参加報告</title><link href="https://kamonohashi.github.io/posts/jasmindone" rel="alternate" type="text/html" title="経営情報学会参加報告" /><published>2018-10-23T14:46:00+09:00</published><updated>2018-10-23T14:46:00+09:00</updated><id>https://kamonohashi.github.io/posts/23144624</id><content type="html" xml:base="https://kamonohashi.github.io/posts/jasmindone">&lt;p&gt; &lt;/p&gt;
 
 &lt;p&gt;こんにちは。KAMONOHASHIチームです。
 今回は先日参加した経営情報学会について報告します。&lt;/p&gt;
@@ -7,7 +7,7 @@
 
 &lt;h1 id=&quot;%E5%AD%A6%E4%BC%9A%E6%A6%82%E8%A6%81&quot;&gt;学会概要&lt;/h1&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://kamonohashi.ai/kamonohashi/conference/&quot; title=&quot;前回のブログ&quot;&gt;前回のブログ&lt;/a&gt;でご紹介した通り、
+&lt;p&gt;&lt;a href=&quot;https://kamonohashi.ai/posts/jasmin&quot; title=&quot;前回のブログ&quot;&gt;前回のブログ&lt;/a&gt;でご紹介した通り、
 先日&lt;a href=&quot;http://www.jasmin.jp/activity/zenkoku_taikai/2018_fall/&quot; title=&quot;経営情報学会&quot;&gt;経営情報学会&lt;/a&gt;に参加してきました。
 本大会では、ポスターセッション、一般発表セッション、企業セッションがあり、
 KAMONOHASHIチームは企業セッションにて発表しました。&lt;/p&gt;
@@ -46,9 +46,9 @@ KAMONOHASHIを一例にとって、問題点を解決するAIプラットフォ�
 
 &lt;p&gt;今回はKAMONOHASHIチームとしてはじめて、経営学界のアカデミアの方々が多くいる学会に参加しました。今後も今回得られたつながりを生かし、世の中のAI開発の取り組み拡大に貢献していきたいと思います。&lt;/p&gt;
 
-&lt;p&gt;発表時間の関係もあり、今回はKAMONOHASHIの一部の機能(GPUリソース共有)のみの紹介であったため、「環境設定」「再現性(トレーサビリティ)」に関しては、今後のKAMONOHASHIブログにて詳細に取り上げてまいります。概要としては、9月に登壇した&lt;a href=&quot;https://kamonohashi.ai/kamonohashi/techplay/&quot; title=&quot;Tech Playイベントの記事&quot;&gt;Tech Playイベントの記事&lt;/a&gt;や、&lt;a href=&quot;https://www.slideshare.net/Kamonohashi/nssol-tech-talk-01&quot; title=&quot;発表資料&quot;&gt;発表資料&lt;/a&gt;をぜひご覧ください。&lt;/p&gt;
+&lt;p&gt;発表時間の関係もあり、今回はKAMONOHASHIの一部の機能(GPUリソース共有)のみの紹介であったため、「環境設定」「再現性(トレーサビリティ)」に関しては、今後のKAMONOHASHIブログにて詳細に取り上げてまいります。概要としては、9月に登壇した&lt;a href=&quot;https://kamonohashi.ai/posts/techplay&quot; title=&quot;Tech Playイベントの記事&quot;&gt;Tech Playイベントの記事&lt;/a&gt;や、&lt;a href=&quot;https://www.slideshare.net/Kamonohashi/nssol-tech-talk-01&quot; title=&quot;発表資料&quot;&gt;発表資料&lt;/a&gt;をぜひご覧ください。&lt;/p&gt;
 
-&lt;p&gt;最後に、KAMONOHASHIチームでは、企業に限らずアカデミアの学会などにも積極的に参加し、最近の企業内でのリアルなAI開発状況・体制についてお話させていただいています。お話を聞いてみたい！と思われた方はぜひ&lt;a href=&quot;https://kamonohashi.ai/contact/&quot; title=&quot;お問い合わせ先&quot;&gt;お問い合わせ先&lt;/a&gt;までご連絡いただけますと幸いです。&lt;/p&gt;
+&lt;p&gt;最後に、KAMONOHASHIチームでは、企業に限らずアカデミアの学会などにも積極的に参加し、最近の企業内でのリアルなAI開発状況・体制についてお話させていただいています。お話を聞いてみたい！と思われた方はぜひ[kamonohashi-support@jp.nssol.nipponsteel.com]までご連絡いただけますと幸いです。&lt;/p&gt;
 
 &lt;p&gt; &lt;/p&gt;</content><author><name></name></author><summary type="html"> </summary></entry><entry><title type="html">10/20経営情報学会にてセッション発表します</title><link href="https://kamonohashi.github.io/posts/jasmin" rel="alternate" type="text/html" title="10/20経営情報学会にてセッション発表します" /><published>2018-10-17T12:18:00+09:00</published><updated>2018-10-17T12:18:00+09:00</updated><id>https://kamonohashi.github.io/posts/17121840</id><content type="html" xml:base="https://kamonohashi.github.io/posts/jasmin">&lt;p&gt; &lt;/p&gt;
 
@@ -87,7 +87,7 @@ KAMONOHASHIを一例にとって、問題点を解決するAIプラットフォ�
 
 &lt;h2 id=&quot;%E3%81%95%E3%81%84%E3%81%94%E3%81%AB&quot;&gt;さいごに&lt;/h2&gt;
 
-&lt;p&gt;先月までKAMONOHASHIは開発者向けのカンファレンス・勉強会に参加し発表していました。(参考：&lt;a href=&quot;https://kamonohashi.ai/kamonohashi/gtc-japan2018%E5%8F%82%E5%8A%A0%E5%A0%B1%E5%91%8A/&quot; title=&quot;GTCの参加報告&quot;&gt;GTCの参加報告&lt;/a&gt;&lt;a href=&quot;https://kamonohashi.ai/kamonohashi/techplay/&quot; title=&quot;TechPlayの参加報告&quot;&gt;TechPlayの参加報告&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;先月までKAMONOHASHIは開発者向けのカンファレンス・勉強会に参加し発表していました。(参考：&lt;a href=&quot;https://kamonohashi.ai/posts/gtc2018done&quot; title=&quot;GTCの参加報告&quot;&gt;GTCの参加報告&lt;/a&gt;&lt;a href=&quot;https://kamonohashi.ai/posts/techplay&quot; title=&quot;TechPlayの参加報告&quot;&gt;TechPlayの参加報告&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;今回は、はじめて経営・経済系の学会に参加します。
 KAMONOHASHIとはまだまだ接点が薄い分野において、
@@ -148,8 +148,6 @@ KAMONOHASHIは一言で言うと「AI開発において発生する3つの課題
 
 &lt;p&gt;ご来場いただいたみなさま、ありがとうございました。&lt;/p&gt;
 
-&lt;p&gt;&lt;a title=&quot;GTC2018_NSSOL_20180913&quot; href=&quot;https://kamonohashi.ai/wp-content/uploads/2018/09/GTC2018_NSSOL_20180913.pdf&quot;&gt;配布資料はこちらからダウンロードできます。&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;多くの方にご来場いただいたなかで、
 多くの企業や組織においてDeep Learning の取り組みはすでに始まっており、
 今後取り組みを拡大していく段階にきているという印象を受けました。&lt;/p&gt;
@@ -168,8 +166,6 @@ KAMONOHASHIは、チームでのDeep Learningの取り組みを拡大する際�
 &lt;!--more--&gt;
 &lt;p&gt;Deep Learning のプロジェクトというより、機械学習一般に対して言えることなので、Deep Learning や機械学習のプロジェクトに携わっている方
 もしくはこれから携わる方にぜひ参考にしてもらえればと思います。&lt;/p&gt;
-
-&lt;p&gt;本記事をスライドで説明したリンクは&lt;a href=&quot;https://kamonohashi.ai/wp-content/uploads/2018/08/AIプロジェクトを成功に導くための4つの観点.pdf&quot; title=&quot;こちら&quot;&gt;こちら&lt;/a&gt;。(記事で書いた情報以外の話題にも触れています)&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -279,9 +275,7 @@ Deep Learning を適用することを検討・見直してみると、大半の
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;KAMONOHASHIを開発している新日鉄住金ソリューションズ㈱は初めてエキシビジョン・スポンサーとして協賛出展し、AI開発プラットフォーム「KAMONOHASHI」を展示致します。是非ブースへお立ち寄りください。&lt;/p&gt;
-
-&lt;p&gt;&lt;a title=&quot;GTC2018_NSSOL_20180913&quot; href=&quot;https://kamonohashi.ai/wp-content/uploads/2018/09/GTC2018_NSSOL_20180913.pdf&quot;&gt;配布資料はこちらからダウンロードできます。&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html"> </summary></entry><entry><title type="html">Introducing KAMONOHASHI — A platform for deep learning</title><link href="https://kamonohashi.github.io/posts/introduction" rel="alternate" type="text/html" title="Introducing KAMONOHASHI — A platform for deep learning" /><published>2018-06-18T14:55:00+09:00</published><updated>2018-06-18T14:55:00+09:00</updated><id>https://kamonohashi.github.io/posts/18145500</id><content type="html" xml:base="https://kamonohashi.github.io/posts/introduction">&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;KAMONOHASHIを開発している新日鉄住金ソリューションズ㈱は初めてエキシビジョン・スポンサーとして協賛出展し、AI開発プラットフォーム「KAMONOHASHI」を展示致します。是非ブースへお立ち寄りください。&lt;/p&gt;</content><author><name></name></author><summary type="html"> </summary></entry><entry><title type="html">Introducing KAMONOHASHI — A platform for deep learning</title><link href="https://kamonohashi.github.io/posts/introduction" rel="alternate" type="text/html" title="Introducing KAMONOHASHI — A platform for deep learning" /><published>2018-06-18T14:55:00+09:00</published><updated>2018-06-18T14:55:00+09:00</updated><id>https://kamonohashi.github.io/posts/18145500</id><content type="html" xml:base="https://kamonohashi.github.io/posts/introduction">&lt;p&gt; &lt;/p&gt;
 &lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;KAMONOHASHIはDeep Learning を活用したアプリケーション開発を容易にするプラットフォームです。技術者が、組織でDeep learning開発を行う上で直面する煩雑な問題を解決します。&lt;/p&gt;
@@ -330,6 +324,4 @@ Deep Learning を適用することを検討・見直してみると、大半の
 
 &lt;h2 id=&quot;questions&quot;&gt;Questions&lt;/h2&gt;
 
-&lt;p&gt;よくあるFAQは&lt;a href=&quot;https://kamonohashi.ai/faq/&quot; title=&quot;こちら&quot;&gt;こちら&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;お問い合わせは&lt;a href=&quot;mailto:kamonohashi-support@jp.nssol.nssmc.com&quot; title=&quot;KAMONOHASHIサポートチーム&quot;&gt;KAMONOHASHIサポートチーム&lt;/a&gt;までご連絡ください。&lt;/p&gt;</content><author><name></name></author><summary type="html">  Introduction</summary></entry></feed>
+&lt;p&gt;お問い合わせは&lt;a href=&quot;mailto:kamonohashi-support@jp.nssol.nipponsteel.com&quot; title=&quot;KAMONOHASHIサポートチーム&quot;&gt;KAMONOHASHIサポートチーム&lt;/a&gt;までご連絡ください。&lt;/p&gt;</content><author><name></name></author><summary type="html">  Introduction</summary></entry></feed>

@@ -21,7 +21,7 @@ permalink: /posts/jasmindone
 
 <h1 id="%E5%AD%A6%E4%BC%9A%E6%A6%82%E8%A6%81">学会概要</h1>
 
-[前回のブログ](https://kamonohashi.ai/kamonohashi/conference/ "前回のブログ")でご紹介した通り、
+[前回のブログ](https://kamonohashi.ai/posts/jasmin "前回のブログ")でご紹介した通り、
 先日[経営情報学会](http://www.jasmin.jp/activity/zenkoku_taikai/2018_fall/ "経営情報学会")に参加してきました。
 本大会では、ポスターセッション、一般発表セッション、企業セッションがあり、
 KAMONOHASHIチームは企業セッションにて発表しました。
@@ -60,9 +60,9 @@ KAMONOHASHIを一例にとって、問題点を解決するAIプラットフォ�
 
 今回はKAMONOHASHIチームとしてはじめて、経営学界のアカデミアの方々が多くいる学会に参加しました。今後も今回得られたつながりを生かし、世の中のAI開発の取り組み拡大に貢献していきたいと思います。
 
-発表時間の関係もあり、今回はKAMONOHASHIの一部の機能(GPUリソース共有)のみの紹介であったため、「環境設定」「再現性(トレーサビリティ)」に関しては、今後のKAMONOHASHIブログにて詳細に取り上げてまいります。概要としては、9月に登壇した[Tech Playイベントの記事](https://kamonohashi.ai/kamonohashi/techplay/ "Tech Playイベントの記事")や、[発表資料](https://www.slideshare.net/Kamonohashi/nssol-tech-talk-01 "発表資料")をぜひご覧ください。
+発表時間の関係もあり、今回はKAMONOHASHIの一部の機能(GPUリソース共有)のみの紹介であったため、「環境設定」「再現性(トレーサビリティ)」に関しては、今後のKAMONOHASHIブログにて詳細に取り上げてまいります。概要としては、9月に登壇した[Tech Playイベントの記事](https://kamonohashi.ai/posts/techplay "Tech Playイベントの記事")や、[発表資料](https://www.slideshare.net/Kamonohashi/nssol-tech-talk-01 "発表資料")をぜひご覧ください。
 
-最後に、KAMONOHASHIチームでは、企業に限らずアカデミアの学会などにも積極的に参加し、最近の企業内でのリアルなAI開発状況・体制についてお話させていただいています。お話を聞いてみたい！と思われた方はぜひ[お問い合わせ先](https://kamonohashi.ai/contact/ "お問い合わせ先")までご連絡いただけますと幸いです。
+最後に、KAMONOHASHIチームでは、企業に限らずアカデミアの学会などにも積極的に参加し、最近の企業内でのリアルなAI開発状況・体制についてお話させていただいています。お話を聞いてみたい！と思われた方はぜひ[kamonohashi-support@jp.nssol.nipponsteel.com]までご連絡いただけますと幸いです。
 
 &nbsp;
 
