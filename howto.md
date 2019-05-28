@@ -34,6 +34,11 @@ feature_row2:
     btn_class: "btn--primary"
 ---
 
-{% include feature_row id="feature_row0" type="left" %}
-{% include feature_row id="feature_row1" type="left" %}
-{% include feature_row id="feature_row2" type="left" %}
+## <a href="/docs/how-to/user">User Guide</a>
+AIモデルの開発に関する学習実行の手順や学習履歴の管理などを説明します。
+
+## <a href="/docs/how-to/admin/">Admin Guide</a>
+テナントやユーザーに関する各種設定やリソースの監視などを説明します。
+
+## <a href="/docs/how-to/cli/">CLI Guide</a>
+コマンドラインからの操作について説明します。

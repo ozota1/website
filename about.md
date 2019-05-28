@@ -5,15 +5,15 @@
 layout: splash
 classes: wide
 title: "About KAMONOHASHI"
-permalink: /docs/about
+permalink: /about/
 ---
 
-<h2 style="text-align: left;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
+<h3 style="text-align: left;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 ワークフローの随所でDeep Learning技術者をサポート
-</h2>
+</h3>
  <div id="index__btn" style="width: 100%;">
     <p><a href="/docs/" class="btn btn--primary" >ドキュメントをみる</a></p>
-    <p><a href="/tutorial/" class="btn btn--primary" >Tutorialをみる</a></p>
+    <p><a href="/docs/tutorial" class="btn btn--primary" >Tutorialをみる</a></p>
 </div>
 <div class="feature_row3">
 <div class="feature__wrapper">
@@ -23,7 +23,7 @@ permalink: /docs/about
             <img src="/assets/images/illust_support1.png" alt="placeholder image 1">
           </div>
         <div class="archive__item-body">
-            <h2 class="archive__item-title">環境構築</h2>
+            <h3 class="archive__item-title">環境構築</h3>
             <div class="archive__item-excerpt">
               <dl>
                 <dt>環境構築の負荷を低減</dt>
@@ -39,7 +39,7 @@ permalink: /docs/about
             <img src="/assets/images/illust_support2.png" alt="placeholder image 2">
           </div>
         <div class="archive__item-body">
-            <h2 class="archive__item-title">データ管理</h2>
+            <h3 class="archive__item-title">データ管理</h3>
             <div class="archive__item-excerpt">
               <dl>
                 <dt>タグ・メモ機能</dt>
@@ -59,7 +59,7 @@ permalink: /docs/about
             <img src="/assets/images/illust_support3.png" alt="">
           </div>
         <div class="archive__item-body">
-            <h2 class="archive__item-title">学習</h2>
+            <h3 class="archive__item-title">学習</h3>
             <div class="archive__item-excerpt">
               <dl>
                 <dt>いくつかの項目を指定することで、学習を自動実行</dt>
@@ -78,7 +78,7 @@ permalink: /docs/about
             <img src="/assets/images/illust_support4.png" alt="">
           </div>
         <div class="archive__item-body">
-            <h2 class="archive__item-title">推論</h2>
+            <h3 class="archive__item-title">推論</h3>
             <div class="archive__item-excerpt">
               <dl>
                 <dt>学習実行と同じステップで推論実行が可能</dt>

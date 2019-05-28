@@ -122,6 +122,8 @@
       <nav id="site-nav" class="greedy-nav">
         <a class="site-title" href="/">KAMONOHASHI</a>
         <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li><li class="masthead__menu-item">
               <a href="/docs/" >Docs</a>
             </li><li class="masthead__menu-item">
               <a href="/posts/" >Posts</a>
@@ -171,7 +173,18 @@
           
           
 
-          <a href="/docs/overview"><span class="nav__sub-title">Product Overview</span></a>
+          <a href="/docs/concepts"><span class="nav__sub-title">Concepts</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/docs/install-and-setup"><span class="nav__sub-title">Installation</span></a>
         
 
         
@@ -183,7 +196,7 @@
             
             
 
-            <li><a href="/docs/about" class="">About KAMONOHASHI</a></li>
+            <li><a href="/docs/install-and-setup#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95" class="">Install Guide</a></li>
           
             
             
@@ -191,7 +204,31 @@
             
             
 
-            <li><a href="/docs/overview/concepts" class="">Concepts</a></li>
+            <li><a href="/docs/install-and-setup#%E3%83%99%E3%83%BC%E3%82%B7%E3%83%83%E3%82%AF%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%BF%E3%81%AE%E6%A7%8B%E7%AF%89" class="">・ベーシッククラスタの構築</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/install-and-setup#%E6%A7%8B%E7%AF%89%E3%81%AE%E6%BA%96%E5%82%99" class="">・構築の準備</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/install-and-setup#%E6%A7%8B%E7%AF%89%E6%96%B9%E6%B3%95" class="">・構築方法</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/install-and-setup#%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" class="">・アンインストール</a></li>
           
         </ul>
         
@@ -202,18 +239,7 @@
           
           
 
-          <a href="/docs/beforequickstart"><span class="nav__sub-title">Before Quick Start</span></a>
-        
-
-        
-      </li>
-    
-      <li>
-        
-          
-          
-
-          <a href="/docs/quickstart"><span class="nav__sub-title">Quick Start</span></a>
+          <a href="/docs/tutorial"><span class="nav__sub-title">Tutorial</span></a>
         
 
         
@@ -402,16 +428,14 @@
 
       <section class="page__content" itemprop="text">
         
-        <h1 id="本書の目的">本書の目的</h1>
+        <p>本書では、KAMONOHASHIのコマンドラインツールをインストールして使用するまでの手順を説明します。</p>
 
-<p>本書では、KAMONOHASHIを使用する人物を対象として、KAMONOHASHIのコマンドラインツールをインストールして使用するまでの手順を説明する事を目的としている。</p>
+<h2 id="前提">前提</h2>
 
-<h1 id="前提">前提</h1>
+<p>読者がLinux、Windows の基本的な知識を持つことを前提としています。</p>
 
-<p>読者がLinux、Windows の基本的な知識を持つことを前提としている。</p>
-
-<p>また、CLIの動作確認済み環境を下表に示す。
-OSには 動作済みの Python バージョンおよび pip がインストールされており、パスが通っていること。</p>
+<p>また、CLIの動作確認済み環境を下表に示します。
+OSには動作確認済みの Python および pip がインストールされており、パスが通っていることを確認してください。</p>
 
 <table>
   <thead>
@@ -432,35 +456,34 @@ OSには 動作済みの Python バージョンおよび pip がインストー�
   </tbody>
 </table>
 
-<h1 id="cliの使用方法">CLIの使用方法</h1>
+<h2 id="cliの使用方法">CLIの使用方法</h2>
 
-<h2 id="cliインストール">CLIインストール</h2>
+<h3 id="cliインストール">CLIインストール</h3>
 
-<h3 id="インストールコマンド">インストールコマンド</h3>
-<p>端末のコンソールから以下のコマンドを実行する。</p>
+<h4 id="インストールコマンド">インストールコマンド</h4>
+<p>端末のコンソールから以下のコマンドを実行します。</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> pip <span class="nb">install </span>kamonohashi-cli
 </code></pre></div></div>
 
-<h3 id="初期設定">初期設定</h3>
-<p>CLIを利用するために、KAMONOHASHI にログインする。</p>
+<h4 id="初期設定">初期設定</h4>
+<p>CLIを利用するために、KAMONOHASHI にログインします。</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> kqi account login
 </code></pre></div></div>
 
-<p>上記コマンドを実行すると、サーバー名、ユーザー名、パスワードの入力プロンプトが表示される。必要な情報を入力し、ログインすると
-以降必要な設定情報が書き込まれて CLI が利用可能となる。サーバー名等の情報は管理者より提供される。</p>
+<p>上記コマンドを実行すると、サーバー名、ユーザー名、パスワードの入力プロンプトが表示されます。必要な情報を入力し、ログインすると以降必要な設定情報が書き込まれて CLI が利用可能となります。サーバー名等の情報は管理者より提供されます。</p>
 
-<h2 id="cli使用方法">CLI使用方法</h2>
+<h3 id="cli使用方法">CLI使用方法</h3>
 <p>KAMONOHASHIのコマンドは</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> kqi &lt;サブコマンド&gt; &lt;操作&gt; オプション
 </code></pre></div></div>
-<p>という構成になっている。
-コマンドの使用方法はヘルプオプション(-h)で確認できる。</p>
+<p>という構成になっています。
+コマンドの使用方法はヘルプオプション(-h)で確認できます。</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> kqi <span class="nt">-h</span>
 </code></pre></div></div>
 
-<p>下表に一覧と概要を示す。</p>
+<p>下表に一覧と概要を示します。</p>
 
 <table>
   <thead>
@@ -497,13 +520,13 @@ OSには 動作済みの Python バージョンおよび pip がインストー�
   </tbody>
 </table>
 
-<p>また、各コマンドについても詳細をヘルプオプション(-h)で確認できる。
-training コマンドの使用方法を確認している例を以下に挙げる。</p>
+<p>また、各コマンドについても詳細をヘルプオプション(-h)で確認できます。
+training コマンドの使用方法を確認している例を以下に挙げます。</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> kqi training <span class="nt">-h</span>
 </code></pre></div></div>
 
-<p>コマンドの引数についても同様にヘルプオプションで(-h)確認できる。</p>
+<p>コマンドの引数についても同様にヘルプオプションで(-h)確認できます。</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> kqi training create <span class="nt">-h</span>
 </code></pre></div></div>

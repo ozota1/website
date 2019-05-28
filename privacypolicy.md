@@ -51,9 +51,9 @@ KAMONOHASHIの商品・サービス
 請求手続や必要な書類につきましては、下記お問い合わせ窓口にお問い合わせください。
 5. お問い合わせ窓口
 個人情報に関するご請求、個人情報の取扱いに関するご質問、苦情等は、
-te-ty-security@jp.nssol.nssmc.comにお問い合わせください。
+te-ty-security@jp.nssol.nipponsteel.comにお問い合わせください。
 KAMONOHASHIの商品・サービスに関しては、
-kamonohashi-support@jp.nssol.nssmc.comにお問い合わせください。
+kamonohashi-support@jp.nssol.nipponsteel.comにお問い合わせください。
 
 ## クッキーポリシー
 [当社ウェブサイト](https://kamonohashi.ai/)（以下「本ウェブサイト」といいます。）では、クッキーの使用等により、アクセスされた利用者の方々の情報（IPアドレス、ブラウザの種類、選択言語、訪問ページ及び滞在時間等）を自動的に取得することがあります。

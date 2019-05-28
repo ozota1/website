@@ -5,16 +5,15 @@
 layout: single
 classes: wide
 title: "Concepts"
-permalink: /docs/overview/concepts
+permalink: /docs/concepts
 sidebar:
   nav: "docs"
 ---
 
-# 本書の目的
 本書では、KAMONOHASHIを使用する前の読者を対象として、KAMONOHASHIのなかで登場する概念や用語について解説し、
 読者がスムーズにKAMONOHASHIを使用開始できるようにすることを目的としている。
 
-# 環境構成
+## 環境構成
 KAMONOHASHIはローカル環境、外部サービスの環境と連携して利用します。
 
 | |説明|
@@ -24,7 +23,7 @@ KAMONOHASHIはローカル環境、外部サービスの環境と連携して利
 
 ![構成概念図](/assets/images/illust_userFlow.png)
 
-# テナントとは？
+## テナントとは？
 
 テナントはKAMONOHASHIの管理単位です。テナント毎に、ユーザの管理、クォータ(リソースの使用量制限)の設定が行えます。<br>
 テナントには、Gitリポジトリ、Docker Registryおよびオブジェクトストレージが関連付けられ、それぞれ複数のテナント間で共有可能です。
@@ -34,7 +33,7 @@ Gitリポジトリ、Docker Registryは1テナントに複数登録すること�
 
 ![テナント概念(図3-1)](/assets/images/illust_tenant.png)
 
-# ノードとは？
+## ノードとは？
 
 ノードは、KAMONOHASHIに管理される物理的あるいは仮想的な計算用コンピュータを指します。
 KAMONOHASHI自体を構成する管理サーバ群は含まれません。
@@ -44,7 +43,7 @@ KAMONOHASHI自体を構成する管理サーバ群は含まれません。
 
 
 
-# ロールとは？
+## ロールとは？
 ユーザにロールを付与することで、操作可能な機能を制御できます。
 一人のユーザには複数のロールを関連付けられます。
 

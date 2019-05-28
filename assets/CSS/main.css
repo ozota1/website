@@ -675,13 +675,14 @@ h1 {
   font-size: 1.563em; }
 
 h2 {
-  font-size: 1.25em; }
+  margin-top: 0;
+  font-size: 1.563em; }
 
 h3 {
-  font-size: 1em; }
+  font-size: 1.25em; }
 
 h4 {
-  font-size: 0.75em; }
+  font-size: 1em; }
 
 h5 {
   font-size: 0.75em; }
@@ -3032,7 +3033,7 @@ a.reversefootnote {
   margin-top: 2em;
   /* paragraph indents */
   /* blockquote citations */ }
-.page__content h1 {
+.page__content h2 {
   font-size: 1.3em;
   padding: 0.5em;/*文字周りの余白*/
   background: #fff;/*背景色*/
@@ -3041,7 +3042,7 @@ a.reversefootnote {
   margin-top: 3em;
   margin-bottom: 1.5em; }
 
-  .page__content h2 {
+  .page__content h3 {
     padding-bottom: 0.5em;
     border-bottom: 1px solid #bfbfbf; }
   .page__content p,
@@ -3051,7 +3052,7 @@ a.reversefootnote {
     letter-spacing: 0.05em;
   line-height: 2em; }
   .page__content p {
-    margin: 0 0 3em;
+    margin: 1.5em 0 ;
     /* sibling indentation*/ }
   .page__content a:not(.btn):not(#goog-wm-sb):hover {
     text-decoration: underline; }
@@ -3679,14 +3680,14 @@ a.reversefootnote {
       right: 0;
       bottom: 0; }
     @media (min-width: 37.5em) {
-      .feature__item--right {
-        text-align: right; }
+      /*.feature__item--right {
+        text-align: right; }*/
         .feature__item--right .archive__item-teaser {
           float: right;
           width: 40.6779661017%; }
         .feature__item--right .archive__item-body {
           float: left;
-          width: 57.6271186441%;
+          /*width: 57.6271186441%;*/
           padding: 0 1.5em; }} 
   .feature__item--center {
     position: relative;

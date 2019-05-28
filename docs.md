@@ -11,38 +11,37 @@ sidebar:
 feature_row0:
   - image_path: /assets/images/illust_overView.png
     alt: "placeholder image 0"
-    title: "Product Overview"
-    excerpt: "KAMONOHASHIを深く理解します。"
-    url: "/docs/overview"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
+    title: "Concepts"
+    excerpt: "KAMONOHASHIの概念を学びます。"
+    url: "/docs/concepts"
 feature_row1:
   - image_path: /assets/images/illust_getStarted.png
     alt: "placeholder image 1"
-    title: "Before Quick Start"
+    title: "Installation and Setup"
     excerpt: "KAMONOHASHIをセットアップします。"
-    url: "/docs/beforequickstart"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
+    url: "/docs/install-and-setup"
 feature_row2:
   - image_path: /assets/images/illust_book.png
     alt: "placeholder image 2"
-    title: "Quick Start"
+    title: "Tutorial"
     excerpt: "KAMONOHASHIを使用したAI開発プロセスを10分で学びます。"
-    url: "/docs/quickstart"  
-    btn_label: "Read More"
-
-    btn_class: "btn--primary"
+    url: "/docs/tutorial"  
 feature_row3:
   - image_path: /assets/images/illust_book3.png
     alt: "placeholder image 3"
     title: "How-to Guides"
     excerpt: "AI開発者向け、システム管理者向けの詳細なマニュアルです。"
     url: "/docs/how-to"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
 ---
-{% include feature_row id="feature_row0" type="left" %}
-{% include feature_row id="feature_row1" type="left" %}
-{% include feature_row id="feature_row2" type="left" %}
-{% include feature_row id="feature_row3" type="left" %}
+## <a href="/docs/concepts">Concepts</a>
+KAMONOHASHIを使用する上で必要な独自の概念やキーワードを説明します。
+
+## <a href="/docs/install-and-setup">Installation</a>
+KAMONOHASHIのインストール方法について説明します。<br>
+**<font color="#094952">初めての方はまずこちらからご覧ください。</font>**
+
+## <a href="/docs/tutorial">Tutorial</a>
+KAMONOHASHIを使用したAI開発プロセスを10分で学びます。
+
+## <a href="/docs/how-to">How-to Guides</a>
+AI開発者・システム管理者向けの詳細なマニュアルです。
