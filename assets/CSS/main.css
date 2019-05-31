@@ -853,6 +853,9 @@ figcaption {
 svg:not(:root) {
   overflow: hidden; }
 /* Material icon*/
+.material-icons {
+  vertical-align: middle;
+}
 .material-icons.blue {
   color: #0f7886;
 }
