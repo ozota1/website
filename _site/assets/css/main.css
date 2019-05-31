@@ -854,7 +854,7 @@ svg:not(:root) {
   overflow: hidden; }
 /* Material icon*/
 .material-icons.blue {
-	color: #0f7886;
+  color: #0f7886;
 }
 /*
    Navigation lists

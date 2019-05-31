@@ -5,7 +5,7 @@
 layout: single
 classes: wide
 title: Docs
-permalink: /docs/
+permalink: /docs/v1.0.0/
 sidebar:
   nav: "docs"
 feature_row0:
@@ -33,7 +33,17 @@ feature_row3:
     excerpt: "AI開発者向け、システム管理者向けの詳細なマニュアルです。"
     url: "/docs/how-to"
 ---
+<div  >
+<button class="greedy-nav__toggle" type="button" count="2" style="">
+          <div class="navicon"></div>
+        </button>
+<ul class="hidden-links"><li class="masthead__menu-item">
+            </li><li class="masthead__menu-item">
+              <a href="/docs/sample/">v1.0.0</a>
+            </li></ul>
+</div>
 
+## v1.0.0
 ## <a href="/docs/concepts">Concepts</a>
 KAMONOHASHIを使用する上で必要な独自の概念やキーワードを説明します。
 
@@ -46,6 +56,3 @@ KAMONOHASHIを使用したAI開発プロセスを10分で学びます。
 
 ## <a href="/docs/how-to">How-to Guides</a>
 AI開発者・システム管理者向けの詳細なマニュアルです。
-
-## <a href="/docs/supported-doc-versions">Supported doc versions</a>
-以前のバージョンの KAMONOHASHI ドキュメントはこちらからご覧ください。
