@@ -22,14 +22,18 @@
             <li class="masthead__menu-item">
               <a href="{{ url }}" {% if link.description %}title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
             </li>
-          {%- endfor -%}
-          <li class="masthead__menu-item">
-                <a href="/" >v1.0.1<i class="material-icons">arrow_drop_down</i></a>
-                <ul class="version-links">
-                    <li><a href="/docs/supported-doc-versions" >v1.0.0</a></li>
-                </ul>
-          </li>
+          {%- endfor -%} 
         </ul>
+        <button class="greedy-nav__dropdown"  type="button">
+            <span>v1.0.1 <i class="material-icons">arrow_drop_down</i> </span>
+            <div class="dropdown-content">
+                <a href="/docs/supported-doc-versions" >other version</a>
+            </div>         
+        </button>
+
+        
+
+       
         {% if site.search == true %}
         <button class="search__toggle" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>

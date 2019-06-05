@@ -445,9 +445,9 @@ img.mfp-img {
    ========================================================================== */
 a:focus, button:focus {
   /* Default*/
-  outline: thin dotted #ff0000;
+  outline: thin dotted #1abfd5;
   /* Webkit*/
-  outline: 5px auto #ff0000;
+  outline: 5px auto #1abfd5;
   outline-offset: -2px; }
 
 /*
@@ -1097,7 +1097,7 @@ textarea[readonly] {
      ========================================================================== */
 input:focus,
 textarea:focus {
-  border-color: #ff0000;
+  border-color: #1abfd5;
   outline: 0;
   outline: thin dotted \9;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(255, 0, 0, 0.7); }
@@ -1734,7 +1734,9 @@ th {
     padding: 0;
     clear: both;
     list-style-type: none; }
-
+  .masthead__menu li.masthead__menu-item{
+    position: relative;
+  }
 .masthead__menu-item {
   display: block;
   list-style-type: none;
@@ -1744,54 +1746,9 @@ th {
     font-weight: 700; }
 
 
-.version-links {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  margin-top: 15px;
-  padding: 5px;
-  border: 1px solid #bfbfbf;
-  border-radius: 4px;
-  background: #fff;
-  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
-  .version-links.hidden {
-    display: none; }
-  .version-links a {
-    margin: 0;
-    padding: 10px 20px;
-    font-size: 1em; }
-    .version-links a:hover {
-      color: #000;
-      background: #cccccc; }
-  .version-links:before {
-    content: "";
-    position: absolute;
-    top: -11px;
-    right: 10px;
-    width: 0;
-    border-style: solid;
-    border-width: 0 10px 10px;
-    border-color: #bfbfbf transparent;
-    display: block;
-    z-index: 0; }
-  .version-links:after {
-    content: "";
-    position: absolute;
-    top: -10px;
-    right: 10px;
-    width: 0;
-    border-style: solid;
-    border-width: 0 10px 10px;
-    border-color: #fff transparent;
-    display: block;
-    z-index: 1; }
-  .version-links li {
-    display: block;
-    border-bottom: 1px solid #bfbfbf; }
-    .version-links li:last-child {
-      border-bottom: none; }
-  
+
+
+   
 
   
 /* ==========================================================================
@@ -1954,6 +1911,41 @@ th {
     outline: none;
     background-color: transparent;
     cursor: pointer; }
+  .greedy-nav__dropdown {
+    text-decoration: none;
+    background-color:#fff;
+    position: relative;
+    display: inline-block;
+    border: 1px solid #e6ecf0;
+    border-radius: 4px;
+    padding: 8px 14px;
+  }
+  .dropdown-content {
+    display: none;
+    top: 100%;
+    position: absolute;
+    border: 1px solid #bfbfbf;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    padding: 5px;
+    z-index: 1;
+  }
+  .dropdown-content a:hover {
+    color: #000;
+    background-color: #cccccc
+  }
+  .greedy-nav__dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .greedy-nav__version {
+    -ms-flex-item-align: center;
+    align-self: center;
+    height: 2rem;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer; }
   .greedy-nav .visible-links {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2033,7 +2025,6 @@ th {
       border-bottom: 1px solid #bfbfbf; }
       .greedy-nav .hidden-links li:last-child {
         border-bottom: none; }
-
 .no-js .greedy-nav .visible-links {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -2177,7 +2168,7 @@ th {
   .toc .nav__title {
     color: #fff;
     font-size: 0.75em;
-    background: #ff0000;
+    background: #1abfd5;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px; }
 
@@ -2299,13 +2290,13 @@ th {
   height: 2rem;
   border: 0;
   outline: none;
-  color: #ff0000;
+  color: #1abfd5;
   background-color: transparent;
   cursor: pointer;
   -webkit-transition: 0.2s;
   transition: 0.2s; }
   .search__toggle:hover {
-    color: #bf0000; }
+    color: #1abfd5; }
 
 .search-icon {
   width: 100%;
@@ -2372,12 +2363,12 @@ th {
   margin-bottom: 2em; }
 
 .archive__item-title .ais-Highlight {
-  color: #ff0000;
+  color: #1abfd5;
   font-style: normal;
   text-decoration: underline; }
 
 .archive__item-excerpt .ais-Highlight {
-  color: #ff0000;
+  color: #1abfd5;
   font-style: normal;
   font-weight: bold; }
 
@@ -2892,6 +2883,8 @@ body:hover .visually-hidden button {
   background: #1ABFD5; }
 .greedy-nav__toggle:hover.close .navicon {
   background: transparent; }
+
+
 
 /*
    Sticky, fixed to top content
