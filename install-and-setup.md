@@ -84,7 +84,7 @@ tar --strip=1 -xf /tmp/deploy-tools-$KQI_VERSION.tar.gz
 |KAMONOHASHIのadminパスワード|adminアカウントで使用する8文字以上のパスワードです。KAMONOHASHI Web UIログイン・DB接続、Object Storageへのログインに使用します。<br>一度構築に使用したパスワードはデプロイツールでは変更できません。パスワードを変える場合は、完全にデータを削除するか、パスワード変更手順を実施する必要があります。パスワード変更手順は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください|
 
 ### アンインストール
-* `./PrivatePlatypus/deploy-tools/deploy-basic-cluster.sh clean`を実行するとソフトウェアがアンインストールされます。
+* `./deploy-basic-cluster.sh clean`を実行するとソフトウェアがアンインストールされます。
   * このコマンドではKAMONOHASHIの内部データ(データベース, ストレージのデータ)は削除しません
     * 特に、adminパスワードも保存されたままです
   * 再度デプロイすると過去のデータベース, ストレージの中身を引き続き使用します
