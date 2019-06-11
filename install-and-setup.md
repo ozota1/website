@@ -126,7 +126,7 @@ cp -nr $OLD_KQI_VERSION/kamonohashi/conf $KQI_VERSION/kamonohashi/
 
 ```bash
 cd /var/lib/kamonohashi/deploy-tools/1.0.1/kamonohashi/
-./deploy-kqi.sh upgrade
+./deploy-kqi.sh update
 ```
 
 ### k8sなども含めたインフラ全体のバージョンアップ
