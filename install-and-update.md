@@ -124,7 +124,7 @@ cd /var/lib/kamonohashi/deploy-tools/
 cp -nr $OLD_KQI_VERSION/infra/conf $KQI_VERSION/infra/
 cp -nr $OLD_KQI_VERSION/kamonohashi/conf $KQI_VERSION/kamonohashi/
 mkdir -p old
-mv $OLD_KQI_VERSION old/$OLD_KQI_VERSION
+mv $OLD_KQI_VERSION old/
 ```
 
 ### KAMONOHASHI Webアプリのみのバージョンアップ
