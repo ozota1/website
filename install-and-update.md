@@ -5,12 +5,14 @@
 layout: single
 classes: wide
 title: "Installation"
-permalink: /docs/install-and-setup
+permalink: /docs/install-and-update
 sidebar:
   nav: "docs"
 ---
+本書ではKAMONOHASHIのインストール方法、アンインストール方法、バージョンアップ方法について説明します。
+
 ## インストール方法
-本書ではKAMONOHASHIのインストールについて説明します。
+
 
 ### ベーシッククラスタの構築
 
@@ -27,7 +29,7 @@ KAMONOHASHIのクラスタは次の4種類のサーバーで構成されます
 ベーシッククラスタ構成では、Kubernetes, KAMONOHASHI, Storage に1台ずつのマシンと、
 複数台のGPUサーバーを想定しています
 
-### 構築の準備
+#### 構築の準備
 * マシンを用意します
   * 物理または仮想のマシンを3台（Kubernetes, KAMONOHASHI, Storage　に使用）
   * NVIDIA GPUを搭載したマシンを1台以上
@@ -53,7 +55,7 @@ KAMONOHASHIのクラスタは次の4種類のサーバーで構成されます
 * GPUサーバーにGPUドライバをインストールします。
   * [NVIDIAドライバダウンロードサイト](https://www.nvidia.co.jp/Download/index.aspx?lang=jp)からインストール用ファイルがダウンロード可能です
 
-### 構築方法
+#### 構築方法
 * Kubernetes master用に用意したマシンにログインします
 * root userで次を実行します
 ```bash
@@ -83,7 +85,14 @@ tar --strip=1 -xf /tmp/deploy-tools-$KQI_VERSION.tar.gz
 |プロキシを設定しますか？ [y/N]|プロキシ環境にデプロイする場合はyを入力して<br> http_proxy, https_proxy, no_proxy<br>を設定します<br>no_proxyはこれまでの入力内容を元に必要なものが自動生成されます。<br>自組織のドメイン等を生成されたno_proxyに更に追加することもできます|
 |KAMONOHASHIのadminパスワード|adminアカウントで使用する8文字以上のパスワードです。KAMONOHASHI Web UIログイン・DB接続、Object Storageへのログインに使用します。<br>一度構築に使用したパスワードはデプロイツールでは変更できません。パスワードを変える場合は、完全にデータを削除するか、パスワード変更手順を実施する必要があります。パスワード変更手順は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください|
 
-### アンインストール
+これでKAMONOHASHIのインストールは完了です。
+[User Guide](/docs/how-to/user)や[Admin Guide](/docs/how-to/admin)を参考にKAMONOHASHIを用いたAI開発を開始しましょう！
+
+### カスタマイズしたクラスタの構築
+* ベーシッククラスタの構成では要件が足りず、カスタマイズしたい場合は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください
+
+
+## アンインストール方法
 * `./deploy-basic-cluster.sh clean`を実行するとソフトウェアがアンインストールされます。
   * このコマンドではKAMONOHASHIの内部データ(データベース, ストレージのデータ)は削除しません
     * 特に、adminパスワードも保存されたままです
@@ -91,12 +100,7 @@ tar --strip=1 -xf /tmp/deploy-tools-$KQI_VERSION.tar.gz
   * 完全にデータを削除する場合は KAMONOHASHIノード, STORAGEノードの 2台で`/var/lib/kamonohashi` を削除してください
     * 特に、構築に失敗してやり直す際にパスワードも変更する場合はこのディレクトリを削除してください
     
-[User Guide](/docs/how-to/user)や[Admin Guide](/docs/how-to/admin)を参考にKAMONOHASHIを用いたAI開発を開始しましょう！
-
-## カスタマイズしたクラスタの構築
-* ベーシッククラスタの構成では要件が足りず、カスタマイズしたい場合は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください
-
-## 古いバージョンからのバージョンアップ
+## バージョンアップ
 バージョンアップには次の2種類のバージョンアップがあります
 * KAMONOHASHI Webアプリのみのバージョンアップ
 * k8sなども含めたインフラ全体のバージョンアップ
