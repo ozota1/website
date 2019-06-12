@@ -17,14 +17,12 @@ docs:
     children:
       - title: "Install Guide"
         url: /docs/install-and-update#インストール方法
-      - title: "・ベーシッククラスタの構築"
-        url: /docs/install-and-update#ベーシッククラスタの構築
-      - title: "・構築の準備"
-        url: /docs/install-and-update#構築の準備
-      - title: "・構築方法"
-        url: /docs/install-and-update#構築方法
-      - title: "・アンインストール"
-        url: /docs/install-and-update#アンインストール
+      - title: "・アンインストール方法"
+        url: /docs/install-and-update#アンインストール方法
+      - title: "・バージョンアップ"
+        url: /docs/install-and-update#バージョンアップ
+      - title: "・外部サービスとの互換性"
+        url: /docs/install-and-update#外部サービスとの互換性
   - title: Tutorial
     url: /docs/tutorial
   - title: How-to Guide

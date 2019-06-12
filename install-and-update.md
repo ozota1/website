@@ -161,3 +161,13 @@ cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
 
 * 注意事項
   * デプロイツールやKAMONOHASHI WEBアプリ外で手で入れた設定は元に戻ります
+
+## 外部サービスとの互換性
+動作環境は以下の通りです。
+
+|KAMONOHASHI| GitLab| 
+|---|---|
+|v1.0.1|11.8以降|
+|v1.0.0|11.7以前|
+
+
