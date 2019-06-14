@@ -645,6 +645,8 @@ wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION<
 <span class="nb">cd</span> /var/lib/kamonohashi/deploy-tools/
 <span class="nb">cp</span> <span class="nt">-nr</span> <span class="nv">$OLD_KQI_VERSION</span>/infra/conf <span class="nv">$KQI_VERSION</span>/infra/
 <span class="nb">cp</span> <span class="nt">-nr</span> <span class="nv">$OLD_KQI_VERSION</span>/kamonohashi/conf <span class="nv">$KQI_VERSION</span>/kamonohashi/
+<span class="nb">mkdir</span> <span class="nt">-p</span> old
+<span class="nb">mv</span> <span class="nv">$OLD_KQI_VERSION</span> old/
 </code></pre></div>    </div>
   </li>
 </ol>
@@ -708,16 +710,19 @@ wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION<
     <tr>
       <th>KAMONOHASHI</th>
       <th>GitLab</th>
+      <th>MinIO</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>v1.0.1</td>
       <td>11.8以降</td>
+      <td>RELEASE.2019-01-23T23-18-58Z</td>
     </tr>
     <tr>
       <td>v1.0.0</td>
       <td>11.7以前</td>
+      <td>RELEASE.2019-01-23T23-18-58Z</td>
     </tr>
   </tbody>
 </table>
