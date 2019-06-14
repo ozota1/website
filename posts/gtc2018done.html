@@ -120,10 +120,15 @@
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
 
-    <div class="masthead">
+    
+
+<div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
+        
+          <!-- <a class="site-logo" href="/"><img src="/assets/images/logo_003.png" alt=""></a> -->
+        
         <a class="site-title" href="/">KAMONOHASHI</a>
         <ul class="visible-links"><li class="masthead__menu-item">
               <a href="/about/" >About</a>
@@ -136,9 +141,19 @@
             </li><li class="masthead__menu-item">
               <a href="https://twitter.com/Kamonohashi_kqi" >Twitter</a>
             </li></ul>
+        <button class="greedy-nav__dropdown"  type="button">
+            <span>v1.0.1 <i class="material-icons">arrow_drop_down</i> </span>
+            <div class="dropdown-content">
+                <a href="/docs/supported-doc-versions" >other version</a>
+            </div>         
+        </button>
+
         
-        <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">Toggle Menu</span>
+
+       
+        
+        <button class="greedy-nav__toggle" type="button">
+          <span class="visually-hidden">Toggle menu</span>
           <div class="navicon"></div>
         </button>
         <ul class="hidden-links hidden"></ul>

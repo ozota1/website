@@ -116,10 +116,15 @@
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
 
-    <div class="masthead">
+    
+
+<div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
+        
+          <!-- <a class="site-logo" href="/"><img src="/assets/images/logo_003.png" alt=""></a> -->
+        
         <a class="site-title" href="/">KAMONOHASHI</a>
         <ul class="visible-links"><li class="masthead__menu-item">
               <a href="/about/" >About</a>
@@ -132,9 +137,19 @@
             </li><li class="masthead__menu-item">
               <a href="https://twitter.com/Kamonohashi_kqi" >Twitter</a>
             </li></ul>
+        <button class="greedy-nav__dropdown"  type="button">
+            <span>v1.0.1 <i class="material-icons">arrow_drop_down</i> </span>
+            <div class="dropdown-content">
+                <a href="/docs/supported-doc-versions" >other version</a>
+            </div>         
+        </button>
+
         
-        <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">Toggle Menu</span>
+
+       
+        
+        <button class="greedy-nav__toggle" type="button">
+          <span class="visually-hidden">Toggle menu</span>
           <div class="navicon"></div>
         </button>
         <ul class="hidden-links hidden"></ul>
@@ -184,7 +199,7 @@
           
           
 
-          <a href="/docs/install-and-setup"><span class="nav__sub-title">Installation</span></a>
+          <a href="/docs/install-and-update"><span class="nav__sub-title">Installation</span></a>
         
 
         
@@ -196,7 +211,7 @@
             
             
 
-            <li><a href="/docs/install-and-setup#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95" class="">Install Guide</a></li>
+            <li><a href="/docs/install-and-update#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95" class="">Install Guide</a></li>
           
             
             
@@ -204,7 +219,7 @@
             
             
 
-            <li><a href="/docs/install-and-setup#%E3%83%99%E3%83%BC%E3%82%B7%E3%83%83%E3%82%AF%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%BF%E3%81%AE%E6%A7%8B%E7%AF%89" class="">・ベーシッククラスタの構築</a></li>
+            <li><a href="/docs/install-and-update#%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95" class="">・アンインストール方法</a></li>
           
             
             
@@ -212,7 +227,7 @@
             
             
 
-            <li><a href="/docs/install-and-setup#%E6%A7%8B%E7%AF%89%E3%81%AE%E6%BA%96%E5%82%99" class="">・構築の準備</a></li>
+            <li><a href="/docs/install-and-update#%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%82%A2%E3%83%83%E3%83%97" class="">・バージョンアップ</a></li>
           
             
             
@@ -220,15 +235,7 @@
             
             
 
-            <li><a href="/docs/install-and-setup#%E6%A7%8B%E7%AF%89%E6%96%B9%E6%B3%95" class="">・構築方法</a></li>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/docs/install-and-setup#%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" class="">・アンインストール</a></li>
+            <li><a href="/docs/install-and-update#%E5%A4%96%E9%83%A8%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%A8%E3%81%AE%E4%BA%92%E6%8F%9B%E6%80%A7" class="">・外部サービスとの互換性</a></li>
           
         </ul>
         
@@ -432,7 +439,7 @@
 
 <p>このチュートリアルを始める前に、以下のKAMONOHASHIのインストールが終わり、KAMONOHASHIにログインできることを確認してください。</p>
 
-<p>(参考) <a href="/docs/install-and-setup#インストール方法">KAMONOHASHIをインストールする</a></p>
+<p>(参考) <a href="/docs/install-and-update#インストール方法">KAMONOHASHIをインストールする</a></p>
 
 <h2 id="はじめに">はじめに</h2>
 
