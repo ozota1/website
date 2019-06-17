@@ -83,6 +83,9 @@
 <loc>http://localhost:4000/privacy-policy/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/success.html</loc>
+</url>
+<url>
 <loc>http://localhost:4000/docs/supported-doc-versions</loc>
 </url>
 <url>

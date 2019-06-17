@@ -428,7 +428,6 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 <h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 　お問い合わせ・参考資料
 </h3>
-
 <div class="feature__wrapper">
 
     <div class="feature__item--center">
@@ -453,7 +452,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 
 
 
-            <p><a href="mailto:kamonohashi-support@jp.nssol.nipponsteel.com" class="btn btn--primary">メールする</a></p>
+            <p><a href="/contact" class="btn btn--primary">メールする</a></p>
 
         </div>
       </div>
