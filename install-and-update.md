@@ -167,9 +167,9 @@ cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
 ## 外部サービスとの互換性
 動作環境は以下の通りです。
 
-|KAMONOHASHI|GitLab|MinIO| 
-|---|---|---|
-|v1.0.1|11.8以降|RELEASE.2019-01-23T23-18-58Z|
-|v1.0.0|11.7以前|RELEASE.2019-01-23T23-18-58Z|
+|KAMONOHASHI|GitLab|MinIO| LDAP|
+|---|---|---|---|
+|v1.0.1|11.8以降|RELEASE.2019-01-23T23-18-58Z|version 3 |
+|v1.0.0|11.7以前|RELEASE.2019-01-23T23-18-58Z|version 3 |
 
 
