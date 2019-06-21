@@ -169,5 +169,7 @@ cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
 
 |KAMONOHASHI|GitLab|MinIO| LDAP|Kubernetes |
 |---|---|---|---|---|
-|v1.0.1|11.8以降|RELEASE.2019-01-23T23-18-58Z|version 3| v1.14.1|
-|v1.0.0|11.7以前|RELEASE.2019-01-23T23-18-58Z|version 3| v1.14.1|
+|v1.0.1|11.8以降|RELEASE.2019-01-23T23-18-58Z|version 3| v1.12.7,v1.14.1|
+|v1.0.0|11.7以前|RELEASE.2019-01-23T23-18-58Z|version 3| v1.12.7|
+
+v1.0.0では11.8以降のGitLabに対応していませんので注意してください。
