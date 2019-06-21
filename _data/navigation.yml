@@ -5,6 +5,8 @@ main:
     url: /docs/
   - title: "Posts"
     url: /posts/
+  - title: "Resource"
+    url: /resource/
   - title: "Contact"
     url: /contact/
   - title: "Twitter"
@@ -70,5 +72,12 @@ tutorials:
     children:
       - title: "Training a model on CIFAR-10 Using KAMONOHASHI"
         url: /tutorial/cifar10
-
-
+resource:
+  - title: Slide Share
+    url: /resource/Slide Share
+  - title: Flyer
+    url: /resource/flyer
+  - title: logo
+    url: /resource/logo
+  - title: illust
+    url: /resource/illust
