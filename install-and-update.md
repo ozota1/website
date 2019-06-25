@@ -165,7 +165,8 @@ cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
   * デプロイツールやKAMONOHASHI WEBアプリ外で手で入れた設定は元に戻ります
 
 ## 外部サービスとの互換性
-動作環境は以下の通りです。
+
+動作を確認した環境は以下の通りです。
 
 |KAMONOHASHI|GitLab|MinIO| LDAP|Kubernetes |
 |---|---|---|---|---|
@@ -173,3 +174,5 @@ cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
 |v1.0.0|11.7以前|RELEASE.2019-01-23T23-18-58Z|version 3| v1.12.7|
 
 v1.0.0では11.8以降のGitLabに対応していませんので注意してください。
+
+
