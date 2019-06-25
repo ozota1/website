@@ -15,7 +15,7 @@ docs:
   - title: Installation
     url: /docs/install-and-update
     children:
-      - title: "Install Guide"
+      - title: "・インストール方法"
         url: /docs/install-and-update#インストール方法
       - title: "・アンインストール方法"
         url: /docs/install-and-update#アンインストール方法

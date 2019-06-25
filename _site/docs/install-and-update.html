@@ -211,7 +211,7 @@
             
             
 
-            <li><a href="/docs/install-and-update#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95" class="">Install Guide</a></li>
+            <li><a href="/docs/install-and-update#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95" class="">・インストール方法</a></li>
           
             
             
@@ -645,6 +645,8 @@ wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION<
 <span class="nb">cd</span> /var/lib/kamonohashi/deploy-tools/
 <span class="nb">cp</span> <span class="nt">-nr</span> <span class="nv">$OLD_KQI_VERSION</span>/infra/conf <span class="nv">$KQI_VERSION</span>/infra/
 <span class="nb">cp</span> <span class="nt">-nr</span> <span class="nv">$OLD_KQI_VERSION</span>/kamonohashi/conf <span class="nv">$KQI_VERSION</span>/kamonohashi/
+<span class="nb">mkdir</span> <span class="nt">-p</span> old
+<span class="nb">mv</span> <span class="nv">$OLD_KQI_VERSION</span> old/
 </code></pre></div>    </div>
   </li>
 </ol>
