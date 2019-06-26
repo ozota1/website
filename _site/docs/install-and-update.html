@@ -213,7 +213,7 @@
             
             
 
-            <li><a href="/docs/install-and-update#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95" class="">Install Guide</a></li>
+            <li><a href="/docs/install-and-update#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95" class="">・インストール方法</a></li>
           
             
             
@@ -249,6 +249,17 @@
           
 
           <a href="/docs/tutorial"><span class="nav__sub-title">Tutorial</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/docs/faq"><span class="nav__sub-title">FAQ</span></a>
         
 
         
@@ -705,7 +716,8 @@ wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION<
 </ul>
 
 <h2 id="外部サービスとの互換性">外部サービスとの互換性</h2>
-<p>動作環境は以下の通りです。</p>
+
+<p>動作を確認した環境は以下の通りです。</p>
 
 <table>
   <thead>
@@ -713,6 +725,8 @@ wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION<
       <th>KAMONOHASHI</th>
       <th>GitLab</th>
       <th>MinIO</th>
+      <th>LDAP</th>
+      <th>Kubernetes</th>
     </tr>
   </thead>
   <tbody>
@@ -720,22 +734,20 @@ wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION<
       <td>v1.0.1</td>
       <td>11.8以降</td>
       <td>RELEASE.2019-01-23T23-18-58Z</td>
+      <td>version 3</td>
+      <td>v1.12.7,v1.14.1</td>
     </tr>
     <tr>
       <td>v1.0.0</td>
       <td>11.7以前</td>
       <td>RELEASE.2019-01-23T23-18-58Z</td>
+      <td>version 3</td>
+      <td>v1.12.7</td>
     </tr>
   </tbody>
 </table>
 
-
-        
-      </section>
-
-      <footer class="page__meta">
-        
-        
+<p>v1.0.0では11.8以降のGitLabに対応していませんので注意してください。</p>       
 
 
         
