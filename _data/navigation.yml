@@ -5,6 +5,8 @@ main:
     url: /docs/
   - title: "Posts"
     url: /posts/
+  - title: "Resource"
+    url: /resource/
   - title: "Contact"
     url: /contact/
   - title: "Twitter"
@@ -72,6 +74,11 @@ tutorials:
     children:
       - title: "Training a model on CIFAR-10 Using KAMONOHASHI"
         url: /tutorial/cifar10
+resource:
+  - title: Slide Share
+    url: /resource/#Slide Share
+  - title: Flyer
+    url: /resource/#flyer
 faq:
   - title: faq
     url: /docs/faq
@@ -82,5 +89,3 @@ faq:
         url: /docs/faq#インストールについて
       - title: "KAMONOHASHIチームへの連絡"
         url: /docs/faq#KAMONOHASHIチームへの連絡
-
-

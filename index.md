@@ -479,14 +479,9 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 
             <div class="archive__item-excerpt">
               <p>KAMONOHASHI　製品リーフレット (2019年4月)は以下からご覧になれます。</p>
+              <p>その他の資料は<a href="/resource/">こちら</a>
 
-            </div>
 
 
 
             <p><a href="/assets/kamonohashi_flyer.pdf" class="btn btn--primary">ダウンロードする</a></p>
-        </div>
-      </div>
-    </div>
-
-</div>
