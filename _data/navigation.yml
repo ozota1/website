@@ -74,10 +74,6 @@ tutorials:
         url: /tutorial/cifar10
 resource:
   - title: Slide Share
-    url: /resource/Slide Share
+    url: /resource/#Slide Share
   - title: Flyer
-    url: /resource/flyer
-  - title: logo
-    url: /resource/logo
-  - title: illust
-    url: /resource/illust
+    url: /resource/#flyer
