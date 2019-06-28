@@ -537,6 +537,7 @@ wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION<
 <span class="nb">mkdir</span> <span class="nt">-p</span> /var/lib/kamonohashi/deploy-tools/<span class="nv">$KQI_VERSION</span>/
 <span class="nb">cd</span> /var/lib/kamonohashi/deploy-tools/<span class="nv">$KQI_VERSION</span>/
 <span class="nb">tar</span> <span class="nt">--strip</span><span class="o">=</span>1 <span class="nt">-xf</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION</span>.tar.gz
+<span class="nb">sed</span> <span class="nt">-i</span> s/docker18.09.6-3/docker18.09.5-3/ infra/conf/group_vars/all.yml
 ./deploy-basic-cluster.sh deploy
 </code></pre></div>    </div>
     <p>対話形式で設定が聞かれるので、下記に従って設定を入力します</p>
@@ -647,6 +648,7 @@ wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION<
 <span class="nb">cp</span> <span class="nt">-nr</span> <span class="nv">$OLD_KQI_VERSION</span>/kamonohashi/conf <span class="nv">$KQI_VERSION</span>/kamonohashi/
 <span class="nb">mkdir</span> <span class="nt">-p</span> old
 <span class="nb">mv</span> <span class="nv">$OLD_KQI_VERSION</span> old/
+<span class="nb">sed</span> <span class="nt">-i</span> s/docker18.09.6-3/docker18.09.5-3/ infra/conf/group_vars/all.yml
 </code></pre></div>    </div>
   </li>
 </ol>
