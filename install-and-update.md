@@ -84,10 +84,10 @@ sed -i s/docker18.09.6-3/docker18.09.5-3/ infra/conf/group_vars/all.yml
 |SSHパスワード|SSHにパスワードを使用する場合は入力します。<br>SSH認証キー`~/.ssh/id_rsa`を使う場合は何も入力せずにEnterを押してこの項目はスキップします|
 |SUDOパスワード|パスワードなしでsudoコマンド実行可能な場合は何も入力せずにEnterを押してこの項目をスキップします|
 |プロキシを設定しますか？ [y/N]|プロキシ環境にデプロイする場合はyを入力して<br> http_proxy, https_proxy, no_proxy<br>を設定します<br>no_proxyはこれまでの入力内容を元に必要なものが自動生成されます。<br>自組織のドメイン等を生成されたno_proxyに更に追加することもできます|
-|KAMONOHASHIのadminパスワード|adminアカウントで使用する8文字以上のパスワードです。KAMONOHASHI Web UIログイン・DB接続、Object Storageへのログインに使用します。<br>一度構築に使用したパスワードはデプロイツールでは変更できません。パスワードを変える場合は、完全にデータを削除するか、パスワード変更手順を実施する必要があります。パスワード変更手順は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください|
+|KAMONOHASHIのadminパスワード|adminアカウントで使用する8文字以上のパスワードです。数字のみのパスワードは使用不可となっているので注意してください。KAMONOHASHI Web UIログイン・DB接続、Object Storageへのログインに使用します。<br>一度構築に使用したパスワードはデプロイツールでは変更できません。パスワードを変える場合は、完全にデータを削除するか、パスワード変更手順を実施する必要があります。パスワード変更手順は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください|
 
 これでKAMONOHASHIのインストールは完了です。
-[User Guide](/docs/how-to/user)や[Admin Guide](/docs/how-to/admin)を参考にKAMONOHASHIを用いたAI開発を開始しましょう！
+[チュートリアル](/docs/tutorial)に進みKAMONOHASHIを用いたAI開発を開始しましょう！
 
 ### カスタマイズしたクラスタの構築
 * ベーシッククラスタの構成では要件が足りず、カスタマイズしたい場合は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください
