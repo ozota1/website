@@ -59,7 +59,7 @@ KAMONOHASHIのクラスタは次の4種類のサーバーで構成されます
 * Kubernetes master用に用意したマシンにログインします
 * root userで次を実行します
 ```bash
-KQI_VERSION=1.0.1
+KQI_VERSION=1.0.2
 wget -O /tmp/deploy-tools-$KQI_VERSION.tar.gz https://github.com/KAMONOHASHI/kamonohashi/releases/download/$KQI_VERSION/deploy-tools-$KQI_VERSION.tar.gz
 mkdir -p /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
 cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
@@ -116,7 +116,7 @@ OLD_KQI_VERSION=1.0.0
 
 2. 次のコマンドを実施して新しいデプロイツール取得と設定ファイルのコピーを行います
 ```bash
-KQI_VERSION=1.0.1
+KQI_VERSION=1.0.2
 wget -O /tmp/deploy-tools-$KQI_VERSION.tar.gz https://github.com/KAMONOHASHI/kamonohashi/releases/download/$KQI_VERSION/deploy-tools-$KQI_VERSION.tar.gz
 mkdir -p /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
 cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
@@ -172,7 +172,7 @@ cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
 
 |KAMONOHASHI|GitLab|MinIO| LDAP|Kubernetes |
 |---|---|---|---|---|
-|v1.0.1|11.8以降|RELEASE.2019-01-23T23-18-58Z|version 3| v1.12.7,v1.14.1|
+|v1.0.1, v1.0.2|11.8以降|RELEASE.2019-01-23T23-18-58Z|version 3| v1.12.7,v1.14.1|
 |v1.0.0|11.7以前|RELEASE.2019-01-23T23-18-58Z|version 3| v1.12.7|
 
 v1.0.0では11.8以降のGitLabに対応していませんので注意してください。
