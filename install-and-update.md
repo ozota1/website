@@ -64,12 +64,14 @@ wget -O /tmp/deploy-tools-$KQI_VERSION.tar.gz https://github.com/KAMONOHASHI/kam
 mkdir -p /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
 cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
 tar --strip=1 -xf /tmp/deploy-tools-$KQI_VERSION.tar.gz
-sed -i s/docker18.09.6-3/docker18.09.5-3/ infra/conf/group_vars/all.yml
 ./deploy-basic-cluster.sh deploy
 ```
 対話形式で設定が聞かれるので、下記に従って設定を入力します
 
-![ターミナル](/assets/images/kqi-terminal.png)
+<div align="center">
+<img src="/assets/images/kqi-terminal.png" alt="ターミナル">
+</div>
+
 
 
 対話形式で以下の項目の質問に答えます。[y/n]形式での質問は大文字の方がデフォルトの値です。
@@ -126,7 +128,6 @@ cp -nr $OLD_KQI_VERSION/infra/conf $KQI_VERSION/infra/
 cp -nr $OLD_KQI_VERSION/kamonohashi/conf $KQI_VERSION/kamonohashi/
 mkdir -p old
 mv $OLD_KQI_VERSION old/
-sed -i s/docker18.09.6-3/docker18.09.5-3/ infra/conf/group_vars/all.yml
 ```
 
 ### KAMONOHASHI Webアプリのみのバージョンアップ
