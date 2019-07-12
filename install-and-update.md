@@ -68,7 +68,10 @@ tar --strip=1 -xf /tmp/deploy-tools-$KQI_VERSION.tar.gz
 ```
 対話形式で設定が聞かれるので、下記に従って設定を入力します
 
-![ターミナル](/assets/images/kqi-terminal.png)
+<div align="center">
+<img src="/assets/images/kqi-terminal.png" alt="ターミナル">
+</div>
+
 
 
 対話形式で以下の項目の質問に答えます。[y/n]形式での質問は大文字の方がデフォルトの値です。
