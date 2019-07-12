@@ -140,7 +140,7 @@
               <a href="https://twitter.com/Kamonohashi_kqi" >Twitter</a>
             </li></ul>
         <button class="greedy-nav__dropdown"  type="button">
-            <span>v1.0.1 <i class="material-icons">arrow_drop_down</i> </span>
+            <span>v1.0.2 <i class="material-icons">arrow_drop_down</i> </span>
             <div class="dropdown-content">
                 <a href="/docs/supported-doc-versions" >other version</a>
             </div>         
@@ -545,19 +545,20 @@
 <ul>
   <li>Kubernetes master用に用意したマシンにログインします</li>
   <li>root userで次を実行します
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">KQI_VERSION</span><span class="o">=</span>1.0.1
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">KQI_VERSION</span><span class="o">=</span>1.0.2
 wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION</span>.tar.gz https://github.com/KAMONOHASHI/kamonohashi/releases/download/<span class="nv">$KQI_VERSION</span>/deploy-tools-<span class="nv">$KQI_VERSION</span>.tar.gz
 <span class="nb">mkdir</span> <span class="nt">-p</span> /var/lib/kamonohashi/deploy-tools/<span class="nv">$KQI_VERSION</span>/
 <span class="nb">cd</span> /var/lib/kamonohashi/deploy-tools/<span class="nv">$KQI_VERSION</span>/
 <span class="nb">tar</span> <span class="nt">--strip</span><span class="o">=</span>1 <span class="nt">-xf</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION</span>.tar.gz
-<span class="nb">sed</span> <span class="nt">-i</span> s/docker18.09.6-3/docker18.09.5-3/ infra/conf/group_vars/all.yml
 ./deploy-basic-cluster.sh deploy
 </code></pre></div>    </div>
     <p>対話形式で設定が聞かれるので、下記に従って設定を入力します</p>
   </li>
 </ul>
 
-<p><img src="/assets/images/kqi-terminal.png" alt="ターミナル" /></p>
+<div align="center">
+<img src="/assets/images/kqi-terminal.png" alt="ターミナル" />
+</div>
 
 <p>対話形式で以下の項目の質問に答えます。[y/n]形式での質問は大文字の方がデフォルトの値です。</p>
 
@@ -651,7 +652,7 @@ wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION<
 </code></pre>
   </li>
   <li>次のコマンドを実施して新しいデプロイツール取得と設定ファイルのコピーを行います
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">KQI_VERSION</span><span class="o">=</span>1.0.1
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">KQI_VERSION</span><span class="o">=</span>1.0.2
 wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION</span>.tar.gz https://github.com/KAMONOHASHI/kamonohashi/releases/download/<span class="nv">$KQI_VERSION</span>/deploy-tools-<span class="nv">$KQI_VERSION</span>.tar.gz
 <span class="nb">mkdir</span> <span class="nt">-p</span> /var/lib/kamonohashi/deploy-tools/<span class="nv">$KQI_VERSION</span>/
 <span class="nb">cd</span> /var/lib/kamonohashi/deploy-tools/<span class="nv">$KQI_VERSION</span>/
@@ -661,7 +662,6 @@ wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION<
 <span class="nb">cp</span> <span class="nt">-nr</span> <span class="nv">$OLD_KQI_VERSION</span>/kamonohashi/conf <span class="nv">$KQI_VERSION</span>/kamonohashi/
 <span class="nb">mkdir</span> <span class="nt">-p</span> old
 <span class="nb">mv</span> <span class="nv">$OLD_KQI_VERSION</span> old/
-<span class="nb">sed</span> <span class="nt">-i</span> s/docker18.09.6-3/docker18.09.5-3/ infra/conf/group_vars/all.yml
 </code></pre></div>    </div>
   </li>
 </ol>
@@ -733,7 +733,7 @@ wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION<
   </thead>
   <tbody>
     <tr>
-      <td>v1.0.1</td>
+      <td>v1.0.1, v1.0.2</td>
       <td>11.8以降</td>
       <td>RELEASE.2019-01-23T23-18-58Z</td>
       <td>version 3</td>
