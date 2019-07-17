@@ -3,8 +3,6 @@ main:
     url: /about/
   - title: "Docs"
     url: /docs/
-  - title: "Posts"
-    url: /posts/
   - title: "Resource"
     url: /resource/
   - title: "Contact"
