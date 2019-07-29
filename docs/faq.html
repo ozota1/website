@@ -131,8 +131,6 @@
             </li><li class="masthead__menu-item">
               <a href="/docs/" >Docs</a>
             </li><li class="masthead__menu-item">
-              <a href="/posts/" >Posts</a>
-            </li><li class="masthead__menu-item">
               <a href="/resource/" >Resource</a>
             </li><li class="masthead__menu-item">
               <a href="/contact/" >Contact</a>
@@ -251,13 +249,13 @@
         <p>FAQではよくある質問とそれに対する答えが読めます。</p>
 
 <h2 id="一般的な質問">一般的な質問</h2>
-<h4 id="kamonohashiの由来は何ですか">KAMONOHASHIの由来は何ですか？</h4>
+<h4 id="kamonohashiの由来は何ですか">■KAMONOHASHIの由来は何ですか？</h4>
 
 <p>KAMONOHASHIは動物の「カモノハシ」からとりました。ご存じのようにカモノハシは、哺乳類なのに卵を産んだり、爬虫類のように毒を持っていたり、ヘラの部分で電気信号を感知できたりと、すごくおもしろい動物です。私たちのKAMONOHASHIは多くの人たちの協力を得て開発してきましたので「多様性」という意味と、「分類が難しいものを見分ける画像認識アプリケーション」という意味を込めてこの名前にしました。敢えて、日本語の名詞を英語表記にし、「日本発の世界共通の技術を作っていきたい」といった思いも込めています。</p>
 
 <h2 id="インストールについて">インストールについて</h2>
 
-<h4 id="まずは何をすればよいですか">まずは何をすればよいですか？</h4>
+<h4 id="まずは何をすればよいですか">■まずは何をすればよいですか？</h4>
 
 <ol>
   <li><a href="/docs/install-and-update">インストールガイド</a>を参考に、マシンの準備とKAMONOHASHIのインストールを行ってください。</li>
@@ -265,7 +263,7 @@
   <li><a href="/docs/">ほかのドキュメント</a>にも目を通してみてください。何か問題がおきたら<a href="contact/">質問</a>してみましょう。</li>
 </ol>
 
-<h4 id="gitlabなどの外部サービスのバージョンはどれを使えばよいですか">GitLabなどの外部サービスのバージョンはどれを使えばよいですか？</h4>
+<h4 id="gitlabなどの外部サービスのバージョンはどれを使えばよいですか">■GitLabなどの外部サービスのバージョンはどれを使えばよいですか？</h4>
 
 <p>動作を確認した環境は以下の通りです。</p>
 
@@ -298,6 +296,131 @@
 </table>
 
 <p>v1.0.0では11.8以降のGitLabに対応していませんので注意してください。</p>
+
+<h4 id="kamonohashiをインストールすると各マシンにどのようなソフトウェアがインストールされますか">■KAMONOHASHIをインストールすると各マシンにどのようなソフトウェアがインストールされますか？</h4>
+<p>各マシンに配置されるソフトウェアは図のようになっています。
+<img src="\assets\images\kamonohashi_software.png" alt="ソフトウェア配置図" /></p>
+
+<p><strong>KAMONOHASHIシステム管理サーバ</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>導入SW・パッケージ</th>
+      <th>SW・パッケージ説明</th>
+      <th>導入理由</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>kubernetes worker</td>
+      <td>コンテナオーケストレーションツール</td>
+      <td>KAMONOHASHIを利用する上で必須ツール。kubelet,kube-proxy,weave-net,nginx-proxyなど。</td>
+    </tr>
+    <tr>
+      <td>docker</td>
+      <td>コンテナ管理ツール</td>
+      <td>KAMONOHASHIでコンテナを利用するために導入します。</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Kubernetesマスターサーバ</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>導入SW・パッケージ</th>
+      <th>SW・パッケージ説明</th>
+      <th>導入理由</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ansible</td>
+      <td>構成管理ツール</td>
+      <td>kubernetesの構築で利用するkubesprayが、本構成管理ツールを利用するため導入します。最新バージョンを利用します。</td>
+    </tr>
+    <tr>
+      <td>kubernetes</td>
+      <td>コンテナオーケストレーションツール</td>
+      <td>KAMONOHASHIを利用する上で必須ツール。etcd,kube-apiserver,kube-scheduler,kube-controller-managerweave-net,nvidia-device-plugin-daemonsetなど。</td>
+    </tr>
+    <tr>
+      <td>docker</td>
+      <td>コンテナ管理ツール</td>
+      <td>KAMONOHASHIでコンテナを利用するために導入します。</td>
+    </tr>
+    <tr>
+      <td>nfs-common</td>
+      <td>NFSマウントを行うために利用するパッケージ</td>
+      <td>KAMONOHASHI環境で共通で導入します。最新バージョンを利用します。</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>GPUサーバ</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>導入SW・パッケージ</th>
+      <th>SW・パッケージ説明</th>
+      <th>導入理由</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>nvidia-docker2 nvidia-container-rutime</td>
+      <td>DockerコンテナでNVDIA社のGPUを利用するためのパッケージ</td>
+      <td>コンテナでGPUを利用するために導入します。</td>
+    </tr>
+    <tr>
+      <td>NVIDIA　GPU　Driver</td>
+      <td>OSがGPUを認識するためのパッケージ</td>
+      <td>コンテナでGPUを利用するために導入します。本パッケージは下位互換性があることから、最新バージョンを導入します。</td>
+    </tr>
+    <tr>
+      <td>kubernetes worker</td>
+      <td>コンテナオーケストレーションツール</td>
+      <td>KAMONOHASHIを利用する上で必須ツール。kubelet,kube-proxy,weave-net,nginx-proxyなど</td>
+    </tr>
+    <tr>
+      <td>docker</td>
+      <td>コンテナ管理ツール</td>
+      <td>KAMONOHASHIでコンテナを利用するために導入します。</td>
+    </tr>
+    <tr>
+      <td>nfs-common</td>
+      <td>NFSマウントを行うために利用するパッケージ</td>
+      <td>KAMONOHASHI環境で共通で導入します。GPUサーバ上のコンテナからNFSサーバをマウントするために利用します。最新バージョンを利用します。</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>オブジェクトストレージサーバ</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>導入SW・パッケージ</th>
+      <th>SW・パッケージ説明</th>
+      <th>導入理由</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>minio</td>
+      <td>Amazon S3互換のAPIを提供し、オブジェクトストレージにアクセスするツール</td>
+      <td>KAMONOHASHIのWebアプリケーションが、NFSサーバにアクセスする際に利用するため導入します。</td>
+    </tr>
+    <tr>
+      <td>nfs-common</td>
+      <td>NFSマウントを行うために利用するパッケージ</td>
+      <td>KAMONOHASHI環境で共通で導入します。オブジェクトストレージサーバからNFSサーバをマウントするために利用します。最新バージョンを利用します。</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="kamonohashiチームへの連絡">KAMONOHASHIチームへの連絡</h2>
 
