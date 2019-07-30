@@ -298,8 +298,12 @@
 <p>v1.0.0では11.8以降のGitLabに対応していませんので注意してください。</p>
 
 <h4 id="kamonohashiをインストールすると各マシンにどのようなソフトウェアがインストールされますか">■KAMONOHASHIをインストールすると各マシンにどのようなソフトウェアがインストールされますか？</h4>
-<p>各マシンに配置されるソフトウェアは図のようになっています。
-<img src="\assets\images\kamonohashi_software.png" alt="ソフトウェア配置図" /></p>
+<p>各マシンに配置されるソフトウェアの概要は図のようになっています。
+<img src="\assets\images\kqi_sw.png" alt="ソフトウェア配置図" /></p>
+
+<p><img src="\assets\images\kqi_sw2.png" alt="ソフトウェア配置図2" /></p>
+
+<p>コンテナ以外のソフトウェアの詳細は以下の通りです。</p>
 
 <p><strong>KAMONOHASHIシステム管理サーバ</strong></p>
 
@@ -342,7 +346,7 @@
       <td>kubernetesの構築で利用するkubesprayが、本構成管理ツールを利用するため導入します。最新バージョンを利用します。</td>
     </tr>
     <tr>
-      <td>kubernetes</td>
+      <td>kubernetes	worker</td>
       <td>コンテナオーケストレーションツール</td>
       <td>KAMONOHASHIを利用する上で必須ツール。etcd,kube-apiserver,kube-scheduler,kube-controller-managerweave-net,nvidia-device-plugin-daemonsetなど。</td>
     </tr>
