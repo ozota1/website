@@ -3,8 +3,8 @@ main:
     url: /about/
   - title: "Docs"
     url: /docs/
-  - title: "Posts"
-    url: /posts/
+  - title: "Resource"
+    url: /resource/
   - title: "Contact"
     url: /contact/
   - title: "Twitter"
@@ -15,7 +15,7 @@ docs:
   - title: Installation
     url: /docs/install-and-update
     children:
-      - title: "Install Guide"
+      - title: "・インストール方法"
         url: /docs/install-and-update#インストール方法
       - title: "・アンインストール方法"
         url: /docs/install-and-update#アンインストール方法
@@ -25,6 +25,8 @@ docs:
         url: /docs/install-and-update#外部サービスとの互換性
   - title: Tutorial
     url: /docs/tutorial
+  - title: FAQ
+    url: /docs/faq
   - title: How-to Guide
     url: /docs/how-to
     children:
@@ -70,5 +72,18 @@ tutorials:
     children:
       - title: "Training a model on CIFAR-10 Using KAMONOHASHI"
         url: /tutorial/cifar10
-
-
+resource:
+  - title: Slide Share
+    url: /resource/#Slide Share
+  - title: Flyer
+    url: /resource/#flyer
+faq:
+  - title: faq
+    url: /docs/faq
+    children:
+      - title: "一般的な質問"
+        url: /docs/faq#一般的な質問
+      - title: "インストールについて"
+        url: /docs/faq#インストールについて
+      - title: "KAMONOHASHIチームへの連絡"
+        url: /docs/faq#KAMONOHASHIチームへの連絡

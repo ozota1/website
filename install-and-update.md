@@ -59,7 +59,7 @@ KAMONOHASHIのクラスタは次の4種類のサーバーで構成されます
 * Kubernetes master用に用意したマシンにログインします
 * root userで次を実行します
 ```bash
-KQI_VERSION=1.0.1
+KQI_VERSION=1.0.3
 wget -O /tmp/deploy-tools-$KQI_VERSION.tar.gz https://github.com/KAMONOHASHI/kamonohashi/releases/download/$KQI_VERSION/deploy-tools-$KQI_VERSION.tar.gz
 mkdir -p /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
 cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
@@ -68,7 +68,10 @@ tar --strip=1 -xf /tmp/deploy-tools-$KQI_VERSION.tar.gz
 ```
 対話形式で設定が聞かれるので、下記に従って設定を入力します
 
-![ターミナル](/assets/images/kqi-terminal.png)
+<div align="center">
+<img src="/assets/images/kqi-terminal.png" alt="ターミナル">
+</div>
+
 
 
 対話形式で以下の項目の質問に答えます。[y/n]形式での質問は大文字の方がデフォルトの値です。
@@ -83,10 +86,10 @@ tar --strip=1 -xf /tmp/deploy-tools-$KQI_VERSION.tar.gz
 |SSHパスワード|SSHにパスワードを使用する場合は入力します。<br>SSH認証キー`~/.ssh/id_rsa`を使う場合は何も入力せずにEnterを押してこの項目はスキップします|
 |SUDOパスワード|パスワードなしでsudoコマンド実行可能な場合は何も入力せずにEnterを押してこの項目をスキップします|
 |プロキシを設定しますか？ [y/N]|プロキシ環境にデプロイする場合はyを入力して<br> http_proxy, https_proxy, no_proxy<br>を設定します<br>no_proxyはこれまでの入力内容を元に必要なものが自動生成されます。<br>自組織のドメイン等を生成されたno_proxyに更に追加することもできます|
-|KAMONOHASHIのadminパスワード|adminアカウントで使用する8文字以上のパスワードです。KAMONOHASHI Web UIログイン・DB接続、Object Storageへのログインに使用します。<br>一度構築に使用したパスワードはデプロイツールでは変更できません。パスワードを変える場合は、完全にデータを削除するか、パスワード変更手順を実施する必要があります。パスワード変更手順は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください|
+|KAMONOHASHIのadminパスワード|adminアカウントで使用する8文字以上のパスワードです。数字のみのパスワードは使用不可となっているので注意してください。KAMONOHASHI Web UIログイン・DB接続、Object Storageへのログインに使用します。<br>一度構築に使用したパスワードはデプロイツールでは変更できません。パスワードを変える場合は、完全にデータを削除するか、パスワード変更手順を実施する必要があります。パスワード変更手順は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください|
 
 これでKAMONOHASHIのインストールは完了です。
-[User Guide](/docs/how-to/user)や[Admin Guide](/docs/how-to/admin)を参考にKAMONOHASHIを用いたAI開発を開始しましょう！
+[チュートリアル](/docs/tutorial)に進みKAMONOHASHIを用いたAI開発を開始しましょう！
 
 ### カスタマイズしたクラスタの構築
 * ベーシッククラスタの構成では要件が足りず、カスタマイズしたい場合は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください
@@ -115,7 +118,7 @@ OLD_KQI_VERSION=1.0.0
 
 2. 次のコマンドを実施して新しいデプロイツール取得と設定ファイルのコピーを行います
 ```bash
-KQI_VERSION=1.0.1
+KQI_VERSION=1.0.3
 wget -O /tmp/deploy-tools-$KQI_VERSION.tar.gz https://github.com/KAMONOHASHI/kamonohashi/releases/download/$KQI_VERSION/deploy-tools-$KQI_VERSION.tar.gz
 mkdir -p /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
 cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
@@ -165,11 +168,14 @@ cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
   * デプロイツールやKAMONOHASHI WEBアプリ外で手で入れた設定は元に戻ります
 
 ## 外部サービスとの互換性
-動作環境は以下の通りです。
 
-|KAMONOHASHI|GitLab|MinIO| 
-|---|---|---|
-|v1.0.1|11.8以降|RELEASE.2019-01-23T23-18-58Z|
-|v1.0.0|11.7以前|RELEASE.2019-01-23T23-18-58Z|
+動作を確認した環境は以下の通りです。
+
+|KAMONOHASHI|GitLab|MinIO| LDAP|Kubernetes |
+|---|---|---|---|---|
+|v1.0.1以降|11.8以降|RELEASE.2019-01-23T23-18-58Z|version 3| v1.12.7,v1.14.1|
+|v1.0.0|11.7以前|RELEASE.2019-01-23T23-18-58Z|version 3| v1.12.7|
+
+v1.0.0では11.8以降のGitLabに対応していませんので注意してください。
 
 

@@ -131,14 +131,14 @@
             </li><li class="masthead__menu-item">
               <a href="/docs/" >Docs</a>
             </li><li class="masthead__menu-item">
-              <a href="/posts/" >Posts</a>
+              <a href="/resource/" >Resource</a>
             </li><li class="masthead__menu-item">
               <a href="/contact/" >Contact</a>
             </li><li class="masthead__menu-item">
               <a href="https://twitter.com/Kamonohashi_kqi" >Twitter</a>
             </li></ul>
         <button class="greedy-nav__dropdown"  type="button">
-            <span>v1.0.1 <i class="material-icons">arrow_drop_down</i> </span>
+            <span>v1.0.3 <i class="material-icons">arrow_drop_down</i> </span>
             <div class="dropdown-content">
                 <a href="/docs/supported-doc-versions" >other version</a>
             </div>         
@@ -211,7 +211,7 @@
             
             
 
-            <li><a href="/docs/install-and-update#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95" class="">Install Guide</a></li>
+            <li><a href="/docs/install-and-update#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95" class="">・インストール方法</a></li>
           
             
             
@@ -247,6 +247,17 @@
           
 
           <a href="/docs/tutorial"><span class="nav__sub-title">Tutorial</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/docs/faq"><span class="nav__sub-title">FAQ</span></a>
         
 
         
@@ -532,7 +543,7 @@
 <ul>
   <li>Kubernetes master用に用意したマシンにログインします</li>
   <li>root userで次を実行します
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">KQI_VERSION</span><span class="o">=</span>1.0.1
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">KQI_VERSION</span><span class="o">=</span>1.0.3
 wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION</span>.tar.gz https://github.com/KAMONOHASHI/kamonohashi/releases/download/<span class="nv">$KQI_VERSION</span>/deploy-tools-<span class="nv">$KQI_VERSION</span>.tar.gz
 <span class="nb">mkdir</span> <span class="nt">-p</span> /var/lib/kamonohashi/deploy-tools/<span class="nv">$KQI_VERSION</span>/
 <span class="nb">cd</span> /var/lib/kamonohashi/deploy-tools/<span class="nv">$KQI_VERSION</span>/
@@ -543,7 +554,9 @@ wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION<
   </li>
 </ul>
 
-<p><img src="/assets/images/kqi-terminal.png" alt="ターミナル" /></p>
+<div align="center">
+<img src="/assets/images/kqi-terminal.png" alt="ターミナル" />
+</div>
 
 <p>対話形式で以下の項目の質問に答えます。[y/n]形式での質問は大文字の方がデフォルトの値です。</p>
 
@@ -589,13 +602,13 @@ wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION<
     </tr>
     <tr>
       <td>KAMONOHASHIのadminパスワード</td>
-      <td>adminアカウントで使用する8文字以上のパスワードです。KAMONOHASHI Web UIログイン・DB接続、Object Storageへのログインに使用します。<br />一度構築に使用したパスワードはデプロイツールでは変更できません。パスワードを変える場合は、完全にデータを削除するか、パスワード変更手順を実施する必要があります。パスワード変更手順は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください</td>
+      <td>adminアカウントで使用する8文字以上のパスワードです。数字のみのパスワードは使用不可となっているので注意してください。KAMONOHASHI Web UIログイン・DB接続、Object Storageへのログインに使用します。<br />一度構築に使用したパスワードはデプロイツールでは変更できません。パスワードを変える場合は、完全にデータを削除するか、パスワード変更手順を実施する必要があります。パスワード変更手順は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください</td>
     </tr>
   </tbody>
 </table>
 
 <p>これでKAMONOHASHIのインストールは完了です。
-<a href="/docs/how-to/user">User Guide</a>や<a href="/docs/how-to/admin">Admin Guide</a>を参考にKAMONOHASHIを用いたAI開発を開始しましょう！</p>
+<a href="/docs/tutorial">チュートリアル</a>に進みKAMONOHASHIを用いたAI開発を開始しましょう！</p>
 
 <h3 id="カスタマイズしたクラスタの構築">カスタマイズしたクラスタの構築</h3>
 <ul>
@@ -637,7 +650,7 @@ wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION<
 </code></pre>
   </li>
   <li>次のコマンドを実施して新しいデプロイツール取得と設定ファイルのコピーを行います
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">KQI_VERSION</span><span class="o">=</span>1.0.1
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">KQI_VERSION</span><span class="o">=</span>1.0.3
 wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION</span>.tar.gz https://github.com/KAMONOHASHI/kamonohashi/releases/download/<span class="nv">$KQI_VERSION</span>/deploy-tools-<span class="nv">$KQI_VERSION</span>.tar.gz
 <span class="nb">mkdir</span> <span class="nt">-p</span> /var/lib/kamonohashi/deploy-tools/<span class="nv">$KQI_VERSION</span>/
 <span class="nb">cd</span> /var/lib/kamonohashi/deploy-tools/<span class="nv">$KQI_VERSION</span>/
@@ -645,6 +658,8 @@ wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION<
 <span class="nb">cd</span> /var/lib/kamonohashi/deploy-tools/
 <span class="nb">cp</span> <span class="nt">-nr</span> <span class="nv">$OLD_KQI_VERSION</span>/infra/conf <span class="nv">$KQI_VERSION</span>/infra/
 <span class="nb">cp</span> <span class="nt">-nr</span> <span class="nv">$OLD_KQI_VERSION</span>/kamonohashi/conf <span class="nv">$KQI_VERSION</span>/kamonohashi/
+<span class="nb">mkdir</span> <span class="nt">-p</span> old
+<span class="nb">mv</span> <span class="nv">$OLD_KQI_VERSION</span> old/
 </code></pre></div>    </div>
   </li>
 </ol>
@@ -701,26 +716,38 @@ wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION<
 </ul>
 
 <h2 id="外部サービスとの互換性">外部サービスとの互換性</h2>
-<p>動作環境は以下の通りです。</p>
+
+<p>動作を確認した環境は以下の通りです。</p>
 
 <table>
   <thead>
     <tr>
       <th>KAMONOHASHI</th>
       <th>GitLab</th>
+      <th>MinIO</th>
+      <th>LDAP</th>
+      <th>Kubernetes</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>v1.0.1</td>
+      <td>v1.0.1以降</td>
       <td>11.8以降</td>
+      <td>RELEASE.2019-01-23T23-18-58Z</td>
+      <td>version 3</td>
+      <td>v1.12.7,v1.14.1</td>
     </tr>
     <tr>
       <td>v1.0.0</td>
       <td>11.7以前</td>
+      <td>RELEASE.2019-01-23T23-18-58Z</td>
+      <td>version 3</td>
+      <td>v1.12.7</td>
     </tr>
   </tbody>
 </table>
+
+<p>v1.0.0では11.8以降のGitLabに対応していませんので注意してください。</p>
 
 
         
