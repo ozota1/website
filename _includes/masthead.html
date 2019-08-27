@@ -9,9 +9,9 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         {% unless logo_path == empty %}
-          <!-- <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt=""></a> -->
+          <!-- <a class="site-logo" href="https://kamonohashi.ai/"><img src="{{ logo_path | relative_url }}" alt=""></a> -->
         {% endunless %}
-        <a class="site-title" href="{{ '/' | relative_url }}">{{ site.masthead_title | default: site.title }}</a>
+        <a class="site-title" href="https://kamonohashi.ai/">{{ site.masthead_title | default: site.title }}</a>
         <ul class="visible-links">
           {%- for link in site.data.navigation.main -%}
             {%- if link.url contains '://' -%}
@@ -20,7 +20,7 @@
               {%- assign url = link.url | relative_url -%}
             {%- endif -%}
             <li class="masthead__menu-item">
-              <a href="https://kamonohashi.ai/" {% if link.description %}title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+              <a href="{{ url }}" {% if link.description %}title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
             </li>
           {%- endfor -%} 
         </ul>
