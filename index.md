@@ -99,7 +99,6 @@ feature_row5:
             <div class="archive__item-excerpt">
               <p>KAMONOHASHIは、Deep Learningのモデル開発を効率的に行うためのAI開発プラットフォームです。
 Deep Learningのモデル開発には、複雑な環境構築・計算リソースの確保・大量に発生するデータや学習履歴の管理といった、煩雑な作業が多く存在します。KAMONOHASHIはこれらの作業を削減し、AI開発者がモデル開発に集中できる環境を提供します。<br><br>KAMONOHASHIはOSSであり、どなたでも使用することができます。AI開発プロセスを最大限効率化した、最高のモデル開発を体験してみませんか。</p>
-              <p>Latest release <a href="https://github.com/KAMONOHASHI/kamonohashi/releases" >v1.0.1</a></p>
             </div>
             <div id="index__btn">
             <p><a href="https://github.com/KAMONOHASHI" class="btn btn--primary">GitHubをみる</a></p>
