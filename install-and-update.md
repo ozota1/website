@@ -5,12 +5,14 @@
 layout: single
 classes: wide
 title: "Installation"
-permalink: /docs/install-and-setup
+permalink: /docs/install-and-update
 sidebar:
   nav: "docs"
 ---
+本書ではKAMONOHASHIのインストール方法、アンインストール方法、バージョンアップ方法について説明します。
+
 ## インストール方法
-本書ではKAMONOHASHIのインストールについて説明します。
+
 
 ### ベーシッククラスタの構築
 
@@ -27,7 +29,7 @@ KAMONOHASHIのクラスタは次の4種類のサーバーで構成されます
 ベーシッククラスタ構成では、Kubernetes, KAMONOHASHI, Storage に1台ずつのマシンと、
 複数台のGPUサーバーを想定しています
 
-### 構築の準備
+#### 構築の準備
 * マシンを用意します
   * 物理または仮想のマシンを3台（Kubernetes, KAMONOHASHI, Storage　に使用）
   * NVIDIA GPUを搭載したマシンを1台以上
@@ -53,11 +55,11 @@ KAMONOHASHIのクラスタは次の4種類のサーバーで構成されます
 * GPUサーバーにGPUドライバをインストールします。
   * [NVIDIAドライバダウンロードサイト](https://www.nvidia.co.jp/Download/index.aspx?lang=jp)からインストール用ファイルがダウンロード可能です
 
-### 構築方法
+#### 構築方法
 * Kubernetes master用に用意したマシンにログインします
 * root userで次を実行します
 ```bash
-KQI_VERSION=1.0.0
+KQI_VERSION=1.0.1
 wget -O /tmp/deploy-tools-$KQI_VERSION.tar.gz https://github.com/KAMONOHASHI/kamonohashi/releases/download/$KQI_VERSION/deploy-tools-$KQI_VERSION.tar.gz
 mkdir -p /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
 cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
@@ -83,7 +85,18 @@ tar --strip=1 -xf /tmp/deploy-tools-$KQI_VERSION.tar.gz
 |プロキシを設定しますか？ [y/N]|プロキシ環境にデプロイする場合はyを入力して<br> http_proxy, https_proxy, no_proxy<br>を設定します<br>no_proxyはこれまでの入力内容を元に必要なものが自動生成されます。<br>自組織のドメイン等を生成されたno_proxyに更に追加することもできます|
 |KAMONOHASHIのadminパスワード|adminアカウントで使用する8文字以上のパスワードです。KAMONOHASHI Web UIログイン・DB接続、Object Storageへのログインに使用します。<br>一度構築に使用したパスワードはデプロイツールでは変更できません。パスワードを変える場合は、完全にデータを削除するか、パスワード変更手順を実施する必要があります。パスワード変更手順は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください|
 
+<<<<<<< HEAD:install-and-update.md
+これでKAMONOHASHIのインストールは完了です。
+[User Guide](/docs/how-to/user)や[Admin Guide](/docs/how-to/admin)を参考にKAMONOHASHIを用いたAI開発を開始しましょう！
+
+### カスタマイズしたクラスタの構築
+* ベーシッククラスタの構成では要件が足りず、カスタマイズしたい場合は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください
+
+
+## アンインストール方法
+=======
 ### アンインストール
+>>>>>>> upstream/md/v1.0.0:install-and-setup.md
 * `./deploy-basic-cluster.sh clean`を実行するとソフトウェアがアンインストールされます。
   * このコマンドではKAMONOHASHIの内部データ(データベース, ストレージのデータ)は削除しません
     * 特に、adminパスワードも保存されたままです
@@ -91,7 +104,76 @@ tar --strip=1 -xf /tmp/deploy-tools-$KQI_VERSION.tar.gz
   * 完全にデータを削除する場合は KAMONOHASHIノード, STORAGEノードの 2台で`/var/lib/kamonohashi` を削除してください
     * 特に、構築に失敗してやり直す際にパスワードも変更する場合はこのディレクトリを削除してください
     
-[User Guide](/docs/how-to/user)や[Admin Guide](/docs/how-to/admin)を参考にKAMONOHASHIを用いたAI開発を開始しましょう！
+## バージョンアップ
+バージョンアップには次の2種類のバージョンアップがあります
+* KAMONOHASHI Webアプリのみのバージョンアップ
+* k8sなども含めたインフラ全体のバージョンアップ
 
-## カスタマイズしたクラスタの構築
-* ベーシッククラスタの構成では要件が足りず、カスタマイズしたい場合は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください
+どちらもバージョンアップするバージョンのデプロイツールを準備する必要があります
+
+### デプロイツールの準備
+1. 現在のKAMONOHASHIのバージョンをシェル変数で指定します
+```bash:現在1.0.0を使用している場合
+OLD_KQI_VERSION=1.0.0
+```
+
+2. 次のコマンドを実施して新しいデプロイツール取得と設定ファイルのコピーを行います
+```bash
+KQI_VERSION=1.0.1
+wget -O /tmp/deploy-tools-$KQI_VERSION.tar.gz https://github.com/KAMONOHASHI/kamonohashi/releases/download/$KQI_VERSION/deploy-tools-$KQI_VERSION.tar.gz
+mkdir -p /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
+cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
+tar --strip=1 -xf /tmp/deploy-tools-$KQI_VERSION.tar.gz
+cd /var/lib/kamonohashi/deploy-tools/
+cp -nr $OLD_KQI_VERSION/infra/conf $KQI_VERSION/infra/
+cp -nr $OLD_KQI_VERSION/kamonohashi/conf $KQI_VERSION/kamonohashi/
+mkdir -p old
+mv $OLD_KQI_VERSION old/
+```
+
+### KAMONOHASHI Webアプリのみのバージョンアップ
+デプロイツールの準備を実施後に次を実施してください
+
+```bash
+cd /var/lib/kamonohashi/deploy-tools/1.0.1/kamonohashi/
+./deploy-kqi.sh update
+```
+
+### k8sなども含めたインフラ全体のバージョンアップ
+現在デプロイツールでは古いバージョンのアンインストールと新しいバージョンのインストールによるアップグレードのみ可能です。
+それは次を考慮しているためです。
+* k8sを2マイナーバージョン以上アップデートできる
+* マシンの移行も同じ方法でサポートできる
+* cordonとuncordonによる無停止アップグレードは、ディープラーニングの動いているシステムでは難しい
+  * ディープラーニングジョブがノードからはけるのに数日かかることからクラスタ全体のアップグレードでは数週間が必要になるためです
+
+インフラ全体のバージョンアップ手順は次になります
+* 古いバージョンのデプロイツールでアンインストールを実行
+  * 詳細はアンインストールの項目を参照
+
+```
+cd /var/lib/kamonohashi/deploy-tools/$OLD_KQI_VERSION/
+./deploy-basic-cluster.sh clean
+```
+
+*　新しいバージョンのデプロイツールでインストールを実行
+  * 詳細はインストールの項目を参照
+  * パスワードは初期構築時と同じものを指定してください
+  
+```
+cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
+./deploy-basic-cluster.sh deploy
+```
+
+* 注意事項
+  * デプロイツールやKAMONOHASHI WEBアプリ外で手で入れた設定は元に戻ります
+
+## 外部サービスとの互換性
+動作環境は以下の通りです。
+
+|KAMONOHASHI|GitLab|MinIO| 
+|---|---|---|
+|v1.0.1|11.8以降|RELEASE.2019-01-23T23-18-58Z|
+|v1.0.0|11.7以前|RELEASE.2019-01-23T23-18-58Z|
+
+

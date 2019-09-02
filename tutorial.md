@@ -15,7 +15,7 @@ sidebar:
 
 このチュートリアルを始める前に、以下のKAMONOHASHIのインストールが終わり、KAMONOHASHIにログインできることを確認してください。
 
-(参考) [KAMONOHASHIをインストールする](/docs/install-and-setup#インストール方法)
+(参考) [KAMONOHASHIをインストールする](/docs/install-and-update#インストール方法)
 
 
 ## はじめに

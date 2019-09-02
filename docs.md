@@ -19,7 +19,7 @@ feature_row1:
     alt: "placeholder image 1"
     title: "Installation and Setup"
     excerpt: "KAMONOHASHIをセットアップします。"
-    url: "/docs/install-and-setup"
+    url: "/docs/install-and-update"
 feature_row2:
   - image_path: /assets/images/illust_book.png
     alt: "placeholder image 2"
@@ -33,10 +33,11 @@ feature_row3:
     excerpt: "AI開発者向け、システム管理者向けの詳細なマニュアルです。"
     url: "/docs/how-to"
 ---
+
 ## <a href="/docs/concepts">Concepts</a>
 KAMONOHASHIを使用する上で必要な独自の概念やキーワードを説明します。
 
-## <a href="/docs/install-and-setup">Installation</a>
+## <a href="/docs/install-and-update">Installation</a>
 KAMONOHASHIのインストール方法について説明します。<br>
 **<font color="#094952">初めての方はまずこちらからご覧ください。</font>**
 
@@ -45,3 +46,6 @@ KAMONOHASHIを使用したAI開発プロセスを10分で学びます。
 
 ## <a href="/docs/how-to">How-to Guides</a>
 AI開発者・システム管理者向けの詳細なマニュアルです。
+
+## <a href="/docs/supported-doc-versions">Supported doc versions</a>
+以前のバージョンの KAMONOHASHI ドキュメントはこちらからご覧ください。
