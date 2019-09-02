@@ -12,8 +12,8 @@ sidebar:
 
 本ウェブサイトでは、現行版とその直前4バージョンのKAMONOHASHIドキュメントを含んでいます。
 
-## 現行版
-現在のバージョンは[v1.0.2](https://kamonohashi.ai/)です。
+## 最新版
+ - [latest](https://kamonohashi.ai/)
 
 ## 以前のバージョン
  - [v1.0.1](https://v1-0-1.kamonohashi.ai/docs/)
