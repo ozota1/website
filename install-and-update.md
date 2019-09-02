@@ -85,6 +85,7 @@ tar --strip=1 -xf /tmp/deploy-tools-$KQI_VERSION.tar.gz
 |プロキシを設定しますか？ [y/N]|プロキシ環境にデプロイする場合はyを入力して<br> http_proxy, https_proxy, no_proxy<br>を設定します<br>no_proxyはこれまでの入力内容を元に必要なものが自動生成されます。<br>自組織のドメイン等を生成されたno_proxyに更に追加することもできます|
 |KAMONOHASHIのadminパスワード|adminアカウントで使用する8文字以上のパスワードです。KAMONOHASHI Web UIログイン・DB接続、Object Storageへのログインに使用します。<br>一度構築に使用したパスワードはデプロイツールでは変更できません。パスワードを変える場合は、完全にデータを削除するか、パスワード変更手順を実施する必要があります。パスワード変更手順は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください|
 
+<<<<<<< HEAD:install-and-update.md
 これでKAMONOHASHIのインストールは完了です。
 [User Guide](/docs/how-to/user)や[Admin Guide](/docs/how-to/admin)を参考にKAMONOHASHIを用いたAI開発を開始しましょう！
 
@@ -93,6 +94,9 @@ tar --strip=1 -xf /tmp/deploy-tools-$KQI_VERSION.tar.gz
 
 
 ## アンインストール方法
+=======
+### アンインストール
+>>>>>>> upstream/md/v1.0.0:install-and-setup.md
 * `./deploy-basic-cluster.sh clean`を実行するとソフトウェアがアンインストールされます。
   * このコマンドではKAMONOHASHIの内部データ(データベース, ストレージのデータ)は削除しません
     * 特に、adminパスワードも保存されたままです
