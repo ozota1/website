@@ -18,7 +18,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="KAMONOHASHI">
 <meta property="og:title" content="Installation">
-<meta property="og:url" content="http://localhost:4000/docs/install-and-setup">
+<meta property="og:url" content="http://localhost:4000/docs/install-and-update">
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/docs/install-and-setup">
+<link rel="canonical" href="http://localhost:4000/docs/install-and-update">
 
 
 
@@ -116,11 +116,16 @@
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
 
-    <div class="masthead">
+    
+
+<div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a class="site-title" href="/">KAMONOHASHI</a>
+        
+          <!-- <a class="site-logo" href="/"><img src="/assets/images/logo_003.png" alt=""></a> -->
+        
+        <a class="site-title" href="https://kamonohashi.ai/">KAMONOHASHI</a>
         <ul class="visible-links"><li class="masthead__menu-item">
               <a href="/about/" >About</a>
             </li><li class="masthead__menu-item">
@@ -132,9 +137,19 @@
             </li><li class="masthead__menu-item">
               <a href="https://twitter.com/Kamonohashi_kqi" >Twitter</a>
             </li></ul>
+        <button class="greedy-nav__dropdown"  type="button">
+            <span>v1.0.0 <i class="material-icons">arrow_drop_down</i> </span>
+            <div class="dropdown-content">
+                <a href="/docs/supported-doc-versions" >other version</a>
+            </div>         
+        </button>
+
         
-        <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">Toggle Menu</span>
+
+       
+        
+        <button class="greedy-nav__toggle" type="button">
+          <span class="visually-hidden">Toggle menu</span>
           <div class="navicon"></div>
         </button>
         <ul class="hidden-links hidden"></ul>
@@ -184,7 +199,7 @@
           
           
 
-          <a href="/docs/install-and-setup"><span class="nav__sub-title">Installation</span></a>
+          <a href="/docs/install-and-update"><span class="nav__sub-title">Installation</span></a>
         
 
         
@@ -196,7 +211,7 @@
             
             
 
-            <li><a href="/docs/install-and-setup#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95" class="">Install Guide</a></li>
+            <li><a href="/docs/install-and-update#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95" class="">Install Guide</a></li>
           
             
             
@@ -204,7 +219,7 @@
             
             
 
-            <li><a href="/docs/install-and-setup#%E3%83%99%E3%83%BC%E3%82%B7%E3%83%83%E3%82%AF%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%BF%E3%81%AE%E6%A7%8B%E7%AF%89" class="">・ベーシッククラスタの構築</a></li>
+            <li><a href="/docs/install-and-update#%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95" class="">・アンインストール方法</a></li>
           
             
             
@@ -212,7 +227,7 @@
             
             
 
-            <li><a href="/docs/install-and-setup#%E6%A7%8B%E7%AF%89%E3%81%AE%E6%BA%96%E5%82%99" class="">・構築の準備</a></li>
+            <li><a href="/docs/install-and-update#%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%82%A2%E3%83%83%E3%83%97" class="">・バージョンアップ</a></li>
           
             
             
@@ -220,15 +235,7 @@
             
             
 
-            <li><a href="/docs/install-and-setup#%E6%A7%8B%E7%AF%89%E6%96%B9%E6%B3%95" class="">・構築方法</a></li>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/docs/install-and-setup#%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" class="">・アンインストール</a></li>
+            <li><a href="/docs/install-and-update#%E5%A4%96%E9%83%A8%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%A8%E3%81%AE%E4%BA%92%E6%8F%9B%E6%80%A7" class="">・外部サービスとの互換性</a></li>
           
         </ul>
         
@@ -428,8 +435,9 @@
 
       <section class="page__content" itemprop="text">
         
-        <h2 id="インストール方法">インストール方法</h2>
-<p>本書ではKAMONOHASHIのインストールについて説明します。</p>
+        <p>本書ではKAMONOHASHIのインストール方法、アンインストール方法、バージョンアップ方法について説明します。</p>
+
+<h2 id="インストール方法">インストール方法</h2>
 
 <h3 id="ベーシッククラスタの構築">ベーシッククラスタの構築</h3>
 
@@ -448,7 +456,7 @@
 <p>ベーシッククラスタ構成では、Kubernetes, KAMONOHASHI, Storage に1台ずつのマシンと、
 複数台のGPUサーバーを想定しています</p>
 
-<h3 id="構築の準備">構築の準備</h3>
+<h4 id="構築の準備">構築の準備</h4>
 <ul>
   <li>マシンを用意します
     <ul>
@@ -520,7 +528,7 @@
   </li>
 </ul>
 
-<h3 id="構築方法">構築方法</h3>
+<h4 id="構築方法">構築方法</h4>
 <ul>
   <li>Kubernetes master用に用意したマシンにログインします</li>
   <li>root userで次を実行します
@@ -586,7 +594,15 @@ wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION<
   </tbody>
 </table>
 
+<h3 id="カスタマイズしたクラスタの構築">カスタマイズしたクラスタの構築</h3>
+<ul>
+  <li>ベーシッククラスタの構成では要件が足りず、カスタマイズしたい場合は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください</li>
+</ul>
+
+<h2 id="アンインストール方法">アンインストール方法</h2>
+
 <h3 id="アンインストール">アンインストール</h3>
+
 <ul>
   <li><code class="highlighter-rouge">./deploy-basic-cluster.sh clean</code>を実行するとソフトウェアがアンインストールされます。
     <ul>
@@ -605,12 +621,112 @@ wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION<
   </li>
 </ul>
 
-<p><a href="/docs/how-to/user">User Guide</a>や<a href="/docs/how-to/admin">Admin Guide</a>を参考にKAMONOHASHIを用いたAI開発を開始しましょう！</p>
-
-<h2 id="カスタマイズしたクラスタの構築">カスタマイズしたクラスタの構築</h2>
+<h2 id="バージョンアップ">バージョンアップ</h2>
+<p>バージョンアップには次の2種類のバージョンアップがあります</p>
 <ul>
-  <li>ベーシッククラスタの構成では要件が足りず、カスタマイズしたい場合は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください</li>
+  <li>KAMONOHASHI Webアプリのみのバージョンアップ</li>
+  <li>k8sなども含めたインフラ全体のバージョンアップ</li>
 </ul>
+
+<p>どちらもバージョンアップするバージョンのデプロイツールを準備する必要があります</p>
+
+<h3 id="デプロイツールの準備">デプロイツールの準備</h3>
+<ol>
+  <li>現在のKAMONOHASHIのバージョンをシェル変数で指定します
+    <pre><code class="language-bash:現在1.0.0を使用している場合">OLD_KQI_VERSION=1.0.0
+</code></pre>
+  </li>
+  <li>次のコマンドを実施して新しいデプロイツール取得と設定ファイルのコピーを行います
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">KQI_VERSION</span><span class="o">=</span>1.0.0
+wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION</span>.tar.gz https://github.com/KAMONOHASHI/kamonohashi/releases/download/<span class="nv">$KQI_VERSION</span>/deploy-tools-<span class="nv">$KQI_VERSION</span>.tar.gz
+<span class="nb">mkdir</span> <span class="nt">-p</span> /var/lib/kamonohashi/deploy-tools/<span class="nv">$KQI_VERSION</span>/
+<span class="nb">cd</span> /var/lib/kamonohashi/deploy-tools/<span class="nv">$KQI_VERSION</span>/
+<span class="nb">tar</span> <span class="nt">--strip</span><span class="o">=</span>1 <span class="nt">-xf</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION</span>.tar.gz
+<span class="nb">cd</span> /var/lib/kamonohashi/deploy-tools/
+<span class="nb">cp</span> <span class="nt">-nr</span> <span class="nv">$OLD_KQI_VERSION</span>/infra/conf <span class="nv">$KQI_VERSION</span>/infra/
+<span class="nb">cp</span> <span class="nt">-nr</span> <span class="nv">$OLD_KQI_VERSION</span>/kamonohashi/conf <span class="nv">$KQI_VERSION</span>/kamonohashi/
+<span class="nb">mkdir</span> <span class="nt">-p</span> old
+<span class="nb">mv</span> <span class="nv">$OLD_KQI_VERSION</span> old/
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="kamonohashi-webアプリのみのバージョンアップ">KAMONOHASHI Webアプリのみのバージョンアップ</h3>
+<p>デプロイツールの準備を実施後に次を実施してください</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /var/lib/kamonohashi/deploy-tools/1.0.1/kamonohashi/
+./deploy-kqi.sh update
+</code></pre></div></div>
+
+<h3 id="k8sなども含めたインフラ全体のバージョンアップ">k8sなども含めたインフラ全体のバージョンアップ</h3>
+<p>現在デプロイツールでは古いバージョンのアンインストールと新しいバージョンのインストールによるアップグレードのみ可能です。
+それは次を考慮しているためです。</p>
+<ul>
+  <li>k8sを2マイナーバージョン以上アップデートできる</li>
+  <li>マシンの移行も同じ方法でサポートできる</li>
+  <li>cordonとuncordonによる無停止アップグレードは、ディープラーニングの動いているシステムでは難しい
+    <ul>
+      <li>ディープラーニングジョブがノードからはけるのに数日かかることからクラスタ全体のアップグレードでは数週間が必要になるためです</li>
+    </ul>
+  </li>
+</ul>
+
+<p>インフラ全体のバージョンアップ手順は次になります</p>
+<ul>
+  <li>古いバージョンのデプロイツールでアンインストールを実行
+    <ul>
+      <li>詳細はアンインストールの項目を参照</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /var/lib/kamonohashi/deploy-tools/$OLD_KQI_VERSION/
+./deploy-basic-cluster.sh clean
+</code></pre></div></div>
+
+<p>*　新しいバージョンのデプロイツールでインストールを実行</p>
+<ul>
+  <li>詳細はインストールの項目を参照</li>
+  <li>パスワードは初期構築時と同じものを指定してください</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
+./deploy-basic-cluster.sh deploy
+</code></pre></div></div>
+
+<ul>
+  <li>注意事項
+    <ul>
+      <li>デプロイツールやKAMONOHASHI WEBアプリ外で手で入れた設定は元に戻ります</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="外部サービスとの互換性">外部サービスとの互換性</h2>
+<p>動作環境は以下の通りです。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>KAMONOHASHI</th>
+      <th>GitLab</th>
+      <th>MinIO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>v1.0.1以降</td>
+      <td>11.8以降</td>
+      <td>RELEASE.2019-01-23T23-18-58Z</td>
+    </tr>
+    <tr>
+      <td>v1.0.0</td>
+      <td>11.7以前</td>
+      <td>RELEASE.2019-01-23T23-18-58Z</td>
+    </tr>
+  </tbody>
+</table>
+
 
         
       </section>
