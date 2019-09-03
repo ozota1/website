@@ -59,7 +59,7 @@ KAMONOHASHIのクラスタは次の4種類のサーバーで構成されます
 * Kubernetes master用に用意したマシンにログインします
 * root userで次を実行します
 ```bash
-KQI_VERSION=1.0.3
+KQI_VERSION=1.1.0
 wget -O /tmp/deploy-tools-$KQI_VERSION.tar.gz https://github.com/KAMONOHASHI/kamonohashi/releases/download/$KQI_VERSION/deploy-tools-$KQI_VERSION.tar.gz
 mkdir -p /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
 cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
@@ -118,7 +118,7 @@ OLD_KQI_VERSION=1.0.0
 
 2. 次のコマンドを実施して新しいデプロイツール取得と設定ファイルのコピーを行います
 ```bash
-KQI_VERSION=1.0.3
+KQI_VERSION=1.1.0
 wget -O /tmp/deploy-tools-$KQI_VERSION.tar.gz https://github.com/KAMONOHASHI/kamonohashi/releases/download/$KQI_VERSION/deploy-tools-$KQI_VERSION.tar.gz
 mkdir -p /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
 cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
@@ -134,7 +134,7 @@ mv $OLD_KQI_VERSION old/
 デプロイツールの準備を実施後に次を実施してください
 
 ```bash
-cd /var/lib/kamonohashi/deploy-tools/1.0.1/kamonohashi/
+cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/kamonohashi/
 ./deploy-kqi.sh update
 ```
 
