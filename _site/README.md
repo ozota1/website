@@ -1,6 +1,17 @@
 # KAMONOHASHI documentation
-このリポジトリには、[KAMONOHASHIのWebサイトとドキュメント](https://kamonohashi.ai/)を構築するために必要な情報があります。
-Contributorを募集しています！
+このリポジトリは、[KAMONOHASHIのWebサイトとドキュメント](https://kamonohashi.ai/)のソースコードです。
+
+## ブランチ構成
+ブランチ構成は以下の通りです。
+
+|バージョン\用途 |ソースコード+サイト生成  |デプロイ  |
+|---|---|---|
+|最新  |master |latest  |
+| v1.0.3 |md/v1.0.3  |v1.0.3  |
+| v1.0.2 |md/v1.0.2  |v1.0.2  |
+| v1.0.1 |md/v1.0.1  |v1.0.1  |
+| v1.0.0 |md/v1.0.0  |v1.0.0  |
+
 
 ## Contributing to the docs
 GitHubアカウントにこのリポジトリのコピーを作成するには、画面の右上にある[ フォーク ]ボタンをクリックします。フォークしたリポジトリに必要な変更を加え、それらの変更をKAMONOHASHIチームに送信する準備ができたら、新しいプルリクエストを作成します。
