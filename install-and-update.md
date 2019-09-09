@@ -59,7 +59,7 @@ KAMONOHASHIのクラスタは次の4種類のサーバーで構成されます
 * Kubernetes master用に用意したマシンにログインします
 * root userで次を実行します
 ```bash
-KQI_VERSION=1.0.2
+KQI_VERSION=1.1.0
 wget -O /tmp/deploy-tools-$KQI_VERSION.tar.gz https://github.com/KAMONOHASHI/kamonohashi/releases/download/$KQI_VERSION/deploy-tools-$KQI_VERSION.tar.gz
 mkdir -p /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
 cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
@@ -118,7 +118,7 @@ OLD_KQI_VERSION=1.0.0
 
 2. 次のコマンドを実施して新しいデプロイツール取得と設定ファイルのコピーを行います
 ```bash
-KQI_VERSION=1.0.2
+KQI_VERSION=1.1.0
 wget -O /tmp/deploy-tools-$KQI_VERSION.tar.gz https://github.com/KAMONOHASHI/kamonohashi/releases/download/$KQI_VERSION/deploy-tools-$KQI_VERSION.tar.gz
 mkdir -p /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
 cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
@@ -134,9 +134,12 @@ mv $OLD_KQI_VERSION old/
 デプロイツールの準備を実施後に次を実施してください
 
 ```bash
-cd /var/lib/kamonohashi/deploy-tools/1.0.1/kamonohashi/
+cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/kamonohashi/
 ./deploy-kqi.sh update
 ```
+
+1.1.0以前のバージョンから1.1.0へのアップデートを行った場合、既存のノードにはNotebook実行可否オプションが"実行しない"に設定されます。
+既存のノードでノートブック機能を利用可能とするには、システム設定のノード管理より、Notebookの実行可否オプションを"実行する"に変更してください。
 
 ### k8sなども含めたインフラ全体のバージョンアップ
 現在デプロイツールでは古いバージョンのアンインストールと新しいバージョンのインストールによるアップグレードのみ可能です。
@@ -167,13 +170,26 @@ cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
 * 注意事項
   * デプロイツールやKAMONOHASHI WEBアプリ外で手で入れた設定は元に戻ります
 
+## DBの切り戻しを含むバージョンダウン
+1.1.0へのバージョンアップには、DBのテーブル変更が含まれています。
+そのため1.1.0から以前のバージョンに戻す際には、下記手順によりDBの切り戻し作業を実施する必要があります(作業中はKAMONOHASHIのサービスが停止します)。
+なおこの作業を行った場合、ノートブック機能で管理していた情報は削除されるため注意してください。
+
+1. `/var/lib/kamonohashi/deploy-tools/1.1.0/rollback/rollback.sh`を実行します。
+2. デプロイされているKAMONOHASHIのバージョンに`1.1.0`、戻したい時点のMigrationファイルに`20190515093033_v1.0.0`を入力します。
+3. DBの切り戻し処理が終了するまで数分間待機します。
+4. 切り戻し処理終了後、再デプロイ可能なバージョンの一覧が表示されるため、戻したいバージョンを指定します。
+5. KAMONOHASHIのWEB画面にアクセスし、バージョン情報より、バージョンが戻っていることを確認します。
+
+![DB切り戻し操作の様子](/assets/images/kqi-rollback.png)
+
 ## 外部サービスとの互換性
 
 動作を確認した環境は以下の通りです。
 
 |KAMONOHASHI|GitLab|MinIO| LDAP|Kubernetes |
 |---|---|---|---|---|
-|v1.0.1, v1.0.2|11.8以降|RELEASE.2019-01-23T23-18-58Z|version 3| v1.12.7,v1.14.1|
+|v1.0.1以降|11.8以降|RELEASE.2019-01-23T23-18-58Z|version 3| v1.12.7,v1.14.1|
 |v1.0.0|11.7以前|RELEASE.2019-01-23T23-18-58Z|version 3| v1.12.7|
 
 v1.0.0では11.8以降のGitLabに対応していませんので注意してください。
