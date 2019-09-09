@@ -25,7 +25,7 @@ docs:
         url: /docs/install-and-update#DBの切り戻しを含むバージョンダウン
       - title: "・外部サービスとの互換性"
         url: /docs/install-and-update#外部サービスとの互換性
-- title: Tutorial
+  - title: Tutorial
     url: /docs/tutorial
   - title: FAQ
     url: /docs/faq
