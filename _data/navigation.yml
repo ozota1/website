@@ -21,6 +21,8 @@ docs:
         url: /docs/install-and-update#アンインストール方法
       - title: "・バージョンアップ"
         url: /docs/install-and-update#バージョンアップ
+      - title: "・DBの切り戻しを含むバージョンダウン"
+        url: /docs/install-and-update#DBの切り戻しを含むバージョンダウン
       - title: "・外部サービスとの互換性"
         url: /docs/install-and-update#外部サービスとの互換性
   - title: Tutorial
@@ -48,6 +50,8 @@ docs:
         url: /docs/how-to/user#学習管理
       - title: "・推論管理"
         url: /docs/how-to/user#推論管理
+      - title: "・ノートブック管理"
+        url: /docs/how-to/user#ノートブック管理
       - title: "Admin Guide"
         url: /docs/how-to/admin/
       - title: "・事前準備"

@@ -138,7 +138,7 @@
               <a href="https://twitter.com/Kamonohashi_kqi" >Twitter</a>
             </li></ul>
         <button class="greedy-nav__dropdown"  type="button">
-            <span>v1.0.3 <i class="material-icons">arrow_drop_down</i> </span>
+            <span>v1.1.0 <i class="material-icons">arrow_drop_down</i> </span>
             <div class="dropdown-content">
                 <a href="/docs/supported-doc-versions" >other version</a>
             </div>         
@@ -228,6 +228,14 @@
             
 
             <li><a href="/docs/install-and-update#%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%82%A2%E3%83%83%E3%83%97" class="">・バージョンアップ</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/install-and-update#DB%E3%81%AE%E5%88%87%E3%82%8A%E6%88%BB%E3%81%97%E3%82%92%E5%90%AB%E3%82%80%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%80%E3%82%A6%E3%83%B3" class="">・DBの切り戻しを含むバージョンダウン</a></li>
           
             
             
@@ -345,6 +353,14 @@
             
 
             <li><a href="/docs/how-to/user#%E6%8E%A8%E8%AB%96%E7%AE%A1%E7%90%86" class="">・推論管理</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/how-to/user#%E3%83%8E%E3%83%BC%E3%83%88%E3%83%96%E3%83%83%E3%82%AF%E7%AE%A1%E7%90%86" class="">・ノートブック管理</a></li>
           
             
             
@@ -592,6 +608,8 @@ Gitリポジトリ、Docker Registryは1テナントに複数登録すること�
   </tbody>
 </table>
 
+<p>なお<a href="https://github.com/">GitHub</a>については、初期構築時に編集不可として自動登録されます。</p>
+
 <p><a name="new_registry"></a></p>
 
 <h4 id="registry情報の新規作成">Registry情報の新規作成</h4>
@@ -714,6 +732,8 @@ Gitリポジトリ、Docker Registryは1テナントに複数登録すること�
     </tr>
   </tbody>
 </table>
+
+<p>なお<a href="https://hub.docker.com/">Docker Hub</a>および<a href="https://ngc.nvidia.com/catalog/landing">NGC</a>については、初期構築時に編集不可として自動登録されます。</p>
 
 <h4 id="テナントの新規作成">テナントの新規作成</h4>
 <p>テナントを作成します。</p>
@@ -965,11 +985,27 @@ KAMONOHASHI自体を構成する管理サーバ群は含みません。</p>
 <p><a name="new_node"></a></p>
 
 <h3 id="ノードの追加">ノードの追加</h3>
-<p>KAMONOHASHIの管理下に新しくノードを追加します。</p>
-
-<p>ノードの新規登録画面は、以下のフローで表示できます。</p>
-
+<p>KAMONOHASHIの管理下に新しくノードを追加します。
+Kubernetes masterノード上での作業および、KAMONOHASHIのWeb画面上での作業が必要となります。</p>
+<h4 id="kubernetes-masterノード上での作業">Kubernetes masterノード上での作業</h4>
 <ol>
+  <li>GPUサーバの準備(Ubuntu Server 16.04およびGPUドライバのインストール)とKAMONOHASHIと同一ネットワークへの接続</li>
+  <li>Kubernetes masterノードにssh</li>
+  <li><code class="highlighter-rouge">/var/lib/kamonohashi/deploy-tools/{バージョン番号}/infra/conf/inventory</code> を編集し、gpu-nodeを追記(下記例を参照)</li>
+  <li><code class="highlighter-rouge">/var/lib/kamonohashi/deploy-tools/{バージョン番号}/infra/deploy-kqi-infra.sh scale</code> を実行</li>
+  <li>SSHパスワード、SUDOパスワードを入力し、処理が完了するまで待機</li>
+</ol>
+
+<h5 id="inventoryファイルへのgpu-node追記例">inventoryファイルへのgpu-node追記例</h5>
+<p>既に利用しているGPUのホスト名がgpu1、追加するGPUのホスト名がgpu2の場合、以下のようにgpu2を追記します。</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[gpu-node]
+gpu1
+gpu2
+</code></pre></div></div>
+
+<h4 id="kamonohashiのweb画面上での作業">KAMONOHASHIのWeb画面上での作業</h4>
+<ol>
+  <li>ブラウザからkamonohashiにアクセス</li>
   <li>管理権限を持つユーザでログイン</li>
   <li>[システム管理] → [ノード管理]を選択し、ノード一覧画面を表示する</li>
   <li>画面右上の新規作成ボタンを押下する</li>
@@ -1004,13 +1040,18 @@ KAMONOHASHI自体を構成する管理サーバ群は含みません。</p>
     </tr>
     <tr>
       <td>アクセスレベル</td>
-      <td>任意</td>
+      <td>必須</td>
       <td>ノードへのアクセスレベルを設定できる。アクセスレベルについての詳細は後述。Privateを選択した場合、アクセスを許可するテナントを選択するUIが表示される。指定しなかった場合はDisabledが設定される。</td>
     </tr>
     <tr>
       <td>TensorBoard実行可否</td>
-      <td>任意</td>
+      <td>必須</td>
       <td>ノード上でTensorBoardコンテナの実行を許可するか指定できる。</td>
+    </tr>
+    <tr>
+      <td>Notebook実行可否</td>
+      <td>必須</td>
+      <td>ノード上でNotebookコンテナの実行を許可するか指定できる。</td>
     </tr>
   </tbody>
 </table>
