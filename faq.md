@@ -85,6 +85,14 @@ FAQではよくある質問とそれに対する答えが読めます。
 | minio	| Amazon S3互換のAPIを提供し、オブジェクトストレージにアクセスするツール|	KAMONOHASHIのWebアプリケーションが、NFSサーバにアクセスする際に利用するため導入します。|
 |nfs-common	|NFSマウントを行うために利用するパッケージ |	KAMONOHASHI環境で共通で導入します。オブジェクトストレージサーバからNFSサーバをマウントするために利用します。最新バージョンを利用します。|
 
+#### ログの場所を教えてください
+
+| ログ種別 | マシン | パス |
+|---|---|---|
+| 構築ツール | Kubernetes Master | `/var/log/kamonohashi/kubespray.log`|
+| KAMONOHASHI | KAMONOHASHIマシン | `/var/log/kamonohashi/platypus-web-api/`配下の各ファイル |
+
+
 ## KAMONOHASHIチームへの連絡
 
 #### バグを発見した場合や要望がある場合どこへ連絡したらよいですか？

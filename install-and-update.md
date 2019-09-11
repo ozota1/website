@@ -42,7 +42,7 @@ KAMONOHASHIのクラスタは次の4種類のサーバーで構成されます
   |Kubernetes master|2 コア|2 GB||
   |KAMONOHASHI|4 コア|8 GB|/var/lib/に10GB以上の空き容量|
   |Storage|1 コア|2 GB|/var/lib/に学習データ・学習結果ファイル分の空き容量|
-  |GPUサーバー|2 コア|2 GB|Fermi (2.1)より後の世代のNVIDIA GPU|
+  |GPUサーバー|2 コア|2 GB|Fermi (2.1)より後の世代のNVIDIA GPU, /var/libに1学習分のデータが入る空容量|
 
 * 全てのマシンに Ubuntu Server 16.04 をインストールします
 * 全てのマシンに共通のアカウントでsshログインできるようにします
