@@ -621,13 +621,13 @@ wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION<
     <ul>
       <li>このコマンドではKAMONOHASHIの内部データ(データベース, ストレージのデータ)は削除しません
         <ul>
-          <li>特に、adminパスワードも保存されたままです</li>
+          <li>adminパスワードも保存されたままです</li>
         </ul>
       </li>
       <li>再度デプロイすると過去のデータベース, ストレージの中身を引き続き使用します</li>
       <li>完全にデータを削除する場合は KAMONOHASHIノード, STORAGEノードの 2台で<code class="highlighter-rouge">/var/lib/kamonohashi</code> を削除してください
         <ul>
-          <li>特に、構築に失敗してやり直す際にパスワードも変更する場合はこのディレクトリを削除してください</li>
+          <li>構築に失敗してやり直す際にパスワードも変更する場合はこのディレクトリを削除してください</li>
         </ul>
       </li>
     </ul>
