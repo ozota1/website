@@ -86,20 +86,14 @@ sed -i s/docker18.09.6-3/docker18.09.5-3/ infra/conf/group_vars/all.yml
 |プロキシを設定しますか？ [y/N]|プロキシ環境にデプロイする場合はyを入力して<br> http_proxy, https_proxy, no_proxy<br>を設定します<br>no_proxyはこれまでの入力内容を元に必要なものが自動生成されます。<br>自組織のドメイン等を生成されたno_proxyに更に追加することもできます|
 |KAMONOHASHIのadminパスワード|adminアカウントで使用する8文字以上のパスワードです。KAMONOHASHI Web UIログイン・DB接続、Object Storageへのログインに使用します。<br>一度構築に使用したパスワードはデプロイツールでは変更できません。パスワードを変える場合は、完全にデータを削除するか、パスワード変更手順を実施する必要があります。パスワード変更手順は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください|
 
-これでKAMONOHASHIのインストールは完了です。
-[User Guide](/docs/how-to/user)や[Admin Guide](/docs/how-to/admin)を参考にKAMONOHASHIを用いたAI開発を開始しましょう！
+### アンインストール
 
-### カスタマイズしたクラスタの構築
-* ベーシッククラスタの構成では要件が足りず、カスタマイズしたい場合は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください
-
-
-## アンインストール方法
 * `./deploy-basic-cluster.sh clean`を実行するとソフトウェアがアンインストールされます。
   * このコマンドではKAMONOHASHIの内部データ(データベース, ストレージのデータ)は削除しません
-    * 特に、adminパスワードも保存されたままです
+    * adminパスワードも保存されたままです
   * 再度デプロイすると過去のデータベース, ストレージの中身を引き続き使用します
   * 完全にデータを削除する場合は KAMONOHASHIノード, STORAGEノードの 2台で`/var/lib/kamonohashi` を削除してください
-    * 特に、構築に失敗してやり直す際にパスワードも変更する場合はこのディレクトリを削除してください
+    * 構築に失敗してやり直す際にパスワードも変更する場合はこのディレクトリを削除してください
     
 ## バージョンアップ
 バージョンアップには次の2種類のバージョンアップがあります

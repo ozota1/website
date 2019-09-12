@@ -11,10 +11,8 @@ sidebar:
 ---
 
 
-
-## 最新版
- - [latest](https://kamonohashi.ai/)
-
+## 最新のバージョン
+- [latest](https://kamonohashi.ai/)
 ## 以前のバージョン
  - [v1.0.0](https://v1-0-0.kamonohashi.ai/docs)
 

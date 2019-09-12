@@ -138,7 +138,7 @@
               <a href="https://twitter.com/Kamonohashi_kqi" >Twitter</a>
             </li></ul>
         <button class="greedy-nav__dropdown"  type="button">
-            <span>v1.0.1 <i class="material-icons">arrow_drop_down</i> </span>
+            <span>v1.0.0 <i class="material-icons">arrow_drop_down</i> </span>
             <div class="dropdown-content">
                 <a href="/docs/supported-doc-versions" >other version</a>
             </div>         
@@ -595,7 +595,8 @@ wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION<
   </tbody>
 </table>
 
-<p>これでKAMONOHASHIのインストールは完了です。
+<p>«««&lt; HEAD:install-and-update.md
+これでKAMONOHASHIのインストールは完了です。
 <a href="/docs/how-to/user">User Guide</a>や<a href="/docs/how-to/admin">Admin Guide</a>を参考にKAMONOHASHIを用いたAI開発を開始しましょう！</p>
 
 <h3 id="カスタマイズしたクラスタの構築">カスタマイズしたクラスタの構築</h3>
@@ -604,23 +605,40 @@ wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION<
 </ul>
 
 <h2 id="アンインストール方法">アンインストール方法</h2>
-<ul>
-  <li><code class="highlighter-rouge">./deploy-basic-cluster.sh clean</code>を実行するとソフトウェアがアンインストールされます。
-    <ul>
-      <li>このコマンドではKAMONOHASHIの内部データ(データベース, ストレージのデータ)は削除しません
-        <ul>
-          <li>特に、adminパスワードも保存されたままです</li>
-        </ul>
-      </li>
-      <li>再度デプロイすると過去のデータベース, ストレージの中身を引き続き使用します</li>
-      <li>完全にデータを削除する場合は KAMONOHASHIノード, STORAGEノードの 2台で<code class="highlighter-rouge">/var/lib/kamonohashi</code> を削除してください
-        <ul>
-          <li>特に、構築に失敗してやり直す際にパスワードも変更する場合はこのディレクトリを削除してください</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+<p>=======</p>
+<h3 id="アンインストール">アンインストール</h3>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <blockquote>
+            <blockquote>
+              <p>upstream/md/v1.0.0:install-and-setup.md</p>
+              <ul>
+                <li><code class="highlighter-rouge">./deploy-basic-cluster.sh clean</code>を実行するとソフトウェアがアンインストールされます。
+                  <ul>
+                    <li>このコマンドではKAMONOHASHIの内部データ(データベース, ストレージのデータ)は削除しません
+                      <ul>
+                        <li>特に、adminパスワードも保存されたままです</li>
+                      </ul>
+                    </li>
+                    <li>再度デプロイすると過去のデータベース, ストレージの中身を引き続き使用します</li>
+                    <li>完全にデータを削除する場合は KAMONOHASHIノード, STORAGEノードの 2台で<code class="highlighter-rouge">/var/lib/kamonohashi</code> を削除してください
+                      <ul>
+                        <li>特に、構築に失敗してやり直す際にパスワードも変更する場合はこのディレクトリを削除してください</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </blockquote>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
 
 <h2 id="バージョンアップ">バージョンアップ</h2>
 <p>バージョンアップには次の2種類のバージョンアップがあります</p>
