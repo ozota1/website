@@ -85,6 +85,14 @@ tar --strip=1 -xf /tmp/deploy-tools-$KQI_VERSION.tar.gz
 |プロキシを設定しますか？ [y/N]|プロキシ環境にデプロイする場合はyを入力して<br> http_proxy, https_proxy, no_proxy<br>を設定します<br>no_proxyはこれまでの入力内容を元に必要なものが自動生成されます。<br>自組織のドメイン等を生成されたno_proxyに更に追加することもできます|
 |KAMONOHASHIのadminパスワード|adminアカウントで使用する8文字以上のパスワードです。KAMONOHASHI Web UIログイン・DB接続、Object Storageへのログインに使用します。<br>一度構築に使用したパスワードはデプロイツールでは変更できません。パスワードを変える場合は、完全にデータを削除するか、パスワード変更手順を実施する必要があります。パスワード変更手順は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください|
 
+
+
+### カスタマイズしたクラスタの構築
+* ベーシッククラスタの構成では要件が足りず、カスタマイズしたい場合は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください
+
+
+## アンインストール方法
+
 ### アンインストール
 
 * `./deploy-basic-cluster.sh clean`を実行するとソフトウェアがアンインストールされます。
@@ -109,7 +117,7 @@ OLD_KQI_VERSION=1.0.0
 
 2. 次のコマンドを実施して新しいデプロイツール取得と設定ファイルのコピーを行います
 ```bash
-KQI_VERSION=1.0.1
+KQI_VERSION=1.0.0
 wget -O /tmp/deploy-tools-$KQI_VERSION.tar.gz https://github.com/KAMONOHASHI/kamonohashi/releases/download/$KQI_VERSION/deploy-tools-$KQI_VERSION.tar.gz
 mkdir -p /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
 cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
@@ -163,7 +171,7 @@ cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
 
 |KAMONOHASHI|GitLab|MinIO| 
 |---|---|---|
-|v1.0.1|11.8以降|RELEASE.2019-01-23T23-18-58Z|
+|v1.0.1以降|11.8以降|RELEASE.2019-01-23T23-18-58Z|
 |v1.0.0|11.7以前|RELEASE.2019-01-23T23-18-58Z|
 
 
