@@ -434,6 +434,22 @@
 
             <li><a href="/docs/how-to/cli" class="">CLI Guide</a></li>
           
+            
+            
+
+            
+            
+
+            <li><a href="/docs/how-to/infra" class="">Infra Guide</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/how-to/infra/#%E3%83%90%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E3%81%A8%E3%83%AA%E3%82%B9%E3%83%88%E3%82%A2" class="">・バックアップとリストア</a></li>
+          
         </ul>
         
       </li>
@@ -529,7 +545,7 @@
           <td style="text-align: left">GPUサーバー</td>
           <td style="text-align: left">2 コア</td>
           <td style="text-align: left">2 GB</td>
-          <td style="text-align: left">Fermi (2.1)より後の世代のNVIDIA GPU</td>
+          <td style="text-align: left">Fermi (2.1)より後の世代のNVIDIA GPU, /var/libに1学習分のデータが入る空容量</td>
         </tr>
       </tbody>
     </table>
@@ -637,13 +653,13 @@ wget <span class="nt">-O</span> /tmp/deploy-tools-<span class="nv">$KQI_VERSION<
     <ul>
       <li>このコマンドではKAMONOHASHIの内部データ(データベース, ストレージのデータ)は削除しません
         <ul>
-          <li>特に、adminパスワードも保存されたままです</li>
+          <li>adminパスワードも保存されたままです</li>
         </ul>
       </li>
       <li>再度デプロイすると過去のデータベース, ストレージの中身を引き続き使用します</li>
       <li>完全にデータを削除する場合は KAMONOHASHIノード, STORAGEノードの 2台で<code class="highlighter-rouge">/var/lib/kamonohashi</code> を削除してください
         <ul>
-          <li>特に、構築に失敗してやり直す際にパスワードも変更する場合はこのディレクトリを削除してください</li>
+          <li>構築に失敗してやり直す際にパスワードも変更する場合はこのディレクトリを削除してください</li>
         </ul>
       </li>
     </ul>
