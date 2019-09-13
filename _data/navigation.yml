@@ -93,5 +93,7 @@ faq:
         url: /docs/faq#一般的な質問
       - title: "インストールについて"
         url: /docs/faq#インストールについて
+      - title: "システム運用全般について"
+        url: /docs/faq#システム運用全般について
       - title: "KAMONOHASHIチームへの連絡"
         url: /docs/faq#KAMONOHASHIチームへの連絡
