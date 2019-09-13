@@ -9,8 +9,8 @@ permalink: /contact/
 
 ---
 ## KAMONOHASHI についてのお問い合わせ
-KAMONOHASHI についてのお問合せは、以下メールアドレスよりご連絡ください。
-後ほど担当者よりご連絡させていただきます。お気軽にご連絡ください。
+弊社では、KAMONOHASHI導入支援や保守サポートを有償にて行っております。
+ご希望の場合は以下メールアドレスよりご連絡ください。
 
 ```
 kamonohashi-support@jp.nssol.nipponsteel.com
