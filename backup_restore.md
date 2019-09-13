@@ -1,4 +1,16 @@
-# KAMONOHASHIのバックアップとリストア
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: single
+classes: wide
+title: Infra Guide
+permalink: /docs/how-to/infra/
+sidebar:
+  nav: "docs"
+---
+
+## バックアップとリストア
 
 KAMONOHASHIのバックアップ・リストアには、
 * マシン・Linux OSのバックアップ・リストア
@@ -9,7 +21,7 @@ KAMONOHASHIのバックアップ・リストアには、
 マシン・Linux OSのバックアップ・リストアについてはご自身の環境に合わせて、
 仮想マシンのバックアップリストアやdumpコマンドの利用を検討してください
 
-## バックアップ対象と設定方法
+### バックアップ対象と設定方法
 バックアップの対象は次の２つになります
 * KAMONOHASHIのデータベース
 * KAMONOHASHIで利用しているNFSストレージ
@@ -29,10 +41,10 @@ KAMONOHASHIのバックアップ・リストアには、
 * /var/lib/kamonohashi/deploy-tools/<version>/kamonohashi/conf/settings.ymlを開きます
 * BackupPostgresTimerOptions__WeeklyTimeSchedule, BackupPostgresTimerOptions__MaxNumberOfBackupFilesのコメントアウトを外し、編集します
 
-|プロパティ名|解説|設定例|
-|---|---|---|
-|BackupPostgresTimerOptions__WeeklyTimeSchedule|取得日を指定します。曜日=時刻のフォーマットで記載します。;区切りで複数日時を指定可能です|"Sun=01:00:00;Mon=01:00:00"|
-|BackupPostgresTimerOptions__MaxNumberOfBackupFiles|保管する世代数です。指定した世代数を超える古いファイルは削除されます|"2"|
+|プロパティ名|解説　　　　　|設定例|
+|---|-------------|---|
+|BackupPostgresTimerOptions__WeeklyTimeSchedule|取得日を指定します。曜日=時刻のフォーマットで記載します。<br>;区切りで複数日時を指定可能です|"Sun=01:00:00;Mon=01:00:00"|
+|BackupPostgresTimerOptions__MaxNumberOfBackupFiles|保管する世代数です。指定した世代数を超える古いファイルは削除されます<br>|"2"|
 
 * 修正例は次になります。インデントをDeployOptionsとそろえてください
 

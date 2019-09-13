@@ -70,6 +70,10 @@ docs:
         url: /docs/how-to/admin/#メニュー
       - title: "CLI Guide"
         url: /docs/how-to/cli
+      - title: "Infra Guide"
+        url: /docs/how-to/infra
+      - title: "・バックアップとリストア"
+        url: /docs/how-to/infra/#バックアップとリストア
 tutorials:
   - title: Tutorial
     url: /tutorial/

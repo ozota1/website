@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>KAMONOHASHIドキュメントがサポートしているバージョン - KAMONOHASHI</title>
+<!-- begin _includes/seo.html --><title>Infra Guide - KAMONOHASHI</title>
 <meta name="description" content="KAMONOHASHI(カモノハシ)は、Deep Learningのモデル開発を効率的に行うためのAI開発プラットフォームです。 AI開発プロセスを最大限に効率化し、最高のモデル開発を体験してみませんか。">
 
 
@@ -17,8 +17,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="KAMONOHASHI">
-<meta property="og:title" content="KAMONOHASHIドキュメントがサポートしているバージョン">
-<meta property="og:url" content="http://localhost:4000/docs/supported-doc-versions">
+<meta property="og:title" content="Infra Guide">
+<meta property="og:url" content="http://localhost:4000/docs/how-to/infra/">
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/docs/supported-doc-versions">
+<link rel="canonical" href="http://localhost:4000/docs/how-to/infra/">
 
 
 
@@ -462,7 +462,7 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="KAMONOHASHIドキュメントがサポートしているバージョン">
+    <meta itemprop="headline" content="Infra Guide">
     
     
     
@@ -470,7 +470,7 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">KAMONOHASHIドキュメントがサポートしているバージョン
+          <h1 id="page-title" class="page__title" itemprop="headline">Infra Guide
 </h1>
           
         </header>
@@ -478,21 +478,124 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>本ウェブサイトでは、現行版とその直前4バージョンのKAMONOHASHIドキュメントを含んでいます。</p>
+        <h2 id="バックアップとリストア">バックアップとリストア</h2>
 
-<h2 id="最新のバージョン">最新のバージョン</h2>
+<p>KAMONOHASHIのバックアップ・リストアには、</p>
 <ul>
-  <li><a href="https://kamonohashi.ai/">latest</a></li>
+  <li>マシン・Linux OSのバックアップ・リストア</li>
+  <li>KAMONOHASHIのアプリレベルのバックアップ・リストア</li>
 </ul>
 
-<h2 id="以前のバージョン">以前のバージョン</h2>
+<p>の２種類の方法があります。
+この内、KAMONOHASHIのアプリレベルのバックアップ・リストアについて解説します。
+マシン・Linux OSのバックアップ・リストアについてはご自身の環境に合わせて、
+仮想マシンのバックアップリストアやdumpコマンドの利用を検討してください</p>
+
+<h3 id="バックアップ対象と設定方法">バックアップ対象と設定方法</h3>
+<p>バックアップの対象は次の２つになります</p>
 <ul>
-  <li><a href="https://v1-0-3.kamonohashi.ai/docs/">v1.0.3</a></li>
-  <li><a href="https://v1-0-2.kamonohashi.ai/docs/">v1.0.2</a></li>
-  <li><a href="https://v1-0-1.kamonohashi.ai/docs/">v1.0.1</a></li>
-  <li><a href="https://v1-0-0.kamonohashi.ai/docs/">v1.0.0</a></li>
+  <li>KAMONOHASHIのデータベース</li>
+  <li>KAMONOHASHIで利用しているNFSストレージ</li>
 </ul>
 
+<h3 id="データベース">データベース</h3>
+
+<h4 id="データベースのバックアップと設定">データベースのバックアップと設定</h4>
+<ul>
+  <li>/var/lib/kamonohashi/postgresql/backupにダンプファイルが生成されます</li>
+  <li>kqi-backup-<日付>.sqlというファイル名になります</日付></li>
+  <li>デフォルトでは毎週日曜日01:00に生成され、1世代のみ保管されます</li>
+  <li>世代数と取得日付を変更可能です</li>
+</ul>
+
+<h5 id="バックアップ設定を変更する">バックアップ設定を変更する</h5>
+
+<ul>
+  <li>Kubernetes Masterマシンにrootでログインします。</li>
+  <li>/var/lib/kamonohashi/deploy-tools/<version>/kamonohashi/conf/settings.ymlを開きます</version></li>
+  <li>BackupPostgresTimerOptions__WeeklyTimeSchedule, BackupPostgresTimerOptions__MaxNumberOfBackupFilesのコメントアウトを外し、編集します</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>プロパティ名</th>
+      <th>解説　　　　　</th>
+      <th>設定例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>BackupPostgresTimerOptions__WeeklyTimeSchedule</td>
+      <td>取得日を指定します。曜日=時刻のフォーマットで記載します。<br />;区切りで複数日時を指定可能です</td>
+      <td>“Sun=01:00:00;Mon=01:00:00”</td>
+    </tr>
+    <tr>
+      <td>BackupPostgresTimerOptions__MaxNumberOfBackupFiles</td>
+      <td>保管する世代数です。指定した世代数を超える古いファイルは削除されます<br /></td>
+      <td>“2”</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>
+    <p>修正例は次になります。インデントをDeployOptionsとそろえてください</p>
+  </li>
+  <li>before
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>appsettings:
+DeployOptions__GpuNodes: ...
+...
+#   BackupPostgresTimerOptions__WeeklyTimeSchedule: "Sun=01:00:00"
+#   BackupPostgresTimerOptions__MaxNumberOfBackupFiles: "1"
+</code></pre></div>    </div>
+  </li>
+  <li>after
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>appsettings:
+DeployOptions__GpuNodes: ...
+...
+BackupPostgresTimerOptions__WeeklyTimeSchedule: "Sun=01:00:00;Mon=01:00:00"
+BackupPostgresTimerOptions__MaxNumberOfBackupFiles: "2"
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="データベースの復元">データベースの復元</h4>
+<h5 id="kubernetes-masterマシンでの作業">Kubernetes Masterマシンでの作業</h5>
+<ul>
+  <li>Kubernetes Masterマシンにrootでログインします。</li>
+  <li>次を実行し、kamonohashiを停止します
+<code class="highlighter-rouge">/var/lib/kamonohashi/deploy-tools/&lt;version&gt;/kamonohashi/deploy-kqi.sh clean</code></li>
+</ul>
+
+<h5 id="kamonohashiマシンでの作業">KAMONOHASHIマシンでの作業</h5>
+<ul>
+  <li>KAMONOHASHIマシンにrootでログインします</li>
+  <li><code class="highlighter-rouge">/var/lib/kamonohashi/postgresql/backup/</code>に復元したいデータベースのダンプファイル(kqi-backup-<日付>.sql)を配置してください</日付></li>
+  <li>次のコマンドを実行します
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mv /var/lib/kamonohashi/postgres/data /var/tmp/
+docker run -d --name restore-postgres -v /var/lib/kamonohashi/postgresql/data/:/var/lib/postgresql/data postgres:10
+docker cp /var/lib/kamonohashi/postgresql/backup/kqi-backup-20190908.sql restore-postgres:/kqi-backup-20190908.sql
+docker exec -it restore-postgres psql -U postgres -f /kqi-backup-20190908.sql
+docker stop restore-postgres
+docker rm restore-postgres
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h5 id="kubernetes-masterマシンでの作業-1">Kubernetes Masterマシンでの作業</h5>
+<ul>
+  <li>Kubernetes Masterマシンにrootでログインします。</li>
+  <li>次を実行し、kamonohashiを起動します
+<code class="highlighter-rouge">/var/lib/kamonohashi/deploy-tools/&lt;version&gt;/kamonohashi/deploy-kqi.sh deploy</code></li>
+</ul>
+
+<h3 id="nfsストレージ">NFSストレージ</h3>
+<ul>
+  <li>NFSの中身をrsyncやバックアップ製品で保護してください</li>
+  <li>ベーシッククラスタではstorageの/var/lib/kamonohashi/nfsを保護します</li>
+  <li>保護した方法に合わせてリストアしてください</li>
+</ul>
 
         
       </section>

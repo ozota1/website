@@ -56,6 +56,9 @@
 <loc>http://localhost:4000/docs/how-to/admin/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/docs/how-to/infra/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/docs/how-to/cli/</loc>
 </url>
 <url>
