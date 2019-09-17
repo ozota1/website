@@ -10,7 +10,7 @@ sidebar:
   nav: "docs"
 ---
 
-本ウェブサイトでは、現行版とその直前4バージョンのKAMONOHASHIドキュメントを含んでいます。
+本ウェブサイトでは、現行版と以前のバージョンのKAMONOHASHIドキュメントを含んでいます。
 
 ## 最新のバージョン
  - [latest](https://kamonohashi.ai/)
