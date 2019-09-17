@@ -11,7 +11,11 @@ sidebar:
 ---
 
 ## Slide Share
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/1llaUlnqU0LCNO" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe><a href="//www.slideshare.net/Kamonohashi/deep-learningkamonohashi-147863128" title="Deep Learningへの取り組み、およびKAMONOHASHIのご紹介" target="_blank">Deep Learningへの取り組み、およびKAMONOHASHIのご紹介<i class="material-icons blue">exit_to_app</i></a>
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/1llaUlnqU0LCNO" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe><a href="//www.slideshare.net/Kamonohashi/deep-learningkamonohashi-147863128" title="&lt;AI開発者向け&gt;Deep Learningへの取り組み、およびKAMONOHASHIのご紹介" target="_blank">&lt;AI開発者向け&gt;Deep Learningへの取り組みおよびKAMONOHASHIのご紹介<i class="material-icons blue">exit_to_app</i></a>
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/FwG9Lxp0tW87Xc" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <a href="//www.slideshare.net/Kamonohashi/aikamonohashi" title="＜インフラ管理者向け＞チームでのAI開発を支援するAI開発プラットフォームKAMONOHASHI" target="_blank">＜インフラ管理者向け＞チームでのAI開発を支援するAI開発プラットフォームKAMONOHASHI
+<i class="material-icons blue">exit_to_app</i></a>
 
 ## flyer
 <img src="/assets/images/kamonohashi_flyer_thumbnail.png" alt="">  
