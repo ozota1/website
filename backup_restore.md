@@ -30,7 +30,7 @@ KAMONOHASHIのバックアップ・リストアには、
 ### データベース
 
 #### データベースのバックアップと設定
-* /var/lib/kamonohashi/postgresql/backupにダンプファイルが生成されます
+* KAMONOHASHIマシンの/var/lib/kamonohashi/postgresql/backupにダンプファイルが生成されます
 * kqi-backup-<日付>.sqlというファイル名になります
 * デフォルトでは毎週日曜日01:00に生成され、1世代のみ保管されます
 * 世代数と取得日付を変更可能です
@@ -43,12 +43,13 @@ KAMONOHASHIのバックアップ・リストアには、
 
 |プロパティ名|解説　　　　　|設定例|
 |---|-------------|---|
-|BackupPostgresTimerOptions__WeeklyTimeSchedule|取得日を指定します。曜日=時刻のフォーマットで記載します。<br>;区切りで複数日時を指定可能です|"Sun=01:00:00;Mon=01:00:00"|
+|BackupPostgresTimerOptions__WeeklyTimeSchedule|取得日を指定します。曜日=時刻のフォーマットで記載します。曜日は英語表記の先頭3文字で指定します。<br>;区切りで複数日時を指定可能です|"Sun=01:00:00;Mon=01:00:00"|
 |BackupPostgresTimerOptions__MaxNumberOfBackupFiles|保管する世代数です。指定した世代数を超える古いファイルは削除されます<br>|"2"|
 
 * 修正例は次になります。インデントをDeployOptionsとそろえてください
 
 * before
+
 ```
 appsettings:
   DeployOptions__GpuNodes: ...
@@ -58,6 +59,7 @@ appsettings:
 ```
 
 * after
+
 ```
 appsettings:
   DeployOptions__GpuNodes: ...
@@ -75,12 +77,29 @@ appsettings:
 ##### KAMONOHASHIマシンでの作業
 * KAMONOHASHIマシンにrootでログインします
 * `/var/lib/kamonohashi/postgresql/backup/`に復元したいデータベースのダンプファイル(kqi-backup-<日付>.sql)を配置してください
-* 次のコマンドを実行します
+* 次のコマンドを実行し、ダンプファイル名を変数に設定します
+
 ```
-mv /var/lib/kamonohashi/postgres/data /var/tmp/
+DUMP_FILE=kqi-backup-<日付>.sql
+```
+
+* 既存のデータベースのデータを別の場所に退避します
+
+```
+mv /var/lib/kamonohashi/postgresql/data /var/tmp/
+```
+
+* リストアコマンドを実行します
+
+```
 docker run -d --name restore-postgres -v /var/lib/kamonohashi/postgresql/data/:/var/lib/postgresql/data postgres:10
-docker cp /var/lib/kamonohashi/postgresql/backup/kqi-backup-20190908.sql restore-postgres:/kqi-backup-20190908.sql
-docker exec -it restore-postgres psql -U postgres -f /kqi-backup-20190908.sql
+docker cp /var/lib/kamonohashi/postgresql/backup/$DUMP_FILE restore-postgres:/$DUMP_FILE
+docker exec -it restore-postgres psql -U postgres -f /$DUMP_FILE
+```
+
+* 完了後に次のコマンドを実施します
+
+```
 docker stop restore-postgres
 docker rm restore-postgres
 ```
