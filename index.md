@@ -375,9 +375,9 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 
             <h3 class="archive__item-title">リリース情報</h3>
             <div class="archive__item-excerpt">
+              <p>2019/09/17 v{{ site.version}} をリリースしました</p>
               <p>2019/09/09 v1.1.0をリリースしました</p>
               <p>2019/08/16 v1.0.3をリリースしました</p>
-              <p>2019/07/12 v1.0.2をリリースしました</p>
             </div>
             <div>
               <p><a href="https://github.com/KAMONOHASHI/kamonohashi/releases" class="btn btn--primary">一覧をみる</a></p>  
