@@ -59,7 +59,7 @@ KAMONOHASHIのクラスタは次の4種類のサーバーで構成されます
 * Kubernetes master用に用意したマシンにログインします
 * root userで次を実行します
 ```bash
-KQI_VERSION= {{ site.version }} 
+KQI_VERSION={{ site.version }} 
 wget -O /tmp/deploy-tools-$KQI_VERSION.tar.gz https://github.com/KAMONOHASHI/kamonohashi/releases/download/$KQI_VERSION/deploy-tools-$KQI_VERSION.tar.gz
 mkdir -p /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
 cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
