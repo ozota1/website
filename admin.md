@@ -276,6 +276,7 @@ Kubernetes masterノード上での作業および、KAMONOHASHIのWeb画面上�
 1. GPUサーバの準備(Ubuntu Server 16.04およびGPUドライバのインストール)とKAMONOHASHIと同一ネットワークへの接続
 1. Kubernetes masterノードにssh
 1. `/var/lib/kamonohashi/deploy-tools/{バージョン番号}/infra/conf/inventory` を編集し、gpu-nodeを追記(下記例を参照)
+1. `/var/lib/kamonohashi/deploy-tools/{バージョン番号}/infra/deploy-kqi-infra.sh prepare` を実行
 1. `/var/lib/kamonohashi/deploy-tools/{バージョン番号}/infra/deploy-kqi-infra.sh scale` を実行
 1. SSHパスワード、SUDOパスワードを入力し、処理が完了するまで待機
 
