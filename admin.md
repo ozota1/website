@@ -29,7 +29,15 @@ KAMONOHASHIを利用するにあたり、事前に設定しておく内容は以
 テナントには、Gitリポジトリ、Docker Registryおよびオブジェクトストレージが関連付けられ、それぞれ複数のテナント間で共有可能です。
 Gitリポジトリ、Docker Registryは1テナントに複数登録することが可能です。
 
-初期状態では、「Sandbox」という名前のテナントが用意されています。
+初期状態では、下記の情報が登録されており、adminはSandboxというテナントに所属しています。
+
+|項目|初期登録情報|詳細|
+|---|---|---|
+|テナント|Sandbox|GitHub, official-docker-hubを登録済み|
+|Git|GitHub|[GitHub](https://github.com)|
+|Git|GitLab.com|[GitLab.com](https://gitlab.com)|
+|レジストリ|official-docker-hub|[dockerhub](https://hub.docker.com/)|
+|レジストリ|ngc|[NVIDIA GPU Cloud](https://ngc.nvidia.com/catalog/containers)|
 
 
 ### テナントの作成
