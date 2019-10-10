@@ -118,7 +118,7 @@ OLD_KQI_VERSION=1.0.0
 
 2. 次のコマンドを実施して新しいデプロイツール取得と設定ファイルのコピーを行います
 ```bash
-KQI_VERSION= {{ site.version }} 
+KQI_VERSION={{ site.version }} 
 wget -O /tmp/deploy-tools-$KQI_VERSION.tar.gz https://github.com/KAMONOHASHI/kamonohashi/releases/download/$KQI_VERSION/deploy-tools-$KQI_VERSION.tar.gz
 mkdir -p /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
 cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
