@@ -398,3 +398,20 @@ gpu2
 3. アクセス権を削除したいロールをクリックし、背景を青から白に変える。
 4. 全ての変更が完了したら、右下の「更新」ボタンを選択する
 
+## ストレージ
+学習に使用するデータや学習結果を保存するためにストレージが必要です。
+
+### ストレージの編集
+KAMONOHASHIに登録しているストレージの情報を変更します。
+KAMONOHASHIのWeb画面上での作業および再デプロイに備えてKubernetes masterノード上での作業が必要となります。
+
+#### KAMONOHASHIのWeb画面上での作業
+1. ブラウザからkamonohashiにアクセス
+1. 管理権限を持つユーザでログイン
+1. [システム管理] → [ストレージ管理]を選択し、ストレージ一覧画面を表示する
+1. 編集したいストレージ情報を選択する
+1. ストレージ編集画面にて編集し、右下の「保存」ボタンを押下する
+
+#### Kubernetes masterノード上での作業
+1. Kubernetes masterノードにssh
+1. `/var/lib/kamonohashi/deploy-tools/{バージョン番号}/kamonohashi/conf/settings.yml` を開き、appsettingsのDeployOptionsを編集し保存する
