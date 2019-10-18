@@ -83,7 +83,9 @@ tutorials:
       - title: "Training a model on CIFAR-10 Using KAMONOHASHI"
         url: /tutorial/cifar10
 resource:
-  - title: Slide Share
+  - title: youtube
+    url: /resource/#youtube  
+  - title: slide share
     url: /resource/#Slide Share
   - title: Flyer
     url: /resource/#flyer
