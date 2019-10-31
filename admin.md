@@ -29,7 +29,15 @@ KAMONOHASHIを利用するにあたり、事前に設定しておく内容は以
 テナントには、Gitリポジトリ、Docker Registryおよびオブジェクトストレージが関連付けられ、それぞれ複数のテナント間で共有可能です。
 Gitリポジトリ、Docker Registryは1テナントに複数登録することが可能です。
 
-初期状態では、「Sandbox」という名前のテナントが用意されています。
+初期状態では、下記の情報が登録されており、adminはSandboxというテナントに所属しています。
+
+|項目|初期登録情報|詳細|
+|---|---|---|
+|テナント|Sandbox|GitHub, official-docker-hubを登録済み|
+|Git|GitHub|[GitHub](https://github.com)|
+|Git|GitLab.com|[GitLab.com](https://gitlab.com)|
+|レジストリ|official-docker-hub|[dockerhub](https://hub.docker.com/)|
+|レジストリ|ngc|[NVIDIA GPU Cloud](https://ngc.nvidia.com/catalog/containers)|
 
 
 ### テナントの作成
@@ -41,8 +49,6 @@ Gitリポジトリ、Docker Registryは1テナントに複数登録すること�
 1. テナントの作成
 
 ストレージ情報、Git情報、Docker Registry情報については、過去に登録したものを再度利用する場合、改めて登録しなおす必要はありません。
-
-<a name="new_storage"></a>
 
 #### ストレージ情報の新規登録
 
@@ -69,8 +75,6 @@ Gitリポジトリ、Docker Registryは1テナントに複数登録すること�
 |NFSサーバ |必須  | NFSサーバのホスト名またはIPアドレス |
 |NFS共有ルートディレクトリ |必須  | マウントする際の共有ルートディレクトリポイント |
 
-<a name="new_git"></a>
-
 #### Git情報の新規登録
 テナントが利用するGitリポジトリの情報を登録します。
 
@@ -87,13 +91,11 @@ Git情報の新規登録は、以下のフローで実行できます。
 |項目  |要否  |説明  |
 |---|---|---|
 |名前  |必須  |識別名。管理者が各登録情報を識別しやすいような、任意の名前を入力する。 |
-|リポジトリURL  |必須  |リポジトリにgitコマンドでアクセスする際の基底URLを入力する。<br>（例）https://git.kamonohashi.ai:8080  |
 |Git種別  |必須  |GitLabやGitHubなど、Gitサービスのプロバイダを選択する。  |
-|API URL  |必須  |リポジトリにREST APIでアクセスする際の基底URLを入力する。<br>（例）https://git.kamonohashi.ai:8080  |
+|リポジトリURL  |必須  |リポジトリにgitコマンドでアクセスする際の基底URLを入力する。<br>（例）https://git.kamonohashi.ai:8080|
+|API URL  |必須  |リポジトリにREST APIでアクセスする際の基底URLを入力する。<br>リポジトリURLと同様のものが自動入力されるため、変更の必要がある場合はトグルボタンを選択し、編集する。|
 
 なお[GitHub](https://github.com/)については、初期構築時に編集不可として自動登録されます。
-
-<a name="new_registry"></a>
 
 #### Registry情報の新規作成
 
@@ -122,10 +124,10 @@ Registry情報の新規登録は、以下のフローで実行できます。
 |---|---|---|
 |レジストリ名  |必須  |識別名。管理者が各登録情報を識別しやすいような名前を入力する。英数字およびハイフンのみが使用可能。 |
 |種別  |必須  |DockerHubを選択する。  |
-|ホスト名  |必須  |イメージ名に使用されるレジストリのFQDNまたはIPアドレスを入力する。  |
-|ポート番号  |必須  |イメージ名に使用されるレジストリのポート番号を入力する。  |
-|API URL  |必須  |レジストリにREST APIでアクセスする際の基底URLを入力する。<br>（例）https://registry-server:5555  |
-|URL  |必須  |レジストリにdockerコマンドでアクセスする際の基底URLを入力する。<br>（例）https://registry-server:5555  |
+|ホスト名  |必須  |イメージ名に使用されるレジストリのFQDNまたはIPアドレスを入力する。<br>（例）registry-server|
+|ポート番号  |必須  |イメージ名に使用されるレジストリのポート番号を入力する。<br>（例）5555|
+|API URL  |必須  |レジストリにREST APIでアクセスする際の基底URLを入力する。<br>https://ホスト名:ポート番号のように自動入力されるため、変更の必要がある場合はトグルボタンを選択し、編集する。|
+|URL  |必須  |レジストリにdockerコマンドでアクセスする際の基底URLを入力する。<br>https://ホスト名:ポート番号のように自動入力されるため、変更の必要がある場合はトグルボタンを選択し、編集する。|
 
 ##### GitLab APIの場合
 
@@ -133,13 +135,11 @@ Registry情報の新規登録は、以下のフローで実行できます。
 |---|---|---|
 |レジストリ名  |必須  |識別名。管理者が各登録情報を識別しやすいような名前を入力する。英数字およびハイフンのみが使用可能。 |
 |種別  |必須  |GitLabを選択する。  |
-|ホスト名  |必須  |イメージ名に使用されるレジストリのFQDNまたはIPアドレスを入力する。  |
-|ポート番号  |必須  |イメージ名に使用されるレジストリのポート番号を入力する。  |
-|API URL  |必須  |レジストリにREST APIでアクセスする際の基底URLを入力する。基本的にはGitLabのWeb URLと等しい。<br>（例）https://registry-server/gitlab  |
-|URL  |必須  |レジストリにdockerコマンドでアクセスする際の基底URLを入力する。<br> 基本的にポート番号はWeb URLではなくレジストリのポート番号となる。<br>（例）https://registry-server:5555/gitlab  |
+|ホスト名  |必須  |イメージ名に使用されるレジストリのFQDNまたはIPアドレスを入力する。<br>（例）registry-server|
+|ポート番号  |必須  |イメージ名に使用されるレジストリのポート番号を入力する。<br>（例）5555|
+|API URL  |必須  |レジストリにREST APIでアクセスする際の基底URLを入力する。基本的にはGitLabのWeb URLと等しい。<br>https://ホスト名:ポート番号のように自動入力されるため、変更の必要がある場合はトグルボタンを選択し、編集する。|
+|URL  |必須  |レジストリにdockerコマンドでアクセスする際の基底URLを入力する。<br> 基本的にポート番号はWeb URLではなくレジストリのポート番号となる。<br>https://ホスト名:ポート番号のように自動入力されるため、変更の必要がある場合はトグルボタンを選択し、編集する。|
 |プロジェクト名  |任意  |プロジェクトパスを、"オーナー名(ユーザ名またはグループ名)/プロジェクト名"の形式で入力する。<br>（例）kamonohashi/sample  |
-
-なお[Docker Hub](https://hub.docker.com/)および[NGC](https://ngc.nvidia.com/catalog/landing)については、初期構築時に編集不可として自動登録されます。
 
 #### テナントの新規作成
 テナントを作成します。
@@ -267,8 +267,6 @@ LDAPユーザに対して、システムロールの付与や、Sandbox以外の
 ノードとは、KAMONOHASHIに管理される物理的あるいは仮想的な計算用コンピュータを指します。
 KAMONOHASHI自体を構成する管理サーバ群は含みません。
 
-<a name="new_node"></a>
-
 ### ノードの追加
 KAMONOHASHIの管理下に新しくノードを追加します。
 Kubernetes masterノード上での作業および、KAMONOHASHIのWeb画面上での作業が必要となります。
@@ -276,6 +274,7 @@ Kubernetes masterノード上での作業および、KAMONOHASHIのWeb画面上�
 1. GPUサーバの準備(Ubuntu Server 16.04およびGPUドライバのインストール)とKAMONOHASHIと同一ネットワークへの接続
 1. Kubernetes masterノードにssh
 1. `/var/lib/kamonohashi/deploy-tools/{バージョン番号}/infra/conf/inventory` を編集し、gpu-nodeを追記(下記例を参照)
+1. `/var/lib/kamonohashi/deploy-tools/{バージョン番号}/infra/deploy-kqi-infra.sh prepare` を実行
 1. `/var/lib/kamonohashi/deploy-tools/{バージョン番号}/infra/deploy-kqi-infra.sh scale` を実行
 1. SSHパスワード、SUDOパスワードを入力し、処理が完了するまで待機
 
@@ -383,8 +382,6 @@ gpu2
     - 特定のシステムロールを持つユーザのみに公開されるメニュー（e.g. テナント管理）
     - テナントを横断する、システム全体に関連した情報を取り扱う
 
-<a name="menu-access"></a>
-
 ### メニューアクセス管理
 
 メニューアクセス管理画面では、全メニューを一覧で確認できます。
@@ -401,3 +398,20 @@ gpu2
 3. アクセス権を削除したいロールをクリックし、背景を青から白に変える。
 4. 全ての変更が完了したら、右下の「更新」ボタンを選択する
 
+## ストレージ
+学習に使用するデータや学習結果を保存するためにストレージが必要です。
+
+### ストレージの編集
+KAMONOHASHIに登録しているストレージの情報を変更します。
+KAMONOHASHIのWeb画面上での作業および再デプロイに備えてKubernetes masterノード上での作業が必要となります。
+
+#### KAMONOHASHIのWeb画面上での作業
+1. ブラウザからkamonohashiにアクセス
+1. 管理権限を持つユーザでログイン
+1. [システム管理] → [ストレージ管理]を選択し、ストレージ一覧画面を表示する
+1. 編集したいストレージ情報を選択する
+1. ストレージ編集画面にて編集し、右下の「保存」ボタンを押下する
+
+#### Kubernetes masterノード上での作業
+1. Kubernetes masterノードにssh
+1. `/var/lib/kamonohashi/deploy-tools/{バージョン番号}/kamonohashi/conf/settings.yml` を開き、appsettingsのDeployOptionsを編集し保存する

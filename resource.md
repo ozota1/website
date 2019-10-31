@@ -10,6 +10,10 @@ sidebar:
   nav: "resource"
 ---
 
+## Youtube
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MKCWf_XLD-I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<a href="https://www.youtube.com/embed/tltp7jBkEuQ" target="_blank">KAMONOHASHIをインストールする</a>
 ## Slide Share
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/1llaUlnqU0LCNO" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe><a href="//www.slideshare.net/Kamonohashi/deep-learningkamonohashi-147863128" title="&lt;AI開発者向け&gt;Deep Learningへの取り組み、およびKAMONOHASHIのご紹介" target="_blank">&lt;AI開発者向け&gt;Deep Learningへの取り組みおよびKAMONOHASHIのご紹介<i class="material-icons blue">exit_to_app</i></a>

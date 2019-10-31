@@ -118,7 +118,7 @@ OLD_KQI_VERSION=1.0.0
 
 2. 次のコマンドを実施して新しいデプロイツール取得と設定ファイルのコピーを行います
 ```bash
-KQI_VERSION= {{ site.version }} 
+KQI_VERSION={{ site.version }} 
 wget -O /tmp/deploy-tools-$KQI_VERSION.tar.gz https://github.com/KAMONOHASHI/kamonohashi/releases/download/$KQI_VERSION/deploy-tools-$KQI_VERSION.tar.gz
 mkdir -p /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
 cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
@@ -170,13 +170,37 @@ cd /var/lib/kamonohashi/deploy-tools/$KQI_VERSION/
 * 注意事項
   * デプロイツールやKAMONOHASHI WEBアプリ外で手で入れた設定は元に戻ります
 
-## DBの切り戻しを含むバージョンダウン
-1.0.3以前から1.1.0以降へのバージョンアップには、DBのテーブル変更が含まれています。
-そのため1.1.0から以前のバージョンに戻す際には、下記手順によりDBの切り戻し作業を実施する必要があります(作業中はKAMONOHASHIのサービスが停止します)。
-なおこの作業を行った場合、ノートブック機能で管理していた情報は削除されるため注意してください。
+## バージョンダウン
 
-1. `/var/lib/kamonohashi/deploy-tools/1.1.1/rollback/rollback.sh`を実行します。
-2. デプロイされているKAMONOHASHIのバージョンに`1.1.1`、戻したい時点のMigrationファイルに`20190515093033_v1.0.0`を入力します。
+### KAMONOHASHI Webアプリのバージョンダウン
+
+バージョンダウンは、バージョンアップ以前のデプロイツールを用いることで行います。以前に利用したデプロイツールは、k8sノードで以下のコマンドを実行することで確認できます。
+
+```bash
+ls /var/lib/kamonohashi/deploy-tools/old
+```
+
+確認した中で、バージョンダウンする番号をメモし、以下のコマンドを実行します。
+
+```bash
+cd /var/lib/kamonohashi/deploy-tools/old/{バージョン番号}/kamonohashi/
+./deploy-kqi.sh update
+```
+
+### DBの切り戻しを含むバージョンダウン
+
+KAMONOHASHIのアップデートを行う際に、下記のバージョンではDBに対するマイグレーション適用が実施され、テーブル変更が行われています。そのためマイグレーション適用後のバージョンから、それ以前のバージョンに戻す際には、切り戻し用スクリプトを実行してDBの切り戻し作業を実施する必要があります(作業中はKAMONOHASHIのサービスが停止します)。
+この作業を行った場合、マイグレーション適用後にのみ存在しているテーブルおよびカラムに格納されていたデータは削除されるため注意してください。例えばv1.1.0からv1.0.3にバージョンダウンする場合は、ノートブック機能で管理していた情報は削除されます。
+
+|version|Migration|主な変更|
+|---|---|---|
+|v1.0.0|20190515093033_v1.0.0|初期構築時|
+|v1.1.0|20190821040509_v1.1.0|ノートブック機能用テーブル追加|
+|v1.1.3|20190911075454_v1.1.3|zip機能利用履歴保持用カラム追加|
+
+1.1.3からバージョンダウンする場合の、DB切り戻しスクリプトの実行例
+1. `/var/lib/kamonohashi/deploy-tools/1.1.3/rollback/rollback.sh`を実行します。
+2. デプロイされているKAMONOHASHIのバージョンに`1.1.3`、戻したい時点のMigrationファイルに`20190821040509_v1.1.0`を入力します。
 3. DBの切り戻し処理が終了するまで数分間待機します。
 4. 切り戻し処理終了後、再デプロイ可能なバージョンの一覧が表示されるため、戻したいバージョンを指定します。
 5. KAMONOHASHIのWEB画面にアクセスし、バージョン情報より、バージョンが戻っていることを確認します。
