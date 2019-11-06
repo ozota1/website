@@ -89,6 +89,8 @@ resource:
     url: /resource/#Slide Share
   - title: Flyer
     url: /resource/#flyer
+  - title: logo
+    url: /resource/#logo
 faq:
   - title: faq
     url: /docs/faq
