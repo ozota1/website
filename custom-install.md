@@ -50,6 +50,12 @@ mkdir conf && cp -i conf-template/* conf/
 |${INGRESS_NODE_IP}|${INGRESS_NODE}で指定したマシンのIP|10.1.1.1|
 |${VIRTUAL_HOST}|ブラウザでアクセスさせるホスト名|kamonohashi.ai|
 |${KQI_NODE}|kamonohashiの各種コンテナの配置ノード|kqi-node1|
+|${NODES}|GPUサーバーホスト名。,区切りで複数指定可能|gpu-node1,gpu-node2|
+|${OBJECT_STORAGE}|Minioのホスト名|minio-node|
+|${OBJECT_STORAGE_PORT}|Minioのポート番号|9000|
+|${OBJECT_STORAGE_ACCESSKEY}|Minioのアクセスキー||
+|${NFS_STORAGE}|MinioのマウントしているNFSのホスト名|nfs-node|
+|${NFS_PATH}|NFSのエクスポートパス|/nfs/share|
 
 ##### オプション項目
 settings.ymlのコメントアウトをはずして設定します
