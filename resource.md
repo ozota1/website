@@ -25,7 +25,7 @@ sidebar:
 <img src="/assets/images/kamonohashi_flyer_thumbnail.png" alt="">  
 <a href="/assets/kamonohashi_flyer.pdf">フライヤー ダウンロード<i class="material-icons blue">save_alt</i></a>
 
-## logo
+<!-- ## logo
 ### <a href="/terms/">ご利用について</a>　<small>必ずお読みください。</small>
 <img src="/assets/images/logo_b_bg_1.png" alt="" >  
 青版 <a href="/assets/images/logo_b_1.png">.png</a>・白版 <a href="/assets/images/logo_w_1.png">.png</a>  
@@ -46,3 +46,4 @@ sidebar:
   
 <img src="/assets/images/kamocchi_illust_sample2.png" alt="" >  
 <a href="/assets/images/KAMOillust_2.zip" download>.png</a>
+-->
