@@ -8,38 +8,32 @@ title: Docs
 permalink: /docs/
 sidebar:
   nav: "docs"
-feature_row0:
-  - image_path: /assets/images/illust_overView.png
-    alt: "placeholder image 0"
-    title: "Concepts"
-    excerpt: "KAMONOHASHIの概念を学びます。"
-    url: "/docs/concepts"
-feature_row1:
-  - image_path: /assets/images/illust_getStarted.png
-    alt: "placeholder image 1"
-    title: "Installation and Setup"
-    excerpt: "KAMONOHASHIをセットアップします。"
-    url: "/docs/install-and-update"
-feature_row2:
-  - image_path: /assets/images/illust_book.png
-    alt: "placeholder image 2"
-    title: "Tutorial"
-    excerpt: "KAMONOHASHIを使用したAI開発プロセスを10分で学びます。"
-    url: "/docs/tutorial"  
-feature_row3:
-  - image_path: /assets/images/illust_book3.png
-    alt: "placeholder image 3"
-    title: "How-to Guides"
-    excerpt: "AI開発者向け、システム管理者向けの詳細なマニュアルです。"
-    url: "/docs/how-to"
 ---
-## 本ドキュメントの構成
- - <a href="/docs/tutorial">Tutorial</a>ではKAMONOHASHIを使用したAI開発プロセスを10分で学べます。
- - <a href="/docs/how-to">How-to Guides</a>はAI開発者・システム管理者向けの詳細なマニュアルです。
+## KAMONOHASHIをはじめる
+ -  <a href="/docs/concepts">コンセプトを知る</a>
+ - <a href="/docs/install-and-update">KAMONOHASHIをインストールする</a>
+ - <a href="/docs/tutorial">チュートリアルを行う</a>
 
-## 最初のステップ
- -  <a href="/docs/concepts">Concepts</a>ではKAMONOHASHIを使用する上で必要な独自の概念やキーワードを説明しています。
- - <a href="/docs/install-and-update">Installation</a>ではKAMONOHASHIのインストール方法について説明しています。
 
-## 質問がある場合
- -  <a href="/docs/faq">FAQ</a>ではよくある質問とそれに対する答えが読めます。
+## KAMONOHASHIを使いこなす
+  - <a href="/docs/how-to/user">User Guide</a>
+  - <a href="/docs/how-to/admin">Admin Guide</a>
+  - <a href="/docs/how-to/cli">CLI Guide</a>
+  - <a href="/docs/how-to/infra">Infra Guide</a>
+
+## よくある質問
+  -  <a href="/docs/faq#KAMONOHASHIの利用について">KAMONOHASHIの利用について 
+  -  <a href="/docs/faq#インストールについて">インストールについて 
+  -  <a href="/docs/faq#システム運用全般について">システム運用全般について
+  -  <a href="/docs/faq#KAMONOHASHIチームへの連絡">問い合わせについて 
+  -  <a href="/docs/faq#一般的な質問">その他
+
+## KAMONOHASHI  YOUTUBE CHANNEL
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MKCWf_XLD-I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<a href="https://www.youtube.com/embed/tltp7jBkEuQ" target="_blank">インストール動画</a>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tltp7jBkEuQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<a href="https://www.youtube.com/embed/tltp7jBkEuQ" target="_blank">チュートリアル動画</a>
+
+
+
