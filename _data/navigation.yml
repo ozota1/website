@@ -12,6 +12,15 @@ main:
 docs:
   - title: Concepts
     url: /docs/concepts
+    children:
+      - title: "・環境構成"
+        url: /docs/concepts#環境構成
+      - title: "・テナントとは"
+        url: /docs/concepts#テナントとは
+      - title: "・ノードとは"
+        url: /docs/concepts#ノードとは
+      - title: "・ロールとは"
+        url: /docs/concepts#ロールとは
   - title: Installation
     url: /docs/install-and-update
     children:
@@ -82,9 +91,7 @@ tutorials:
     children:
       - title: "Training a model on CIFAR-10 Using KAMONOHASHI"
         url: /tutorial/cifar10
-resource:
-  - title: youtube
-    url: /resource/#youtube  
+resource: 
   - title: slide share
     url: /resource/#Slide Share
   - title: Flyer

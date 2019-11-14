@@ -10,10 +10,8 @@ sidebar:
   nav: "docs"
 ---
 ## KAMONOHASHIをはじめる
- -  <a href="/docs/concepts">コンセプトを知る</a>
  - <a href="/docs/install-and-update">KAMONOHASHIをインストールする</a>
  - <a href="/docs/tutorial">チュートリアルを行う</a>
-
 
 ## KAMONOHASHIを使いこなす
   - <a href="/docs/how-to/user">User Guide</a>
@@ -26,14 +24,14 @@ sidebar:
   -  <a href="/docs/faq#インストールについて">インストールについて 
   -  <a href="/docs/faq#システム運用全般について">システム運用全般について
   -  <a href="/docs/faq#KAMONOHASHIチームへの連絡">問い合わせについて 
-  -  <a href="/docs/faq#一般的な質問">その他
 
 ## KAMONOHASHI  YOUTUBE CHANNEL
+  - <a href="https://www.youtube.com/embed/tltp7jBkEuQ" target="_blank">インストール動画</a>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MKCWf_XLD-I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<a href="https://www.youtube.com/embed/tltp7jBkEuQ" target="_blank">インストール動画</a>
 
+  - <a href="https://www.youtube.com/embed/tltp7jBkEuQ" target="_blank">チュートリアル動画</a>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tltp7jBkEuQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<a href="https://www.youtube.com/embed/tltp7jBkEuQ" target="_blank">チュートリアル動画</a>
+
 
 
 
