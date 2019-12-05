@@ -118,7 +118,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
  <div id="newsBox" style="margin-bottom: 2rem;">
         <ul id="newsList">
           <li class="newsItem">
-            <div class="newsDate">2019/09/17</div>
+            <div class="newsDate">2019/12/02</div>
             <div class="newsLabel labelRelease">リリース</div>
             <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v{{ site.version}} をリリースしました</a></div>
           </li>
