@@ -402,7 +402,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 </div>
 </div>
 
-<h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
+<!-- <h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 導入実績
 </h3>
 <div class="feature_row3">
@@ -438,7 +438,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 
 </div>
 </div>
-</div>
+</div> -->
 
 
 <h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
