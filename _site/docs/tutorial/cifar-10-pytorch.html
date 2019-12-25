@@ -294,6 +294,26 @@
         
 
         
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/tutorial/cifar-10-tensorflow" class="">・CIFAR-10(tensorflow)</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/docs/tutorial/cifar-10-pytorch" class="active">・CIFAR-10(pytroch)</a></li>
+          
+        </ul>
+        
       </li>
     
       <li>
@@ -634,9 +654,9 @@ GUIで学習を開始するには[学習管理]を選択し、新規登録ボタ
 
 <h3 id="step2">step2</h3>
 <p>フレームワークとモデルをテキストエリアに記述し、実行コマンドを記述します。
-本チュートリアルではフレームワークは<a href="https://hub.docker.com/">Docker Hub</a>の公式イメージ(tensorflow/tensorflow)を使用しています。</p>
+本チュートリアルではフレームワークは<a href="https://hub.docker.com/">Docker Hub</a>の公式イメージ(pytorch/pytorch)を使用しています。</p>
 
-<p><img src="/assets/images/job-step2.PNG" alt="ジョブ2" /></p>
+<!-- ![ジョブ2](/assets/images/job-step2.PNG) -->
 <ul>
   <li>コンテナイメージ</li>
 </ul>
@@ -726,9 +746,9 @@ python -u pytorch/train.py \
 <h3 id="tensorboardで学習の状況を確認する">Tensorboardで学習の状況を確認する</h3>
 
 <p>実行した学習を選択し、学習履歴画面を開きます。
-<img src="/assets/images/job-edit.PNG" alt="ジョブ確認" />
+<!-- ![ジョブ確認](/assets/images/job-edit.PNG) -->
 Tensorboardの起動ボタンを押し、開きます。
-<img src="/assets/images/tensorboard.PNG" alt="Tensorboard確認" /></p>
+<!-- ![Tensorboard確認](/assets/images/tensorboard.PNG) --></p>
 
 <p>注意：TensorBoardを表示する場合、モデルのpythonファイル中に対応するプログラムを書く必要があります。</p>
 
