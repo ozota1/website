@@ -133,7 +133,7 @@ python -u pytorch/train.py \
 --train_log_dir /kqi/output/demo \
 --parameter_dir /kqi/output/demo \
 --test_images /kqi/input/testing \
---test_anns /kqi/input/testing
+--test_anns /kqi/input/testing \
 --max_epochs 10
 ```
 
