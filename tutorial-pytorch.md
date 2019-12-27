@@ -139,7 +139,16 @@ python -u pytorch/train.py \
 
 ### step3
 必要なリソースを指定します。
-![ジョブ3](/assets/images/job-step3.PNG)
+以下は例です。
+
+例
+
+|リソース　|使用量　|
+|---|---|
+|CPU|8|
+|Memory|8|
+|GPU|1|
+
 
 ### step4
 オプションとして追記したい項目があれば追記し実行ボタンを押します。
