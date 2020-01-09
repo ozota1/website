@@ -118,34 +118,34 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
  <div id="newsBox" style="margin-bottom: 2rem;">
         <ul id="newsList">
           <li class="newsItem">
+            <div class="newsDate">2020/01/10</div>
+            <div class="newsLabel labelRelease">リリース</div>
+            <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.1.5をリリースしました</a></div>
+          </li>        
+          <li class="newsItem">
             <div class="newsDate">2019/12/02</div>
             <div class="newsLabel labelRelease">リリース</div>
-            <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v{{ site.version}} をリリースしました</a></div>
+            <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.1.4をリリースしました</a></div>
           </li>
           <li class="newsItem">
-              <div class="newsDate">2019/09/09</div>
+              <div class="newsDate">2019/10/15</div>
               <div class="newsLabel labelRelease">リリース</div>
-              <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.1.0をリリースしました</a></div>
+              <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.1.3をリリースしました</a></div>
           </li>
           <li class="newsItem">
-              <div class="newsDate">2019/08/16</div>
+              <div class="newsDate">2019/10/03</div>
               <div class="newsLabel labelRelease">リリース</div>
-              <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.0.3をリリースしました</a></div>
+              <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.1.2をリリースしました</a></div>
           </li>
           <li class="newsItem">
-              <div class="newsDate">2018/10/21</div>
-              <div class="newsLabel labelEvent">イベント</div>
-              <div class="newsTitle"><a href="/posts/jasmindone">経営情報学会で発表しました</a></div>
+              <div class="newsDate">2019/10/03</div>
+              <div class="newsLabel labelRelease">リリース</div>
+              <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.0.4をリリースしました</a></div>
           </li>
           <li class="newsItem">
-              <div class="newsDate">2018/09/19</div>
-              <div class="newsLabel labelEvent">イベント</div>
-              <div class="newsTitle"><a href="/posts/techplay">TECHPLAYにて発表しました</a></div>
-          </li>
-          <li class="newsItem">
-              <div class="newsDate">2018/09/13</div>
-              <div class="newsLabel labelEvent">イベント</div>
-              <div class="newsTitle"><a href="/posts/gtc2018done">GTCJapanに出展しました</a></div>
+              <div class="newsDate">2019/09/17</div>
+              <div class="newsLabel labelRelease">リリース</div>
+              <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.1.1をリリースしました</a></div>
           </li>
         </ul>
         </div>
