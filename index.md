@@ -412,7 +412,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
     <div class="feature__item--left">
       <div class="archive__item">
           <div class="archive__item-teaser">
-            <img src="/assets/images/logo_image.png" alt="placeholder image 1">
+            <img src="/assets/images/logo_nipponsteel.png" alt="placeholder image 1">
           </div>
         <div class="archive__item-body">
             <h3 class="archive__item-title"><a href="/">日本製鉄株式会社 様</a></h3>

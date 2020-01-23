@@ -29,6 +29,10 @@
 <lastmod>2018-10-23T14:46:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/posts/supportDetail</loc>
+<lastmod>2020-01-10T11:13:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/posts/introduction</loc>
 </url>
 <url>
@@ -48,6 +52,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/posts/jasmindone</loc>
+</url>
+<url>
+<loc>http://localhost:4000/posts/supportDetail</loc>
 </url>
 <url>
 <loc>http://localhost:4000/about/</loc>
@@ -113,5 +120,13 @@
 <url>
 <loc>http://localhost:4000/assets/kamonohashi_flyer.pdf</loc>
 <lastmod>2019-08-27T11:17:29+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/kamonohashi_flyer2.pdf</loc>
+<lastmod>2019-10-23T15:19:55+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/kamonohashi_flyer3.pdf</loc>
+<lastmod>2020-01-14T10:17:56+09:00</lastmod>
 </url>
 </urlset>

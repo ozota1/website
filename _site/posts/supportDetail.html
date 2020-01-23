@@ -9,19 +9,19 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>経営情報学会参加報告 - KAMONOHASHI</title>
-<meta name="description" content=" ">
+<!-- begin _includes/seo.html --><title>Support KAMONOHASHI detail - KAMONOHASHI</title>
+<meta name="description" content="導入サービス">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="KAMONOHASHI">
-<meta property="og:title" content="経営情報学会参加報告">
-<meta property="og:url" content="http://localhost:4000/posts/jasmindone">
+<meta property="og:title" content="Support KAMONOHASHI detail">
+<meta property="og:url" content="http://localhost:4000/posts/supportDetail">
 
 
-  <meta property="og:description" content=" ">
+  <meta property="og:description" content="導入サービス">
 
 
 
@@ -31,14 +31,14 @@
 
 
 
-  <meta property="article:published_time" content="2018-10-23T14:46:00+09:00">
+  <meta property="article:published_time" content="2020-01-10T11:13:00+09:00">
 
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/posts/jasmindone">
+<link rel="canonical" href="http://localhost:4000/posts/supportDetail">
 
 
 
@@ -172,15 +172,15 @@
   
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="経営情報学会参加報告">
-    <meta itemprop="description" content=" ">
-    <meta itemprop="datePublished" content="October 23, 2018">
+    <meta itemprop="headline" content="Support KAMONOHASHI detail">
+    <meta itemprop="description" content="導入サービス">
+    <meta itemprop="datePublished" content="January 10, 2020">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">経営情報学会参加報告
+          <h1 id="page-title" class="page__title" itemprop="headline">Support KAMONOHASHI detail
 </h1>
           
         </header>
@@ -188,59 +188,88 @@
 
       <section class="page__content" itemprop="text">
         
-        <p> </p>
+        <h2 id="導入サービス">導入サービス</h2>
 
-<p>こんにちは。KAMONOHASHIチームです。
-今回は先日参加した経営情報学会について報告します。</p>
+<h3 id="サービス内容">サービス内容</h3>
+<h4 id="対象環境の導入可否事前調査">対象環境の導入可否事前調査</h4>
+<p>以下をリモートあるいはオンサイトで実施します。<br />
+・KAMONOHASHIの構成説明、疑問点への回答<br />
+・パラメータシートの項目説明<br />
+・(既にKAMONOHASHI導入対象のサーバが用意されている場合)対象サーバの情報をお客様に取得頂き、内容を確認</p>
 
-<!--more-->
+<h4 id="管理サーバストレージ容量の試算支援">管理サーバ・ストレージ容量の試算支援</h4>
+<p>お客様の利用想定を元に、管理サーバ、NFSのストレージ容量を試算する支援を行います。(GPUサーバは除外)<br />
+※お客様にて、以下などの利用想定の試算が必要です。<br />
+・ユーザ数（同時・累積）<br />
+・プロジェクト数（同時・累積）<br />
+・入力データサイズ（データ数、1件当たりの容量。前処理による追加分含む）<br />
+・出力データサイズ（学習・推論の出力データサイズ、各ログのデータサイズ）<br />
+・学習の規模（学習・推論の同時実行数および総数、1学習・推論の実行時間）<br />
+など。</p>
 
-<h1 id="%E5%AD%A6%E4%BC%9A%E6%A6%82%E8%A6%81">学会概要</h1>
+<h4 id="パラメータシートの送付検証">パラメータシートの送付・検証</h4>
+<p>・KAMONOHASHIの構築に必要な設定項目をまとめたパラメータシートを送付<br />
+・返送いただいた後、記載内容の不備を確認</p>
 
-<p><a href="https://kamonohashi.ai/posts/jasmin" title="前回のブログ">前回のブログ</a>でご紹介した通り、
-先日<a href="http://www.jasmin.jp/activity/zenkoku_taikai/2018_fall/" title="経営情報学会">経営情報学会</a>に参加してきました。
-本大会では、ポスターセッション、一般発表セッション、企業セッションがあり、
-KAMONOHASHIチームは企業セッションにて発表しました。</p>
+<h4 id="kamonohashi導入">KAMONOHASHI導入</h4>
+<p>管理サーバおよびGPUサーバ上にKAMONOHASHIを構築します。</p>
 
-<h1 id="%E7%99%BA%E8%A1%A8%E5%86%85%E5%AE%B9">発表内容</h1>
+<h4 id="kubernetes導入">Kubernetes導入</h4>
+<p>KAMONOHASHIの動作に必要なKubernetesを管理サーバ上に構築します。</p>
 
-<p>まず、近年、第三次AIブームが再来したきっかけとなったDeep Learningについて、その概要と進歩の原動力(データ・計算パワー)についてお話しました。そして今後企業や組織にてAI開発の取り組みを拡大する際に、AI開発者やシステム管理者が直面するであろう問題点を挙げ、
-KAMONOHASHIを一例にとって、問題点を解決するAIプラットフォームの必要性をご説明しました。</p>
+<h4 id="初期テナント作成">初期テナント作成</h4>
+<p>パラメータシートに基づき、KAMONOHASHI上でのテナント作成、および連携サービス登録を行います。</p>
 
-<p>具体的には、チームや組織でAIを利用したシステム開発を実行する際には「環境設定」「再現性(トレーサビリティ)」「GPUリソース共有」の3つの問題点が浮上することを、弊社のAI開発チームの体制を例にとってご説明しました。
-今回のセッションの発表時間は20分と短かったため、これらの問題点のうち、「GPUリソース共有」について、解決方法をKAMONOHASHIを例にとってご説明しました。</p>
+<h4 id="導入テスト計画書兼報告書の提出">導入テスト計画書兼報告書の提出</h4>
+<p>・導入作業後に行うテスト項目の一覧を事前送付します<br />
+・導入後のテスト結果を提出します</p>
 
-<p>まとめとしましては、Deep Learningを中心とするAIの技術はデータと計算パワーによって今後も発展していくと思われますが、チームや組織で取り組みを拡大していく際には、「環境設定」「再現性(トレーサビリティ)」「GPUリソース共有」の問題を解決するようなAIプラットフォームが必要であることをご説明いたしました。さらに、ビジネス的観点としては、今後AI開発の取り組みが進んでいくにつれて、AIプラットフォームの有無が、企業のAI競争力の差に結びついていくのではないか？との考察を述べさせていただきました。</p>
+<h4 id="ユーザトレーニング管理者向け">ユーザトレーニング（管理者向け）</h4>
+<p>KAMONOHASHIの管理者向け機能の標準的な利用方法について、1時間程度のトレーニングを行います。</p>
 
-<h1 id="%E6%89%80%E6%84%9F">所感</h1>
+<h4 id="ユーザトレーニング一般向け">ユーザトレーニング（一般向け）</h4>
+<p>KAMONOHASHIの一般ユーザ向け機能の標準的な利用方法について、1～2時間程度のトレーニングを行います。<br />
+トレーニングでは、公式にて公開しているチュートリアルをベースに、データ登録・データセット作成・学習実行の方法を講義形式にてご説明します。</p>
 
-<p>発表は大会1日目の午前中であり、企業セッションは2つと少なかったため、
-聞いてくださる方は10名程度くらいではないか？と予想していました。
-しかし、予想に反して約30名の方にお越しいただき、質問も質問時間10分を超えるなど、刺さる方には刺さった発表だったようです。</p>
+<h3 id="サービスに含まれない内容">サービスに含まれない内容</h3>
+<h4 id="kqi環境のインフラ構築">KQI環境のインフラ構築</h4>
+<p>KAMONOHASHI管理サーバやGPUサーバに対し、以下はお客様にて実施していただく<br />
+・ハードウェア選定・構築<br />
+・OSインストール<br />
+・NWやアカウント設定、お客様標準SW導入などの初期設定</p>
 
-<h1 id="%E3%81%8A%E3%81%BE%E3%81%91">おまけ</h1>
+<h4 id="連携先サービスの設計構築">連携先サービスの設計・構築</h4>
+<p>GitLab、認証サーバ、NFSの設計・構築は、必要に応じてお客様にて実施いただく</p>
 
-<p>学会が開催された、<a href="https://www.kindai.ac.jp/" title="近畿大学">近畿大学</a>は近大マグロで有名な大学です。懇親会会場ではインパクトのある近大マグロをお目にかかることができました。
-(懇親会ではお刺身をいただきました。とても美味しかったです。)
-懇親会では普段KAMONOHASHIチームとは交流の薄い、経営学界のアカデミアにいる方々ともお話できたことで、
-大学におけるAI活用の研究の現状についてうかがい知ることができ、とても興味深かったです。</p>
+<h4 id="監視機構の設計構築">監視機構の設計・構築</h4>
+<p>インフラやサービスの監視設定は行わず、必要に応じてお客様にて対応いただく。</p>
 
-<p><img class="alignnone size-medium wp-image-390" src="https://kamonohashi.ai/wp-content/uploads/2018/10/IMG_0309-e1540273506135-225x300.jpg" alt="" width="225" height="300" /></p>
+<h4 id="バックアップ機構の設計構築">バックアップ機構の設計・構築</h4>
+<p>データのバックアップは行わず、必要に応じてお客様にて対応いただく。<br />
+各データの保存先などの情報はオンラインマニュアルにて提供する。</p>
 
-<p> </p>
+<h4 id="パラメータシートの記載">パラメータシートの記載</h4>
+<p>パラメータシートはお客様にて記載いただきます。</p>
 
-<p>また、学会大会会場は昨年度新設された<a href="https://act.kindai.ac.jp/structure/" title="アカデミックセンター">アカデミックセンター</a>にて行われました。
-建物の1Fには、<a href="https://ja.wikipedia.org/wiki/%E3%83%A9%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E3%83%BB%E3%82%B3%E3%83%A2%E3%83%B3%E3%82%BA" title="ラーニングコモンズ">ラーニングコモンズ</a>と一般的に呼ばれる図書とインターネット環境を備えた学習スペースやカフェがある、学生が主体的に学ぶことができるスペースが広がっており、とても先進的で印象に残りました。</p>
+<h4 id="他ソフトとの同時実行可否の検証">他ソフトとの同時実行可否の検証</h4>
+<p>ウイルス対策ソフトや監視ツールなど、管理サーバやGPUサーバで他のソフトウェアと同時に実行した場合の動作検証は行わない</p>
 
-<h1 id="%E6%9C%80%E5%BE%8C%E3%81%AB">最後に</h1>
+<h3 id="サイトossにて無償提供されるドキュメント">サイト/OSSにて無償提供されるドキュメント</h3>
+<p><a href="https://kamonohashi.ai/docs/install-and-update#外部サービスとの互換性">
+KQI確認済み動作環境一覧 </a><br />
+<a href="https://kamonohashi.ai/docs/how-to/admin/">
+KQI管理者マニュアル </a><br />
+<a href="https://kamonohashi.ai/docs/how-to/user">
+KQI利用者マニュアル </a><br />
+<a href="https://kamonohashi.ai/docs/how-to/cli/">
+KQI CLIインストールマニュアル </a><br />
+<a href="https://kamonohashi.ai/docs/install-and-update#インストール方法">
+KQIインストールマニュアル </a><br />
+<a href="https://kamonohashi.ai/docs/tutorial">
+チュートリアル </a><br /></p>
 
-<p>今回はKAMONOHASHIチームとしてはじめて、経営学界のアカデミアの方々が多くいる学会に参加しました。今後も今回得られたつながりを生かし、世の中のAI開発の取り組み拡大に貢献していきたいと思います。</p>
-
-<p>発表時間の関係もあり、今回はKAMONOHASHIの一部の機能(GPUリソース共有)のみの紹介であったため、「環境設定」「再現性(トレーサビリティ)」に関しては、今後のKAMONOHASHIブログにて詳細に取り上げてまいります。概要としては、9月に登壇した<a href="https://kamonohashi.ai/posts/techplay" title="Tech Playイベントの記事">Tech Playイベントの記事</a>や、<a href="https://www.slideshare.net/Kamonohashi/nssol-tech-talk-01" title="発表資料">発表資料</a>をぜひご覧ください。</p>
-
-<p>最後に、KAMONOHASHIチームでは、企業に限らずアカデミアの学会などにも積極的に参加し、最近の企業内でのリアルなAI開発状況・体制についてお話させていただいています。お話を聞いてみたい！と思われた方はぜひ[kamonohashi-support@jp.nssol.nipponsteel.com]までご連絡いただけますと幸いです。</p>
-
-<p> </p>
+<h3 id="注意事項">注意事項</h3>
+<p>各作業をオンサイトで行う際、遠距離の場合は移動・宿泊費を別途請求する可能性があります	</p>
 
 
         
@@ -252,7 +281,7 @@ KAMONOHASHIを一例にとって、問題点を解決するAIプラットフォ�
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-10-23T14:46:00+09:00">October 23, 2018</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-01-10T11:13:00+09:00">January 10, 2020</time></p>
         
       </footer>
 
@@ -261,12 +290,11 @@ KAMONOHASHIを一例にとって、問題点を解決するAIプラットフォ�
       
   <nav class="pagination">
     
-      <a href="/posts/jasmin" class="pagination--pager" title="10/20経営情報学会にてセッション発表します
+      <a href="/posts/jasmindone" class="pagination--pager" title="経営情報学会参加報告
 ">Previous</a>
     
     
-      <a href="/posts/supportDetail" class="pagination--pager" title="Support KAMONOHASHI detail
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 

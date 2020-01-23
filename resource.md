@@ -19,7 +19,11 @@ sidebar:
 
 ## flyer
 <img src="/assets/images/kamonohashi_flyer_thumbnail.png" alt="">  
-<a href="/assets/kamonohashi_flyer.pdf">フライヤー ダウンロード<i class="material-icons blue">save_alt</i></a>
+<a href="/assets/kamonohashi_flyer.pdf">フライヤー ダウンロード<i class="material-icons blue">save_alt</i></a><br>
+<img src="/assets/images/kamonohashi_flyer_thumbnail2.png" alt="">  
+<a href="/assets/kamonohashi_flyer2.pdf">フライヤー ダウンロード<i class="material-icons blue">save_alt</i></a><br>
+<img src="/assets/images/kamonohashi_flyer_thumbnail3.png" alt="">  
+<a href="/assets/kamonohashi_flyer3.pdf">フライヤー ダウンロード<i class="material-icons blue">save_alt</i></a><br>
 
 ## logo
 ### <a href="/terms/">ご利用について</a>　<small>必ずお読みください。</small>
