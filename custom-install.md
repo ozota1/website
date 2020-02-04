@@ -13,8 +13,10 @@
 * 任意の方法でKubernetesクラスタを構築します
   * v1.14.1
   * ネットワークプラグインはweaveを使用します
+  * kube-proxy mode は iptablesを使用します
 * [nvidia-docker2をインストール](https://github.com/NVIDIA/nvidia-docker)します。そして、デフォルトのdockerランタイムとして設定します
 * [nvidia-device-pluginをインストール](https://github.com/NVIDIA/k8s-device-plugin)します
+* nfs-clientを各GPUサーバーにインストールします
 
 ## Minio NAS Gatewayを構築
 * NFSサーバーを構築します
