@@ -1,70 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-23T13:46:47+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KAMONOHASHI</title><subtitle>KAMONOHASHI(カモノハシ)は、Deep Learningのモデル開発を効率的に行うためのAI開発プラットフォームです。 AI開発プロセスを最大限に効率化し、最高のモデル開発を体験してみませんか。</subtitle><entry><title type="html">Support KAMONOHASHI detail</title><link href="http://localhost:4000/posts/supportDetail" rel="alternate" type="text/html" title="Support KAMONOHASHI detail" /><published>2020-01-10T11:13:00+09:00</published><updated>2020-01-10T11:13:00+09:00</updated><id>http://localhost:4000/posts/11092411</id><content type="html" xml:base="http://localhost:4000/posts/supportDetail">&lt;h2 id=&quot;導入サービス&quot;&gt;導入サービス&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-07T13:59:13+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KAMONOHASHI</title><subtitle>KAMONOHASHI(カモノハシ)は、Deep Learningのモデル開発を効率的に行うためのAI開発プラットフォームです。 AI開発プロセスを最大限に効率化し、最高のモデル開発を体験してみませんか。</subtitle><entry><title type="html">Support</title><link href="http://localhost:4000/posts/support" rel="alternate" type="text/html" title="Support" /><published>2020-01-10T11:13:00+09:00</published><updated>2020-01-10T11:13:00+09:00</updated><id>http://localhost:4000/posts/11092411</id><content type="html" xml:base="http://localhost:4000/posts/support">&lt;h2 id=&quot;導入サポート&quot;&gt;導入サポート&lt;/h2&gt;
+&lt;p&gt;KAMONOHASHIの導入にあたって対象環境の導入可否事前調査や管理サーバ、ストレージ容量の試算支援、ユーザートレーニングなどのサポートをいたします。&lt;/p&gt;
 
-&lt;h3 id=&quot;サービス内容&quot;&gt;サービス内容&lt;/h3&gt;
+&lt;h3 id=&quot;サービス内容詳細&quot;&gt;サービス内容詳細&lt;/h3&gt;
 &lt;h4 id=&quot;対象環境の導入可否事前調査&quot;&gt;対象環境の導入可否事前調査&lt;/h4&gt;
-&lt;p&gt;以下をリモートあるいはオンサイトで実施します。&lt;br /&gt;
-・KAMONOHASHIの構成説明、疑問点への回答&lt;br /&gt;
-・パラメータシートの項目説明&lt;br /&gt;
-・(既にKAMONOHASHI導入対象のサーバが用意されている場合)対象サーバの情報をお客様に取得頂き、内容を確認&lt;/p&gt;
-
+&lt;p&gt;KAMONOHASHIの構成説明や導入予定先の環境確認を行い、導入する際の問題やリスクを検討します。&lt;/p&gt;
 &lt;h4 id=&quot;管理サーバストレージ容量の試算支援&quot;&gt;管理サーバ・ストレージ容量の試算支援&lt;/h4&gt;
-&lt;p&gt;お客様の利用想定を元に、管理サーバ、NFSのストレージ容量を試算する支援を行います。(GPUサーバは除外)&lt;br /&gt;
-※お客様にて、以下などの利用想定の試算が必要です。&lt;br /&gt;
-・ユーザ数（同時・累積）&lt;br /&gt;
-・プロジェクト数（同時・累積）&lt;br /&gt;
-・入力データサイズ（データ数、1件当たりの容量。前処理による追加分含む）&lt;br /&gt;
-・出力データサイズ（学習・推論の出力データサイズ、各ログのデータサイズ）&lt;br /&gt;
-・学習の規模（学習・推論の同時実行数および総数、1学習・推論の実行時間）&lt;br /&gt;
-など。&lt;/p&gt;
-
-&lt;h4 id=&quot;パラメータシートの送付検証&quot;&gt;パラメータシートの送付・検証&lt;/h4&gt;
-&lt;p&gt;・KAMONOHASHIの構築に必要な設定項目をまとめたパラメータシートを送付&lt;br /&gt;
-・返送いただいた後、記載内容の不備を確認&lt;/p&gt;
-
-&lt;h4 id=&quot;kamonohashi導入&quot;&gt;KAMONOHASHI導入&lt;/h4&gt;
-&lt;p&gt;管理サーバおよびGPUサーバ上にKAMONOHASHIを構築します。&lt;/p&gt;
-
+&lt;p&gt;ユーザ数や学習規模など、お客様の利用想定を元に、管理サーバ、NFSのストレージ容量を試算する支援を行います。&lt;/p&gt;
 &lt;h4 id=&quot;kubernetes導入&quot;&gt;Kubernetes導入&lt;/h4&gt;
 &lt;p&gt;KAMONOHASHIの動作に必要なKubernetesを管理サーバ上に構築します。&lt;/p&gt;
-
-&lt;h4 id=&quot;初期テナント作成&quot;&gt;初期テナント作成&lt;/h4&gt;
-&lt;p&gt;パラメータシートに基づき、KAMONOHASHI上でのテナント作成、および連携サービス登録を行います。&lt;/p&gt;
-
-&lt;h4 id=&quot;導入テスト計画書兼報告書の提出&quot;&gt;導入テスト計画書兼報告書の提出&lt;/h4&gt;
-&lt;p&gt;・導入作業後に行うテスト項目の一覧を事前送付します&lt;br /&gt;
-・導入後のテスト結果を提出します&lt;/p&gt;
-
+&lt;h4 id=&quot;kamonohashi導入&quot;&gt;KAMONOHASHI導入&lt;/h4&gt;
+&lt;p&gt;事前に記載いただいたパラメータシートに基づき、管理サーバおよびGPUサーバ上にKAMONOHASHIを構築します。&lt;/p&gt;
+&lt;h4 id=&quot;kamonohashi初期設定&quot;&gt;KAMONOHASHI初期設定&lt;/h4&gt;
+&lt;p&gt;事前に記載いただいたパラメータシートに基づき、テナント作成、GitリポジトリやDockerレジストリの登録など、KAMONOHASHIの初期設定を行います。&lt;/p&gt;
 &lt;h4 id=&quot;ユーザトレーニング管理者向け&quot;&gt;ユーザトレーニング（管理者向け）&lt;/h4&gt;
 &lt;p&gt;KAMONOHASHIの管理者向け機能の標準的な利用方法について、1時間程度のトレーニングを行います。&lt;/p&gt;
-
 &lt;h4 id=&quot;ユーザトレーニング一般向け&quot;&gt;ユーザトレーニング（一般向け）&lt;/h4&gt;
-&lt;p&gt;KAMONOHASHIの一般ユーザ向け機能の標準的な利用方法について、1～2時間程度のトレーニングを行います。&lt;br /&gt;
-トレーニングでは、公式にて公開しているチュートリアルをベースに、データ登録・データセット作成・学習実行の方法を講義形式にてご説明します。&lt;/p&gt;
+&lt;p&gt;KAMONOHASHIの一般ユーザ向け機能の標準的な利用方法について、1～2時間程度のトレーニングを行います。&lt;/p&gt;
 
-&lt;h3 id=&quot;サービスに含まれない内容&quot;&gt;サービスに含まれない内容&lt;/h3&gt;
-&lt;h4 id=&quot;kqi環境のインフラ構築&quot;&gt;KQI環境のインフラ構築&lt;/h4&gt;
-&lt;p&gt;KAMONOHASHI管理サーバやGPUサーバに対し、以下はお客様にて実施していただく&lt;br /&gt;
-・ハードウェア選定・構築&lt;br /&gt;
-・OSインストール&lt;br /&gt;
-・NWやアカウント設定、お客様標準SW導入などの初期設定&lt;/p&gt;
-
-&lt;h4 id=&quot;連携先サービスの設計構築&quot;&gt;連携先サービスの設計・構築&lt;/h4&gt;
-&lt;p&gt;GitLab、認証サーバ、NFSの設計・構築は、必要に応じてお客様にて実施いただく&lt;/p&gt;
-
-&lt;h4 id=&quot;監視機構の設計構築&quot;&gt;監視機構の設計・構築&lt;/h4&gt;
-&lt;p&gt;インフラやサービスの監視設定は行わず、必要に応じてお客様にて対応いただく。&lt;/p&gt;
-
-&lt;h4 id=&quot;バックアップ機構の設計構築&quot;&gt;バックアップ機構の設計・構築&lt;/h4&gt;
-&lt;p&gt;データのバックアップは行わず、必要に応じてお客様にて対応いただく。&lt;br /&gt;
-各データの保存先などの情報はオンラインマニュアルにて提供する。&lt;/p&gt;
-
-&lt;h4 id=&quot;パラメータシートの記載&quot;&gt;パラメータシートの記載&lt;/h4&gt;
-&lt;p&gt;パラメータシートはお客様にて記載いただきます。&lt;/p&gt;
-
-&lt;h4 id=&quot;他ソフトとの同時実行可否の検証&quot;&gt;他ソフトとの同時実行可否の検証&lt;/h4&gt;
-&lt;p&gt;ウイルス対策ソフトや監視ツールなど、管理サーバやGPUサーバで他のソフトウェアと同時に実行した場合の動作検証は行わない&lt;/p&gt;
-
-&lt;h3 id=&quot;サイトossにて無償提供されるドキュメント&quot;&gt;サイト/OSSにて無償提供されるドキュメント&lt;/h3&gt;
+&lt;h3 id=&quot;関連情報&quot;&gt;関連情報&lt;/h3&gt;
+&lt;p&gt;導入サービスを利用せず、お客様ご自身でKAMONOHASHIを導入する場合は、以下のドキュメントをご参考ください。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://kamonohashi.ai/docs/install-and-update#外部サービスとの互換性&quot;&gt;
 KQI確認済み動作環境一覧 &lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://kamonohashi.ai/docs/how-to/admin/&quot;&gt;
@@ -76,10 +30,7 @@ KQI CLIインストールマニュアル &lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://kamonohashi.ai/docs/install-and-update#インストール方法&quot;&gt;
 KQIインストールマニュアル &lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://kamonohashi.ai/docs/tutorial&quot;&gt;
-チュートリアル &lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;注意事項&quot;&gt;注意事項&lt;/h3&gt;
-&lt;p&gt;各作業をオンサイトで行う際、遠距離の場合は移動・宿泊費を別途請求する可能性があります	&lt;/p&gt;</content><author><name></name></author><summary type="html">導入サービス</summary></entry><entry><title type="html">経営情報学会参加報告</title><link href="http://localhost:4000/posts/jasmindone" rel="alternate" type="text/html" title="経営情報学会参加報告" /><published>2018-10-23T14:46:00+09:00</published><updated>2018-10-23T14:46:00+09:00</updated><id>http://localhost:4000/posts/23144624</id><content type="html" xml:base="http://localhost:4000/posts/jasmindone">&lt;p&gt; &lt;/p&gt;
+チュートリアル &lt;/a&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">導入サポート KAMONOHASHIの導入にあたって対象環境の導入可否事前調査や管理サーバ、ストレージ容量の試算支援、ユーザートレーニングなどのサポートをいたします。</summary></entry><entry><title type="html">経営情報学会参加報告</title><link href="http://localhost:4000/posts/jasmindone" rel="alternate" type="text/html" title="経営情報学会参加報告" /><published>2018-10-23T14:46:00+09:00</published><updated>2018-10-23T14:46:00+09:00</updated><id>http://localhost:4000/posts/23144624</id><content type="html" xml:base="http://localhost:4000/posts/jasmindone">&lt;p&gt; &lt;/p&gt;
 
 &lt;p&gt;こんにちは。KAMONOHASHIチームです。
 今回は先日参加した経営情報学会について報告します。&lt;/p&gt;

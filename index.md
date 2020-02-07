@@ -415,7 +415,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
             <img src="/assets/images/logo_nipponsteel.png" alt="placeholder image 1">
           </div>
         <div class="archive__item-body">
-            <h3 class="archive__item-title"><a href="/">日本製鉄株式会社 様</a></h3>
+            <h3 class="archive__item-title">日本製鉄株式会社 様</h3>
             <div class="archive__item-excerpt">
               <p>人工知能(AI)の開発と適用を可能にする技術基盤｢NS-DIG｣にKAMONOHASHIを組み込み</p>
             </div>
