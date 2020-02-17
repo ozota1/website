@@ -34,7 +34,7 @@ permalink: /contact/
         <h3 class="support__text-title">ベーシックサポート</h3>
         <div class="support__text-excerpt">
             <p>KAMONOHASHIに関する仕様や、実績に基づいた情報提供をいたします。また、KAMONOHASHIの障害発生、新機能の紹介をメールにてご連絡いたします。<br>
-            <!-- <a href="/">詳細はこちら</a></p> -->
+            <!-- <a href="/">詳細はこちら</a> --> </p>
         </div>
     </div>
 </div>
