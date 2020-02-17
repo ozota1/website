@@ -20,8 +20,8 @@ permalink: /contact/
     <div class="support support__text">
         <h3 class="support__text-title">導入サポート</h3>
         <div class="support__text-excerpt">
-            <p>KAMONOHASHIの導入にあたって対象環境の導入可否事前調査や管理サーバ、ストレージ容量の試算支援、ユーザートレーニングなどのサポートをいたします。<br>
-            <a href="/posts/support">詳細はこちら</a></p>
+            <p>KAMONOHASHIの導入にあたって対象環境の導入可否事前調査や管理サーバやストレージの容量の試算支援、ユーザートレーニングなどのサポートをいたします。<br>
+            <!-- <a href="/posts/support">詳細はこちら</a> --> </p>
         </div>
     </div>
 </div>
@@ -59,7 +59,7 @@ permalink: /contact/
     <div class="support support__text">
         <h3 class="support__text-title">バージョンアップ</h3>
         <div class="support__text-excerpt">
-            <p>KAMONOHASHIは最長1年に1度のバージョンアップを推奨しております。<br>
+            <p>KAMONOHASHIは少なくとも年1回はバージョンアップすることを推奨しております。<br>
             詳細はメールにてお問い合わせください。</p>
         </div>
     </div>
