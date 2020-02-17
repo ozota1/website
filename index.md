@@ -12,10 +12,10 @@ feature_row0:
     excerpt: 'KAMONOHASHIは、新日鉄住金ソリューションズが Deep Learning を適用する過程で生み出した学習実行の運用環境です。Deep Learningプロセスで発生する多くの副次的作業（雑用）の一つ一つ効率化したノウハウをプラットフォームとして凝縮しています。
     <br><br>KAMONOHASHIはOSSであり、どなたでも使用することができます。AI開発プロセスを最大限効率化した、最高のモデル開発を体験してみませんか。'
     url: "/docs/tutorial"
-    btn_label: "Tutorialをみる"
+    btn_label: "使ってみる"
     btn_class: "btn--primary"
-    url: "https://github.com/KAMONOHASHI"
-    btn_label: "GitHubをみる"
+    url: "/contact"
+    btn_label: "問い合わせる"
     btn_class: "btn--primary"
 
 feature_row1:
@@ -101,8 +101,8 @@ feature_row5:
 Deep Learningのモデル開発には、複雑な環境構築・計算リソースの確保・大量に発生するデータや学習履歴の管理といった、煩雑な作業が多く存在します。KAMONOHASHIはこれらの作業を削減し、AI開発者がモデル開発に集中できる環境を提供します。<br><br>KAMONOHASHIはOSSであり、どなたでも使用することができます。AI開発プロセスを最大限効率化した、最高のモデル開発を体験してみませんか。</p>
             </div>
             <div id="index__btn">
-            <p><a href="https://github.com/KAMONOHASHI" class="btn btn--primary">GitHubをみる</a></p>
             <p><a href="/docs/tutorial" class="btn btn--primary">使ってみる</a></p>
+            <p><a href="/contact" class="btn btn--primary">問い合わせる</a></p>
             </div>
         </div>
       </div>
