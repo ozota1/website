@@ -36,11 +36,6 @@ docs:
         url: /docs/install-and-update#外部サービスとの互換性
   - title: Tutorial
     url: /docs/tutorial
-    children:
-      - title: "・CIFAR-10(tensorflow)"
-        url: /docs/tutorial/cifar-10-tensorflow
-      - title: "・CIFAR-10(pytroch)"
-        url: /docs/tutorial/cifar-10-pytorch
   - title: FAQ
     url: /docs/faq
   - title: How-to Guide
@@ -90,6 +85,12 @@ docs:
         url: /docs/how-to/infra
       - title: "・バックアップとリストア"
         url: /docs/how-to/infra/#バックアップとリストア
+tutorials:
+  - title: Tutorial
+    url: /tutorial/
+    children:
+      - title: "Training a model on CIFAR-10 Using KAMONOHASHI"
+        url: /tutorial/cifar10
 resource: 
   - title: slide share
     url: /resource/#Slide Share

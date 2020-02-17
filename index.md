@@ -121,36 +121,41 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
             <div class="newsDate">2020/02/14</div>
             <div class="newsLabel labelRelease">リリース</div>
             <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.1.6をリリースしました</a></div>
-          </li>        
+          </li>
           <li class="newsItem">
             <div class="newsDate">2020/01/10</div>
             <div class="newsLabel labelRelease">リリース</div>
             <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.1.5をリリースしました</a></div>
-          </li>        
+          </li>
           <li class="newsItem">
             <div class="newsDate">2019/12/02</div>
             <div class="newsLabel labelRelease">リリース</div>
-            <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.1.4をリリースしました</a></div>
+            <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v{{ site.version}} をリリースしました</a></div>
           </li>
           <li class="newsItem">
-              <div class="newsDate">2019/10/15</div>
+              <div class="newsDate">2019/09/09</div>
               <div class="newsLabel labelRelease">リリース</div>
-              <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.1.3をリリースしました</a></div>
+              <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.1.0をリリースしました</a></div>
           </li>
           <li class="newsItem">
-              <div class="newsDate">2019/10/03</div>
+              <div class="newsDate">2019/08/16</div>
               <div class="newsLabel labelRelease">リリース</div>
-              <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.1.2をリリースしました</a></div>
+              <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.0.3をリリースしました</a></div>
           </li>
           <li class="newsItem">
-              <div class="newsDate">2019/10/03</div>
-              <div class="newsLabel labelRelease">リリース</div>
-              <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.0.4をリリースしました</a></div>
+              <div class="newsDate">2018/10/21</div>
+              <div class="newsLabel labelEvent">イベント</div>
+              <div class="newsTitle"><a href="/posts/jasmindone">経営情報学会で発表しました</a></div>
           </li>
           <li class="newsItem">
-              <div class="newsDate">2019/09/17</div>
-              <div class="newsLabel labelRelease">リリース</div>
-              <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.1.1をリリースしました</a></div>
+              <div class="newsDate">2018/09/19</div>
+              <div class="newsLabel labelEvent">イベント</div>
+              <div class="newsTitle"><a href="/posts/techplay">TECHPLAYにて発表しました</a></div>
+          </li>
+          <li class="newsItem">
+              <div class="newsDate">2018/09/13</div>
+              <div class="newsLabel labelEvent">イベント</div>
+              <div class="newsTitle"><a href="/posts/gtc2018done">GTCJapanに出展しました</a></div>
           </li>
         </ul>
         </div>
@@ -407,7 +412,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 </div>
 </div>
 
-<!-- <h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
+<h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 導入実績
 </h3>
 <div class="feature_row3">
@@ -417,10 +422,10 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
     <div class="feature__item--left">
       <div class="archive__item">
           <div class="archive__item-teaser">
-            <img src="/assets/images/logo_image.png" alt="placeholder image 1">
+            <img src="/assets/images/logo_nipponsteel.png" alt="placeholder image 1">
           </div>
         <div class="archive__item-body">
-            <h3 class="archive__item-title"><a href="/">日本製鉄株式会社 様</a></h3>
+            <h3 class="archive__item-title">日本製鉄株式会社 様</h3>
             <div class="archive__item-excerpt">
               <p>人工知能(AI)の開発と適用を可能にする技術基盤｢NS-DIG｣にKAMONOHASHIを組み込み</p>
             </div>
@@ -443,7 +448,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 
 </div>
 </div>
-</div> -->
+</div>
 
 
 <h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
