@@ -432,7 +432,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
         </div>
       </div>
     </div>
-    <div class="feature__item--left">
+    <!-- <div class="feature__item--left">
       <div class="archive__item">
           <div class="archive__item-teaser">
             <img src="/assets/images/logo_image.png" alt="placeholder image 2">
@@ -444,7 +444,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
             </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
 </div>
 </div>
