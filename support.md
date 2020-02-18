@@ -4,8 +4,8 @@
 
 layout: single
 classes: wide
-title: Contact us
-permalink: /contact/
+title: Support
+permalink: /support/
 
 ---
 ## 導入支援や保守サポートを頼みたい

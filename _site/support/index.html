@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.14.1 by Michael Rose
-  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.18.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
@@ -9,17 +9,19 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Contact us - KAMONOHASHI</title>
-<meta name="description" content="KAMONOHASHI(カモノハシ)は、Deep Learningのモデル開発を効率的に行うためのAI開発プラットフォームです。 AI開発プロセスを最大限に効率化し、最高のモデル開発を体験してみませんか。">
+<!-- begin _includes/seo.html --><title>Support - KAMONOHASHI</title>
+<meta name="description" content="KAMONOHASHI(カモノハシ)は、Deep Learningのモデル開発を効率的に行うためのAI開発プラットフォームです。 AI開発プロセスを最大限に効率化し、最高のモデル開発を体験してみませんか。 ">
 
 
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="KAMONOHASHI">
-<meta property="og:title" content="Contact us">
-<meta property="og:url" content="http://localhost:4000/contact/">
+<meta property="og:title" content="Support">
+<meta property="og:url" content="http://localhost:4000/support/">
 
+
+  <meta property="og:description" content="KAMONOHASHI(カモノハシ)は、Deep Learningのモデル開発を効率的に行うためのAI開発プラットフォームです。 AI開発プロセスを最大限に効率化し、最高のモデル開発を体験してみませんか。 ">
 
 
 
@@ -34,23 +36,21 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/contact/">
+<link rel="canonical" href="http://localhost:4000/support/">
 
 
 
 
-
-  <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Organization",
-      "url": "http://localhost:4000",
-      "logo": "http://localhost:4000/assets/images/logo_002.png"
-    }
-  </script>
-
-
-
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
 
 
 
@@ -111,6 +111,14 @@
   </head>
 
   <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -133,7 +141,7 @@
             </li><li class="masthead__menu-item">
               <a href="/resource/" >Resource</a>
             </li><li class="masthead__menu-item">
-              <a href="/contact/" >Contact</a>
+              <a href="/support/" >Support</a>
             </li><li class="masthead__menu-item">
               <a href="https://twitter.com/Kamonohashi_kqi" >Twitter</a>
             </li></ul>
@@ -167,8 +175,8 @@
 <div id="main" role="main">
   
 
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Contact us">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Support">
     
     
     
@@ -176,7 +184,7 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Contact us
+          <h1 id="page-title" class="page__title" itemprop="headline">Support
 </h1>
           
         </header>
@@ -283,11 +291,12 @@
   
   
 </div>
+
     </div>
 
     
 
-    <div class="page__footer">
+    <div id="footer" class="page__footer">
       <footer>
         <!-- start custom footer snippets -->
 
@@ -340,7 +349,7 @@
 
     
   <script src="/assets/js/main.min.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
 
 
 
@@ -356,6 +365,8 @@
   ga('send', 'pageview');
 
 </script>
+
+
 
 
 
