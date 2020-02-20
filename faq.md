@@ -115,6 +115,6 @@ KAMONOHASHIの動作確認済み環境を下表に示します。
  修正・改善要望は[GitHubのIssue](https://github.com/KAMONOHASHI/kamonohashi/issues)にて受け付けています。[Issueの書き方](https://github.com/KAMONOHASHI/kamonohashi/wiki/Submitting-Bugs-and-Suggestions)を参考に提出してください。
 
 #### その他質問がある場合どこへ連絡したらよいですか？
- [お問い合わせページ](/contact/)よりご連絡をお願いします。
+ [サポートページ](/support/)よりご連絡をお願いします。
 
 

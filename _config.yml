@@ -33,10 +33,17 @@ footer:
 # Build settings
 markdown: kramdown
 theme: minimal-mistakes-jekyll
+search: true
+search_provider: algolia
 minimal_mistakes_skin: "contrast"
 google_analytics: UA-121400633-1
 plugins:
  - jekyll-feed
+algolia:
+  application_id: FHOXZY3123
+  index_name: test_KAMONOHASHI
+  search_only_api_key: ec39e3bdd7c77c432404bd00ba60be40
+  powered_by: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
