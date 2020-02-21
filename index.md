@@ -130,17 +130,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
           <li class="newsItem">
             <div class="newsDate">2019/12/02</div>
             <div class="newsLabel labelRelease">リリース</div>
-            <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v{{ site.version}} をリリースしました</a></div>
-          </li>
-          <li class="newsItem">
-              <div class="newsDate">2019/09/09</div>
-              <div class="newsLabel labelRelease">リリース</div>
-              <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.1.0をリリースしました</a></div>
-          </li>
-          <li class="newsItem">
-              <div class="newsDate">2019/08/16</div>
-              <div class="newsLabel labelRelease">リリース</div>
-              <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.0.3をリリースしました</a></div>
+            <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.1.4 をリリースしました</a></div>
           </li>
           <li class="newsItem">
               <div class="newsDate">2018/10/21</div>
@@ -432,7 +422,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
         </div>
       </div>
     </div>
-    <div class="feature__item--left">
+    <!-- <div class="feature__item--left">
       <div class="archive__item">
           <div class="archive__item-teaser">
             <img src="/assets/images/logo_image.png" alt="placeholder image 2">
@@ -444,7 +434,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
             </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
 </div>
 </div>
@@ -545,7 +535,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 
 
 
-            <p><a href="/contact/" class="btn btn--primary">問い合わせする</a></p>
+            <p><a href="/support/" class="btn btn--primary">問い合わせする</a></p>
 
         </div>
       </div>
