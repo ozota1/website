@@ -36,6 +36,7 @@ theme: minimal-mistakes-jekyll
 search: true
 search_provider: algolia
 minimal_mistakes_skin: "contrast"
+breadcrumbs: true 
 google_analytics: UA-121400633-1
 plugins:
  - jekyll-feed
