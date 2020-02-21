@@ -247,7 +247,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 <h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 　KAMONOHASHIで解決できます
 </h3>
-<div class="feature__wrapper">
+<div class="feature__wrapper" style="border-bottom:none; margin-bottom:0;">
 
     <div class="feature__item">
       <div class="archive__item">
@@ -332,15 +332,19 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
         </div>
       </div>
     </div>
-
 </div>
-
+<div class="feature__wrapper">
+    <div class="feature__item">
+      <div class="archive__item">
+        <div class="archive__item-body">
+            <p><a href="/about" class="btn btn--primary" style= "text-align: center;">詳しく知りたい方はこちら</a></p>
+        </div>
+      </div>
+    </div>
+</div>
 <h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 　管理も楽々
 </h3>
-<div class="feature_row3">
-<div class="feature_row3">
-
 <div class="feature__wrapper">
 
     <div class="feature__item--left">
@@ -391,15 +395,10 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
               <p>KAMONOHASHIは各学習に対して、GPU単位でのリソース割り当てが可能です。リソースを最適な粒度で分割して割り振ることで稼働率を向上できます。また、特定のチームだけでリソースを独占されないように、利用上限を設定したり、ノードごとに利用できるチームを制限することも可能です。</p>
 
             </div>
-
-
-
         </div>
       </div>
     </div>
 
-</div>
-</div>
 </div>
 
 <h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
