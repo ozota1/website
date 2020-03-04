@@ -114,6 +114,12 @@
 <loc>http://localhost:4000/docs/how-to/user</loc>
 </url>
 <url>
+<loc>http://localhost:4000/version115/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/version16/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/assets/images/KAMONOHASHI_flyer.pdf</loc>
 <lastmod>2020-02-27T13:58:30+09:00</lastmod>
 </url>
