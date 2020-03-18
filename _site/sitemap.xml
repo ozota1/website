@@ -117,10 +117,10 @@
 <loc>http://localhost:4000/terms/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/docs/supported-doc-versions</loc>
+<loc>http://localhost:4000/docs/tutorial/cifar-10-pytorch</loc>
 </url>
 <url>
-<loc>http://localhost:4000/terms/</loc>
+<loc>http://localhost:4000/docs/tutorial/cifar-10-tensorflow</loc>
 </url>
 <url>
 <loc>http://localhost:4000/docs/tutorial</loc>
