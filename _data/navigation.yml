@@ -89,8 +89,10 @@ tutorials:
   - title: Tutorial
     url: /tutorial/
     children:
-      - title: "Training a model on CIFAR-10 Using KAMONOHASHI"
-        url: /tutorial/cifar10
+      - title: "・CIFAR-10 Tutorial (TensorFlow)"
+        url: /tutorial/cifar-10-tensorflow
+      - title: "・CIFAR-10 Tutorial (pytorch)"
+        url: /tutorial/cifar-10-pytorch
 resource: 
   - title: slide share
     url: /resource/#Slide Share

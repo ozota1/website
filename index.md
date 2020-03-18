@@ -91,9 +91,9 @@ feature_row5:
 <div class="feature__wrapper">
     <div class="feature__item--left">
       <div class="archive__item">
-          <div class="archive__item-teaser">
-            <img src="/assets/images/logo_002.png" alt="placeholder image 0">
-          </div>
+        <div class="archive__item-teaser">
+            <img src="/assets/images/mainvisual_1.png" alt="placeholder image 0" style = "margin-top: 2em;">
+        </div>
         <div class="archive__item-body">
             <h3 class="archive__item-title">Deep Learning 開発者を煩雑な作業から解放！</h3>
             <div class="archive__item-excerpt">
@@ -101,8 +101,8 @@ feature_row5:
 Deep Learningのモデル開発には、複雑な環境構築・計算リソースの確保・大量に発生するデータや学習履歴の管理といった、煩雑な作業が多く存在します。KAMONOHASHIはこれらの作業を削減し、AI開発者がモデル開発に集中できる環境を提供します。<br><br>KAMONOHASHIはOSSであり、どなたでも使用することができます。AI開発プロセスを最大限効率化した、最高のモデル開発を体験してみませんか。</p>
             </div>
             <div id="index__btn">
-            <p><a href="https://github.com/KAMONOHASHI" class="btn btn--primary">GitHubをみる</a></p>
             <p><a href="/docs/tutorial" class="btn btn--primary">使ってみる</a></p>
+            <p><a href="/support" class="btn btn--primary">サポートを受ける</a></p>
             </div>
         </div>
       </div>
@@ -247,7 +247,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 <h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 　KAMONOHASHIで解決できます
 </h3>
-<div class="feature__wrapper">
+<div class="feature__wrapper" style="border-bottom:none; margin-bottom:0;">
 
     <div class="feature__item">
       <div class="archive__item">
@@ -332,15 +332,21 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
         </div>
       </div>
     </div>
-
 </div>
-
+<div class="feature__wrapper">
+    <div class="feature__item">
+      <div class="archive__item">
+        <div class="archive__item-body">
+            <p><a href="/about" class="btn btn--primary" style= "text-align: center;">詳しく知りたい方はこちら</a></p>
+        </div>
+      </div>
+    </div>
+</div>
 <h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 　管理も楽々
 </h3>
 <div class="feature_row3">
 <div class="feature_row3">
-
 <div class="feature__wrapper">
 
     <div class="feature__item--left">
@@ -391,13 +397,9 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
               <p>KAMONOHASHIは各学習に対して、GPU単位でのリソース割り当てが可能です。リソースを最適な粒度で分割して割り振ることで稼働率を向上できます。また、特定のチームだけでリソースを独占されないように、利用上限を設定したり、ノードごとに利用できるチームを制限することも可能です。</p>
 
             </div>
-
-
-
         </div>
       </div>
     </div>
-
 </div>
 </div>
 </div>
@@ -409,34 +411,33 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 <div class="feature_row3">
 
 <div class="feature__wrapper">
-    <div class="feature__item--left">
-      <div class="archive__item">
-          <div class="archive__item-teaser">
-            <img src="/assets/images/logo_nipponsteel.png" alt="placeholder image 1">
+  <div class="feature__item--left">
+    <div class="archive__item">
+        <div class="archive__item-teaser">
+          <img src="/assets/images/logo_nipponsteel.png" alt="placeholder image 1">
+        </div>
+      <div class="archive__item-body">
+          <h3 class="archive__item-title">日本製鉄株式会社 様</h3>
+          <div class="archive__item-excerpt">
+            <p>人工知能(AI)の開発と適用を可能にする技術基盤｢NS-DIG｣にKAMONOHASHIを組み込み</p>
           </div>
+      </div>
+    </div>
+  </div>
+  <div class="feature__item--left">
+    <div class="archive__item">
+        <div class="archive__item-teaser">
+          <img src="/assets/images/logo_sumitomorikou.png" alt="placeholder image 2">
+        </div>
         <div class="archive__item-body">
-            <h3 class="archive__item-title">日本製鉄株式会社 様</h3>
-            <div class="archive__item-excerpt">
-              <p>人工知能(AI)の開発と適用を可能にする技術基盤｢NS-DIG｣にKAMONOHASHIを組み込み</p>
-            </div>
+          <h3 class="archive__item-title">住友理工株式会社 様</h3>
+          <div class="archive__item-excerpt">
+            <p>組織横断のAI開発環境基盤にKAMONOHASHIを導入<br>
+            社内のAI開発スピードの加速と業務でのAI活用を拡大</p>
         </div>
       </div>
     </div>
-    <div class="feature__item--left">
-      <div class="archive__item">
-          <div class="archive__item-teaser">
-            <img src="/assets/images/logo_sumitomorikou.png" alt="placeholder image 2">
-          </div>
-          <div class="archive__item-body">
-            <h3 class="archive__item-title">住友理工株式会社 様</h3>
-            <div class="archive__item-excerpt">
-              <p>組織横断のAI開発環境基盤にKAMONOHASHIを導入<br>
-              社内のAI開発スピードの加速と業務でのAI活用を拡大</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
+  </div>
 </div>
 </div>
 </div>
