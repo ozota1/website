@@ -16,6 +16,7 @@ sidebar:
  - [latest](https://kamonohashi.ai/)
 
 ## 以前のバージョン
+ - [v1.1.6](https://v1-1-6.kamonohashi.ai/docs/)
  - [v1.1.5](https://v1-1-5.kamonohashi.ai/docs/)
  - [v1.1.4](https://v1-1-4.kamonohashi.ai/docs/)
  - [v1.1.3](https://v1-1-3.kamonohashi.ai/docs/)
