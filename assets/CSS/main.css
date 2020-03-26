@@ -4307,7 +4307,7 @@ a.reversefootnote {
      width: 100%;
    }
 
-  @media (max-width: 37.5em) {
+   @media (max-width: 37.5em) {
     li.newsItem div {
         display: block;
         padding: 0 25px;
@@ -4394,4 +4394,32 @@ border-bottom: none;
 
 div.support__text-excerpt p{
   margin: 0;
+}
+
+/* Main dropdown wrapper */
+.algolia-autocomplete .ds-dropdown-menu {
+  width: 500px;
+}
+/* Main category (eg. Getting Started) */
+.algolia-autocomplete .algolia-docsearch-suggestion--category-header {
+  color: darkgray;
+  border: 1px solid gray;
+}
+/* Category (eg. Downloads) */
+.algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column {
+  color: gray;
+}
+/* Title (eg. Bootstrap CDN) */
+.algolia-autocomplete .algolia-docsearch-suggestion--title {
+  font-weight: bold;
+  color: black;
+}
+/* Description description (eg. Bootstrap currently works...) */
+.algolia-autocomplete .algolia-docsearch-suggestion--text {
+  font-size: 0.8rem;
+  color: gray;
+}
+/* Highlighted text */
+.algolia-autocomplete .algolia-docsearch-suggestion--highlight {
+  color: blue;
 }
