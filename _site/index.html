@@ -101,7 +101,6 @@
 
 </script>
 
-
     <!-- start custom head snippets -->
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
@@ -138,7 +137,7 @@
               <a href="https://twitter.com/Kamonohashi_kqi" >Twitter</a>
             </li></ul>
         <button class="greedy-nav__dropdown"  type="button">
-            <span>1.1.6 <i class="material-icons">arrow_drop_down</i> </span>
+            <span>1.1.7 <i class="material-icons">arrow_drop_down</i> </span>
             <div class="dropdown-content">
                 <a href="/docs/supported-doc-versions" >other version</a>
             </div>         
@@ -147,6 +146,13 @@
         
 
        
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
         
         <button class="greedy-nav__toggle" type="button">
           <span class="visually-hidden">Toggle menu</span>
@@ -183,8 +189,8 @@
 Deep Learningのモデル開発には、複雑な環境構築・計算リソースの確保・大量に発生するデータや学習履歴の管理といった、煩雑な作業が多く存在します。KAMONOHASHIはこれらの作業を削減し、AI開発者がモデル開発に集中できる環境を提供します。<br /><br />KAMONOHASHIはOSSであり、どなたでも使用することができます。AI開発プロセスを最大限効率化した、最高のモデル開発を体験してみませんか。</p>
             </div>
             <div id="index__btn">
-            <p><a href="https://github.com/KAMONOHASHI" class="btn btn--primary">GitHubをみる</a></p>
             <p><a href="/docs/tutorial" class="btn btn--primary">使ってみる</a></p>
+            <p><a href="/support" class="btn btn--primary">サポートを受ける</a></p>
             </div>
         </div>
       </div>
@@ -199,6 +205,11 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
  <div id="newsBox" style="margin-bottom: 2rem;">
         <ul id="newsList">
           <li class="newsItem">
+            <div class="newsDate">2020/03/19</div>
+            <div class="newsLabel labelRelease">リリース</div>
+            <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.1.7 をリリースしました</a></div>
+          </li>
+          <li class="newsItem">
             <div class="newsDate">2020/02/14</div>
             <div class="newsLabel labelRelease">リリース</div>
             <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.1.6をリリースしました</a></div>
@@ -207,11 +218,6 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
             <div class="newsDate">2020/01/10</div>
             <div class="newsLabel labelRelease">リリース</div>
             <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.1.5をリリースしました</a></div>
-          </li>
-          <li class="newsItem">
-            <div class="newsDate">2019/12/02</div>
-            <div class="newsLabel labelRelease">リリース</div>
-            <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.1.4 をリリースしました</a></div>
           </li>
           <li class="newsItem">
               <div class="newsDate">2018/10/21</div>
@@ -327,7 +333,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 <h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 　KAMONOHASHIで解決できます
 </h3>
-<div class="feature__wrapper">
+<div class="feature__wrapper" style="border-bottom:none; margin-bottom:0;">
 
     <div class="feature__item">
       <div class="archive__item">
@@ -412,15 +418,21 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
         </div>
       </div>
     </div>
-
 </div>
-
+<div class="feature__wrapper">
+    <div class="feature__item">
+      <div class="archive__item">
+        <div class="archive__item-body">
+            <p><a href="/about" class="btn btn--primary" style="text-align: center;">詳しく知りたい方はこちら</a></p>
+        </div>
+      </div>
+    </div>
+</div>
 <h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 　管理も楽々
 </h3>
 <div class="feature_row3">
 <div class="feature_row3">
-
 <div class="feature__wrapper">
 
     <div class="feature__item--left">
@@ -471,13 +483,9 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
               <p>KAMONOHASHIは各学習に対して、GPU単位でのリソース割り当てが可能です。リソースを最適な粒度で分割して割り振ることで稼働率を向上できます。また、特定のチームだけでリソースを独占されないように、利用上限を設定したり、ノードごとに利用できるチームを制限することも可能です。</p>
 
             </div>
-
-
-
         </div>
       </div>
     </div>
-
 </div>
 </div>
 </div>
@@ -489,34 +497,33 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 <div class="feature_row3">
 
 <div class="feature__wrapper">
-    <div class="feature__item--left">
-      <div class="archive__item">
-          <div class="archive__item-teaser">
-            <img src="/assets/images/logo_nipponsteel.png" alt="placeholder image 1" />
+  <div class="feature__item--left">
+    <div class="archive__item">
+        <div class="archive__item-teaser">
+          <img src="/assets/images/logo_nipponsteel.png" alt="placeholder image 1" />
+        </div>
+      <div class="archive__item-body">
+          <h3 class="archive__item-title">日本製鉄株式会社 様</h3>
+          <div class="archive__item-excerpt">
+            <p>人工知能(AI)の開発と適用を可能にする技術基盤｢NS-DIG｣にKAMONOHASHIを組み込み</p>
           </div>
+      </div>
+    </div>
+  </div>
+  <div class="feature__item--left">
+    <div class="archive__item">
+        <div class="archive__item-teaser">
+          <img src="/assets/images/logo_sumitomorikou.png" alt="placeholder image 2" />
+        </div>
         <div class="archive__item-body">
-            <h3 class="archive__item-title">日本製鉄株式会社 様</h3>
-            <div class="archive__item-excerpt">
-              <p>人工知能(AI)の開発と適用を可能にする技術基盤｢NS-DIG｣にKAMONOHASHIを組み込み</p>
-            </div>
+          <h3 class="archive__item-title">住友理工株式会社 様</h3>
+          <div class="archive__item-excerpt">
+            <p>組織横断のAI開発環境基盤にKAMONOHASHIを導入<br />
+            社内のAI開発スピードの加速と業務でのAI活用を拡大</p>
         </div>
       </div>
     </div>
-    <div class="feature__item--left">
-      <div class="archive__item">
-          <div class="archive__item-teaser">
-            <img src="/assets/images/logo_sumitomorikou.png" alt="placeholder image 2" />
-          </div>
-          <div class="archive__item-body">
-            <h3 class="archive__item-title">住友理工株式会社 様</h3>
-            <div class="archive__item-excerpt">
-              <p>組織横断のAI開発環境基盤にKAMONOHASHIを導入<br />
-              社内のAI開発スピードの加速と業務でのAI活用を拡大</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
+  </div>
 </div>
 </div>
 </div>
@@ -651,6 +658,11 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
     </div>
 
     
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+    <div class="search-hits"></div></div>
+      </div>
+    
 
     <div class="page__footer">
       <footer>
@@ -708,6 +720,60 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
   <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
 
 
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: 'FHOXZY3123',
+  apiKey: 'ec39e3bdd7c77c432404bd00ba60be40',
+  indexName: 'test_KAMONOHASHI',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const title = hit._highlightResult.title.value;
+  const content = hit._highlightResult.html.value;
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    poweredBy: true,
+    placeholder: 'Enter your search term...'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate
+    }
+  })
+);
+
+// Starting the search
+search.start();
+</script>
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
