@@ -59,3 +59,13 @@ include:
   - .htaccess
   - _posts
 encoding: UTF-8
+
+# Site Footer
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/Kamonohashi_kqi"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/KAMONOHASHI/kamonohashi"
