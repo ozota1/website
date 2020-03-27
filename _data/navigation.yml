@@ -7,8 +7,8 @@ main:
     url: /resource/
   - title: "Support"
     url: /support/
-  - title: "Twitter"
-    url: "https://twitter.com/Kamonohashi_kqi"
+  - title: "GitHub"
+    url: "https://github.com/KAMONOHASHI/kamonohashi"
 docs:
   - title: Concepts
     url: /docs/concepts
