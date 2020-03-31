@@ -537,7 +537,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 
 
 
-            <p><a href="/support/" class="btn btn--primary">問い合わせする</a></p>
+            <p><a href="mailto:kamonohashi-support@jp.nssol.nipponsteel.com" class="btn btn--primary">問い合わせする</a></p>
 
         </div>
       </div>
