@@ -19,11 +19,11 @@ sidebar:
   - <a href="/docs/how-to/cli">CLI Guide</a>
   - <a href="/docs/how-to/infra">Infra Guide</a>
 
-## よくある質問
-  -  <a href="/docs/faq#KAMONOHASHIの利用について">KAMONOHASHIの利用について 
-  -  <a href="/docs/faq#インストールについて">インストールについて 
-  -  <a href="/docs/faq#システム運用全般について">システム運用全般について
-  -  <a href="/docs/faq#KAMONOHASHIチームへの連絡">問い合わせについて 
+## よくある質問 
+  KAMONOHASHIインストールや各種設定など、困った時は以下をご覧ください
+  - <a href="/docs/faq">FAQ</a>
+
+
 
 ## KAMONOHASHI  YOUTUBE CHANNEL
   - <a href="https://www.youtube.com/embed/tltp7jBkEuQ" target="_blank">インストール動画</a>
