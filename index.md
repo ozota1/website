@@ -447,62 +447,31 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 　チュートリアルやドキュメントを完備
 </h3>
 <div class="feature__wrapper">
-
     <div class="feature__item--center">
       <div class="archive__item">
-
           <div class="archive__item-teaser">
             <img src="/assets/images/illust_book2.png" alt="placeholder image 1">
-
           </div>
-
-
         <div class="archive__item-body">
-
             <h3 class="archive__item-title">ドキュメント</h3>
-
-
-
             <div class="archive__item-excerpt">
               <p>開発者向けとシステム管理者向けの2種類のドキュメントを用意しています。<br>KAMONOHASHIをCLIで利用する際のガイドもあります。</p>
-
             </div>
-
-
-
             <p><a href="/docs/" class="btn btn--primary">ドキュメントをみる</a></p>
-
         </div>
       </div>
     </div>
-
-
-
-
     <div class="feature__item--center">
       <div class="archive__item">
-
           <div class="archive__item-teaser">
-            <img src="/assets/images/illust_book.png" alt="placeholder image 2">
-
+            <img src="/assets/images/illust_beginner.png" alt="placeholder image 2">
           </div>
-
-
         <div class="archive__item-body">
-
             <h3 class="archive__item-title">チュートリアル</h3>
-
-
-
             <div class="archive__item-excerpt">
               <p>初めての利用者向けのチュートリアルを用意しています。ステップバイステップ形式で、KAMONOHASHIの使用方法を知ることができます。</p>
-
             </div>
-
-
-
             <p><a href="/docs/tutorial" class="btn btn--primary">Tutorialをみる</a></p>
-
         </div>
       </div>
     </div>
