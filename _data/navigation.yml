@@ -1,14 +1,14 @@
 main:
+  - title: "GitHub"
+    url: "https://github.com/KAMONOHASHI/kamonohashi"
   - title: "Docs"
     url: /docs/
+  - title: "Support"
+    url: /support/
   - title: "Resource"
     url: /resource/
   - title: "FAQ"
     url: /docs/faq/
-  - title: "Support"
-    url: /support/
-  - title: "GitHub"
-    url: "https://github.com/KAMONOHASHI/kamonohashi"
 docs:
   - title: Concepts
     url: /docs/concepts
