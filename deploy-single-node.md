@@ -2,9 +2,8 @@
 ## 構築ツールのセットアップ
 * インストール対象マシンにログインします。
 * `sudo su -`を実行し、rootユーザーになります
-* (暫定手順)`git clone https://github.com/ozota1/kamonohashi.git -b deepops_deploy`を実行してスクリプトを入手します
-  * (暫定手順)deploy-tools/kamonohashi/charts/*/Chart.yaml-templateをChart.yamlにリネームします
-  * 各Chart.yamlの`${VERSION}`を`2.0.0`に書き換えます
+* `mkdir -p /var/lib/kamonohashi/ && cd /var/lib/kamonohashi/ `を実行します
+* `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.0.0 --recursive`を実行してデプロイスクリプトを入手します
 * `./deploy-kamonohashi.sh prepare`を実行して構築に必要なソフトウェアをインストールします
 
 ## デプロイ構成の設定 
@@ -32,11 +31,19 @@
 実行後、対話形式で聞かれる以下の内容を入力します
 |質問文|解説|
 |---|---|
-|Admin Passwordを入力:|KAMONOHASHIのアプリケーションのAdminユーザーのパスワードです。|
+|Admin Passwordを入力:|KAMONOHASHIのadminアカウントで使用する8文字以上のパスワードです。数字のみのパスワードは使用不可となっているので注意してください。KAMONOHASHI Web UIログイン・DB接続、Object Storageへのログインに使用します。<br>一度構築に使用したパスワードはデプロイツールでは変更できません。パスワードを変える場合は、完全にデータを削除するか、パスワード変更手順を実施する必要があります。パスワード変更手順は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください。|
 |SSH password: |構築時に使用する、sshユーザーのパスワードです。`-k`指定時のみ聞かれます|
 |SUDO password[defaults to SSH password]: |構築時に使用する、sshユーザーのsudoパスワードです。`-K`指定時のみ聞かれます。|
 
 入力後に構築が始まります。
+
+初回はGPUドライバのインストール後に再起動されます。  
+再起動後rootユーザーでログインしなおし、再度デプロイスクリプトを実行してください。
+```bash
+cd /var/lib/kamonohashi/
+./deploy-kamonohashi.sh deploy all
+```
 構築には20分程かかります。
 
 構築後にアクセス用のURLが表示されるので、それをブラウザで開きます
+
