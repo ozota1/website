@@ -1,4 +1,16 @@
-# 1ノード構成でのインストール
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: single
+classes: wide
+title: "1ノード構成でのインストール"
+permalink: /docs/install-and-update/deploy-single-node
+sidebar:
+  nav: "docs"
+---
+
+
 ## 構築ツールのセットアップ
 * インストール対象マシンにログインします。
 * `sudo su -`を実行し、rootユーザーになります

@@ -1,4 +1,15 @@
-# クラスタ構成でのインストール
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: single
+classes: wide
+title: "クラスタ構成でのインストール"
+permalink: /docs/install-and-update/deploy-cluster
+sidebar:
+  nav: "docs"
+---
+
 
 ## 構成について
 KAMONOHASHIのクラスタは次の4種類のサーバーで構成されます

@@ -1,4 +1,14 @@
-# KAMONOHASHI 1.xから2.xへの移行
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: single
+classes: wide
+title: "KAMONOHASHI 1.xから2.xへの移行"
+permalink: /docs/install-and-update/migrate1xto2x
+sidebar:
+  nav: "docs"
+---
 
 ## 考慮事項
 * KAMONOHASHI2.xではインフラ部分に[deepops](https://github.com/NVIDIA/deepops)を採用する変更を行いました。
