@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Concepts - KAMONOHASHI</title>
+<!-- begin _includes/seo.html --><title>カスタマイズ設定ガイド - KAMONOHASHI</title>
 <meta name="description" content="KAMONOHASHI(カモノハシ)は、Deep Learningのモデル開発を効率的に行うためのAI開発プラットフォームです。 AI開発プロセスを最大限に効率化し、最高のモデル開発を体験してみませんか。">
 
 
@@ -17,8 +17,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="KAMONOHASHI">
-<meta property="og:title" content="Concepts">
-<meta property="og:url" content="http://localhost:4000/docs/concepts">
+<meta property="og:title" content="カスタマイズ設定ガイド">
+<meta property="og:url" content="http://localhost:4000/docs/install-and-update/customize-2x">
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/docs/concepts">
+<link rel="canonical" href="http://localhost:4000/docs/install-and-update/customize-2x">
 
 
 
@@ -541,7 +541,7 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Concepts">
+    <meta itemprop="headline" content="カスタマイズ設定ガイド">
     
     
     
@@ -549,7 +549,7 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Concepts
+          <h1 id="page-title" class="page__title" itemprop="headline">カスタマイズ設定ガイド
 </h1>
           
         </header>
@@ -557,99 +557,61 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>本書では、KAMONOHASHIを使用する前の読者を対象として、KAMONOHASHIのなかで登場する概念や用語について解説し、
-読者がスムーズにKAMONOHASHIを使用開始できるようにすることを目的としています。</p>
+        <h2 id="自動構築のnfsサーバーでなく既存のnfsサーバーを使用する">自動構築のNFSサーバーでなく既存のNFSサーバーを使用する</h2>
+<p>例えばHWベンダーのNFSサーバーを使用する場合にこのカスタマイズを行います。
+NFSサーバーはrootユーザーでの読み書きが可能であることが要件です</p>
 
-<h2 id="環境構成">環境構成</h2>
-<p>KAMONOHASHIはローカル環境、外部サービスの環境と連携して利用します。</p>
+<ol>
+  <li>次の<code class="highlighter-rouge">deepops/config/inventry</code>の記述を削除します</li>
+</ol>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left"> </th>
-      <th style="text-align: left">説明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">ローカル環境</td>
-      <td style="text-align: left">開発者自身が作業する環境です。NVIDIA GPUを搭載したマシンも使用することが可能です。モデルのソースコード、データ、実行コマンドなどを用意します。</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">外部サービス環境</td>
-      <td style="text-align: left">GitやDockerなど、外部のサービスです。KAMONOHASHIには含まれません。個別に用意が必要です。</td>
-    </tr>
-  </tbody>
-</table>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[nfs-server]
+${NFS}
+</code></pre></div></div>
 
-<p><img src="/assets/images/illust_userFlow.png" alt="構成概念図" /></p>
+<ol>
+  <li><code class="highlighter-rouge">kamonohashi/conf/settings.yml</code>の次の箇所を編集します</li>
+</ol>
 
-<h2 id="テナントとは">テナントとは</h2>
-
-<p>テナントはKAMONOHASHIの管理単位です。テナント毎に、ユーザの管理、クォータ(リソースの使用量制限)の設定が行えます。<br />
-テナントには、Gitリポジトリ、Docker Registryおよびオブジェクトストレージが関連付けられ、それぞれ複数のテナント間で共有可能です。
-Gitリポジトリ、Docker Registryは1テナントに複数登録することができます。</p>
-
-<p>初期状態では、「Sandbox」という名前のテナントが既定で用意されています。</p>
-
-<p><img src="/assets/images/illust_tenant.png" alt="テナント概念(図3-1)" /></p>
-
-<h2 id="ノードとは">ノードとは</h2>
-
-<p>ノードは、KAMONOHASHIに管理される物理的あるいは仮想的な計算用コンピュータを指します。
-KAMONOHASHI自体を構成する管理サーバ群は含まれません。</p>
-
-<p><img src="/assets/images/node.png" alt="ノード概念" /></p>
-
-<h2 id="ロールとは">ロールとは</h2>
-<p>ユーザにロールを付与することで、操作可能な機能を制御できます。
-一人のユーザには複数のロールを関連付けられます。</p>
-
-<p>ロールは大きく以下の2種類に大別されます。</p>
-
-<ul>
-  <li>システムロール
-    <ul>
-      <li>テナントを横断する、システム全体に関連した情報を取り扱うためのロール</li>
-      <li>既定では全てのシステム管理権限がある「Adminロール」が使用可能</li>
-    </ul>
-  </li>
-  <li>テナントロール
-    <ul>
-      <li>特定のテナント内に限定された情報を扱うためのロール</li>
-      <li>所属するテナントごとに、ユーザに付与するテナントロールを指定する
-        <ul>
-          <li>例えば、同一のユーザに対し、AテナントにはManagerロールを付与し、BテナントにはUserロールとResercherロールを付与する、など</li>
-        </ul>
-      </li>
-      <li>既定では以下の3種類のテナントロールが使用できる</li>
-    </ul>
-  </li>
-</ul>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">appsettings</span><span class="pi">:</span>
+<span class="nn">...</span>
+  <span class="na">DeployOptions__NfsStorage</span><span class="pi">:</span> <span class="s2">"</span><span class="s">storage"</span>
+  <span class="na">DeployOptions__NfsPath</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/var/lib/kamonohashi/nfs"</span>
+</code></pre></div></div>
 
 <table>
   <thead>
     <tr>
-      <th>ロール</th>
-      <th>説明</th>
+      <th>yamlの項目</th>
+      <th>内容</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>User</td>
-      <td>データの追加・削除、およびデータセットの作成・変更を行う権限を持つ。</td>
+      <td>appsettings.DeployOptions__NfsStorage</td>
+      <td>NFSサーバーのホスト名</td>
     </tr>
     <tr>
-      <td>Researcher</td>
-      <td>学習の実行、結果の評価を行う権限を持つ。</td>
-    </tr>
-    <tr>
-      <td>Manager</td>
-      <td>そのテナント内で使用する計算リソースや権限の管理を行う権限を持つ。</td>
+      <td>appsettings.DeployOptions__NfsPath</td>
+      <td>NFSサーバーのエクスポートパス</td>
     </tr>
   </tbody>
 </table>
 
+<ol>
+  <li>構築フェーズでは<code class="highlighter-rouge">./deploy-kamonohashi.sh deploy all</code>の代わりに次を実行します
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./deploy-kamonohashi.sh deploy k8s &amp;&amp; ./deploy-kamonohashi.sh deploy app
+</code></pre></div>    </div>
+    <p>sshにパスワードが必要な場合は<code class="highlighter-rouge">-k</code>,<code class="highlighter-rouge">-K</code>オプションを使用します</p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./deploy-kamonohashi.sh deploy k8s -K -k &amp;&amp; ./deploy-kamonohashi.sh deploy app
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="insecure-registryを設定する">insecure-registryを設定する</h2>
+<p><code class="highlighter-rouge">deepops/config/group_vars/k8s-cluster.yml</code>に次の記述を追記します</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker_insecure_registries: ["&lt;host名:ポート&gt;"]
+</code></pre></div></div>
 
         
       </section>

@@ -1,4 +1,14 @@
-# カスタマイズ設定ガイド
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: single
+classes: wide
+title: "カスタマイズ設定ガイド"
+permalink: /docs/install-and-update/customize-2x
+sidebar:
+  nav: "docs"
+---
 
 ## 自動構築のNFSサーバーでなく既存のNFSサーバーを使用する
 例えばHWベンダーのNFSサーバーを使用する場合にこのカスタマイズを行います。
