@@ -278,14 +278,6 @@
             
             
 
-            <li><a href="/docs/install-and-update#%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%80%E3%82%A6%E3%83%B3" class="">・バージョンダウン</a></li>
-          
-            
-            
-
-            
-            
-
             <li><a href="/docs/install-and-update#%E5%A4%96%E9%83%A8%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%A8%E3%81%AE%E4%BA%92%E6%8F%9B%E6%80%A7" class="">・外部サービスとの互換性</a></li>
           
         </ul>
@@ -643,15 +635,42 @@
 
 <h2 id="デプロイ構成の設定">デプロイ構成の設定</h2>
 <p><code class="highlighter-rouge">./deploy-kamonohashi.sh configure cluster</code>を実行します。
-対話形式で聞かれる以下の内容を入力します
-|質問文|解説|
-|—|—|
-|Kubernetes masterを<br />デプロイするサーバ名||
-|KAMONOHASHIを<br />デプロイするサーバ名||
-|Storageをデプロイするサーバ名|HWベンダーのNFSを使用する場合は|
-|計算ノード名|,区切りで複数指定できます。<br />例: gpu1,gpu2,gpu3 |
-|SSHで利用するユーザー名:|構築時に使用するSSHユーザーを指定します。構築ツールがSSH経由で構築を行う仕様のため、指定が必要になります|
-|プロキシを設定しますか？ [y/N]|プロキシ環境にデプロイする場合はyを入力して<br /> http_proxy, https_proxy, no_proxy<br />を設定します<br />no_proxyはこれまでの入力内容を元に必要なものが自動生成されます。<br />自組織のドメイン等を生成されたno_proxyに更に追加することもできます|</p>
+対話形式で聞かれる以下の内容を入力します</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>質問文</th>
+      <th>解説</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Kubernetes masterを<br />デプロイするサーバ名</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>KAMONOHASHIを<br />デプロイするサーバ名</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Storageをデプロイするサーバ名</td>
+      <td>HWベンダーのNFSを使用する場合は</td>
+    </tr>
+    <tr>
+      <td>計算ノード名</td>
+      <td>,区切りで複数指定できます。<br />例: gpu1,gpu2,gpu3</td>
+    </tr>
+    <tr>
+      <td>SSHで利用するユーザー名:</td>
+      <td>構築時に使用するSSHユーザーを指定します。構築ツールがSSH経由で構築を行う仕様のため、指定が必要になります</td>
+    </tr>
+    <tr>
+      <td>プロキシを設定しますか？ [y/N]</td>
+      <td>プロキシ環境にデプロイする場合はyを入力して<br /> http_proxy, https_proxy, no_proxy<br />を設定します<br />no_proxyはこれまでの入力内容を元に必要なものが自動生成されます。<br />自組織のドメイン等を生成されたno_proxyに更に追加することもできます</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>入力内容に応じ、以下の設定ファイルに書き込みが行われます</p>
 <ul>
@@ -669,12 +688,30 @@
 指定したユーザーでのsudoにパスワードが必要な場合は<code class="highlighter-rouge">-K</code>のオプションを指定します。
 例： <code class="highlighter-rouge">./deploy-kamonohashi.sh deploy all -k -K</code></p>
 
-<p>実行後、対話形式で聞かれる以下の内容を入力します
-|質問文|解説|
-|—|—|
-|Admin Passwordを入力:|KAMONOHASHIのadminアカウントで使用する8文字以上のパスワードです。数字のみのパスワードは使用不可となっているので注意してください。KAMONOHASHI Web UIログイン・DB接続、Object Storageへのログインに使用します。<br />一度構築に使用したパスワードはデプロイツールでは変更できません。パスワードを変える場合は、完全にデータを削除するか、パスワード変更手順を実施する必要があります。パスワード変更手順は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください|
-|SSH password: |構築時に使用する、sshユーザーのパスワードです。<code class="highlighter-rouge">-k</code>指定時のみ聞かれます|
-|SUDO password[defaults to SSH password]: |構築時に使用する、sshユーザーのsudoパスワードです。<code class="highlighter-rouge">-K</code>指定時のみ聞かれます。|</p>
+<p>実行後、対話形式で聞かれる以下の内容を入力します</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>質問文</th>
+      <th>解説</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Admin Passwordを入力:</td>
+      <td>KAMONOHASHIのadminアカウントで使用する8文字以上のパスワードです。数字のみのパスワードは使用不可となっているので注意してください。KAMONOHASHI Web UIログイン・DB接続、Object Storageへのログインに使用します。<br />一度構築に使用したパスワードはデプロイツールでは変更できません。パスワードを変える場合は、完全にデータを削除するか、パスワード変更手順を実施する必要があります。パスワード変更手順は<a href="mailto:kamonohashi-support@jp.nssol.nipponsteel.com">kamonohashi-support@jp.nssol.nipponsteel.com</a>にお問い合わせください</td>
+    </tr>
+    <tr>
+      <td>SSH password:</td>
+      <td>構築時に使用する、sshユーザーのパスワードです。<code class="highlighter-rouge">-k</code>指定時のみ聞かれます</td>
+    </tr>
+    <tr>
+      <td>SUDO password[defaults to SSH password]:</td>
+      <td>構築時に使用する、sshユーザーのsudoパスワードです。<code class="highlighter-rouge">-K</code>指定時のみ聞かれます。</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>入力後に構築が始まります。
 構築には20分程かかります。</p>

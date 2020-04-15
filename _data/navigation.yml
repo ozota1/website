@@ -30,8 +30,6 @@ docs:
         url: /docs/install-and-update#アンインストール方法
       - title: "・バージョンアップ"
         url: /docs/install-and-update#バージョンアップ
-      - title: "・バージョンダウン"
-        url: /docs/install-and-update#バージョンダウン
       - title: "・外部サービスとの互換性"
         url: /docs/install-and-update#外部サービスとの互換性
   - title: Tutorial
