@@ -14,14 +14,14 @@ sidebar:
 例えばHWベンダーのNFSサーバーを使用する場合にこのカスタマイズを行います。
 NFSサーバーはrootユーザーでの読み書きが可能であることが要件です
 
-1. 次の`deepops/config/inventry`の記述を削除します
+#### 1. 次の`deepops/config/inventry`の記述を削除します
 
 ```
 [nfs-server]
 ${NFS}
 ```
 
-2. `kamonohashi/conf/settings.yml`の次の箇所を編集します
+#### 2. `kamonohashi/conf/settings.yml`の次の箇所を編集します
 
 ```yaml
 appsettings:
@@ -35,7 +35,7 @@ appsettings:
 |appsettings.DeployOptions__NfsStorage|NFSサーバーのホスト名|
 |appsettings.DeployOptions__NfsPath|NFSサーバーのエクスポートパス|
 
-3. 構築フェーズでは`./deploy-kamonohashi.sh deploy all`の代わりに次を実行します
+#### 3. 構築フェーズでは`./deploy-kamonohashi.sh deploy all`の代わりに次を実行します
 ```
 ./deploy-kamonohashi.sh deploy k8s && ./deploy-kamonohashi.sh deploy app
 ```

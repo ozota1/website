@@ -278,14 +278,6 @@
             
             
 
-            <li><a href="/docs/install-and-update#%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%80%E3%82%A6%E3%83%B3" class="">・バージョンダウン</a></li>
-          
-            
-            
-
-            
-            
-
             <li><a href="/docs/install-and-update#%E5%A4%96%E9%83%A8%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%A8%E3%81%AE%E4%BA%92%E6%8F%9B%E6%80%A7" class="">・外部サービスとの互換性</a></li>
           
         </ul>
@@ -561,17 +553,13 @@
 <p>例えばHWベンダーのNFSサーバーを使用する場合にこのカスタマイズを行います。
 NFSサーバーはrootユーザーでの読み書きが可能であることが要件です</p>
 
-<ol>
-  <li>次の<code class="highlighter-rouge">deepops/config/inventry</code>の記述を削除します</li>
-</ol>
+<h4 id="1-次のdeepopsconfiginventryの記述を削除します">1. 次の<code class="highlighter-rouge">deepops/config/inventry</code>の記述を削除します</h4>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[nfs-server]
 ${NFS}
 </code></pre></div></div>
 
-<ol>
-  <li><code class="highlighter-rouge">kamonohashi/conf/settings.yml</code>の次の箇所を編集します</li>
-</ol>
+<h4 id="2-kamonohashiconfsettingsymlの次の箇所を編集します">2. <code class="highlighter-rouge">kamonohashi/conf/settings.yml</code>の次の箇所を編集します</h4>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">appsettings</span><span class="pi">:</span>
 <span class="nn">...</span>
@@ -598,15 +586,12 @@ ${NFS}
   </tbody>
 </table>
 
-<ol>
-  <li>構築フェーズでは<code class="highlighter-rouge">./deploy-kamonohashi.sh deploy all</code>の代わりに次を実行します
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./deploy-kamonohashi.sh deploy k8s &amp;&amp; ./deploy-kamonohashi.sh deploy app
-</code></pre></div>    </div>
-    <p>sshにパスワードが必要な場合は<code class="highlighter-rouge">-k</code>,<code class="highlighter-rouge">-K</code>オプションを使用します</p>
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./deploy-kamonohashi.sh deploy k8s -K -k &amp;&amp; ./deploy-kamonohashi.sh deploy app
-</code></pre></div>    </div>
-  </li>
-</ol>
+<h4 id="3-構築フェーズではdeploy-kamonohashish-deploy-allの代わりに次を実行します">3. 構築フェーズでは<code class="highlighter-rouge">./deploy-kamonohashi.sh deploy all</code>の代わりに次を実行します</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./deploy-kamonohashi.sh deploy k8s &amp;&amp; ./deploy-kamonohashi.sh deploy app
+</code></pre></div></div>
+<p>sshにパスワードが必要な場合は<code class="highlighter-rouge">-k</code>,<code class="highlighter-rouge">-K</code>オプションを使用します</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./deploy-kamonohashi.sh deploy k8s -K -k &amp;&amp; ./deploy-kamonohashi.sh deploy app
+</code></pre></div></div>
 
 <h2 id="insecure-registryを設定する">insecure-registryを設定する</h2>
 <p><code class="highlighter-rouge">deepops/config/group_vars/k8s-cluster.yml</code>に次の記述を追記します</p>

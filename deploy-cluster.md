@@ -54,6 +54,7 @@ KAMONOHASHIのクラスタは次の4種類のサーバーで構成されます
 ## デプロイ構成の設定 
 `./deploy-kamonohashi.sh configure cluster`を実行します。
 対話形式で聞かれる以下の内容を入力します
+
 |質問文|解説|
 |---|---|
 |Kubernetes masterを<br>デプロイするサーバ名||
@@ -78,9 +79,11 @@ KAMONOHASHIのクラスタは次の4種類のサーバーで構成されます
 例： `./deploy-kamonohashi.sh deploy all -k -K`
 
 実行後、対話形式で聞かれる以下の内容を入力します
+
+
 |質問文|解説|
 |---|---|
-|Admin Passwordを入力:|KAMONOHASHIのadminアカウントで使用する8文字以上のパスワードです。数字のみのパスワードは使用不可となっているので注意してください。KAMONOHASHI Web UIログイン・DB接続、Object Storageへのログインに使用します。<br>一度構築に使用したパスワードはデプロイツールでは変更できません。パスワードを変える場合は、完全にデータを削除するか、パスワード変更手順を実施する必要があります。パスワード変更手順は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください|
+|Admin Passwordを入力:|KAMONOHASHIのadminアカウントで使用する8文字以上のパスワードです。数字のみのパスワードは使用不可となっているので注意してください。KAMONOHASHI Web UIログイン・DB接続、Object Storageへのログインに使用します。<br>一度構築に使用したパスワードはデプロイツールでは変更できません。パスワードを変える場合は、完全にデータを削除するか、パスワード変更手順を実施する必要があります。パスワード変更手順は[kamonohashi-support@jp.nssol.nipponsteel.com](mailto:kamonohashi-support@jp.nssol.nipponsteel.com)にお問い合わせください|
 |SSH password: |構築時に使用する、sshユーザーのパスワードです。`-k`指定時のみ聞かれます|
 |SUDO password[defaults to SSH password]: |構築時に使用する、sshユーザーのsudoパスワードです。`-K`指定時のみ聞かれます。|
 
