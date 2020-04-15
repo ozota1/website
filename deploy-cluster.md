@@ -100,3 +100,20 @@ KAMONOHASHIのクラスタは次の4種類のサーバーで構成されます
   * 再度デプロイすると過去のデータベース, ストレージの中身を引き続き使用します
   * 完全にデータを削除する場合は KAMONOHASHIノード, STORAGEノードで`/var/lib/kamonohashi` を削除してください
     * 構築に失敗してやり直す際にパスワードも変更する場合はこのディレクトリを削除してください
+
+### 備考
+* 2.0.0のアンインストールでは、内部で利用するツールの[既知のバグ](https://github.com/kubernetes-sigs/kubespray/issues/5185)により、次のようなエラーがメッセージに含まれます。
+これは無視して良いエラーです
+
+```
+    The task includes an option with an undefined variable. The error was: 'dict object' has no attribute 'stdout'
+
+    The error appears to have been in '/kubespray/kubespray/roles/remove-node/post-remove/tasks/main.yml': line 14, column 3, but may
+    be elsewhere in the file depending on the exact syntax problem.
+
+    The offending line appears to be:
+
+
+    - name: Set node IP
+      ^ here
+```
