@@ -26,7 +26,7 @@ sidebar:
   * KAMONOHASHIノードの`/var/lib/kamonohashi/postgres`,Storageノードの`/var/lib/kamonohashi/nfs`は消さずに残してください
 
 * Ubuntu 16.04をUbuntu 18.04にバージョンアップしてください
-
+* deepopsがインストールするGPU driverとの競合を防ぐため、GPUドライバをアンインストールします
 * Kubernetes Masterの`/var/lib/kamonohashi/deploy-tools/`ディレクトリを別の場所に退避します
 
 ## 2.x構築ツールのセットアップ

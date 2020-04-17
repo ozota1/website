@@ -35,15 +35,6 @@ appsettings:
 |appsettings.DeployOptions__NfsStorage|NFSサーバーのホスト名|
 |appsettings.DeployOptions__NfsPath|NFSサーバーのエクスポートパス|
 
-#### 3. 構築フェーズでは`./deploy-kamonohashi.sh deploy all`の代わりに次を実行します
-```
-./deploy-kamonohashi.sh deploy k8s && ./deploy-kamonohashi.sh deploy app
-```
-sshにパスワードが必要な場合は`-k`,`-K`オプションを使用します
-```
-./deploy-kamonohashi.sh deploy k8s -K -k && ./deploy-kamonohashi.sh deploy app
-```
-
 ## insecure-registryを設定する
 `deepops/config/group_vars/k8s-cluster.yml`に次の記述を追記します
 ```
