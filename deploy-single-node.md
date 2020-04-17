@@ -20,6 +20,8 @@ sidebar:
 
 ## デプロイ構成の設定 
 `./deploy-kamonohashi.sh configure single-node`を実行します。
+
+
 対話形式で聞かれる以下の内容を入力します
 |質問文|解説|
 |---|---|
@@ -31,7 +33,7 @@ sidebar:
 * kamonohashiの設定ファイル(kamonohashi/conf/settings.yml)
 
 設定内容をカスタマイズする場合は次を参照し、設定ファイルの編集を行ってください。
-[カスタマイズ設定ガイド]()
+[カスタマイズ設定ガイド](/docs/install-and-update/customize-2x)
 
 ## デプロイの実行
 `./deploy-kamonohashi.sh deploy all`を実行します。
