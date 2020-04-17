@@ -22,11 +22,14 @@ sidebar:
 * KAMONOHASHIのAdminアカウントでログインできることを確認します
 
 ### KAMONOHASHI 1.xのアンインストール
-* 利用バージョンのアンインストールを実施してください
-  * KAMONOHASHIノードの`/var/lib/kamonohashi/postgres`,Storageノードの`/var/lib/kamonohashi/nfs`は消さずに残してください
-
-* Ubuntu 16.04をUbuntu 18.04にバージョンアップしてください
+次のコマンドを実行します
+```
+cd /var/lib/kamonohashi/deploy-tools/<version>/infra/
+./deploy-kqi-infra.sh prepare
+./deploy-kqi-infra.sh clean
+```
 * deepopsがインストールするGPU driverとの競合を防ぐため、GPUドライバをアンインストールします
+* Ubuntu 16.04をUbuntu 18.04にバージョンアップしてください
 * Kubernetes Masterの`/var/lib/kamonohashi/deploy-tools/`ディレクトリを別の場所に退避します
 
 ## 2.x構築ツールのセットアップ
