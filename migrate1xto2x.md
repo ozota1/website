@@ -61,9 +61,13 @@ sidebar:
 指定したユーザーでのsudoにパスワードが必要な場合は`-K`のオプションを指定します。
 例： `./deploy-kamonohashi.sh clean nvidia-repo -k -K`
 
-`./deploy-kamonohashi.sh clean nvidia-repo`を実行します
-`./deploy-kamonohashi.sh deploy nvidia-gpg-key`を実行します。
-`./deploy-kamonohashi.sh deploy all`を実行します。
+* sshキーを~/.ssh/id_rsaで配置している場合は、ペアのid_rsa.pubも~/.sshに配置してください
+
+1. `./deploy-kamonohashi.sh clean nvidia-repo`を実行します
+  * ubuntu16用のnvidiaリポジトリ登録が残っているためです
+2. `./deploy-kamonohashi.sh deploy nvidia-gpg-key`を実行します。
+  * nvidiaのGPGキーは期限が半年であり、期限が切れるとaptが失敗することの対応です
+3. `./deploy-kamonohashi.sh deploy all`を実行します。
 
 実行後、対話形式で聞かれる以下の内容を入力します
 |質問文|解説|
