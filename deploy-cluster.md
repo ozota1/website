@@ -82,4 +82,8 @@ KAMONOHASHIのクラスタは次の4種類のサーバーで構成されます
 入力後に構築が始まります。
 構築には20分程かかります。
 
+* DGX利用時のみ、構築後に次の作業を行ってください
+  * `rm /etc/systemd/system/docker.service.d/docker-override.conf`
+  * これは構築に使用する NVIDIA deepopsのバグで、20.02.1の次のdeepopsのリリースがされれば[対応される見込み](https://github.com/NVIDIA/deepops/commit/980cfe42685e17f0d3688fe50b1939aeaa51f314#diff-25c48ad81ab2a8e8c03e25d8d023bc1c)です。
+
 構築後にアクセス用のURLが表示されるので、それをブラウザで開きます
