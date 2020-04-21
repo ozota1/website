@@ -19,7 +19,7 @@ sidebar:
 * インストール対象マシンにログインします。
 * `sudo su -`を実行し、rootユーザーになります
 * `mkdir -p /var/lib/kamonohashi/ && cd /var/lib/kamonohashi/ `を実行します
-* `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.0.0 --recursive`を実行してデプロイスクリプトを入手します
+* `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.0.0.1 --recursive`を実行してデプロイスクリプトを入手します
 * `./deploy-kamonohashi.sh prepare`を実行して構築に必要なソフトウェアをインストールします
 
 ## デプロイ構成の設定 
