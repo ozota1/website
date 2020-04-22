@@ -275,23 +275,25 @@ LDAPユーザに対して、システムロールの付与や、Sandbox以外の
 KAMONOHASHI自体を構成する管理サーバ群は含みません。
 
 ### ノードの追加
-KAMONOHASHIの管理下に新しくノードを追加します。
-Kubernetes masterノード上での作業および、KAMONOHASHIのWeb画面上での作業が必要となります。
-#### Kubernetes masterノード上での作業
-1. GPUサーバの準備(Ubuntu Server 16.04およびGPUドライバのインストール)とKAMONOHASHIと同一ネットワークへの接続
-1. Kubernetes masterノードにssh
-1. `/var/lib/kamonohashi/deploy-tools/{バージョン番号}/infra/conf/inventory` を編集し、gpu-nodeを追記(下記例を参照)
-1. `/var/lib/kamonohashi/deploy-tools/{バージョン番号}/infra/deploy-kqi-infra.sh prepare` を実行
-1. `/var/lib/kamonohashi/deploy-tools/{バージョン番号}/infra/deploy-kqi-infra.sh scale` を実行
-1. SSHパスワード、SUDOパスワードを入力し、処理が完了するまで待機
+KAMONOHASHI 2.0.0で採用したdeepopsがGPUノード追加をサポートしていないため、
+GPUノード追加は再構築（アンインストール・インストール）が必要になります。
+CPUノード追加は[deepopsのドキュメント](https://github.com/NVIDIA/deepops/blob/master/docs/kubernetes-cluster.md#adding-nodes)に従ってください
 
-##### inventoryファイルへのgpu-node追記例
+#### GPUノード追加(アンインストール・インストール)
+* `cd /var/lib/kamonohashi`
+* `./deploy-kamonohashi.sh clean all`
+* `/var/lib/kamonohashi/deploy-tools/deepops/config/inventory` を編集し、gpu-nodeを追記(下記例を参照)
+* `./deploy-kamonohashi.sh deploy all` を実行
+
+#### inventoryファイルへのgpu-node追記例
 既に利用しているGPUのホスト名がgpu1、追加するGPUのホスト名がgpu2の場合、以下のようにgpu2を追記します。
 ```
-[gpu-node]
+[kube-node]
 gpu1
 gpu2
 ```
+
+再構築またはCPUノード追加後にKAMONOHASHIのWeb画面で次を実行します
 
 #### KAMONOHASHIのWeb画面上での作業
 1. ブラウザからkamonohashiにアクセス
