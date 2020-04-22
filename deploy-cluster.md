@@ -42,6 +42,7 @@ KAMONOHASHIのクラスタは次の4種類のサーバーで構成されます
 * `mkdir -p /var/lib/kamonohashi/ && cd /var/lib/kamonohashi/ `を実行します
 * `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.0.0.1 --recursive`を実行してデプロイスクリプトを入手します
 * `./deploy-kamonohashi.sh prepare`を実行して構築に必要なソフトウェアをインストールします
+  * ansibleでエラーが出る場合はansibleのアンインストールを実行してから`prepare`を実行してください
 
 ## デプロイ構成の設定 
 `./deploy-kamonohashi.sh configure cluster`を実行します。
