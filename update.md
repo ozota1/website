@@ -6,8 +6,9 @@
 デプロイツールの準備を実施後に次を実施してください
 
 ```bash
-cd /var/lib/kamonohashi
-git checkout tags/<バージョン>
+cd /var/lib/kamonohashi/deploy-tools
+git fetch
+git checkout tags/<デプロイツールバージョン>
 ./deploy-kamonohashi.sh update
 ```
 
