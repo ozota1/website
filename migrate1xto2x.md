@@ -15,6 +15,7 @@ sidebar:
   * Ubuntu16.04はサポートされないため、18.04へのバージョンアップが必要になります
   * インフラ部分を含めたアンインストールとインストールが必要になります
 * 2.xへのバージョンアップ後は、1.xへのバージョンダウンはできません
+* 2.xの[マシンの要件](/prerequisite)を事前にご確認ください
 
 ## 移行手順
 ### 事前準備
@@ -31,18 +32,20 @@ cd /var/lib/kamonohashi/deploy-tools/<version>/infra/
 * deepopsがインストールするGPU driverとの競合を防ぐため、GPUドライバをアンインストールします
 * Ubuntu 16.04をUbuntu 18.04にバージョンアップしてください
 * Kubernetes Masterの`/var/lib/kamonohashi/deploy-tools/`ディレクトリを別の場所に退避します
+* アンインストール完了後、[マシンの要件](/prerequisite)に合わせた設定をしてください
 
 ## 2.x構築ツールのセットアップ
 * Kubernetes masterをインストールするマシンにログインします。
 * `sudo su -`を実行し、rootユーザーになります
 * `mkdir -p /var/lib/kamonohashi/ && cd /var/lib/kamonohashi/ `を実行します
-* `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.0.0.2 --recursive`を実行してデプロイスクリプトを入手します
+* `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.0.0.4 --recursive`を実行してデプロイスクリプトを入手します
 * `/var/lib/kamonohashi/deploy-tools/`に移動します
 * プロキシ環境下では次のファイルにプロキシ設定を記載してください
   * `./deepops/scripts/proxy.sh`
   * no_proxyには`localhost,127.0.0.1,.cluster.local,使用するマシンのIPアドレス・ホスト名`の記載をしてください
 * `./deploy-kamonohashi.sh prepare`を実行して構築に必要なソフトウェアをインストールします
   * ansibleでエラーが出る場合はansibleのアンインストールを実行してから`prepare`を実行してください
+    * スクリプト実行中に適切なansibleがインストールされます
 
 ## デプロイ構成の設定 
 `./deploy-kamonohashi.sh configure cluster`を実行します。
