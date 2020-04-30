@@ -10,13 +10,23 @@ sidebar:
   nav: "docs"
 ---
 
+#### 構築の準備
+* [マシンの要件](/prerequisite)に合わせた設定をしてください
+* CPU8コアメモリ32GB以上を推奨します
+
 
 ## 構築ツールのセットアップ
 * インストール対象マシンにログインします。
 * `sudo su -`を実行し、rootユーザーになります
 * `mkdir -p /var/lib/kamonohashi/ && cd /var/lib/kamonohashi/ `を実行します
-* `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.0.0 --recursive`を実行してデプロイスクリプトを入手します
+* `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.0.0.4 --recursive`を実行してデプロイスクリプトを入手します
+* `/var/lib/kamonohashi/deploy-tools/`に移動します
+* プロキシ環境下では次のファイルにプロキシ設定を記載してください
+  * `./deepops/scripts/proxy.sh`
+  * no_proxyには`localhost,127.0.0.1,.cluster.local,使用するマシンのIPアドレス・ホスト名`の記載をしてください
 * `./deploy-kamonohashi.sh prepare`を実行して構築に必要なソフトウェアをインストールします
+  * ansibleでエラーが出る場合はansibleのアンインストールを実行してから`prepare`を実行してください
+    * スクリプト実行中に適切なansibleがインストールされます
 
 ## デプロイ構成の設定 
 `./deploy-kamonohashi.sh configure single-node`を実行します。
@@ -42,6 +52,8 @@ sidebar:
 指定したユーザーでのsudoにパスワードが必要な場合は`-K`のオプションを指定します。
 例： `./deploy-kamonohashi.sh deploy all -k -K`
 
+* sshキーを~/.ssh/id_rsaで配置している場合は、ペアのid_rsa.pubも~/.sshに配置してください
+
 実行後、対話形式で聞かれる以下の内容を入力します
 
 
@@ -60,5 +72,9 @@ cd /var/lib/kamonohashi/
 ./deploy-kamonohashi.sh deploy all
 ```
 構築には20分程かかります。
+
+* DGX利用時のみ、構築後に次の作業を行ってください
+  * `rm /etc/systemd/system/docker.service.d/docker-override.conf`
+  * これは構築に使用する NVIDIA deepopsのバグで、20.02.1の次のdeepopsのリリースがされれば[対応される見込み](https://github.com/NVIDIA/deepops/commit/980cfe42685e17f0d3688fe50b1939aeaa51f314#diff-25c48ad81ab2a8e8c03e25d8d023bc1c)です。
 
 構築後にアクセス用のURLが表示されるので、それをブラウザで開きます

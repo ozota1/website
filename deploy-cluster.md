@@ -25,7 +25,7 @@ KAMONOHASHIのクラスタは次の4種類のサーバーで構成されます
 * マシンを用意します
   * クラスタ構成では4種類のサーバーを別々のマシンにインストールする前提です
   * 同一マシンにインストールすることも可能ですが、テストしていません
-* 全てのマシンがAMD64(Intel 64bit CPU)である必要があります
+* [マシンの要件](/prerequisite)に合わせた設定をしてください
 * 各サーバーの最小リソース要件は下記になります。
   * データ・ユーザー数・実施するディープラーニングの内容に応じて下記よりも多く必要になる場合があります
 
@@ -36,20 +36,18 @@ KAMONOHASHIのクラスタは次の4種類のサーバーで構成されます
   |Storage|1 コア|2 GB|/var/lib/に学習データ・学習結果ファイル分の空き容量|
   |GPUサーバー|2 コア|2 GB|Fermi (2.1)より後の世代のNVIDIA GPU, /var/libに1学習分のデータが入る空容量|
 
-* 全てのマシンに Ubuntu Server 18.04 をインストールします
-* 全てのマシンに共通のアカウントでsshログインできるようにします
-  * そのアカウントが全てのマシンでsudoできるようにします
-  * sshキーを使用する場合は、id_rsaファイルをKubernetes masterマシンの/root/.ssh/に所有者root、パーミッション0600で配置します
-* 用意したマシンの名前解決が出来るようにします
-* NTPを設定し、各マシンの時刻を揃えます
-* 各マシンがインターネットアクセス出来るようにします
-
 ## 構築ツールのセットアップ
 * Kubernetes masterをインストールするマシンにログインします。
 * `sudo su -`を実行し、rootユーザーになります
 * `mkdir -p /var/lib/kamonohashi/ && cd /var/lib/kamonohashi/ `を実行します
-* `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.0.0 --recursive`を実行してデプロイスクリプトを入手します
+* `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.0.0.4 --recursive`を実行してデプロイスクリプトを入手します
+* `/var/lib/kamonohashi/deploy-tools/`に移動します
+* プロキシ環境下では次のファイルにプロキシ設定を記載してください
+  * `./deepops/scripts/proxy.sh`
+  * no_proxyには`localhost,127.0.0.1,.cluster.local,使用する各マシンのIPアドレス・ホスト名`の記載を含めてください
 * `./deploy-kamonohashi.sh prepare`を実行して構築に必要なソフトウェアをインストールします
+  * ansibleでエラーが出る場合はansibleのアンインストールを実行してから`prepare`を実行してください
+    * スクリプト実行中に適切なansibleがインストールされます
 
 ## デプロイ構成の設定 
 `./deploy-kamonohashi.sh configure cluster`を実行します。
@@ -89,5 +87,9 @@ KAMONOHASHIのクラスタは次の4種類のサーバーで構成されます
 
 入力後に構築が始まります。
 構築には20分程かかります。
+
+* DGX利用時のみ、構築後に次の作業を行ってください
+  * `rm /etc/systemd/system/docker.service.d/docker-override.conf`
+  * これは構築に使用する NVIDIA deepopsのバグで、20.02.1の次のdeepopsのリリースがされれば[対応される見込み](https://github.com/NVIDIA/deepops/commit/980cfe42685e17f0d3688fe50b1939aeaa51f314#diff-25c48ad81ab2a8e8c03e25d8d023bc1c)です。
 
 構築後にアクセス用のURLが表示されるので、それをブラウザで開きます
