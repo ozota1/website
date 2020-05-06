@@ -280,7 +280,7 @@ KAMONOHASHIの管理下に新しくノードを追加します。 Kubernetes mas
 1. GPUサーバの準備とKAMONOHASHIと同一ネットワークへの接続
 1. Kubernetes masterノードにssh
 1. `/var/lib/kamonohashi/deploy-tools/deepops/config/inventory` を編集し、マシンを追記(下記例を参照)
-1. `/var/lib/kamonohashi/deploy-tools/deploy-kamonohashi.sh scale` を実行
+1. `/var/lib/kamonohashi/deploy-tools/deploy-kamonohashi.sh update node-conf` を実行
 1. 処理が完了するまで待機
 
 #### inventoryファイルへのノード追記例
