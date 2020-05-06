@@ -30,6 +30,8 @@ sidebar:
 
 ## デプロイ構成の設定 
 `./deploy-kamonohashi.sh configure single-node`を実行します。
+
+
 対話形式で聞かれる以下の内容を入力します
 |質問文|解説|
 |---|---|
