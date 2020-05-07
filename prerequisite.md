@@ -1,3 +1,14 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: single
+classes: wide
+title: "インストールする際の前提条件"
+permalink: /docs/install-and-update/prerequisite
+sidebar:
+  nav: "docs"
+---
 * 全てのマシンがAMD64(Intel 64bit CPU)である必要があります
 * OSは Ubuntu Server 18.04 または NVIDIA DGX OS 4 になります
 * 全てのマシンに共通のアカウントでsshログインできるようにします

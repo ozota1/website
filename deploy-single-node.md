@@ -11,7 +11,7 @@ sidebar:
 ---
 
 #### 構築の準備
-* [マシンの要件](/prerequisite)に合わせた設定をしてください
+* [マシンの要件](/docs/install-and-update/prerequisite)に合わせた設定をしてください
 * CPU8コアメモリ32GB以上を推奨します
 
 
