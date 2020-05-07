@@ -13,10 +13,10 @@ sidebar:
 
 ## インストール方法
 
- - <a href="/docs/install-and-update/deploy-single-node">シングルノード構成でのインストール</a>
- - <a href="/docs/install-and-update/deploy-cluster">クラスタ構成でのインストール</a>
+ - [シングルノード構成でのインストール](/docs/install-and-update/deploy-single-node)
+ - [クラスタ構成でのインストール](/docs/install-and-update/deploy-cluster)
 
-* 上記の構成では要件が足りず、カスタマイズしたい場合は[kamonohashi-support@jp.nssol.nipponsteel.com](mailto:kamonohashi-support@jp.nssol.nipponsteel.com)にお問い合わせください
+上記の構成では要件が足りず、カスタマイズしたい場合は[kamonohashi-support@jp.nssol.nipponsteel.com](mailto:kamonohashi-support@jp.nssol.nipponsteel.com)にお問い合わせください
 
 
 ## アンインストール方法
