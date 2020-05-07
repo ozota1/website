@@ -6,10 +6,15 @@
 デプロイツールの準備を実施後に次を実施してください
 
 ```bash
-cd /var/lib/kamonohashi
-git checkout tags/<バージョン>
-./deploy-kamonohashi.sh update
+cd /var/lib/kamonohashi/deploy-tools
+git fetch --tags
+git checkout tags/<デプロイツールバージョン>
+./deploy-kamonohashi.sh update app
 ```
+
+* デプロイツールバージョンは<アプリのバージョン>.<デプロイツールリビジョン>となってます
+  * デプロイツールバージョンが2.0.0.nの場合、アプリバージョン2.0.0をデプロイするツールのn番目のリビジョンです
+  * 古いアプリバージョンに戻す場合は[DBの切り戻しを含むバージョンダウン](#DBの切り戻しを含むバージョンダウン)を確認してください
 
 ### k8sなども含めたインフラ全体のバージョンアップ
 現在デプロイツールでは古いバージョンのアンインストールと新しいバージョンのインストールによるアップグレードのみ可能です。
@@ -32,6 +37,7 @@ git checkout tags/<バージョン>
   * パスワードは初期構築時と同じものを指定してください
   
 ```
+git fetch --tags
 git checkout --recurse-submodules tags/<バージョン>
 ./deploy-kamonohashi.sh deploy all
 ```
