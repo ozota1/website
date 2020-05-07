@@ -586,13 +586,6 @@ ${NFS}
   </tbody>
 </table>
 
-<h4 id="3-構築フェーズではdeploy-kamonohashish-deploy-allの代わりに次を実行します">3. 構築フェーズでは<code class="highlighter-rouge">./deploy-kamonohashi.sh deploy all</code>の代わりに次を実行します</h4>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./deploy-kamonohashi.sh deploy k8s &amp;&amp; ./deploy-kamonohashi.sh deploy app
-</code></pre></div></div>
-<p>sshにパスワードが必要な場合は<code class="highlighter-rouge">-k</code>,<code class="highlighter-rouge">-K</code>オプションを使用します</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./deploy-kamonohashi.sh deploy k8s -K -k &amp;&amp; ./deploy-kamonohashi.sh deploy app
-</code></pre></div></div>
-
 <h2 id="insecure-registryを設定する">insecure-registryを設定する</h2>
 <p><code class="highlighter-rouge">deepops/config/group_vars/k8s-cluster.yml</code>に次の記述を追記します</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker_insecure_registries: ["&lt;host名:ポート&gt;"]
