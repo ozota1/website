@@ -38,7 +38,7 @@ cd /var/lib/kamonohashi/deploy-tools/<version>/infra/
 * Kubernetes masterをインストールするマシンにログインします。
 * `sudo su -`を実行し、rootユーザーになります
 * `mkdir -p /var/lib/kamonohashi/ && cd /var/lib/kamonohashi/ `を実行します
-* `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.0.0.4 --recursive`を実行してデプロイスクリプトを入手します
+* `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.0.0.5 --recursive`を実行してデプロイスクリプトを入手します
 * `/var/lib/kamonohashi/deploy-tools/`に移動します
 * プロキシ環境下では次のファイルにプロキシ設定を記載してください
   * `./deepops/scripts/proxy.sh`
@@ -46,6 +46,25 @@ cd /var/lib/kamonohashi/deploy-tools/<version>/infra/
 * `./deploy-kamonohashi.sh prepare`を実行して構築に必要なソフトウェアをインストールします
   * ansibleでエラーが出る場合はansibleのアンインストールを実行してから`prepare`を実行してください
     * スクリプト実行中に適切なansibleがインストールされます
+    * ubuntuアップグレードに際し、ansibleの実行ファイルのみ残存するケースがあります。ansibleのアンインストールと`prepare`実行時に次のようなエラーが発生します
+        * その場合は、`mv /usr/local/bin/ansible /tmp/`のようなコマンドでansible実行ファイルを退避して`prepare`を実行してください
+
+      * ansibleのアンインストールでのエラー
+
+        ```
+        Cannot uninstall requirement ansible, not installed
+        ```
+
+      * prepare実行時のエラー
+
+        ```
+        Traceback (most recent call last):
+          File "/usr/local/bin/ansible", line 40, in <module>
+            from ansible.errors import AnsibleError, AnsibleOptionsError, AnsibleParserError
+        ModuleNotFoundError: No module named 'ansible'
+        ```
+
+
 
 ## デプロイ構成の設定 
 `./deploy-kamonohashi.sh configure cluster`を実行します。
@@ -57,7 +76,6 @@ cd /var/lib/kamonohashi/deploy-tools/<version>/infra/
 |Storageをデプロイするサーバ名|HWベンダーのNFSを使用する場合は|
 |計算ノード名|,区切りで複数指定できます。<br>例: gpu1,gpu2,gpu3 |
 |SSHで利用するユーザー名:|構築時に使用するSSHユーザーを指定します。構築ツールがSSH経由で構築を行う仕様のため、指定が必要になります|
-|プロキシを設定しますか？ [y/N]|プロキシ環境にデプロイする場合はyを入力して<br> http_proxy, https_proxy, no_proxy<br>を設定します<br>no_proxyはこれまでの入力内容を元に必要なものが自動生成されます。<br>自組織のドメイン等を生成されたno_proxyに更に追加することもできます|
 
 入力内容に応じ、以下の設定ファイルに書き込みが行われます
 * deepopsの設定ファイル(deepops/config/inventry)

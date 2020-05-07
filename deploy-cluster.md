@@ -40,7 +40,7 @@ KAMONOHASHIのクラスタは次の4種類のサーバーで構成されます
 * Kubernetes masterをインストールするマシンにログインします。
 * `sudo su -`を実行し、rootユーザーになります
 * `mkdir -p /var/lib/kamonohashi/ && cd /var/lib/kamonohashi/ `を実行します
-* `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.0.0.4 --recursive`を実行してデプロイスクリプトを入手します
+* `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.0.0.5 --recursive`を実行してデプロイスクリプトを入手します
 * `/var/lib/kamonohashi/deploy-tools/`に移動します
 * プロキシ環境下では次のファイルにプロキシ設定を記載してください
   * `./deepops/scripts/proxy.sh`
@@ -60,7 +60,6 @@ KAMONOHASHIのクラスタは次の4種類のサーバーで構成されます
 |Storageをデプロイするサーバ名|HWベンダーのNFSを使用する場合は|
 |計算ノード名|,区切りで複数指定できます。<br>例: gpu1,gpu2,gpu3 |
 |SSHで利用するユーザー名:|構築時に使用するSSHユーザーを指定します。構築ツールがSSH経由で構築を行う仕様のため、指定が必要になります|
-|プロキシを設定しますか？ [y/N]|プロキシ環境にデプロイする場合はyを入力して<br> http_proxy, https_proxy, no_proxy<br>を設定します<br>no_proxyはこれまでの入力内容を元に必要なものが自動生成されます。<br>自組織のドメイン等を生成されたno_proxyに更に追加することもできます|
 
 入力内容に応じ、以下の設定ファイルに書き込みが行われます
 * deepopsの設定ファイル(deepops/config/inventry)
