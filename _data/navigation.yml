@@ -38,11 +38,11 @@ docs:
     url: /docs/faq
     children:
       - title: "・導入について"
-        url: /docs/faq/install
+        url: /docs/faq-detail/install
       - title: "・利用について"
-        url: /docs/faq/operation
+        url: /docs/faq-detail/operation
       - title: "・その他"
-        url: /docs/faq/general
+        url: /docs/faq-detail/general
   - title: How-to Guide
     url: /docs/how-to
     children:
