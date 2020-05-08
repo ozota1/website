@@ -17,12 +17,11 @@ sidebar:
 * 2.xへのバージョンアップ後は、1.xへのバージョンダウンはできません
 * 2.xの[マシンの要件](/docs/install-and-update/prerequisite)を事前にご確認ください
 
-## 移行手順
-### 事前準備
+## 事前準備
 * KAMONOHASHIのバックアップが取れていることを確認します
 * KAMONOHASHIのAdminアカウントでログインできることを確認します
 
-### KAMONOHASHI 1.xのアンインストール
+## KAMONOHASHI 1.xのアンインストール
 次のコマンドを実行します
 ```
 cd /var/lib/kamonohashi/deploy-tools/<version>/infra/
@@ -35,40 +34,41 @@ cd /var/lib/kamonohashi/deploy-tools/<version>/infra/
 * アンインストール完了後、[マシンの要件](/docs/install-and-update/prerequisite)に合わせた設定をしてください
 
 ## 2.x構築ツールのセットアップ
-* Kubernetes masterをインストールするマシンにログインします。
-* `sudo su -`を実行し、rootユーザーになります
-* `mkdir -p /var/lib/kamonohashi/ && cd /var/lib/kamonohashi/ `を実行します
-* `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.0.0.6 --recursive`を実行してデプロイスクリプトを入手します
-* `/var/lib/kamonohashi/deploy-tools/`に移動します
-* プロキシ環境下では次のファイルにプロキシ設定を記載してください
-  * `./deepops/scripts/proxy.sh`
-  * no_proxyには`localhost,127.0.0.1,.cluster.local,使用するマシンのIPアドレス・ホスト名`の記載をしてください
-* `./deploy-kamonohashi.sh prepare`を実行して構築に必要なソフトウェアをインストールします
-  * ansibleでエラーが出る場合はansibleのアンインストールを実行してから`prepare`を実行してください
-    * スクリプト実行中に適切なansibleがインストールされます
-    * ubuntuアップグレードに際し、ansibleの実行ファイルのみ残存するケースがあります。ansibleのアンインストールと`prepare`実行時に次のようなエラーが発生します
-        * その場合は、`mv /usr/local/bin/ansible /tmp/`のようなコマンドでansible実行ファイルを退避して`prepare`を実行してください
+- Kubernetes masterをインストールするマシンにログインします。
+- `sudo su -`を実行し、rootユーザーになります
+- `mkdir -p /var/lib/kamonohashi/ && cd /var/lib/kamonohashi/ `を実行します
+- `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.0.0.6 --recursive`を実行してデプロイスクリプトを入手します
+- `/var/lib/kamonohashi/deploy-tools/`に移動します
+- プロキシ環境下では`./deepops/scripts/proxy.sh`ファイルにプロキシ設定を記載してください
+  *  no_proxyには`localhost,127.0.0.1,.cluster.local,使用するマシンのIPアドレス・ホスト名`の記載をしてください
+- `./deploy-kamonohashi.sh prepare`を実行して構築に必要なソフトウェアをインストールします
 
-      * ansibleのアンインストールでのエラー
+* ansibleでエラーが出る場合はansibleのアンインストールを実行してから`prepare`を実行してください
+  * スクリプト実行中に適切なansibleがインストールされます
+  * ubuntuアップグレードに際し、ansibleの実行ファイルのみ残存するケースがあります。ansibleのアンインストールと`prepare`実行時に次のようなエラーが発生します。その場合は、`mv /usr/local/bin/ansible /tmp/`のようなコマンドでansible実行ファイルを退避して`prepare`を実行してください
 
-        ```
-        Cannot uninstall requirement ansible, not installed
-        ```
+  * ansibleのアンインストールでのエラー
 
-      * prepare実行時のエラー
+    ```
+    Cannot uninstall requirement ansible, not installed
+    ```
 
-        ```
-        Traceback (most recent call last):
-          File "/usr/local/bin/ansible", line 40, in <module>
-            from ansible.errors import AnsibleError, AnsibleOptionsError, AnsibleParserError
-        ModuleNotFoundError: No module named 'ansible'
-        ```
+  * prepare実行時のエラー
+
+    ```
+    Traceback (most recent call last):
+      File "/usr/local/bin/ansible", line 40, in <module>
+        from ansible.errors import AnsibleError, AnsibleOptionsError, AnsibleParserError
+    ModuleNotFoundError: No module named 'ansible'
+    ```
 
 
 
 ## デプロイ構成の設定 
 `./deploy-kamonohashi.sh configure cluster`を実行します。
 対話形式で聞かれる以下の内容を入力します
+
+
 |質問文|解説|
 |---|---|
 |Kubernetes masterを<br>デプロイするサーバ名||
@@ -82,7 +82,7 @@ cd /var/lib/kamonohashi/deploy-tools/<version>/infra/
 * kamonohashiの設定ファイル(kamonohashi/conf/settings.yml)
 
 設定内容をカスタマイズする場合は次を参照し、設定ファイルの編集を行ってください。
-[カスタマイズ設定ガイド](/customize)
+[カスタマイズ設定ガイド](/docs/install-and-update/customize-2x)
 
 ## デプロイの実行
 以下のコマンドではデプロイ構成の設定で指定したユーザーでSSHが実行されます。
@@ -99,6 +99,8 @@ cd /var/lib/kamonohashi/deploy-tools/<version>/infra/
 3. `./deploy-kamonohashi.sh deploy all`を実行します。
 
 実行後、対話形式で聞かれる以下の内容を入力します
+
+
 |質問文|解説|
 |---|---|
 |Admin Passwordを入力:|KAMONOHASHIのadminアカウントで使用する8文字以上のパスワードです。数字のみのパスワードは使用不可となっているので注意してください。KAMONOHASHI Web UIログイン・DB接続、Object Storageへのログインに使用します。<br>一度構築に使用したパスワードはデプロイツールでは変更できません。パスワードを変える場合は、完全にデータを削除するか、パスワード変更手順を実施する必要があります。パスワード変更手順は[kamonohashi-support@jp.nssol.nipponsteel.com]にお問い合わせください|

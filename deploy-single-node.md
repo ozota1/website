@@ -33,6 +33,8 @@ sidebar:
 
 
 対話形式で聞かれる以下の内容を入力します
+
+
 |質問文|解説|
 |---|---|
 |SSHで利用するユーザー名:|構築時に使用するSSHユーザーを指定します。構築ツールがSSH経由で構築を行う仕様のため、指定が必要になります|
@@ -50,6 +52,7 @@ sidebar:
 この際にデプロイ構成の設定で指定したユーザーでSSHが実行されます。
 指定したユーザーでのSSHにパスワードが必要な場合は`-k`、
 指定したユーザーでのsudoにパスワードが必要な場合は`-K`のオプションを指定します。
+
 例： `./deploy-kamonohashi.sh deploy all -k -K`
 
 * sshキーを~/.ssh/id_rsaで配置している場合は、ペアのid_rsa.pubも~/.sshに配置してください
@@ -74,7 +77,10 @@ cd /var/lib/kamonohashi/
 構築には20分程かかります。
 
 * DGX利用時のみ、構築後に次の作業を行ってください
-  * `rm /etc/systemd/system/docker.service.d/docker-override.conf`
-  * これは構築に使用する NVIDIA deepopsのバグで、20.02.1の次のdeepopsのリリースがされれば[対応される見込み](https://github.com/NVIDIA/deepops/commit/980cfe42685e17f0d3688fe50b1939aeaa51f314#diff-25c48ad81ab2a8e8c03e25d8d023bc1c)です。
+
+```bash
+rm /etc/systemd/system/docker.service.d/docker-override.conf
+```
+これは構築に使用する NVIDIA deepopsのバグで、20.02.1の次のdeepopsのリリースがされれば[対応される見込み](https://github.com/NVIDIA/deepops/commit/980cfe42685e17f0d3688fe50b1939aeaa51f314#diff-25c48ad81ab2a8e8c03e25d8d023bc1c)です。
 
 構築後にアクセス用のURLが表示されるので、それをブラウザで開きます
