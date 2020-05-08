@@ -57,7 +57,7 @@ KAMONOHASHIのクラスタは次の4種類のサーバーで構成されます
 |---|---|
 |Kubernetes masterを<br>デプロイするサーバ名||
 |KAMONOHASHIを<br>デプロイするサーバ名||
-|Storageをデプロイするサーバ名|HWベンダーのNFSを使用する場合は|
+|Storageをデプロイするサーバ名|HWベンダーのNFSを使用する場合は[カスタマイズ設定ガイド](/docs/install-and-update/customize-2x)を参照してください|
 |計算ノード名|,区切りで複数指定できます。<br>例: gpu1,gpu2,gpu3 |
 |SSHで利用するユーザー名:|構築時に使用するSSHユーザーを指定します。構築ツールがSSH経由で構築を行う仕様のため、指定が必要になります|
 
