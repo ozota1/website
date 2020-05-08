@@ -282,10 +282,15 @@ KAMONOHASHIの管理下に新しくノードを追加します。 Kubernetes mas
 1. `/var/lib/kamonohashi/deploy-tools/deepops/config/inventory` を編集し、マシンを追記(下記例を参照)
 1. `/var/lib/kamonohashi/deploy-tools/deploy-kamonohashi.sh update node-conf` を実行
 1. 処理が完了するまで待機
+1. 完了後にGPUサーバーを再起動
 
 #### inventoryファイルへのノード追記例
-既に利用しているGPUのホスト名がgpu1、追加するGPUのホスト名がgpu2の場合、以下のようにgpu2を追記します。
+既に利用しているGPUのホスト名がgpu1(10.0.0.1)、追加するGPUのホスト名がgpu2(10.0.0.2)の場合、以下のように[all]と[kube-node]にgpu2を追記します。
 ```
+[all]
+gpu1 ansible_host=10.0.0.1
+gpu2 ansible_host=10.0.0.2
+...
 [kube-node]
 gpu1
 gpu2

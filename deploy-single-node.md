@@ -19,7 +19,7 @@ sidebar:
 * インストール対象マシンにログインします。
 * `sudo su -`を実行し、rootユーザーになります
 * `mkdir -p /var/lib/kamonohashi/ && cd /var/lib/kamonohashi/ `を実行します
-* `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.0.0.5 --recursive`を実行してデプロイスクリプトを入手します
+* `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.0.0.6 --recursive`を実行してデプロイスクリプトを入手します
 * `/var/lib/kamonohashi/deploy-tools/`に移動します
 * プロキシ環境下では次のファイルにプロキシ設定を記載してください
   * `./deepops/scripts/proxy.sh`
