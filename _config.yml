@@ -63,7 +63,8 @@ encoding: UTF-8
 netlify:
   redirects:
     - /docs/install-and-setup              /docs/install-and-update
-
+    - /docs/quickstart              /docs/tutorial
+    
 # Site Footer
 footer:
   links:
