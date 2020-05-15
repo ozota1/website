@@ -19,6 +19,22 @@ sidebar:
 上記の構成では要件が足りず、カスタマイズしたい場合は[kamonohashi-support@jp.nssol.nipponsteel.com](mailto:kamonohashi-support@jp.nssol.nipponsteel.com)にお問い合わせください
 
 
+## バージョンアップ
+  - <a href="/docs/install-and-update/migrate1xto2x">KAMONOHASHI 1.xから2.xへの移行</a>
+
+
+## 外部サービスとの互換性
+
+動作を確認した環境は以下の通りです。
+
+|KAMONOHASHI|GitLab|MinIO| LDAP|Kubernetes |Ubuntu |
+|---|---|---|---|---|---|
+|v2.0.0|11.8以降|RELEASE.2020-03-09T18-26-53Z|version 3| v1.15.3 |Ubuntu 18.04|
+|v1.0.1 ~ v1.1.7|11.8以降|RELEASE.2019-01-23T23-18-58Z|version 3| v1.12.7,v1.14.1|ubuntu 16.04|
+|v1.0.0|11.7以前|RELEASE.2019-01-23T23-18-58Z|version 3| v1.12.7|Ubuntu 16.04|
+
+v1.0.0では11.8以降のGitLabに対応していませんので注意してください。
+
 ## アンインストール方法
 
 以下のコマンドを実行するとソフトウェアがアンインストールされます。
@@ -50,21 +66,5 @@ sidebar:
     - name: Set node IP
       ^ here
 ```
-
-## バージョンアップ
-  - <a href="/docs/install-and-update/migrate1xto2x">KAMONOHASHI 1.xから2.xへの移行</a>
-
-
-## 外部サービスとの互換性
-
-動作を確認した環境は以下の通りです。
-
-|KAMONOHASHI|GitLab|MinIO| LDAP|Kubernetes |Ubuntu |
-|---|---|---|---|---|---|
-|v2.0.0|11.8以降|RELEASE.2020-03-09T18-26-53Z|version 3| v1.15.3 |Ubuntu 18.04|
-|v1.0.1 ~ v1.1.7|11.8以降|RELEASE.2019-01-23T23-18-58Z|version 3| v1.12.7,v1.14.1|ubuntu 16.04|
-|v1.0.0|11.7以前|RELEASE.2019-01-23T23-18-58Z|version 3| v1.12.7|Ubuntu 16.04|
-
-v1.0.0では11.8以降のGitLabに対応していませんので注意してください。
 
 
