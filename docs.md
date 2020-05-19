@@ -26,8 +26,6 @@ sidebar:
 
 
 ## KAMONOHASHI  YOUTUBE CHANNEL
-  - <a href="https://www.youtube.com/embed/tltp7jBkEuQ" target="_blank">インストール動画</a>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MKCWf_XLD-I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
   - <a href="https://www.youtube.com/embed/tltp7jBkEuQ" target="_blank">チュートリアル動画</a>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tltp7jBkEuQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
