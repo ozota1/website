@@ -12,14 +12,33 @@ sidebar:
 
 本ウェブサイトでは、現行版と以前のバージョンのKAMONOHASHIドキュメントを含んでいます。
 
-前のマイナーバージョンのサポート期間は最新バージョンリリース後3か月です。
+## サポートとメンテナンス計画
 
+|version|status|最新メンテナンスバージョン|初版リリース日|アクティブ終了日|サポート終了日|
+|v2|Active|[v2.1.0](https://v2-1-0.kamonohashi.ai/docs/)|2020-05-08|2021-03-31|2021-06-30|
+|v1|Bug fix Support|[v1.1.8](https://v1-1-8.kamonohashi.ai/docs/)|2019-05-29|2020-05-29|2020-08-08|
 
-## 最新のバージョン
+#### サポートの種類
+- Active
+　機能追加と不具合修正を行います。
+- Bug fix Support
+  不具合修正のみ行います。
+
+#### メンテナンス計画
+- メジャーバージョンは約1年に1度リリースします。
+- メジャーバージョンの移行期間として最新メジャーバージョンリリースから3か月間、１つ古いメジャーバージョンのバグフィックスサポートを継続します。
+- アクティブサポートはマイナーバージョン単位で行います。
+- バグフィックスサポートはメジャーバージョン単位で行います。
+
+## バージョン一覧
+### 最新バージョン
  - [v{{ site.version }}](https://kamonohashi.ai/)
 
-## 以前のバージョン
-#### 　v1.1.X
+
+
+### 以前のバージョン
+#### 　v1.1
+ - [v1.1.8](https://v1-1-8.kamonohashi.ai/docs/)
  - [v1.1.7](https://v1-1-7.kamonohashi.ai/docs/)
  - [v1.1.6](https://v1-1-6.kamonohashi.ai/docs/)
  - [v1.1.5](https://v1-1-5.kamonohashi.ai/docs/)
@@ -29,8 +48,7 @@ sidebar:
  - [v1.1.1](https://v1-1-1.kamonohashi.ai/docs/)
  - [v1.1.0](https://v1-1-0.kamonohashi.ai/docs/)
 
-
-####   v1.0.X (サポート外)
+####   v1.0 (サポート外)
  - [v1.0.4](https://v1-0-4.kamonohashi.ai/docs/)
  - [v1.0.3](https://v1-0-3.kamonohashi.ai/docs/)
  - [v1.0.2](https://v1-0-2.kamonohashi.ai/docs/)
