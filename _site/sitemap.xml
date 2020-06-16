@@ -48,6 +48,9 @@
 <loc>http://localhost:4000/version200/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/version210/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/posts/introduction</loc>
 </url>
 <url>
