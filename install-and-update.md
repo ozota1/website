@@ -20,8 +20,11 @@ sidebar:
 
 
 ## バージョンアップ
+  - <a href="/docs/install-and-update/update">KAMONOHASHI 2.xのバージョンアップ</a>
   - <a href="/docs/install-and-update/migrate1xto2x">KAMONOHASHI 1.xから2.xへの移行</a>
 
+## バージョンダウン
+  - <a href="/docs/install-and-update/update#バージョンダウン">バージョンダウン</a>
 
 ## 外部サービスとの互換性
 
