@@ -10,30 +10,6 @@ sidebar:
   nav: "docs"
 ---
 
-## 物体検出チュートリアル作成
-
-## 概要
-- 物体検出のチュートリアルを行う
-
-### データセット
-- [Penn-Fudan](https://www.cis.upenn.edu/~jshi/ped_html/)
-
-### モデル
-Faster R-CNN
-
-
-### 参考URL
-- https://pytorch.org/tutorials/intermediate/torchvision_tutorial.html
-- http://torch.classcat.com/2019/12/18/pytorch-1-3-tutorials-image-torchvision/
-- 一番参考になった記事
-    - https://lsifrontend.hatenablog.com/entry/2019/12/20/195244
-
-
-
-### 詳細文章案
-
-
-
 ## はじめる前に
 
 このチュートリアルを始める前に、以下のKAMONOHASHIのインストールが終わり、KAMONOHASHIにログインできることを確認してください。
