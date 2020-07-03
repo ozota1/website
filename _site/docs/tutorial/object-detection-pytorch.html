@@ -557,35 +557,7 @@
 
       <section class="page__content" itemprop="text">
         
-        <h2 id="物体検出チュートリアル作成">物体検出チュートリアル作成</h2>
-
-<h2 id="概要">概要</h2>
-<ul>
-  <li>物体検出のチュートリアルを行う</li>
-</ul>
-
-<h3 id="データセット">データセット</h3>
-<ul>
-  <li><a href="https://www.cis.upenn.edu/~jshi/ped_html/">Penn-Fudan</a></li>
-</ul>
-
-<h3 id="モデル">モデル</h3>
-<p>Faster R-CNN</p>
-
-<h3 id="参考url">参考URL</h3>
-<ul>
-  <li>https://pytorch.org/tutorials/intermediate/torchvision_tutorial.html</li>
-  <li>http://torch.classcat.com/2019/12/18/pytorch-1-3-tutorials-image-torchvision/</li>
-  <li>一番参考になった記事
-    <ul>
-      <li>https://lsifrontend.hatenablog.com/entry/2019/12/20/195244</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="詳細文章案">詳細文章案</h3>
-
-<h2 id="はじめる前に">はじめる前に</h2>
+        <h2 id="はじめる前に">はじめる前に</h2>
 
 <p>このチュートリアルを始める前に、以下のKAMONOHASHIのインストールが終わり、KAMONOHASHIにログインできることを確認してください。</p>
 
@@ -605,7 +577,7 @@
 <h2 id="データをアップロードする">データをアップロードする</h2>
 <p>KAMONOHASHIにデータをアップロードする流れを説明します。</p>
 
-<h3 id="cocoデータセットをダウンロードする">COCOデータセットをダウンロードする</h3>
+<h3 id="データセットをダウンロードする">データセットをダウンロードする</h3>
 <p>このチュートリアルでは、<a href="https://www.cis.upenn.edu/~jshi/ped_html/">Penn-Fudanデータセット</a><i class="material-icons blue">launch</i>を使用します。
 Penn-Fudanは、歩行者の検出に使用される画像データベースです。
 170枚の画像に345のラベルが付けられた歩行者が含まれており、そのうち96枚の画像はペンシルベニア大学周辺、他の74枚は復旦大学周辺で撮影されています。</p>
@@ -781,7 +753,8 @@ cd cocoapi/PythonAPI
 python setup.py build_ext install
 </code></pre></div></div>
 <p><img src="/assets/images/coco-shell.PNG" alt="coco-shell" />
-エラーが出た場合は各種エラー文に従って不足しているツールをインストールします。</p>
+エラーが出た場合は各種エラー文に従ってCythonなど不足しているツールをインストールします。
+<a href="https://github.com/cocodataset/cocoapi/issues/141#issuecomment-386606299">参考</a></p>
 
 <h3 id="データの確認を行う">データの確認を行う</h3>
 <p>KAMONOHASHIにアップロードしたデータの確認を行います。
@@ -791,7 +764,7 @@ Image.open('../input/training/PNGImagesを入れたデータセット番号/Fuda
 </code></pre></div></div>
 <h3 id="データセットの定義をする">データセットの定義をする</h3>
 
-<p>説明文</p>
+<p>データセットの定義をします。</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
 import numpy as np
 import torch
@@ -907,10 +880,13 @@ cp references/detection/coco_eval.py ../
 cp references/detection/engine.py ../
 cp references/detection/coco_utils.py ../
 </code></pre></div></div>
+<p>コピーしたファイルが<code class="highlighter-rouge">/kqi/output/cocoapi/PythonAPI</code>にあることを確認します。</p>
 
 <h4 id="notebookでの操作">notebookでの操作</h4>
 
 <p>data augmentationや変換するための補助関数を定義します。</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /kqi/output/cocoapi/PythonAPI
+</code></pre></div></div>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from engine import train_one_epoch, evaluate
 import utils
 import transforms as T
@@ -926,11 +902,12 @@ def get_transform(train):
         transforms.append(T.RandomHorizontalFlip(0.5))
     return T.Compose(transforms)
 </code></pre></div></div>
+<p>エラーが出る場合はエラー文に沿って必要なツールをインストールしたりコマンドをたたきます。</p>
 
 <p>trainやevaluateに渡す DataLoaderを作成します。</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># use our dataset and defined transformations
-dataset = PennFudanDataset('PennFudanPed', get_transform(train=True))
-dataset_test = PennFudanDataset('PennFudanPed', get_transform(train=False))
+dataset = PennFudanDataset('/kqi/input/training', get_transform(train=True))
+dataset_test = PennFudanDataset('/kqi/input/training', get_transform(train=False))
 
 # split the dataset in train and test set
 torch.manual_seed(1)
