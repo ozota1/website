@@ -138,7 +138,7 @@ KAMONOHASHI上で登録したデータセットを選択できます。
 
 
 ## 人物検出のモデル学習・推論を行う
-notebook見本は[GitHub](https://github.com/KAMONOHASHI/tutorial)から確認できます。
+notebook見本は[GitHub]https://github.com/KAMONOHASHI/tutorial/blob/master/pytorch/pedestrian-detection.ipynb)から確認できます。
 
 ### 前準備
 shellにてをPythonAPIをインストールします。
