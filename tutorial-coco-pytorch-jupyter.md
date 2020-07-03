@@ -29,7 +29,7 @@ sidebar:
 ## データをアップロードする
 KAMONOHASHIにデータをアップロードする流れを説明します。
 
-### COCOデータセットをダウンロードする
+### データセットをダウンロードする
 このチュートリアルでは、[Penn-Fudanデータセット](https://www.cis.upenn.edu/~jshi/ped_html/)<i class="material-icons" class="material-icons blue">launch</i>を使用します。
 Penn-Fudanは、歩行者の検出に使用される画像データベースです。
 170枚の画像に345のラベルが付けられた歩行者が含まれており、そのうち96枚の画像はペンシルベニア大学周辺、他の74枚は復旦大学周辺で撮影されています。
@@ -150,7 +150,8 @@ cd cocoapi/PythonAPI
 python setup.py build_ext install
 ```
 ![coco-shell](/assets/images/coco-shell.PNG)
-エラーが出た場合は各種エラー文に従って不足しているツールをインストールします。
+エラーが出た場合は各種エラー文に従ってCythonなど不足しているツールをインストールします。
+[参考](https://github.com/cocodataset/cocoapi/issues/141#issuecomment-386606299)
 
 ### データの確認を行う
 KAMONOHASHIにアップロードしたデータの確認を行います。
@@ -284,10 +285,15 @@ cp references/detection/coco_eval.py ../
 cp references/detection/engine.py ../
 cp references/detection/coco_utils.py ../
 ```
+コピーしたファイルが```/kqi/output/cocoapi/PythonAPI```にあることを確認します。
+
 
 #### notebookでの操作
 
 data augmentationや変換するための補助関数を定義します。
+```
+cd /kqi/output/cocoapi/PythonAPI
+```
 ```
 from engine import train_one_epoch, evaluate
 import utils
@@ -304,12 +310,14 @@ def get_transform(train):
         transforms.append(T.RandomHorizontalFlip(0.5))
     return T.Compose(transforms)
 ```
+エラーが出る場合はエラー文に沿って必要なツールをインストールしたりコマンドをたたきます。
+
 
 trainやevaluateに渡す DataLoaderを作成します。
 ```
 # use our dataset and defined transformations
-dataset = PennFudanDataset('PennFudanPed', get_transform(train=True))
-dataset_test = PennFudanDataset('PennFudanPed', get_transform(train=False))
+dataset = PennFudanDataset('/kqi/input/training', get_transform(train=True))
+dataset_test = PennFudanDataset('/kqi/input/training', get_transform(train=False))
 
 # split the dataset in train and test set
 torch.manual_seed(1)

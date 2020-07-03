@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Docs - KAMONOHASHI</title>
+<!-- begin _includes/seo.html --><title>KAMONOHASHI 2.xのバージョンアップ - KAMONOHASHI</title>
 <meta name="description" content="KAMONOHASHI(カモノハシ)は、Deep Learningのモデル開発を効率的に行うためのAI開発プラットフォームです。 AI開発プロセスを最大限に効率化し、最高のモデル開発を体験してみませんか。">
 
 
@@ -17,8 +17,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="KAMONOHASHI">
-<meta property="og:title" content="Docs">
-<meta property="og:url" content="http://localhost:4000/docs/">
+<meta property="og:title" content="KAMONOHASHI 2.xのバージョンアップ">
+<meta property="og:url" content="http://localhost:4000/docs/install-and-update/update">
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/docs/">
+<link rel="canonical" href="http://localhost:4000/docs/install-and-update/update">
 
 
 
@@ -541,7 +541,7 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Docs">
+    <meta itemprop="headline" content="KAMONOHASHI 2.xのバージョンアップ">
     
     
     
@@ -549,7 +549,7 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Docs
+          <h1 id="page-title" class="page__title" itemprop="headline">KAMONOHASHI 2.xのバージョンアップ
 </h1>
           
         </header>
@@ -557,32 +557,144 @@
 
       <section class="page__content" itemprop="text">
         
-        <h2 id="kamonohashiをはじめる">KAMONOHASHIをはじめる</h2>
-<ul>
-  <li><a href="/docs/install-and-update">KAMONOHASHIをインストールする</a></li>
-  <li><a href="/docs/tutorial">チュートリアルを行う</a></li>
-</ul>
+        <h2 id="バージョンアップ">バージョンアップ</h2>
+<p>バージョン2.0.0以降の手順になります。バージョン1.xの場合は<a href="https://kamonohashi.ai/docs/supported-doc-versions">以前のバージョン</a>から確認してください</p>
 
-<h2 id="kamonohashiを使いこなす">KAMONOHASHIを使いこなす</h2>
-<ul>
-  <li><a href="/docs/how-to/user">User Guide</a></li>
-  <li><a href="/docs/how-to/admin">Admin Guide</a></li>
-  <li><a href="/docs/how-to/cli">CLI Guide</a></li>
-  <li><a href="/docs/how-to/infra">Infra Guide</a></li>
-</ul>
+<h3 id="kamonohashi-webアプリのみのバージョンアップ">KAMONOHASHI Webアプリのみのバージョンアップ</h3>
 
-<h2 id="よくある質問">よくある質問</h2>
-<p>KAMONOHASHIインストールや各種設定など、困った時は以下をご覧ください</p>
-<ul>
-  <li><a href="/docs/faq">FAQ</a></li>
-</ul>
+<p>デプロイツールの準備を実施後に次を実施してください</p>
 
-<h2 id="kamonohashi--youtube-channel">KAMONOHASHI  YOUTUBE CHANNEL</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /var/lib/kamonohashi/deploy-tools
+git fetch <span class="nt">--tags</span>
+git checkout tags/&lt;デプロイツールバージョン&gt;
+./deploy-kamonohashi.sh update app
+</code></pre></div></div>
 
 <ul>
-  <li><a href="https://www.youtube.com/embed/i9VjG4QwoNg" target="_blank">チュートリアル動画</a></li>
+  <li>デプロイツールバージョンは<アプリのバージョン>.<デプロイツールリビジョン>となってます
+</デプロイツールリビジョン></アプリのバージョン>    <ul>
+      <li>デプロイツールバージョンが2.0.0.nの場合、アプリバージョン2.0.0をデプロイするツールのn番目のリビジョンです</li>
+      <li>古いアプリバージョンに戻す場合は<a href="#バージョンダウン">バージョンダウン</a>を確認してください</li>
+    </ul>
+  </li>
 </ul>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/i9VjG4QwoNg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h3 id="k8sなども含めたインフラ全体のバージョンアップ">k8sなども含めたインフラ全体のバージョンアップ</h3>
+<p>現在デプロイツールでは古いバージョンのアンインストールと新しいバージョンのインストールによるアップグレードのみ可能です。
+それは次を考慮しているためです。</p>
+<ul>
+  <li>k8sを2マイナーバージョン以上アップデートできる</li>
+  <li>マシンの移行も同じ方法でサポートできる</li>
+  <li>cordonとuncordonによる無停止アップグレードは、ディープラーニングの動いているシステムでは難しい
+    <ul>
+      <li>ディープラーニングジョブがノードからはけるのに数日かかることからクラスタ全体のアップグレードでは数週間が必要になるためです</li>
+    </ul>
+  </li>
+</ul>
+
+<p>インフラ全体のバージョンアップ手順は次になります</p>
+<ul>
+  <li>古いバージョンのデプロイツールでアンインストールを実行
+    <ul>
+      <li>詳細はアンインストールの項目を参照</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./deploy-kamonohashi.sh clean all
+</code></pre></div></div>
+
+<p>*　新しいバージョンのデプロイツールでインストールを実行</p>
+<ul>
+  <li>詳細はインストールの項目を参照</li>
+  <li>パスワードは初期構築時と同じものを指定してください</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git fetch --tags
+git checkout --recurse-submodules tags/&lt;バージョン&gt;
+./deploy-kamonohashi.sh deploy all
+</code></pre></div></div>
+
+<h2 id="バージョンダウン">バージョンダウン</h2>
+<h3 id="dbの切り戻しを含むバージョンダウン">DBの切り戻しを含むバージョンダウン</h3>
+<p>2.0.0から2.1.0以降へのバージョンアップには、DBのテーブル変更が含まれています。
+そのため以前のバージョンに戻す際には、下記手順によりDBの切り戻し作業を実施する必要があります(作業中はKAMONOHASHIのサービスが停止します)。
+なおこの作業を行った場合、マイグレーション適用後にのみ存在しているテーブルおよびカラムに格納されていたデータは削除されるため注意してください。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>version</th>
+      <th>Migration</th>
+      <th>主な変更</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>v2.0.0</td>
+      <td>20200319064613_v2.0.0</td>
+      <td>v2.x初期状態</td>
+    </tr>
+    <tr>
+      <td>v2.1.0</td>
+      <td>20200615001935_v2.1.0</td>
+      <td>Tensorboard生存期間、ノートブックの実行コマンド、学習へのタグ付け、データセットローカルコピーに関するカラム追加</td>
+    </tr>
+  </tbody>
+</table>
+
+<ol>
+  <li><code class="highlighter-rouge">/var/lib/kamonohashi/deploy-tools/rollback/rollback.sh</code>を実行します。</li>
+  <li>(v2.1.0からv2.0.0に戻す場合)デプロイされているKAMONOHASHIのバージョンに<code class="highlighter-rouge">2.1.0</code>、戻したい時点のMigrationファイルに<code class="highlighter-rouge">20200319064613_v2.0.0</code>を入力します。</li>
+  <li>DBの切り戻し処理が終了するまで数分間待機します。</li>
+  <li>切り戻し処理終了後、再デプロイ可能なバージョンの一覧が表示されるため、戻したいバージョンを指定します。</li>
+  <li>KAMONOHASHIのWEB画面にアクセスし、バージョン情報より、バージョンが戻っていることを確認します。</li>
+</ol>
+
+<h2 id="外部サービスとの互換性">外部サービスとの互換性</h2>
+
+<p>動作を確認した環境は以下の通りです。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>KAMONOHASHI</th>
+      <th>GitLab</th>
+      <th>MinIO</th>
+      <th>LDAP</th>
+      <th>Kubernetes</th>
+      <th>Ubuntu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>v2.0.0</td>
+      <td>11.8以降</td>
+      <td>RELEASE.2020-03-09T18-26-53Z</td>
+      <td>version 3</td>
+      <td>v1.15.3</td>
+      <td>Ubuntu 18.04</td>
+    </tr>
+    <tr>
+      <td>v1.0.1 ~ v1.1.7</td>
+      <td>11.8以降</td>
+      <td>RELEASE.2019-01-23T23-18-58Z</td>
+      <td>version 3</td>
+      <td>v1.12.7,v1.14.1</td>
+      <td>ubuntu 16.04</td>
+    </tr>
+    <tr>
+      <td>v1.0.0</td>
+      <td>11.7以前</td>
+      <td>RELEASE.2019-01-23T23-18-58Z</td>
+      <td>version 3</td>
+      <td>v1.12.7</td>
+      <td>Ubuntu 16.04</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>v1.0.0では11.8以降のGitLabに対応していませんので注意してください。</p>
 
         
       </section>
