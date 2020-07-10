@@ -22,9 +22,8 @@ sidebar:
 具体的にはKAMONOHASHI上のJupyterLabを使用して、Deep Learningでの物体検知をPenn-Fudan データセットで行う方法を以下の手順に沿って説明します。
  1. データをアップロードする
  1. データセットを作成する
- 1. 学習を実行する
- 1. TensorBoardで学習の状況を表示する
- 1. 学習のログを確認する
+ 1. ノートブックを作成し、JupyterLabを起動する
+ 1. 人物検出のモデル学習・推論を行う
 
 ## データをアップロードする
 KAMONOHASHIにデータをアップロードする流れを説明します。
@@ -68,12 +67,13 @@ PennFudanPed/
 |ファイル|複数のデータを登録できる。jpg/png/csv/zipなど、ファイルのデータ形式は任意。|
 
 上記の情報を入力し、右下の登録ボタンを押すとデータをアップロードすることができます。
-コマンドラインインターフェイス（[CLI](/docs/how-to/cli/)）を使用してデータをアップロードすることも可能です。
+今回は、下記データ名でデータを登録することとします。
 
-KAMONOHASHIでは、複数のファイルを一つのデータとして管理可能です。
-
+- PNGImages: PNGImages内に含まれる170枚の画像を登録します
+- PedMasks: PedMasks内に含まれる170枚の画像を登録します。
 
 登録したデータは、データの一覧画面で確認できます。
+なおコマンドラインインターフェイス（[CLI](/docs/how-to/cli/)）を使用してデータをアップロードすることも可能です。
 
 ![データ一覧](/assets/images/coco-data.png)
 
@@ -128,7 +128,7 @@ GUIでノートブックを開始するには[ノートブック管理]を選択
 ※Docker Hubを指定した後イメージ、タグをテキストエリアに入力してください。
 
 * データセット
-KAMONOHASHI上で登録したデータセットを選択できます。
+上記で登録したデータセットを選択できます。
 
 ### step4
 オプションとして追記したい項目があれば追記し実行ボタンを押します。
@@ -141,26 +141,52 @@ KAMONOHASHI上で登録したデータセットを選択できます。
 notebook見本は[GitHub](https://github.com/KAMONOHASHI/tutorial/blob/master/pytorch/pedestrian-detection.ipynb)から確認できます。
 
 ### 前準備
-shellにてをPythonAPIをインストールします。
+
+shell機能を利用し下記コマンドを実行することで、本機能で用いるファイルの準備を行います。
 
 ```
+cd /kqi/output
+
 # Install pycocotools
 git clone https://github.com/cocodataset/cocoapi.git
+git checkout 8c9bcc3cf640524c4c20a9c40e89cb6a2f2fa0e9
 cd cocoapi/PythonAPI
+pip install Cython
 python setup.py build_ext install
+make
+
+# Download TorchVision repo to use some files from
+# references/detection
+git clone https://github.com/pytorch/vision.git
+cd vision
+git checkout v0.3.0
+
+cp references/detection/utils.py ../
+cp references/detection/transforms.py ../
+cp references/detection/coco_eval.py ../
+cp references/detection/engine.py ../
+cp references/detection/coco_utils.py ../
 ```
+
 ![coco-shell](/assets/images/coco-shell.PNG)
-エラーが出た場合は各種エラー文に従ってCythonなど不足しているツールをインストールします。
-[参考](https://github.com/cocodataset/cocoapi/issues/141#issuecomment-386606299)
+
+### ノートブックを作成する
+ノートブックを開くボタンを押下し、ノートブック画面にアクセスします。
+LauncherからNotebookのPython3を選択し、新規ノートブックを作成します。
 
 ### データの確認を行う
 KAMONOHASHIにアップロードしたデータの確認を行います。
 データは/kqi/input配下にあります。
 ```
 from PIL import Image
-Image.open('../input/training/PNGImagesを入れたデータセット番号/FudanPed00001.png')
+Image.open('/kqi/input/training/PNGImagesを入れたデータID/FudanPed00001.png')
 ```
 ### データセットの定義をする
+
+今回利用するAPIが格納されたディレクトリに移動します。
+```
+cd /kqi/output/cocoapi/PythonAPI
+```
 
 データセットの定義をします。
 ```
@@ -176,13 +202,13 @@ class PennFudanDataset(torch.utils.data.Dataset):
         self.transforms = transforms
         # load all image files, sorting them to
         # ensure that they are aligned
-        self.imgs = list(sorted(os.listdir(os.path.join(root, "PNGImagesを入れたデータセット番号"))))
-        self.masks = list(sorted(os.listdir(os.path.join(root, "PedMasksを入れたデータセット番号"))))
+        self.imgs = list(sorted(os.listdir(os.path.join(root, "PNGImagesを入れたデータID"))))
+        self.masks = list(sorted(os.listdir(os.path.join(root, "PedMasksを入れたデータID"))))
 
     def __getitem__(self, idx):
         # load images ad masks
-        img_path = os.path.join(self.root, "PNGImagesを入れたデータセット番号", self.imgs[idx])
-        mask_path = os.path.join(self.root, "PedMasksを入れたデータセット番号", self.masks[idx])
+        img_path = os.path.join(self.root, "PNGImagesを入れたデータID", self.imgs[idx])
+        mask_path = os.path.join(self.root, "PedMasksを入れたデータID", self.masks[idx])
         img = Image.open(img_path).convert("RGB")
         # note that we haven't converted the mask to RGB,
         # because each color corresponds to a different instance
@@ -271,29 +297,10 @@ def get_instance_segmentation_model(num_classes):
 
 ### 学習を行う
 
-#### shellでの操作
-```
-# Download TorchVision repo to use some files from
-# references/detection
-git clone https://github.com/pytorch/vision.git
-cd vision
-git checkout v0.3.0
-
-cp references/detection/utils.py ../
-cp references/detection/transforms.py ../
-cp references/detection/coco_eval.py ../
-cp references/detection/engine.py ../
-cp references/detection/coco_utils.py ../
-```
-コピーしたファイルが```/kqi/output/cocoapi/PythonAPI```にあることを確認します。
-
 
 #### notebookでの操作
 
 data augmentationや変換するための補助関数を定義します。
-```
-cd /kqi/output/cocoapi/PythonAPI
-```
 ```
 from engine import train_one_epoch, evaluate
 import utils
@@ -310,8 +317,6 @@ def get_transform(train):
         transforms.append(T.RandomHorizontalFlip(0.5))
     return T.Compose(transforms)
 ```
-エラーが出る場合はエラー文に沿って必要なツールをインストールしたりコマンドをたたきます。
-
 
 trainやevaluateに渡す DataLoaderを作成します。
 ```
