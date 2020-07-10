@@ -35,8 +35,45 @@ appsettings:
 |appsettings.DeployOptions__NfsStorage|NFSサーバーのホスト名|
 |appsettings.DeployOptions__NfsPath|NFSサーバーのエクスポートパス|
 
+## 自動構築のオブジェクトストレージではなく既存のものを使用する
+* オブジェクトストレージとNFSは同期されている必要があります。  
+NFSに書き込んだファイルはオブジェクトストレージからアクセスできる必要があります。逆も同様です。
+
+次の設定ファイル編集を行います
+
+#### 1. `deepops/config/inventry`のkube-nodeの項目からオブジェクトストレージに指定したマシンを削除します
+* 編集前
+```
+[kube-node]
+gpu-node1
+object-storage
+gpu-node2
+```
+* 編集後
+```
+[kube-node]
+gpu-node1
+gpu-node2
+```
+
+#### 2.  `kamonohashi/conf/settings.yml`の`minio_deploy`を`false`に指定します
+
+```yaml
+minio_deploy: false
+```
+
+#### 3. 構築完了後、kamonohashiのweb画面のストレージ設定画面から、オブジェクトストレージの設定を変更します
+
+
+|yamlの項目|内容|
+|---|---|
+|appsettings.DeployOptions__NfsStorage|NFSサーバーのホスト名|
+|appsettings.DeployOptions__NfsPath|NFSサーバーのエクスポートパス|
 ## insecure-registryを設定する
 `deepops/config/group_vars/k8s-cluster.yml`に次の記述を追記します
 ```
 docker_insecure_registries: ["<host名:ポート>"]
 ```
+
+
+
