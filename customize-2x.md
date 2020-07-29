@@ -64,11 +64,6 @@ minio_deploy: false
 
 #### 3. 構築完了後、kamonohashiのweb画面のストレージ設定画面から、オブジェクトストレージの設定を変更します
 
-
-|yamlの項目|内容|
-|---|---|
-|appsettings.DeployOptions__NfsStorage|NFSサーバーのホスト名|
-|appsettings.DeployOptions__NfsPath|NFSサーバーのエクスポートパス|
 ## insecure-registryを設定する
 `deepops/config/group_vars/k8s-cluster.yml`に次の記述を追記します
 ```
