@@ -35,10 +35,13 @@ git checkout tags/<デプロイツールバージョン>
 *　新しいバージョンのデプロイツールでインストールを実行
   * 詳細はインストールの項目を参照
   * パスワードは初期構築時と同じものを指定してください
-  
+  * deepopsの設定ファイルの互換性が無くなっている場合があるため、設定ファイルの再作成が必要です
 ```
 git fetch --tags
 git checkout --recurse-submodules tags/<バージョン>
+./deploy-kamonohashi.sh prepare
+./deploy-kamonohashi.sh configure <cluster/single-node>
+# カスタマイズする場合は設定ファイルを編集
 ./deploy-kamonohashi.sh deploy all
 ```
 
