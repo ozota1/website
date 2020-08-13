@@ -37,7 +37,7 @@ cd /var/lib/kamonohashi/deploy-tools/<version>/infra/
 - Kubernetes masterをインストールするマシンにログインします。
 - `sudo su -`を実行し、rootユーザーになります
 - `mkdir -p /var/lib/kamonohashi/ && cd /var/lib/kamonohashi/ `を実行します
-- `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.1.0.2 --recursive`を実行してデプロイスクリプトを入手します
+- `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.1.1.0 --recursive`を実行してデプロイスクリプトを入手します
 - `/var/lib/kamonohashi/deploy-tools/`に移動します
 - プロキシ環境下では`./deepops/scripts/proxy.sh`ファイルにプロキシ設定を記載してください
   *  no_proxyには`localhost,127.0.0.1,.cluster.local,使用するマシンのIPアドレス・ホスト名`の記載をしてください

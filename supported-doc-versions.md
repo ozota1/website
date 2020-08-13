@@ -15,7 +15,7 @@ sidebar:
 ## サポートとメンテナンス計画
 
 |Release|Status|Latest Maintenanced version|Initial Release|End-of-Active|End-of-support|
-|v2|Active|[v2.1.0](https://v2-1-0.kamonohashi.ai/docs/)|2020-05-08|2021-03-31|2021-06-30|
+|v2|Active|[v2.1.1](https://v2-1-1.kamonohashi.ai/docs/)|2020-05-08|2021-03-31|2021-06-30|
 |v1|Bug fix Support|[v1.1.8](https://v1-1-8.kamonohashi.ai/docs/)|2019-05-29|2020-05-29|2020-08-08|
 
 #### サポートの種類
@@ -40,6 +40,10 @@ sidebar:
 
 
 ### 以前のバージョン
+#### 　v2.1
+
+ - [v2.1.0](https://v2-1-0.kamonohashi.ai/docs/)
+
 #### 　v2.0
 
  - [v2.0.0](https://v2-0-0.kamonohashi.ai/docs/)
