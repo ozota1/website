@@ -4,8 +4,8 @@
 
 layout: single
 classes: wide
-title: "CIFAR-10 Tutorial (tensorflow)"
-permalink: /docs/tutorial/cifar-10-tensorflow
+title: "Concrete Crack Classification Tutorial (pytorch)"
+permalink: /docs/tutorial/crackclassification-pytorch
 sidebar:
   nav: "docs"
 ---
@@ -18,8 +18,7 @@ sidebar:
 
 ## はじめに
 
-本チュートリアルでは、KAMONOHASHI を使用する方法について簡単に説明します。
-具体的には KAMONOHASHI を使用して、機械学習手法を試す際によく用いられる cifar-10 の画像分類モデルを学習させる方法を以下の手順に沿って説明します。
+本チュートリアルでは、KAMONOHASHI を使用して、大量のデータを用いてコンクリート画像のヒビの有無を検出するモデルを作成し学習する方法を以下の手順に沿って説明します。
 
 1.  データをアップロードする
 1.  データセットを作成する
@@ -31,31 +30,29 @@ sidebar:
 
 KAMONOHASHI にデータをアップロードする流れを説明します。
 
-### cifar-10 データセットをダウンロードする
+### concrete データセットを準備する
 
-このチュートリアルでは、[cifar-10 データセット](https://www.cs.toronto.edu/~kriz/cifar.html)<i class="material-icons" class="material-icons blue">launch</i>を使用します。cifar10 は、カラー画像のデータセットです。
+このチュートリアルでは、[Concrete Crack Images for Classification](https://data.mendeley.com/datasets/5y9wdsg2zt/2)[2]<i class="material-icons" class="material-icons blue">launch</i>を使用します。
 
-- 画像サイズは 32 x 32px
-- 10 クラスの画像がそれぞれ 6000 枚、計 60000 枚の画像がある
-- そのうち 50000 枚が学習データ、10000 枚がテストデータ
-- クラスは airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck
+[Concrete Crack Images for Classification のデータをダウンロードする](https://data.mendeley.com/public-files/datasets/5y9wdsg2zt/files/8a70d8a5-bce9-4291-bab9-b48cfb3e87c3/file_downloaded)<i class="material-icons" class="material-icons blue">save_alt</i>
 
-KAMONOHASHI にアクセスできる端末に CIFAR-10 binary version (cifar-10-binary.tar.gz) をダウンロードしてください。
-[cifar-10 のデータをダウンロードする](http://www.cs.toronto.edu/~kriz/cifar-10-binary.tar.gz)<i class="material-icons" class="material-icons blue">save_alt</i>
-
-### データを解凍する
-
+Concrete Crack Images for Classification は、カラー画像のデータセットです。
 このデータセットは解凍すると、
 
-- data_batch_1.bin
-- data_batch_2.bin
-- data_batch_3.bin
-- data_batch_4.bin
-- data_batch_5.bin
-- test_batch.bin
+- Positive
+- Negatvie
 
-というファイルに分割されます。それぞれの bin ファイルは、32x32x3 の画像データが 1 万枚ずつ含まれています。
-画像 1 枚あたり、先頭 1 バイトがラベル + 32x32x3 バイトが画素情報という構成になっており、これが先頭から 1 万個結合されているのが bin ファイルです。
+の 2 ディレクトリに分かれており、それぞれ 20000 枚のデータが含まれています。
+
+そのうち 15000 枚*2 を学習データ、5000 枚 *2 をテストデータとしてまとめて zip 化します。
+
+- train.zip(Positive 15000 枚, Negative 15000 枚)
+- test.zip(Positive 5000 枚, Negative 5000 枚)
+
+![ローカルでのデータ準備](/assets/images/concrete-data-preparation.png)
+
+KAMONOHASHI へのデータのアップロードの前にそれぞれのクラスのファイル名の先頭にクラスの頭文字(P または N)をつけ、あとでラベル付けを行いやすいようにしておきます。
+![ローカルでのデータ準備](/assets/images/concrete-data-train.png)
 
 ### データを KAMONOHASHI にアップロードする
 
@@ -64,7 +61,7 @@ KAMONOHASHI にアクセスできる端末に CIFAR-10 binary version (cifar-10-
 
 | 種類　   | 説明　                                                                       |
 | -------- | ---------------------------------------------------------------------------- |
-| データ名 | (例)data_batch_1.bin                                                         |
+| データ名 | (例)train.zip                                                                |
 | メモ     | 画像の説明など補足情報。                                                     |
 | タグ     | データの種類や受領日などグルーピングしたい単位に付与し、検索等で利用する。   |
 | ファイル | 複数のデータを登録できる。jpg/png/csv/zip など、ファイルのデータ形式は任意。 |
@@ -74,19 +71,19 @@ KAMONOHASHI にアクセスできる端末に CIFAR-10 binary version (cifar-10-
 
 KAMONOHASHI では、複数のファイルを一つのデータとして管理可能ですが、今回は個別に、一ファイル一データとして登録します。
 
-![データアップロード](/assets/images/data-create.PNG)
+![データアップロード](/assets/images/concrete-data.png)
 
 登録したデータは、データの一覧画面で確認できます。
 
-![データ一覧](/assets/images/data-index.png)
+![データ一覧](/assets/images/concrete-data-index.png)
 
 ## データセットを作成する
 
 [データセット管理]を選択し、右上の新規登録ボタンから行います。
 アップロードしたデータを training 用、test 用にまとめます。
-下図では、data_batch を training、test_batch を testing に移動させています。
+下図では、train.zip を training、test.zip を testing に移動させています。
 
-![データセットアップロード](/assets/images/dataset.PNG)
+![データセットアップロード](/assets/images/concrete-dataset.PNG)
 
 ## 学習を実行する
 
@@ -96,26 +93,30 @@ KAMONOHASHI では、複数のファイルを一つのデータとして管理�
 GUI で学習を開始するには[学習管理]を選択し、新規登録ボタンから行います。
 詳細は[User Guide](/docs/how-to/user#学習)を参照してください。
 
+また、学習ではなく notebook 形式で進める場合は[こちら](https://github.com/KAMONOHASHI/tutorial/blob/master/pytorch/concrete-classfication/concreteclassfication.ipynb)から notebook を確認できます。
+[User Guide ノートブック管理](/docs/how-to/user#ノートブック管理)や[notebook のチュートリアル](/docs/tutorial/object-detection-pytorch)を参照してください。
+
 ### step1
 
 学習名を記入し、先ほど登録したデータセットを選択します。
 半角英数小文字、または記号(“-”（ハイフン）) 30 文字以下で指定可能です。
-![ジョブ1](/assets/images/job-step1.PNG)
+
+<!-- ![ジョブ1](/assets/images/job-step1.PNG) -->
 
 ### step2
 
 フレームワークとモデルをテキストエリアに記述し、実行コマンドを記述します。
-本チュートリアルではフレームワークは[Docker Hub](https://hub.docker.com/)の公式イメージ(tensorflow/tensorflow)を使用しています。
+本チュートリアルではフレームワークは[Docker Hub](https://hub.docker.com/)の公式イメージ(pytorch/pytorch)を使用しています。
 
-![ジョブ2](/assets/images/job-step2.PNG)
+<!-- ![ジョブ2](/assets/images/job-step2.PNG) -->
 
 - コンテナイメージ
 
-| コンテナイメージ　 | 記述例　                  |
-| ------------------ | ------------------------- |
-| レジストリ         | officail-docker-hub(選択) |
-| イメージ           | tensorflow/tensorflow     |
-| タグ               | 1.13.1-gpu-py3            |
+| コンテナイメージ　 | 記述例　                    |
+| ------------------ | --------------------------- |
+| レジストリ         | officail-docker-hub(選択)   |
+| イメージ           | pytorch/pytorch             |
+| タグ               | 1.3-cuda10.1-cudnn7-runtime |
 
 ※Docker Hub を指定した後イメージ、タグをテキストエリアに入力してください。
 
@@ -127,23 +128,34 @@ GUI で学習を開始するには[学習管理]を選択し、新規登録ボ�
 | リポジトリ | KAMONOHASHI/tutorial |
 | ブランチ   | master               |
 
-※Git Hub を指定した後リポジトリ、ブランチをテキストエリアに入力してください。
+※GitHub を指定した後リポジトリ、ブランチをテキストエリアに入力してください。
 
 - 実行コマンド例
 
 ```
-python -u tensorflow/train.py \
---images /kqi/input/training \
---anns /kqi/input/training \
+apt-get update
+apt-get install unzip
+unzip /kqi/input/training/*/train.zip -d "/kqi/input/training"
+unzip /kqi/input/testing/*/test.zip -d "/kqi/input/testing"
+python -u  pytorch/concrete-classfication/train.py \
 --train_log_dir /kqi/output/demo \
 --parameter_dir /kqi/output/demo \
---max_steps=5000
+--max_steps=3000 \
+--epochs=3
 ```
 
 ### step3
 
 必要なリソースを指定します。
-![ジョブ3](/assets/images/job-step3.PNG)
+以下は例です。
+
+例
+
+| リソース　 | 使用量　 |
+| ---------- | -------- |
+| CPU        | 8        |
+| Memory     | 8        |
+| GPU        | 1        |
 
 ### step4
 
@@ -158,9 +170,12 @@ python -u tensorflow/train.py \
 ### Tensorboard で学習の状況を確認する
 
 実行した学習を選択し、学習履歴画面を開きます。
-![ジョブ確認](/assets/images/job-edit.PNG)
+
+<!-- ![ジョブ確認](/assets/images/job-edit.PNG) -->
+
 Tensorboard の起動ボタンを押し、開きます。
-![Tensorboard確認](/assets/images/tensorboard.PNG)
+
+![Tensorboard確認](/assets/images/concrete-tensorboard.png)
 
 注意：TensorBoard を表示する場合、モデルの python ファイル中に対応するプログラムを書く必要があります。
 
@@ -168,7 +183,7 @@ Tensorboard の起動ボタンを押し、開きます。
 
 学習実行中でも標準出力をダウンロードして確認することができます。
 GUI からは添付ファイル欄にあるログファイル閲覧ボタンを押すとブラウザ上で標準出力を確認することができます。
-![標準出力](/assets/images/training-stdout.PNG)
+![標準出力](/assets/images/concrete-train-log.png)
 
 標準出力は学習履歴画面からダウンロードすることもできます。
 
@@ -179,14 +194,22 @@ GUI からは添付ファイル欄にあるログファイル閲覧ボタンを�
 学習履歴画面のファイル一覧ボタンを押すと
 コンテナに出力したファイルを確認することができます。
 
-今回は step 数を 5000 としたため、5000step 目の checkpoint が出力されていることが確認できます。
+今回は epoch 数を 3 としたため、3epoch 終了後に checkpoint(.pth ファイル)が出力されていることが確認できます。
 上述した標準出力をみることでも、学習の正常終了を確認することができます。
 
 ## おわりに
 
-このように、KAMONOHASHI では、簡単に学習を開始することができます。
+このチュートリアルでは、KAMONOHASHI を用いて、コンクリートのひびを検出するモデルを作成し、
+GPU ノードを用いて転移学習を行いました。
+特に、大量のデータを扱う際の参考になれば幸いです。
 
-このチュートリアルでは、KAMONOHASHI を用いて、単一の GPU ノードでモデルをトレーニングしました。
+実際の現場では本チュートリアルのように異常画像が豊富にないケースがあるかもしれません。
+そういった際にはより試行錯誤が必要になります。
+KAMONOHASHI を活用して学習の試行錯誤とデータの管理を同時にできるため、効率的な AI 開発フローを実現しましょう。
 
-KAMONOHASHI では簡単に学習を開始・管理できるため、効率的な AI 開発ができます！
 より詳しく KAMONOHASHI の使い方を知りたい場合は[How-to Guide](/docs/how-to/)を参照してください。
+
+## 参考文献・データセット
+
+- [1] Zhang, Lei, et al. "Road crack detection using deep convolutional neural network." 2016 IEEE international conference on image processing (ICIP). IEEE, 2016.
+- [2] Özgenel, Çağlar Fırat (2019), “Concrete Crack Images for Classification”, Mendeley Data, V2, doi: 10.17632/5y9wdsg2zt.2 (https://data.mendeley.com/datasets/5y9wdsg2zt/2)
