@@ -18,7 +18,7 @@ sidebar:
 
 ## はじめに
 
-本チュートリアルでは、KAMONOHASHI を使用して、コンクリート画像のヒビの有無を検出する方法を以下の手順に沿って説明します。
+本チュートリアルでは、KAMONOHASHI を使用して、大量のデータを用いてコンクリート画像のヒビの有無を検出するモデルを作成する方法を以下の手順に沿って説明します。
 
 1.  データをアップロードする
 1.  データセットを作成する
@@ -127,13 +127,11 @@ GUI で学習を開始するには[学習管理]を選択し、新規登録ボ�
 - 実行コマンド例
 
 ```
-pip install matplotlib --force
-pip install pandas
 apt-get update
 apt-get install unzip
 unzip /kqi/input/training/*/train.zip -d "/kqi/input/training"
 unzip /kqi/input/testing/*/test.zip -d "/kqi/input/testing"
-python -u train.py \
+python -u  pytorch/concrete-classfication/train.py \
 --train_log_dir /kqi/output/demo \
 --parameter_dir /kqi/output/demo \
 ```
@@ -169,7 +167,7 @@ python -u train.py \
 
 Tensorboard の起動ボタンを押し、開きます。
 
-<!-- ![Tensorboard確認](/assets/images/tensorboard.PNG) -->
+![Tensorboard確認](/assets/images/concrete-tensorboard.png)
 
 注意：TensorBoard を表示する場合、モデルの python ファイル中に対応するプログラムを書く必要があります。
 
@@ -177,7 +175,7 @@ Tensorboard の起動ボタンを押し、開きます。
 
 学習実行中でも標準出力をダウンロードして確認することができます。
 GUI からは添付ファイル欄にあるログファイル閲覧ボタンを押すとブラウザ上で標準出力を確認することができます。
-![標準出力](/assets/images/training-stdout.PNG)
+![標準出力](/assets/images/concrete-log.png)
 
 標準出力は学習履歴画面からダウンロードすることもできます。
 
@@ -197,9 +195,10 @@ GUI からは添付ファイル欄にあるログファイル閲覧ボタンを�
 
 このチュートリアルでは、KAMONOHASHI を用いて、コンクリートのひびを検出するモデルを作成し、
 GPU ノードを用いて転移学習を行いました。
+特に、大量のデータを扱う際のデータ管理の参考になれば幸いです。
 
-実際の現場ではこのチュートリアルのように異常画像が豊富にあるケースは少ないかもしれません。
-そういった際にはより試行錯誤が必要になってくるかと思います。
-KAMONOHASHI では学習の試行錯誤を管理できるため、効率的な AI 開発ができます。
+実際の現場では本チュートリアルのように異常画像が豊富にあるケースは少ないかもしれません。
+そういった際にはより試行錯誤が必要になります。
+KAMONOHASHI では学習の試行錯誤とデータの管理を同時にできるため、効率的な AI 開発ができます。
 
 より詳しく KAMONOHASHI の使い方を知りたい場合は[How-to Guide](/docs/how-to/)を参照してください。
