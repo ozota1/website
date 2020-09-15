@@ -140,7 +140,7 @@ unzip /kqi/input/testing/*/test.zip -d "/kqi/input/testing"
 python -u  pytorch/concrete-classfication/train.py \
 --train_log_dir /kqi/output/demo \
 --parameter_dir /kqi/output/demo \
---max_steps=3000
+--max_steps=3000 \
 --epochs=3
 ```
 
