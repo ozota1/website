@@ -4424,3 +4424,68 @@ div.support__text-excerpt p{
 .algolia-autocomplete .algolia-docsearch-suggestion--highlight {
   color: blue;
 }
+
+/*
+   よくある質問
+   ========================================================================== */
+/*全体*/
+.hidden_box {
+    margin: 2em 0;/*前後の余白*/
+    padding: 0;
+}
+
+/*ボタン装飾*/
+.hidden_box label {
+    padding: 15px 50px;
+    font-weight: bold;
+    border-radius:10px;
+    cursor :pointer;
+    background: #92CBD3;
+    color: #fff;
+    width: 90%;
+    margin: auto;
+    text-align: left;
+
+}
+
+
+
+/*ボタンホバー時*/
+.hidden_box label:hover {
+    background:#1abfd5;
+    transition: 0.5s;
+}
+
+/*チェックは見えなくする*/
+.hidden_box input {
+    display: none;
+}
+
+/*中身を非表示にしておく*/
+.hidden_box .hidden_show {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    color: #333333;
+}
+
+.hidden_show {
+  width: 80%;
+  margin: auto;
+
+}
+
+.hidden_box .hidden_show p{
+  text-align: left;
+  margin: 1em;
+}
+
+/*クリックで中身表示*/
+.hidden_box input:checked ~ .hidden_show {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+}
+

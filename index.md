@@ -479,57 +479,114 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 </div>
 
 <h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
+　よくあるお問い合わせ
+</h3>
+
+<div class="feature__wrapper">
+    <div class="feature__item--center">
+      <!--qaブロック1start-->
+      <div class="hidden_box">
+        <label for="label1">Q1:そもそもAI開発チームをこれから整備していく段階なのだけど、大丈夫？</label>
+        <input type="checkbox" id="label1"/>
+        <div class="hidden_show">
+        <!--非表示ここから-->
+      	  <p>A:問題ありません。詳しくは<a href="https://kamonohashi.ai/posts/support">KAMONOHASHIを活用してDeep Learning開発組織を立ち上げるためのステップ</a>をご覧ください</p>
+        <!--ここまで-->
+        </div>
+      </div>
+      <!--qaブロックend-->
+      <!--qaブロック2start-->
+      <div class="hidden_box">
+        <label for="label2">Q2:AIは作れば終わりでしょ？</label>
+        <input type="checkbox" id="label2"/>
+        <div class="hidden_show">
+        <!--非表示ここから-->
+      	  <p>A:デプロイしたモデルは経年・季節などの要因で劣化・変動することもあり、特に長期間のAI運用を前提としているところでは~~(MLOpsの重要性をとく)</p>
+        <!--ここまで-->
+        </div>
+      </div>
+      <!--qaブロックend-->
+      <!--qaブロック3start-->
+      <div class="hidden_box">
+        <label for="label3">Q3:おいくらですか？</label>
+        <input type="checkbox" id="label3"/>
+        <div class="hidden_show">
+        <!--非表示ここから-->
+      	  <p>A:OSSのためインストールは無償です。(インストールするためのサーバの用意が必要です。サーバは要件を満たしていればオンプレでもクラウドでも可能です。)必要に応じて有償にて導入・保守サポートを用意しています。</p>
+        <!--ここまで-->
+        </div>
+      </div>
+      <!--qaブロックend-->
+      <!--qaブロック4start-->
+      <div class="hidden_box">
+        <label for="label4">Q4:導入実績はありますか？</label>
+        <input type="checkbox" id="label4"/>
+        <div class="hidden_show">
+        <!--非表示ここから-->
+      	  <p>A:主に大手製造業を中心にご活用いただいております。<br>
+          公開している導入事例は<a href="/">こちら</a>をご覧ください。</p>
+        <!--ここまで-->
+        </div>
+      </div>
+      <!--qaブロックend-->
+      <!--qaブロック5start-->
+      <div class="hidden_box">
+        <label for="label5">Q5:デモ動画を見たいのだけど</label>
+        <input type="checkbox" id="label5"/>
+        <div class="hidden_show">
+        <!--非表示ここから-->
+      	  <p>A:<a href="https://youtu.be/i9VjG4QwoNg">youtube</a>に動画があります。デモのリクエストも受け付けています</p>
+        <!--ここまで-->
+        </div>
+      </div>
+      <!--qaブロックend-->
+      <!--qaブロック6start-->
+      <div class="hidden_box">
+        <label for="label6">Q6:何人ぐらいで使えば良いの?</label>
+        <input type="checkbox" id="label6"/>
+        <div class="hidden_show">
+        <!--非表示ここから-->
+      	  <p>A:何人からでもご利用になれます。弊社事例では20名程度が約10のGPUノードを共有してKAMONOHASHIを利用しています。</p>
+        <!--ここまで-->
+        </div>
+      </div>
+      <!--qaブロックend-->
+    </div>
+</div>
+
+
+
+
+
+<h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 　お問い合わせ・参考資料
 </h3>
 
 <div class="feature__wrapper">
-
     <div class="feature__item--center">
       <div class="archive__item">
-
           <div class="archive__item-teaser">
             <img src="/assets/images/contact.png" alt="placeholder image 1">
-
           </div>
-
-
         <div class="archive__item-body">
-
             <h3 class="archive__item-title">お問い合わせ</h3>
-
-
-
             <div class="archive__item-excerpt">
               <p>KAMONOHASHI導入支援や保守サポートを有償にて行っております。</p>
-
             </div>
-
-
-
             <p><a href="mailto:kamonohashi-support@jp.nssol.nipponsteel.com" class="btn btn--primary">問い合わせする</a></p>
-
         </div>
       </div>
     </div>
     <div class="feature__item--center">
       <div class="archive__item">
-
           <div class="archive__item-teaser">
            <img src="/assets/images/kamo_pdf.png" alt="placeholder image 1">  
           </div>
         <div class="archive__item-body">
-
             <h3 class="archive__item-title">参考資料</h3>
-
-
-
             <div class="archive__item-excerpt">
               <p>リーフレットや紹介スライドなど各種資料をご覧になれます。</p>
-
             </div>
-
-
-
             <p><a href="/resource/" class="btn btn--primary">資料を見る</a></p>
         </div>
       </div>
