@@ -137,6 +137,7 @@ DEPENDENCIES
   activesupport (>= 4.1.11)
   jekyll (~> 3.8.5)
   jekyll-algolia
+  jekyll-feed (~> 0.6)
   jekyll-netlify-redirects
   minima (~> 2.0)
   minimal-mistakes-jekyll (~> 4.14.1)

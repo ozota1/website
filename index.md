@@ -111,7 +111,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 
 
 <!-- news testここから　-->
-<h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none;">
+<h3 id="news" style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none;">
 　NEWS
 </h3>
 <div class="feature__wrapper">
@@ -153,7 +153,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 <!-- news testここまで　-->
 
 
-<h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
+<h3 id="trouble" style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 　AI開発におけるこんな悩みはありませんか？
 </h3>
 <div class="feature__wrapper">
@@ -244,7 +244,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 
 </div>
 
-<h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
+<h3 id="solution" style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 　KAMONOHASHIで解決できます
 </h3>
 <div class="feature__wrapper" style="border-bottom:none; margin-bottom:0;">
@@ -342,7 +342,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
       </div>
     </div>
 </div>
-<h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
+<h3 id="management"style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 　管理も楽々
 </h3>
 <div class="feature_row3">
@@ -404,7 +404,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 </div>
 </div>
 
-<h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
+<h3 id="achievement" style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 導入実績
 </h3>
 <div class="feature_row3">
@@ -443,7 +443,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 </div>
 
 
-<h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
+<h3 id="tutorial_doc" style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 　チュートリアルやドキュメントを完備
 </h3>
 <div class="feature__wrapper">
@@ -478,7 +478,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 
 </div>
 
-<h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
+<h3 id="inquiry" style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 　よくあるお問い合わせ
 </h3>
 
@@ -501,7 +501,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
         <input type="checkbox" id="label2"/>
         <div class="hidden_show">
         <!--非表示ここから-->
-      	  <p>A:デプロイしたモデルは経年・季節などの要因で劣化・変動することもあり、特に長期間のAI運用を前提としているところでは~~(MLOpsの重要性をとく)</p>
+      	  <p>A:デプロイしたモデルの精度は経年・季節などの要因で劣化・変動することがあります。特に長期間・チームでのAI運用を前提としているところではモデルの管理が必要です。</p>
         <!--ここまで-->
         </div>
       </div>
@@ -524,7 +524,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
         <div class="hidden_show">
         <!--非表示ここから-->
       	  <p>A:主に大手製造業を中心にご活用いただいております。<br>
-          公開している導入事例は<a href="/">こちら</a>をご覧ください。</p>
+          公開している導入事例は<a href="#achievement">こちら</a>をご覧ください。</p>
         <!--ここまで-->
         </div>
       </div>
