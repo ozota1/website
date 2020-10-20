@@ -23,7 +23,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://kamonohashi.ai" # the base hostname & protocol for your site, e.g. http://example.com
 logo: "/assets/images/logo_003.png"
 og_image: /assets/images/logo_002.png
-version: "2.1.2"
+version: "2.1.1"
 footer:
   links:
     - label: "Privacy Policy"
