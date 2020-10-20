@@ -109,7 +109,6 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
     </div>
 </div>
 
-
 <!-- news testここから　-->
 <h3 id="news" style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none;">
 　NEWS
@@ -151,7 +150,6 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
         </div>
 </div>
 <!-- news testここまで　-->
-
 
 <h3 id="trouble" style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 　AI開発におけるこんな悩みはありませんか？
@@ -332,6 +330,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
         </div>
       </div>
     </div>
+
 </div>
 <div class="feature__wrapper">
     <div class="feature__item">
@@ -342,7 +341,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
       </div>
     </div>
 </div>
-<h3 id="management"style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
+<h3 id="management" style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 　管理も楽々
 </h3>
 <div class="feature_row3">
@@ -400,6 +399,7 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
         </div>
       </div>
     </div>
+
 </div>
 </div>
 </div>
@@ -441,7 +441,6 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
 </div>
 </div>
 </div>
-
 
 <h3 id="tutorial_doc" style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 　チュートリアルやドキュメントを完備
@@ -553,10 +552,6 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
       <!--qaブロックend-->
     </div>
 </div>
-
-
-
-
 
 <h3 style="text-align: center;font-size:1.5em; font-weight:bold; border-bottom:none; margin-bottom: 1em;">
 　お問い合わせ・参考資料
