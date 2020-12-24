@@ -117,6 +117,11 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
  <div id="newsBox" style="margin-bottom: 2rem;">
         <ul id="newsList">
           <li class="newsItem">
+            <div class="newsDate">2020/12/25</div>
+            <div class="newsLabel labelRelease">リリース</div>
+            <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v2.2.0をリリースしました</a></div>
+          </li>
+          <li class="newsItem">
             <div class="newsDate">2020/10/28</div>
             <div class="newsLabel labelRelease">リリース</div>
             <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v2.1.2をリリースしました</a></div>
@@ -130,11 +135,6 @@ Deep Learningのモデル開発には、複雑な環境構築・計算リソー�
             <div class="newsDate">2020/06/26</div>
             <div class="newsLabel labelRelease">リリース</div>
             <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v2.1.0 をリリースしました</a></div>
-          </li>
-          <li class="newsItem">
-            <div class="newsDate">2020/06/08</div>
-            <div class="newsLabel labelRelease">リリース</div>
-            <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v1.1.8をリリースしました</a></div>
           </li>
           <li class="newsItem">
               <div class="newsDate">2018/10/21</div>
