@@ -21,7 +21,7 @@ OSには動作確認済みの Python および pip がインストールされ�
 
 |項目  |バージョン  |
 |---|---|
-|OS  |Ubuntu 16.04、Windows 10  |
+|OS  |Ubuntu 18.04、Windows 10  |
 |Python  |3.5以上  |
 
 ## CLIの使用方法
