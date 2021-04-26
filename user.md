@@ -451,7 +451,7 @@ TensorBoardの項目から起動ボタンを押下することで、指定した
 |GPU|必須|ノートブックが利用するGPU枚数を指定する。|
 |起動期間設定|必須|ノートブックの起動期間を設定するかどうかを指定する。テナント設定で無期限実行が許可されている場合のみ設定可能。OFFにすると無期限の実行、ONにすると起動期間を設定しての実行となる。|
 |起動期間|必須|ノートブックの起動期間(h)を指定する。立ち上げたノートブックは、起動期間終了後に自動で終了する。|
-|コンテナイメージ|任意|利用するDockerレジストリ、コンテナ、タグを指定する。未指定の場合は、デフォルト値として[Docker Hub](https://hub.docker.com/r/tensorflow/tensorflow)に公開されているtensorflow/tensorflow:1.13.1-gpu-py3が利用される。|
+|コンテナイメージ|任意|利用するDockerレジストリ、コンテナ、タグを指定する。未指定の場合は、デフォルト値として[Docker Hub](https://hub.docker.com/r/tensorflow/tensorflow)に公開されているtensorflow/tensorflow:1.13.1-gpu-py3が利用される。このイメージは2021/04現在は[既知のissue](https://github.com/KAMONOHASHI/kamonohashi/issues/468)の対応が必要です|
 |モデル|任意|利用するソースコードを格納しているGitサーバ、リポジトリ、ブランチ、コミットIDを指定する。コミットIDを指定した場合はブランチの入力値は無視される。コミットIDが未指定の場合はブランチのHEADが選択される。ブランチもコミットIDも未指定の場合は、masterブランチのHEADが選択される。|
 |マウントする学習|任意|ノートブックコンテナにマウントする学習結果を指定する。指定した学習結果が/kqi/parentにマウントされる。|
 |マウントする推論|任意|ノートブックコンテナにマウントする推論結果を指定する。指定した推論結果が/kqi/inferenceにマウントされる。|
@@ -467,9 +467,9 @@ TensorBoardの項目から起動ボタンを押下することで、指定した
 なお利用するDockerイメージには、python3およびpip3がインストールされている必要があります。
 Docker Hubで提供されている下記Dockerイメージについては、動作確認を行っています。
 
-* tensorflow/tensorflow:1.13.1-gpu-py3
+* tensorflow/tensorflow:1.15.2-gpu
 * pytorch/pytorch:1.1.0-cuda10.0-cudnn7.5-devel
-* chainer/chainer:v6.2.0-python3
+
 
 ### ノートブックへのアクセス
 
