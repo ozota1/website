@@ -98,7 +98,7 @@ KAMONOHASHI のクラスタは次の 4 種類のサーバーで構成されま�
   fatal: [localhost]: FAILED! => {"changed": false, "msg": "Failed to get client due to HTTPConnectionPool(host='localhost', port=80): Max retries exceeded with url: /version (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f6f87772f10>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
   ```
 
-  これはdeepopsの依存パッケージのバグであり、次のように修正したのちに`deploy all`を再実行すると構築が進みます
+  これはdeepopsの依存パッケージのバグであり、次のコマンドを実行して修正したのちに`deploy all`を再実行すると構築が進みます
 
   ```
   source /opt/deepops/venv/bin/activate
