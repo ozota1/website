@@ -43,7 +43,7 @@ KAMONOHASHI のクラスタは次の 4 種類のサーバーで構成されま�
 - Kubernetes master をインストールするマシンにログインします。
 - `sudo su -`を実行し、root ユーザーになります
 - `mkdir -p /var/lib/kamonohashi/ && cd /var/lib/kamonohashi/ `を実行します
-- `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.2.0.3 --recursive`を実行してデプロイスクリプトを入手します
+- `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.2.1.0 --recursive`を実行してデプロイスクリプトを入手します
 - `/var/lib/kamonohashi/deploy-tools/`に移動します
 - プロキシ環境下では次のファイルにプロキシ設定を記載してください
   - `./deepops/scripts/proxy.sh`
@@ -91,6 +91,21 @@ KAMONOHASHI のクラスタは次の 4 種類のサーバーで構成されま�
 
 入力後に構築が始まります。
 構築には 20 分程かかります。
+
+- 構築時に次のエラーが出ることがあります
+  
+  ```
+  fatal: [localhost]: FAILED! => {"changed": false, "msg": "Failed to get client due to HTTPConnectionPool(host='localhost', port=80): Max retries exceeded with url: /version (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f6f87772f10>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
+  ```
+
+  これはdeepopsの依存パッケージのバグであり、次のコマンドを実行して修正したのちに`deploy all`を再実行すると構築が進みます
+
+  ```
+  source /opt/deepops/venv/bin/activate
+  pip uninstall Kubernetes
+  pip uninstall openshift
+  pip install openshift==0.11.2
+  ```
 
 - DGX 利用時のみ、構築後に次の作業を行ってください
   - `rm /etc/systemd/system/docker.service.d/docker-override.conf`
