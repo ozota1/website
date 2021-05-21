@@ -45,3 +45,6 @@ AIモデルの開発に関する学習実行の手順や学習履歴の管理な
 
 ## <a href="/docs/how-to/infra/">Infra Guide</a>
 バックアップなどのシステム運用方法について説明します。
+
+## <a href="/docs/how-to/aquarium/">Aquarium User Guide</a>
+アクアリウムの利用方法を説明します。
