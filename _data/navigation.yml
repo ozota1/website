@@ -103,6 +103,21 @@ docs:
         url: /docs/how-to/infra/#バックアップとリストア
       - title: "Aquarium User Guide"
         url: /docs/how-to/aquarium
+      - title: "・ログイン"
+        url: /docs/how-to/aquarium/#ログイン
+      - title: "・ユーザ情報設定"
+        url: /docs/how-to/aquarium/#ユーザ情報設定
+      - title: "・アクアリウムダッシュボード"
+        url: /docs/how-to/aquarium/#アクアリウムダッシュボード
+      - title: "・テンプレート管理"
+        url: /docs/how-to/aquarium/#テンプレート管理
+      - title: "・データセット管理"
+        url: /docs/how-to/aquarium/#データセット管理
+      - title: "・新規実験"
+        url: /docs/how-to/aquarium/#新規実験
+      - title: "・実験管理"
+        url: /docs/how-to/aquarium/#実験管理
+
 resource:
   - title: slide share
     url: /resource/#Slide Share
