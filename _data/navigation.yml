@@ -101,6 +101,8 @@ docs:
         url: /docs/how-to/infra
       - title: "・バックアップとリストア"
         url: /docs/how-to/infra/#バックアップとリストア
+      - title: "Aquarium User Guide"
+        url: /docs/how-to/aquarium
 resource:
   - title: slide share
     url: /resource/#Slide Share
