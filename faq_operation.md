@@ -20,7 +20,7 @@ KAMONOHASHIの動作確認済み環境を下表に示します。
 
 |項目  |バージョン  |
 |---|---|
-|OS  |Ubuntu 16.04、Windows 10  |
+|OS  |Ubuntu 18.04、Windows 10  |
 |ブラウザ  |Chrome 最新版, Firefox 最新版  |
 
 ## ログの場所を教えてください

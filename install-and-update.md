@@ -20,8 +20,8 @@ sidebar:
 
 
 ## バージョンアップ
-  - <a href="/docs/install-and-update/update">KAMONOHASHI 2.xのバージョンアップ</a>
-  - <a href="/docs/install-and-update/migrate1xto2x">KAMONOHASHI 1.xから2.xへの移行</a>
+  - <a href="/docs/install-and-update/update">KAMONOHASHI 3.xのバージョンアップ</a>
+  - <a href="/docs/install-and-update/migrate2xto3x">KAMONOHASHI 2.xから3.xへの移行</a>
 
 ## バージョンダウン
   - <a href="/docs/install-and-update/update#バージョンダウン">バージョンダウン</a>
@@ -32,11 +32,8 @@ sidebar:
 
 |KAMONOHASHI|GitLab|MinIO| LDAP|Kubernetes |Ubuntu |
 |---|---|---|---|---|---|
+|v3.0.0 ~|11.8以降|RELEASE.2020-03-09T18-26-53Z|version 3| v1.18.9 |Ubuntu 18.04|
 |v2.0.0 ~|11.8以降|RELEASE.2020-03-09T18-26-53Z|version 3| v1.15.3 |Ubuntu 18.04|
-|v1.0.1 ~ v1.1.7|11.8以降|RELEASE.2019-01-23T23-18-58Z|version 3| v1.12.7,v1.14.1|ubuntu 16.04|
-|v1.0.0|11.7以前|RELEASE.2019-01-23T23-18-58Z|version 3| v1.12.7|Ubuntu 16.04|
-
-v1.0.0では11.8以降のGitLabに対応していませんので注意してください。
 
 ## アンインストール方法
 
@@ -53,21 +50,5 @@ v1.0.0では11.8以降のGitLabに対応していませんので注意してく�
   * クラスタ構成: KAMONOHASHIノード, STORAGEノードの`/var/lib/kamonohashi`
   * 構築に失敗してやり直す際にパスワードも変更する場合はこのディレクトリを削除してください
 
-### アンインストールについての補足事項
-* 2.0.0のアンインストールでは、内部で利用するツールの[既知のバグ](https://github.com/kubernetes-sigs/kubespray/issues/5185)により、次のようなエラーがメッセージに含まれます。
-これは無視して良いエラーです
-
-```
-    The task includes an option with an undefined variable. The error was: 'dict object' has no attribute 'stdout'
-
-    The error appears to have been in '/kubespray/kubespray/roles/remove-node/post-remove/tasks/main.yml': line 14, column 3, but may
-    be elsewhere in the file depending on the exact syntax problem.
-
-    The offending line appears to be:
-
-
-    - name: Set node IP
-      ^ here
-```
 
 
