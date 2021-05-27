@@ -76,7 +76,7 @@ cat deepops/conf/settings.yml
 ```
 ./deploy-kamonohashi.sh clean all
 ```
-  * deepopsのGPUドライバパッケージが`cuda-drivers`から`nvidia-headless-450-server`に変更になりました。これらに互換性がないため、古いgpuドライバと依存パッケージを含め、全てのnvidiaパッケージのアンインストールを実施します。これらは以前のでぷりーツールのアンインストールコマンドではアンインストールされませんでした。
+  * deepopsのGPUドライバパッケージが`cuda-drivers`から`nvidia-headless-450-server`に変更になりました。これらに互換性がないため、古いgpuドライバと依存パッケージを含め、全てのnvidiaパッケージのアンインストールを実施します。これらは以前のKAMONOHASHIデプロイツールのアンインストールコマンドではアンインストールされませんでした。
   * このコマンド実行後、GPUサーバーは再起動します
   
 * コマンド実行後にk8s masterサーバーを手動で再起動します
