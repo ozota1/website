@@ -46,7 +46,7 @@ KAMONOHASHI のクラスタは次の 4 種類のサーバーで構成されま�
 - `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 3.0.0.1 --recursive`を実行してデプロイスクリプトを入手します
 - `/var/lib/kamonohashi/deploy-tools/`に移動します
 - プロキシ環境下では次のファイルにプロキシ設定を記載してください
-  - `./deepops/scripts/proxy.sh`
+  - `./deepops/scripts/deepops/proxy.sh`
   - no_proxy には`localhost,127.0.0.1,.cluster.local,使用する各マシンのIPアドレス・ホスト名`の記載を含めてください
 - `./deploy-kamonohashi.sh prepare`を実行して構築に必要なソフトウェアをインストールします
   - ansible でエラーが出る場合は ansible のアンインストールを実行してから`prepare`を実行してください
