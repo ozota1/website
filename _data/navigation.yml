@@ -45,6 +45,8 @@ docs:
         url: /docs/tutorial/object-detection-pytorch
       - title: "・Crack classfication (pytorch)"
         url: /docs/tutorial/crackclassification-pytorch
+      - title: "・アクアリウム mnist Tutorial"
+        url: /docs/tutorial/aquarium-mnist
   - title: FAQ
     url: /docs/faq
     children:
