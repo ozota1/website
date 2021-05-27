@@ -43,7 +43,7 @@ KAMONOHASHI のクラスタは次の 4 種類のサーバーで構成されま�
 - Kubernetes master をインストールするマシンにログインします。
 - `sudo su -`を実行し、root ユーザーになります
 - `mkdir -p /var/lib/kamonohashi/ && cd /var/lib/kamonohashi/ `を実行します
-- `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.2.0.3 --recursive`を実行してデプロイスクリプトを入手します
+- `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 3.0.0.1 --recursive`を実行してデプロイスクリプトを入手します
 - `/var/lib/kamonohashi/deploy-tools/`に移動します
 - プロキシ環境下では次のファイルにプロキシ設定を記載してください
   - `./deepops/scripts/proxy.sh`
@@ -91,9 +91,5 @@ KAMONOHASHI のクラスタは次の 4 種類のサーバーで構成されま�
 
 入力後に構築が始まります。
 構築には 20 分程かかります。
-
-- DGX 利用時のみ、構築後に次の作業を行ってください
-  - `rm /etc/systemd/system/docker.service.d/docker-override.conf`
-  - これは構築に使用する NVIDIA deepops のバグで、20.02.1 の次の deepops のリリースがされれば[対応される見込み](https://github.com/NVIDIA/deepops/commit/980cfe42685e17f0d3688fe50b1939aeaa51f314#diff-25c48ad81ab2a8e8c03e25d8d023bc1c)です。
 
 構築後にアクセス用の URL が表示されるので、それをブラウザで開きます
