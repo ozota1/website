@@ -26,7 +26,7 @@ cd /var/lib/kamonohashi/deploy-tools/
 
 * 既知のバグによりエラーが出ますが、後の手順で再度アンインストールコマンドを実行するので無視して構いません
 
-## 3.x 構築ツールのセットアップ
+## KAMONOHASHI 3.x 構築
 
 ### KAMONOHASHIバージョン3.0.0用の構築ツールを入手します
 
@@ -55,15 +55,18 @@ echo deepops: $(cd deepops; git tag --points-at HEAD)
 
 ### 移行設定の生成
 * 次のコマンドを実行し、設定ファイルの生成を行います
-`./deploy-kamonohashi.sh configure verup`
+```
+./deploy-kamonohashi.sh configure verup
+```
 #### 補足事項 
-  * このコマンドではk8s構築に利用するツールであるdeepopsの設定ファイルには互換性がないことの対応を行っています。deepopsの設定ファイルの変更を抽出してdeepops既定外の独自の設定ファイル`deepops/config/settings.yml`に書き移します
+  * このコマンドではk8s構築に利用するツールであるdeepopsの設定ファイルについて、以前のバージョン20.02.1と現在のバージョン21.03で互換性がないことの対応を行っています。
+  * deepopsの設定ファイルの変更を抽出してdeepops既定外の独自の設定ファイル`deepops/config/settings.yml`に書き移します
   * deepopsの設定ファイルは21.03のデフォルトに書き換えます
   * デプロイコマンド実行時には、`deepops/config/settings.yml`の内容をデフォルト設定に上書きして適用されます
   * このコマンドは現在のdeepops設定ファイルと20.02.1のdeepops設定ファイルの差分を見るため、2回実行すると21.03のデフォルトに書き換え後に20.02.1のdeepops設定との比較が行われ、settings.ymlが意図しない内容となります。
   * 過去の設定ファイルは`deepops/old_config`配下にコピーされます
 
-* 設定ファイルが正常に生成され、過去に編集した内容が書き込まれているか確認します
+* 設定ファイルが正常に生成され、過去にdeepopsの設定ファイルを編集した内容が書き込まれているか確認します
 ```
 cat deepops/conf/settings.yml
 ```
@@ -87,8 +90,7 @@ reboot
 cd /var/lib/kamonohashi/deploy-tools
 ./deploy-kamonohashi.sh deploy all
 ```
-　　
-  * シングルノード構成の場合はドライバインストールの再にk8s masterサーバーが再起動されるため、 
+* シングルノード構成の場合はドライバインストールの際にk8s masterサーバーが再起動されるため、 
   再起動後に再度`./deploy-kamonohashi.sh deploy all`を実行してください
 
 * 以上で構築は完了します
