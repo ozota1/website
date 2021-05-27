@@ -103,9 +103,9 @@ docs:
         url: /docs/how-to/infra/#バックアップとリストア
       - title: "アクアリウム概要"
         url: /docs/how-to/aquarium_intro
-      - title: "アクアリウムとは"
+      - title: "・アクアリウムとは"
         url: /docs/how-to/aquarium_intro/#アクアリウムとは
-      - title: "アクアリウム利用の流れ"
+      - title: "・アクアリウム利用の流れ"
         url: /docs/how-to/aquarium_intro/#アクアリウム利用の流れ
       - title: "アクアリウムデータ保持者ガイド"
         url: /docs/how-to/aquarium_owner
