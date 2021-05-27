@@ -92,7 +92,7 @@ mv /var/lib/kamonohashi/postgresql/data /var/tmp/
 * リストアコマンドを実行します
 
 ```
-docker run -d --name restore-postgres -v /var/lib/kamonohashi/postgresql/data/:/var/lib/postgresql/data postgres:10
+docker run -d --name restore-postgres -e POSTGRES_HOST_AUTH_METHOD=trust -v /var/lib/kamonohashi/postgresql/data/:/var/lib/postgresql/data postgres:10
 docker cp /var/lib/kamonohashi/postgresql/backup/$DUMP_FILE restore-postgres:/$DUMP_FILE
 docker exec -it restore-postgres psql -U postgres -f /$DUMP_FILE
 ```
