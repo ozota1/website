@@ -28,7 +28,7 @@ cd /var/lib/kamonohashi/deploy-tools/
 
 ## 3.x 構築ツールのセットアップ
 
-* KAMONOHASHIバージョン3.0.0用の構築ツールを入手します
+### KAMONOHASHIバージョン3.0.0用の構築ツールを入手します
 
 ```
 cd /var/lib/kamonohashi/deploy-tools/
@@ -40,37 +40,40 @@ git submodule update --init --recursive
 
 * 構築ツールが正常に取得できているか次のコマンドで確認します
 ```
-echo $(cd deepops; git tag --points-at HEAD)
+echo KAMONOHASHI deploy tool: $(git tag --points-at HEAD)
+echo deepops: $(cd deepops; git tag --points-at HEAD)
 ```
-  * 21.03と表示されれば正常です。
+  * KAMONOHASHI deploy tool: 3.0.0.1,  deepops: 21.03　が表示されれば正常です。
   * 正常でない場合、`git submodule update --init --recursive`でエラーが出ていないかを確認してください
 
-* プロキシ環境の場合は、`deepops/scripts/deepops/proxy.sh`にプロキシ設定を記載します
-
+### 構築ツール依存パッケージの更新
+* プロキシ環境の場合は、準備として`deepops/scripts/deepops/proxy.sh`にプロキシ設定を記載します
 * 次のコマンドを実行し、構築に必要なパッケージを入手します
 ```
 ./deploy-kamonohashi.sh prepare
 ```
 
+### 移行設定の生成
 * 次のコマンドを実行し、設定ファイルの生成を行います
 `./deploy-kamonohashi.sh configure verup`
-  * 補足事項 
-    * k8s構築に利用するツールであるdeepopsの設定ファイルには互換性がないことの対応を行います。deepopsの設定ファイルの変更を抽出してdeepops既定外の独自の設定ファイル`deepops/config/settings.yml`に書き移します
-    * deepopsの設定ファイルは21.03のデフォルトに書き換えます
-    * デプロイコマンド実行時には、デフォルト設定に`deepops/config/settings.yml`の内容を上書き上書き追加して適用します
-    * このコマンドは現在のdeepops設定ファイルと20.02.1のdeepops設定ファイルの差分を見るため、2回実行すると21.03のデフォルトに書き換え後に20.02.1のdeepops設定との比較が行われ、settings.ymlが意図しない内容となります。
-    * 過去の設定ファイルは`deepops/old_config`配下にコピーされます
+#### 補足事項 
+  * このコマンドではk8s構築に利用するツールであるdeepopsの設定ファイルには互換性がないことの対応を行っています。deepopsの設定ファイルの変更を抽出してdeepops既定外の独自の設定ファイル`deepops/config/settings.yml`に書き移します
+  * deepopsの設定ファイルは21.03のデフォルトに書き換えます
+  * デプロイコマンド実行時には、`deepops/config/settings.yml`の内容をデフォルト設定に上書きして適用されます
+  * このコマンドは現在のdeepops設定ファイルと20.02.1のdeepops設定ファイルの差分を見るため、2回実行すると21.03のデフォルトに書き換え後に20.02.1のdeepops設定との比較が行われ、settings.ymlが意図しない内容となります。
+  * 過去の設定ファイルは`deepops/old_config`配下にコピーされます
 
 * 設定ファイルが正常に生成され、過去に編集した内容が書き込まれているか確認します
 ```
 cat deepops/conf/settings.yml
 ```
 
+### アンインストールの再実行
 * 再度アンインストールコマンドを実行します
 ```
 ./deploy-kamonohashi.sh clean all
 ```
-  * deepopsのGPUドライバパッケージが`cuda-drivers`から`nvidia-headless-450-server`に変更になりました。これらに互換性がないため、古いgpuドライバと依存パッケージを含め、全てのnvidiaパッケージのアンインストールを実施します
+  * deepopsのGPUドライバパッケージが`cuda-drivers`から`nvidia-headless-450-server`に変更になりました。これらに互換性がないため、古いgpuドライバと依存パッケージを含め、全てのnvidiaパッケージのアンインストールを実施します。これらは以前のでぷりーツールのアンインストールコマンドではアンインストールされませんでした。
   * このコマンド実行後、GPUサーバーは再起動します
   
 * コマンド実行後にk8s masterサーバーを手動で再起動します
@@ -78,6 +81,7 @@ cat deepops/conf/settings.yml
 reboot
 ```
 
+### 構築の実施
 * 再起動完了後にrootユーザーで次の構築コマンドを実行します
 ```
 cd /var/lib/kamonohashi/deploy-tools
