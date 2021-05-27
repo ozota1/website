@@ -32,3 +32,9 @@ KAMONOHASHI を使用して、機械学習手法を試す際によく用いら�
 KAMONOHASHI を使用して、大量の画像を扱い正常画像と異常画像の分類を行うモデルを学習させる方法を学びます。
 
 - <a href="/docs/tutorial/crackclassification-pytorch">pytorch 版チュートリアル</a>
+
+## アクアリウム tutorial
+
+アクアリウムを使用して学習を行う方法を説明します。
+
+- <a href="/docs/tutorial/aquarium-mnist">mnist 版チュートリアル</a>
