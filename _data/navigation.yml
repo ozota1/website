@@ -101,22 +101,32 @@ docs:
         url: /docs/how-to/infra
       - title: "・バックアップとリストア"
         url: /docs/how-to/infra/#バックアップとリストア
-      - title: "Aquarium User Guide"
-        url: /docs/how-to/aquarium
+      - title: "アクアリウム概要"
+        url: /docs/how-to/aquarium_intro
+      - title: "アクアリウムとは"
+        url: /docs/how-to/aquarium_intro/#アクアリウムとは
+      - title: "アクアリウム利用の流れ"
+        url: /docs/how-to/aquarium_intro/#アクアリウム利用の流れ
+      - title: "アクアリウムデータ保持者ガイド"
+        url: /docs/how-to/aquarium_owner
       - title: "・ログイン"
-        url: /docs/how-to/aquarium/#ログイン
+        url: /docs/how-to/aquarium_owner/#ログイン
       - title: "・ユーザ情報設定"
-        url: /docs/how-to/aquarium/#ユーザ情報設定
+        url: /docs/how-to/aquarium_owner/#ユーザ情報設定
       - title: "・アクアリウムダッシュボード"
-        url: /docs/how-to/aquarium/#アクアリウムダッシュボード
-      - title: "・テンプレート管理"
-        url: /docs/how-to/aquarium/#テンプレート管理
+        url: /docs/how-to/aquarium_owner/#アクアリウムダッシュボード
       - title: "・データセット管理"
-        url: /docs/how-to/aquarium/#データセット管理
+        url: /docs/how-to/aquarium_owner/#データセット管理
       - title: "・新規実験"
-        url: /docs/how-to/aquarium/#新規実験
+        url: /docs/how-to/aquarium_owner/#新規実験
       - title: "・実験管理"
-        url: /docs/how-to/aquarium/#実験管理
+        url: /docs/how-to/aquarium_owner/#実験管理
+      - title: "アクアリウムAI開発者ガイド"
+        url: /docs/how-to/aquarium_dev
+      - title: "・アクアリウムダッシュボード"
+        url: /docs/how-to/aquarium_dev/#アクアリウムダッシュボード
+      - title: "・テンプレート管理"
+        url: /docs/how-to/aquarium_dev/#テンプレート管理
 
 resource:
   - title: slide share
