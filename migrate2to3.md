@@ -24,6 +24,9 @@ cd /var/lib/kamonohashi/deploy-tools/
 ./deploy-kamonohashi.sh clean all
 ```
 
+* アンインストールはsshを用いて実行されます。
+  * 設定されているsshユーザーは`deepops/config/inventory`の`ansible_user`の項目で確認できます。
+  * sshユーザーでの SSH にパスワードが必要な場合は、clean allに`-k`オプションを追加します。sudo にパスワードが必要な場合は`-K`のオプションを指定します。
 * 既知のバグによりエラーが出ますが、後の手順で再度アンインストールコマンドを実行するので無視して構いません
 
 ## KAMONOHASHI 3.x 構築
@@ -76,8 +79,9 @@ cat deepops/conf/settings.yml
 ```
 ./deploy-kamonohashi.sh clean all
 ```
-  * deepopsのGPUドライバパッケージが`cuda-drivers`から`nvidia-headless-450-server`に変更になりました。これらに互換性がないため、古いgpuドライバと依存パッケージを含め、全てのnvidiaパッケージのアンインストールを実施します。これらは以前のKAMONOHASHIデプロイツールのアンインストールコマンドではアンインストールされませんでした。
-  * このコマンド実行後、GPUサーバーは再起動します
+* アンインストールはsshを用いて実行されます。冒頭のアンインストールと同様に`-K`,`-k`オプションを必要に応じ追加します
+* deepopsのGPUドライバパッケージが`cuda-drivers`から`nvidia-headless-450-server`に変更になりました。これらに互換性がないため、古いgpuドライバと依存パッケージを含め、全てのnvidiaパッケージのアンインストールを実施します。これらは以前のKAMONOHASHIデプロイツールのアンインストールコマンドではアンインストールされませんでした。
+* このコマンド実行後、GPUサーバーは再起動します
   
 * コマンド実行後にk8s masterサーバーを手動で再起動します
 ```
@@ -90,8 +94,8 @@ reboot
 cd /var/lib/kamonohashi/deploy-tools
 ./deploy-kamonohashi.sh deploy all
 ```
+* 構築はsshを用いて実行されます。冒頭のアンインストールと同様に`-K`,`-k`オプションを必要に応じ追加します
 * シングルノード構成の場合はドライバインストールの際にk8s masterサーバーが再起動されるため、 
   再起動後に再度`./deploy-kamonohashi.sh deploy all`を実行してください
-
 * 以上で構築は完了します
   * 必要に応じ、GPUサーバーのドライバパッケージ`nvidia-headless-450-server`,ドライバ管理ツールパッケージ`nvidia-utils-450-server`をaptでバージョンアップしてください
