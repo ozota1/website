@@ -288,7 +288,7 @@ KAMONOHASHI の管理下に新しくノードを追加します。 Kubernetes ma
 1. `/var/lib/kamonohashi/deploy-tools/deepops/config/inventory` を編集し、マシンを追記(下記例を参照)
 1. `/var/lib/kamonohashi/deploy-tools/deploy-kamonohashi.sh update node-conf` を実行
 1. 処理が完了するまで待機
-1. 完了後に GPU サーバーを再起動
+1. `kubectl get csr -o name | xargs -I {} kubectl certificate approve {}`を実行
 
 #### inventory ファイルへのノード追記例
 
