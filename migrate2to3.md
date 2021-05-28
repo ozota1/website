@@ -36,7 +36,7 @@ cd /var/lib/kamonohashi/deploy-tools/
 ```
 cd /var/lib/kamonohashi/deploy-tools/
 git fetch --tags
-git checkout 3.0.0.1
+git checkout 3.0.0.2
 (cd deepops; git stash save "backup berfore verup KAMONOHASHI 3")
 git submodule update --init --recursive
 ```
@@ -46,7 +46,7 @@ git submodule update --init --recursive
 echo KAMONOHASHI deploy tool: $(git tag --points-at HEAD)
 echo deepops: $(cd deepops; git tag --points-at HEAD)
 ```
-  * KAMONOHASHI deploy tool: 3.0.0.1,  deepops: 21.03　が表示されれば正常です。
+  * KAMONOHASHI deploy tool: 3.0.0.2,  deepops: 21.03　が表示されれば正常です。
   * 正常でない場合、`git submodule update --init --recursive`でエラーが出ていないかを確認してください
 
 ### 構築ツール依存パッケージの更新
@@ -80,13 +80,17 @@ cat deepops/conf/settings.yml
 ./deploy-kamonohashi.sh clean all
 ```
 * アンインストールはsshを用いて実行されます。冒頭のアンインストールと同様に`-K`,`-k`オプションを必要に応じ追加します
-* deepopsのGPUドライバパッケージが`cuda-drivers`から`nvidia-headless-450-server`に変更になりました。これらに互換性がないため、古いgpuドライバと依存パッケージを含め、全てのnvidiaパッケージのアンインストールを実施します。これらは以前のKAMONOHASHIデプロイツールのアンインストールコマンドではアンインストールされませんでした。
+* deepopsのデフォルトGPUドライバパッケージが`cuda-drivers`から`nvidia-headless-450-server`に変更になりました。これらに互換性がないため、古いgpuドライバと依存パッケージを含め、全てのnvidiaパッケージのアンインストールを実施します。これらは以前のKAMONOHASHIデプロイツールのアンインストールコマンドではアンインストールされませんでした。
 * このコマンド実行後、GPUサーバーは再起動します
   
 * コマンド実行後にk8s masterサーバーを手動で再起動します
 ```
 reboot
 ```
+
+### 設定の変更
+* 設定内容をカスタマイズする場合は次を参照し、設定ファイルの編集を行ってください。
+[カスタマイズ設定ガイド](/docs/install-and-update/customize-3x)
 
 ### 構築の実施
 * 再起動完了後にrootユーザーで次の構築コマンドを実行します
@@ -97,5 +101,4 @@ cd /var/lib/kamonohashi/deploy-tools
 * 構築はsshを用いて実行されます。冒頭のアンインストールと同様に`-K`,`-k`オプションを必要に応じ追加します
 * シングルノード構成の場合はドライバインストールの際にk8s masterサーバーが再起動されるため、 
   再起動後に再度`./deploy-kamonohashi.sh deploy all`を実行してください
-* 以上で構築は完了します
-  * 必要に応じ、GPUサーバーのドライバパッケージ`nvidia-headless-450-server`,ドライバ管理ツールパッケージ`nvidia-utils-450-server`をaptでバージョンアップしてください
+

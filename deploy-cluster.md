@@ -43,7 +43,7 @@ KAMONOHASHI のクラスタは次の 4 種類のサーバーで構成されま�
 - Kubernetes master をインストールするマシンにログインします。
 - `sudo su -`を実行し、root ユーザーになります
 - `mkdir -p /var/lib/kamonohashi/ && cd /var/lib/kamonohashi/ `を実行します
-- `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 3.0.0.1 --recursive`を実行してデプロイスクリプトを入手します
+- `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 3.0.0.2 --recursive`を実行してデプロイスクリプトを入手します
 - `/var/lib/kamonohashi/deploy-tools/`に移動します
 - プロキシ環境下では次のファイルにプロキシ設定を記載してください
   - `./deepops/scripts/deepops/proxy.sh`
@@ -61,7 +61,7 @@ KAMONOHASHI のクラスタは次の 4 種類のサーバーで構成されま�
 | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | Kubernetes master を<br>デプロイするサーバ名 |                                                                                                                     |
 | KAMONOHASHI を<br>デプロイするサーバ名       |                                                                                                                     |
-| Storage をデプロイするサーバ名               | HW ベンダーの NFS を使用する場合は[カスタマイズ設定ガイド](/docs/install-and-update/customize-2x)を参照してください |
+| Storage をデプロイするサーバ名               | HW ベンダーの NFS を使用する場合は[カスタマイズ設定ガイド](/docs/install-and-update/customize-3x)を参照してください |
 | 計算ノード名                                 | ,区切りで複数指定できます。<br>例: gpu1,gpu2,gpu3                                                                   |
 | SSH で利用するユーザー名:                    | 構築時に使用する SSH ユーザーを指定します。構築ツールが SSH 経由で構築を行う仕様のため、指定が必要になります        |
 
@@ -71,7 +71,7 @@ KAMONOHASHI のクラスタは次の 4 種類のサーバーで構成されま�
 - kamonohashi の設定ファイル(kamonohashi/conf/settings.yml)
 
 設定内容をカスタマイズする場合は次を参照し、設定ファイルの編集を行ってください。
-[カスタマイズ設定ガイド](/docs/install-and-update/customize-2x)
+[カスタマイズ設定ガイド](/docs/install-and-update/customize-3x)
 
 ## デプロイの実行
 

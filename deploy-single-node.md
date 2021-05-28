@@ -20,7 +20,7 @@ sidebar:
 - インストール対象マシンにログインします。
 - `sudo su -`を実行し、root ユーザーになります
 - `mkdir -p /var/lib/kamonohashi/ && cd /var/lib/kamonohashi/ `を実行します
-- `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 3.0.0.1 --recursive`を実行してデプロイスクリプトを入手します
+- `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 3.0.0.2 --recursive`を実行してデプロイスクリプトを入手します
 - `/var/lib/kamonohashi/deploy-tools/`に移動します
 - プロキシ環境下では次のファイルにプロキシ設定を記載してください
   - `./deepops/scripts/deepops/proxy.sh`
@@ -45,7 +45,7 @@ sidebar:
 - kamonohashi の設定ファイル(kamonohashi/conf/settings.yml)
 
 設定内容をカスタマイズする場合は次を参照し、設定ファイルの編集を行ってください。
-[カスタマイズ設定ガイド](/docs/install-and-update/customize-2x)
+[カスタマイズ設定ガイド](/docs/install-and-update/customize-3x)
 
 ## デプロイの実行
 
