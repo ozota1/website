@@ -51,19 +51,25 @@ sidebar:
 
 |項目|入力値|
 |-----|-----|
-|レジストリ||
-|イメージ||
-|タグ||
+|レジストリ|official-docker-hub|
+|イメージ|tensorflow/tensorflow|
+|タグ|2.1.0-gpu-py3|
 |token|(空)|
-|Gitサーバ||
-|リポジトリ||
-|ブランチ||
+|Gitサーバ|GitHub|
+|リポジトリ|KAMONOHASHI/aquarium-tutorial|
+|ブランチ|master|
 |コミットID|HEAD|
 |token|(空)|
-|実行コマンド||
-|CPU||
-|メモリ(GB)||
-|GPU||
+|CPU|4|
+|メモリ(GB)|8|
+|GPU|1|
+
+実行コマンド
+```shell
+pip install --upgrade pip && pip install scikit-image scikit-learn pandas tqdm
+unzip /kqi/input/*/*.zip -d /kqi/input/images
+python -u train.py
+```
 
 ### 前処理ありテンプレートを登録する
 
@@ -81,37 +87,49 @@ sidebar:
 
 |項目|入力値|
 |-----|-----|
-|レジストリ||
-|イメージ||
-|タグ||
+|レジストリ|official-docker-hub|
+|イメージ|tensorflow/tensorflow|
+|タグ|2.1.0-gpu-py3|
 |token|(空)|
-|Gitサーバ||
-|リポジトリ||
-|ブランチ||
+|Gitサーバ|GitHub|
+|リポジトリ|KAMONOHASHI/aquarium-tutorial|
+|ブランチ|master|
 |コミットID|HEAD|
 |token|(空)|
-|実行コマンド||
-|CPU||
-|メモリ(GB)||
-|GPU||
+|CPU|4|
+|メモリ(GB)|8|
+|GPU|0|
+
+実行コマンド
+```shell
+pip install --upgrade pip && pip install scikit-image scikit-learn pandas tqdm
+unzip /kqi/input/*/*.zip -d /kqi/input/images
+python -u preprocess.py
+```
+
 
 * Step 3
 
 |項目|入力値|
 |-----|-----|
-|レジストリ||
-|イメージ||
-|タグ||
+|レジストリ|official-docker-hub|
+|イメージ|tensorflow/tensorflow|
+|タグ|2.1.0-gpu-py3|
 |token|(空)|
-|Gitサーバ||
-|リポジトリ||
-|ブランチ||
+|Gitサーバ|GitHub|
+|リポジトリ|KAMONOHASHI/aquarium-tutorial|
+|ブランチ|master|
 |コミットID|HEAD|
 |token|(空)|
-|実行コマンド||
-|CPU||
-|メモリ(GB)||
-|GPU||
+|CPU|4|
+|メモリ(GB)|8|
+|GPU|1|
+
+実行コマンド
+```shell
+pip install --upgrade pip && pip install scikit-image scikit-learn pandas tqdm
+python -u train_after_preprocess.py --input_path /kqi/parent/
+```
 
 
 ## 実験を開始する
