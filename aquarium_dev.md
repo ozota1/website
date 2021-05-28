@@ -127,9 +127,11 @@ Dockerレジストリ、Gitリポジトリの公開設定によっては、ア�
 
 * 前処理なしテンプレートの学習・前処理ありテンプレートの前処理
 
+```
 /kqi/input
 /kqi/output
 /kqi/git
+```
 
 は、KAMONOHASHIのものと同じです。
 
@@ -137,8 +139,10 @@ Dockerレジストリ、Gitリポジトリの公開設定によっては、ア�
 
 * 前処理ありテンプレートの学習
 
+```
 /kqi/output
 /kqi/git
+```
 
 は、KAMONOHASHIのものと同じです。
 
