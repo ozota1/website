@@ -24,7 +24,8 @@ sidebar:
 - `/var/lib/kamonohashi/deploy-tools/`に移動します
 - プロキシ環境下では次のファイルにプロキシ設定を記載してください
   - `./deepops/scripts/deepops/proxy.sh`
-  - no_proxy には`localhost,127.0.0.1,.cluster.local,使用するマシンのIPアドレス・ホスト名`の記載をしてください
+  - no_proxy には`localhost,127.0.0.1,.cluster.local,使用する各マシンのIPアドレス・ホスト名`の記載を含めてください
+  - OSのno_proxy設定にも上記と同様のno_proxy設定が含まれるように設定してください。`/etc/environment`で指定することを推奨します
 - `./deploy-kamonohashi.sh prepare`を実行して構築に必要なソフトウェアをインストールします
   - ansible でエラーが出る場合は ansible のアンインストールを実行してから`prepare`を実行してください
     - スクリプト実行中に適切な ansible がインストールされます
