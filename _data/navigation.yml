@@ -109,6 +109,8 @@ docs:
         url: /docs/how-to/aquarium_intro/#アクアリウムとは
       - title: "・アクアリウム利用の流れ"
         url: /docs/how-to/aquarium_intro/#アクアリウム利用の流れ
+      - title: "・テンプレート・データセットのバージョニング"
+        url: /docs/how-to/aquarium_intro/#テンプレート・データセットのバージョニング
       - title: "アクアリウムデータ保持者ガイド"
         url: /docs/how-to/aquarium_owner
       - title: "・ログイン"
@@ -129,6 +131,8 @@ docs:
         url: /docs/how-to/aquarium_dev/#アクアリウムダッシュボード
       - title: "・テンプレート管理"
         url: /docs/how-to/aquarium_dev/#テンプレート管理
+      - title: "・テンプレートの補足情報"
+        url: /docs/how-to/aquarium_dev/#テンプレートの補足情報
 
 resource:
   - title: slide share
