@@ -50,7 +50,10 @@ echo deepops: $(cd deepops; git tag --points-at HEAD)
   * 正常でない場合、`git submodule update --init --recursive`でエラーが出ていないかを確認してください
 
 ### 構築ツール依存パッケージの更新
-* プロキシ環境の場合は、準備として`deepops/scripts/deepops/proxy.sh`にプロキシ設定を記載します
+* プロキシ環境下では次のファイルにプロキシ設定を記載してください
+  - `./deepops/scripts/deepops/proxy.sh`
+  - no_proxy には`localhost,127.0.0.1,.cluster.local,使用する各マシンのIPアドレス・ホスト名`の記載を含めてください
+  - OSのno_proxy設定にも上記と同様のno_proxy設定が含まれるように設定してください。`/etc/environment`で指定することを推奨します
 * 次のコマンドを実行し、構築に必要なパッケージを入手します
 ```
 ./deploy-kamonohashi.sh prepare
