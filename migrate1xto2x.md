@@ -78,7 +78,7 @@ cd /var/lib/kamonohashi/deploy-tools/<version>/infra/
 | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | Kubernetes master を<br>デプロイするサーバ名 |                                                                                                                     |
 | KAMONOHASHI を<br>デプロイするサーバ名       |                                                                                                                     |
-| Storage をデプロイするサーバ名               | HW ベンダーの NFS を使用する場合は[カスタマイズ設定ガイド](/docs/install-and-update/customize-2x)を参照してください |
+| Storage をデプロイするサーバ名               | HW ベンダーの NFS を使用する場合は[カスタマイズ設定ガイド](/docs/install-and-update/customize-3x)を参照してください |
 | 計算ノード名                                 | ,区切りで複数指定できます。<br>例: gpu1,gpu2,gpu3                                                                   |
 | SSH で利用するユーザー名:                    | 構築時に使用する SSH ユーザーを指定します。構築ツールが SSH 経由で構築を行う仕様のため、指定が必要になります        |
 
@@ -88,7 +88,7 @@ cd /var/lib/kamonohashi/deploy-tools/<version>/infra/
 - kamonohashi の設定ファイル(kamonohashi/conf/settings.yml)
 
 設定内容をカスタマイズする場合は次を参照し、設定ファイルの編集を行ってください。
-[カスタマイズ設定ガイド](/docs/install-and-update/customize-2x)
+[カスタマイズ設定ガイド](/docs/install-and-update/customize-3x)
 
 ## デプロイの実行
 

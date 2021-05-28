@@ -5,10 +5,17 @@
 layout: single
 classes: wide
 title: "カスタマイズ設定ガイド"
-permalink: /docs/install-and-update/customize-2x
+permalink: /docs/install-and-update/customize-3x
 sidebar:
   nav: "docs"
 ---
+
+## インストールするGPUドライババージョンの指定
+* `deepops/config/settings.yml`に`nvidia_driver_ubuntu_branch: <version>`のフォーマットで記載します
+* 460の場合の例
+```
+nvidia_driver_ubuntu_branch: "460"
+```
 
 ## 自動構築のNFSサーバーでなく既存のNFSサーバーを使用する
 例えばHWベンダーのNFSサーバーを使用する場合にこのカスタマイズを行います。
