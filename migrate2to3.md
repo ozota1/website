@@ -105,3 +105,6 @@ cd /var/lib/kamonohashi/deploy-tools
 * シングルノード構成の場合はドライバインストールの際にk8s masterサーバーが再起動されるため、 
   再起動後に再度`./deploy-kamonohashi.sh deploy all`を実行してください
 
+構築完了のメッセージが出たらブラウザで次のURLにアクセスし、adminユーザーでログインして利用を開始してください
+* KAMONOHASHI: http://<KAMONOHASHI用サーバー>/kamonohashi
+* アクアリウム機能: http://<KAMONOHASHI用サーバー>/aquarium
