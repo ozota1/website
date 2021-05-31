@@ -78,6 +78,7 @@ cd /var/lib/kamonohashi/
 ```
 
 構築には 20 分程かかります。
+
 構築完了のメッセージが出たらブラウザで次のURLにアクセスし、adminユーザーでログインして利用を開始してください
 * KAMONOHASHI: http://KAMONOHASHI用サーバー/kamonohashi
 * アクアリウム機能: http://KAMONOHASHI用サーバー/aquarium

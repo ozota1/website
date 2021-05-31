@@ -96,3 +96,4 @@ KAMONOHASHI のクラスタは次の 4 種類のサーバーで構成されま�
 構築完了のメッセージが出たらブラウザで次のURLにアクセスし、adminユーザーでログインして利用を開始してください
 * KAMONOHASHI: http://KAMONOHASHI用サーバー/kamonohashi
 * アクアリウム機能: http://KAMONOHASHI用サーバー/aquarium
+
