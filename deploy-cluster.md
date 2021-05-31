@@ -93,4 +93,6 @@ KAMONOHASHI のクラスタは次の 4 種類のサーバーで構成されま�
 入力後に構築が始まります。
 構築には 20 分程かかります。
 
-構築後にアクセス用の URL が表示されるので、それをブラウザで開きます
+構築完了のメッセージが出たらブラウザで次のURLにアクセスし、adminユーザーでログインして利用を開始してください
+* KAMONOHASHI: http://<KAMONOHASHI用サーバー>/kamonohashi
+* アクアリウム機能: http://<KAMONOHASHI用サーバー>/aquarium
