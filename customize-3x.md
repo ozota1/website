@@ -72,7 +72,7 @@ minio_deploy: false
 #### 3. 構築完了後、kamonohashiのweb画面のストレージ設定画面から、オブジェクトストレージの設定を変更します
 
 ## insecure-registryを設定する
-`deepops/config/group_vars/k8s-cluster.yml`に次の記述を追記します
+`deepops/config/settings.yml`に次の記述を追記します
 ```
 docker_insecure_registries: ["<host名:ポート>"]
 ```
