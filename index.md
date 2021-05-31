@@ -98,10 +98,17 @@ feature_row5:
             <h3 class="archive__item-title">Deep Learning 開発者を煩雑な作業から解放！</h3>
             <div class="archive__item-excerpt">
               <p>KAMONOHASHIは、Deep Learningのモデル開発を効率的に行うためのAI開発プラットフォームです。
-Deep Learningのモデル開発には、複雑な環境構築・計算リソースの確保・大量に発生するデータや学習履歴の管理といった、煩雑な作業が多く存在します。KAMONOHASHIはこれらの作業を削減し、AI開発者がモデル開発に集中できる環境を提供します。<br><br>KAMONOHASHIはOSSであり、どなたでも使用することができます。AI開発プロセスを最大限効率化した、最高のモデル開発を体験してみませんか。</p>
+<br>
+Deep Learningのモデル開発には、複雑な環境構築・計算リソースの確保・大量に発生するデータや学習履歴の管理といった、煩雑な作業が多く存在します。KAMONOHASHIはこれらの作業を削減し、AI開発者がモデル開発に集中できる環境を提供します。<br>
+<br>
+また、Deep Learningを用いたシステムを実用化する上では、実データを管理・維持しているユーザとAIのモデル開発をするユーザが別になることがあります。KAMONOHASHIのアクアリウム機能を用いると、こうしたユーザを円滑に連携することができます。
+<br><br>
+KAMONOHASHIはOSSであり、どなたでも使用することができます。AI開発プロセスを最大限効率化した、最高のモデル開発を体験してみませんか。</p>
             </div>
             <div id="index__btn">
             <p><a href="/docs/tutorial" class="btn btn--primary">使ってみる</a></p>
+            <p><a href="/docs/how-to/user" class="btn btn--primary">KAMONOHASHIを知る</a></p>
+            <p><a href="/docs/how-to/aquarium_intro" class="btn btn--primary">アクアリウムを知る</a></p>
             <p><a href="/support" class="btn btn--primary">サポートを受ける</a></p>
             </div>
         </div>
