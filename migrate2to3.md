@@ -106,5 +106,5 @@ cd /var/lib/kamonohashi/deploy-tools
   再起動後に再度`./deploy-kamonohashi.sh deploy all`を実行してください
 
 構築完了のメッセージが出たらブラウザで次のURLにアクセスし、adminユーザーでログインして利用を開始してください
-* KAMONOHASHI: http://<KAMONOHASHI用サーバー>/kamonohashi
-* アクアリウム機能: http://<KAMONOHASHI用サーバー>/aquarium
+* KAMONOHASHI: http://KAMONOHASHI用サーバー/kamonohashi
+* アクアリウム機能: http://KAMONOHASHI用サーバー/aquarium
