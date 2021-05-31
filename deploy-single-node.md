@@ -20,11 +20,12 @@ sidebar:
 - インストール対象マシンにログインします。
 - `sudo su -`を実行し、root ユーザーになります
 - `mkdir -p /var/lib/kamonohashi/ && cd /var/lib/kamonohashi/ `を実行します
-- `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 2.2.1.0 --recursive`を実行してデプロイスクリプトを入手します
+- `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 3.0.0.2 --recursive`を実行してデプロイスクリプトを入手します
 - `/var/lib/kamonohashi/deploy-tools/`に移動します
 - プロキシ環境下では次のファイルにプロキシ設定を記載してください
-  - `./deepops/scripts/proxy.sh`
-  - no_proxy には`localhost,127.0.0.1,.cluster.local,使用するマシンのIPアドレス・ホスト名`の記載をしてください
+  - `./deepops/scripts/deepops/proxy.sh`
+  - no_proxy には`localhost,127.0.0.1,.cluster.local,使用する各マシンのIPアドレス・ホスト名`の記載を含めてください
+  - OSのno_proxy設定にも上記と同様のno_proxy設定が含まれるように設定してください。`/etc/environment`で指定することを推奨します
 - `./deploy-kamonohashi.sh prepare`を実行して構築に必要なソフトウェアをインストールします
   - ansible でエラーが出る場合は ansible のアンインストールを実行してから`prepare`を実行してください
     - スクリプト実行中に適切な ansible がインストールされます
@@ -45,7 +46,7 @@ sidebar:
 - kamonohashi の設定ファイル(kamonohashi/conf/settings.yml)
 
 設定内容をカスタマイズする場合は次を参照し、設定ファイルの編集を行ってください。
-[カスタマイズ設定ガイド](/docs/install-and-update/customize-2x)
+[カスタマイズ設定ガイド](/docs/install-and-update/customize-3x)
 
 ## デプロイの実行
 
@@ -78,27 +79,6 @@ cd /var/lib/kamonohashi/
 
 構築には 20 分程かかります。
 
-- 構築時に次のエラーが出ることがあります
-  
-  ```
-  fatal: [localhost]: FAILED! => {"changed": false, "msg": "Failed to get client due to HTTPConnectionPool(host='localhost', port=80): Max retries exceeded with url: /version (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f6f87772f10>: Failed to establish a new connection: [Errno 111] Connection refused'))"}
-  ```
-
-  これはdeepopsの依存パッケージのバグであり、次のコマンドを実行したのちに`deploy all`を再実行すると構築が進みます
-
-  ```
-  source /opt/deepops/venv/bin/activate
-  pip uninstall Kubernetes
-  pip uninstall openshift
-  pip install openshift==0.11.2
-  ```
-
-- DGX 利用時のみ、構築後に次の作業を行ってください
-
-```bash
-rm /etc/systemd/system/docker.service.d/docker-override.conf
-```
-
-これは構築に使用する NVIDIA deepops のバグで、20.02.1 の次の deepops のリリースがされれば[対応される見込み](https://github.com/NVIDIA/deepops/commit/980cfe42685e17f0d3688fe50b1939aeaa51f314#diff-25c48ad81ab2a8e8c03e25d8d023bc1c)です。
-
-構築後にアクセス用の URL が表示されるので、それをブラウザで開きます
+構築完了のメッセージが出たらブラウザで次のURLにアクセスし、adminユーザーでログインして利用を開始してください
+* KAMONOHASHI: http://KAMONOHASHI用サーバー/kamonohashi
+* アクアリウム機能: http://KAMONOHASHI用サーバー/aquarium

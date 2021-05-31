@@ -72,7 +72,7 @@ appsettings:
 ##### Kubernetes Masterマシンでの作業
 * Kubernetes Masterマシンにrootでログインします。
 * 次を実行し、kamonohashiを停止します
-`/var/lib/kamonohashi/deploy-tools/<version>/kamonohashi/deploy-kqi.sh clean`
+`/var/lib/kamonohashi/deploy-tools/deploy-kamonohashi.sh clean app`
 
 ##### KAMONOHASHIマシンでの作業
 * KAMONOHASHIマシンにrootでログインします
@@ -107,7 +107,7 @@ docker rm restore-postgres
 ##### Kubernetes Masterマシンでの作業
 * Kubernetes Masterマシンにrootでログインします。
 * 次を実行し、kamonohashiを起動します
-`/var/lib/kamonohashi/deploy-tools/<version>/kamonohashi/deploy-kqi.sh deploy`
+`/var/lib/kamonohashi/deploy-tools/deploy-kamonohashi.sh deploy app`
 
 
 ### NFSストレージ
