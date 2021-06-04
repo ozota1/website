@@ -14,6 +14,8 @@ sidebar:
 
 アクアリウムは、KAMONOHASHIを基に構築された新しいAI開発プラットフォームです。
 
+![コンセプト](/assets/images/aquarium/intro-concept.png)
+
 アクアリウムでは、利用者の役割を次の2つに分類します。
 
 * データ保持者
