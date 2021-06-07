@@ -10,8 +10,6 @@ sidebar:
   nav: "docs"
 ---
 
-(準備中)
-
 ## はじめる前に
 
 このチュートリアルを始める前に、アクアリウムにログインできることを確認してください。
@@ -21,13 +19,11 @@ sidebar:
 本チュートリアルでは、アクアリウムを使用する方法について簡単に説明します。
 具体的にはアクアリウムを使用して、機械学習手法を試す際によく用いられるmnistの画像分類モデルを学習させる方法を以下の手順に沿って説明します。
 
+1.  テンプレートを作成する
 1.  データセットを作成する
-1.  テンプレートを作成する    
 1.  実験を実行する
 1.  ステータスを確認する
 1.  TensorBoard で学習の状況を表示する
-
-## データセットを作成する
 
 ## テンプレートを登録する
 
@@ -55,14 +51,14 @@ sidebar:
 |-----|-----|
 |レジストリ|official-docker-hub|
 |イメージ|tensorflow/tensorflow|
-|タグ|2.1.0-gpu-py3|
+|タグ|2.5.0-gpu|
 |token|(空)|
 |Gitサーバ|GitHub|
-|リポジトリ|KAMONOHASHI/aquarium-tutorial|
-|ブランチ|master|
-|コミットID|HEAD|
+|リポジトリ|KAMONOHASHI/aquarium_tutorial|
+|ブランチ|main|
+|コミットID|(空)|
 |token|(空)|
-|CPU|4|
+|CPU|2|
 |メモリ(GB)|8|
 |GPU|1|
 
@@ -70,7 +66,7 @@ sidebar:
 ```shell
 pip install --upgrade pip && pip install scikit-image scikit-learn pandas tqdm
 unzip /kqi/input/*/*.zip -d /kqi/input/images
-python -u train.py
+python -u train.py --input_type chinese
 ```
 
 ### 前処理ありテンプレートを登録する
@@ -91,14 +87,14 @@ python -u train.py
 |-----|-----|
 |レジストリ|official-docker-hub|
 |イメージ|tensorflow/tensorflow|
-|タグ|2.1.0-gpu-py3|
+|タグ|2.5.0-gpu|
 |token|(空)|
 |Gitサーバ|GitHub|
-|リポジトリ|KAMONOHASHI/aquarium-tutorial|
-|ブランチ|master|
-|コミットID|HEAD|
+|リポジトリ|KAMONOHASHI/aquarium_tutorial|
+|ブランチ|main|
+|コミットID|(空)|
 |token|(空)|
-|CPU|4|
+|CPU|2|
 |メモリ(GB)|8|
 |GPU|0|
 
@@ -106,7 +102,7 @@ python -u train.py
 ```shell
 pip install --upgrade pip && pip install scikit-image scikit-learn pandas tqdm
 unzip /kqi/input/*/*.zip -d /kqi/input/images
-python -u preprocess.py
+python -u preprocess.py --input_type chinese
 ```
 
 
@@ -116,12 +112,12 @@ python -u preprocess.py
 |-----|-----|
 |レジストリ|official-docker-hub|
 |イメージ|tensorflow/tensorflow|
-|タグ|2.1.0-gpu-py3|
+|タグ|2.5.0-gpu|
 |token|(空)|
 |Gitサーバ|GitHub|
-|リポジトリ|KAMONOHASHI/aquarium-tutorial|
-|ブランチ|master|
-|コミットID|HEAD|
+|リポジトリ|KAMONOHASHI/aquarium_tutorial|
+|ブランチ|main|
+|コミットID|(空)|
 |token|(空)|
 |CPU|4|
 |メモリ(GB)|8|
@@ -130,13 +126,29 @@ python -u preprocess.py
 実行コマンド
 ```shell
 pip install --upgrade pip && pip install scikit-image scikit-learn pandas tqdm
-python -u train_after_preprocess.py --input_path /kqi/parent/
+python -u train_after_preprocess.py
 ```
+
+## データセットを作成する
+
+この実験では、Chinese MNISTと呼ばれているデータセットを使用します。
+
+1. [Chinese MNIST](https://www.kaggle.com/gpreda/chinese-mnist)からzipファイルになっているデータセットをダウンロードします。
+2. ダウンロードしたzipファイルを展開します。
+3. 展開したファイル群から、data/data/にある画像ファイルだけを別のzipファイルとして圧縮します。
+   この新たなzipファイルは、展開したときにフォルダが作成されないように、つまりルート直下に画像ファイルがあるようにします。
+4. この新たなzipファイルをアクアリウムのデータセットとしてアップロードします。
+   データセット一覧画面から「新しいデータセット」を選択して、次のように入力します。
+   
+|種類　|説明　|
+|---|---|
+|データセット名|(任意)|
+|画像|新たなzipファイルのファイル名。|
 
 
 ## 実験を開始する
 
-実験を開始するには、新規実験画面からこのチュートリアル用に登録したテンプレートを選択します。
+実験を開始するには、新規実験画面からこのチュートリアル用に登録したテンプレートのいずれかを選択します。
 
 続いて、次のように入力します。
 
