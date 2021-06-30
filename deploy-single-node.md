@@ -73,7 +73,7 @@ sidebar:
 再起動後 root ユーザーでログインしなおし、再度デプロイスクリプトを実行してください。
 
 ```bash
-cd /var/lib/kamonohashi/
+cd /var/lib/kamonohashi/deploy-tools/
 ./deploy-kamonohashi.sh deploy all
 ```
 
