@@ -470,9 +470,9 @@ TensorBoardの項目から起動ボタンを押下することで、指定した
 なお利用するDockerイメージには、python3およびpip3がインストールされている必要があります。
 Docker Hubで提供されている下記Dockerイメージについては、動作確認を行っています。
 
-* tensorflow/tensorflow:1.13.1-gpu-py3
+* tensorflow/tensorflow:1.15.2-gpu
 * pytorch/pytorch:1.1.0-cuda10.0-cudnn7.5-devel
-* chainer/chainer:v6.2.0-python3
+
 
 ### ノートブックへのアクセス
 
