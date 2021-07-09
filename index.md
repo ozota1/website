@@ -124,6 +124,21 @@ KAMONOHASHIはOSSであり、どなたでも使用することができます。
  <div id="newsBox" style="margin-bottom: 2rem;">
         <ul id="newsList">
           <li class="newsItem">
+            <div class="newsDate">2021/06/30</div>
+            <div class="newsLabel labelRelease">リリース</div>
+            <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v3.0.1をリリースしました</a></div>
+          </li>
+          <li class="newsItem">
+            <div class="newsDate">2021/05/31</div>
+            <div class="newsLabel labelRelease">リリース</div>
+            <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v3.0.0をリリースしました</a></div>
+          </li>
+          <li class="newsItem">
+            <div class="newsDate">2021/05/14</div>
+            <div class="newsLabel labelRelease">リリース</div>
+            <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v2.2.1をリリースしました</a></div>
+          </li>
+          <li class="newsItem">
             <div class="newsDate">2020/12/25</div>
             <div class="newsLabel labelRelease">リリース</div>
             <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v2.2.0をリリースしました</a></div>
