@@ -31,7 +31,7 @@ cd /var/lib/kamonohashi/deploy-tools/
 
 ## KAMONOHASHI 3.x 構築
 
-### KAMONOHASHI バージョン 3.0.0 用の構築ツールを入手します
+### KAMONOHASHI バージョン 3.0.2 用の構築ツールを入手します
 
 ```
 cd /var/lib/kamonohashi/deploy-tools/
