@@ -20,12 +20,12 @@ sidebar:
 - インストール対象マシンにログインします。
 - `sudo su -`を実行し、root ユーザーになります
 - `mkdir -p /var/lib/kamonohashi/ && cd /var/lib/kamonohashi/ `を実行します
-- `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 3.0.1.0  --recursive`を実行してデプロイスクリプトを入手します
+- `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 3.0.2.0 --recursive`を実行してデプロイスクリプトを入手します
 - `/var/lib/kamonohashi/deploy-tools/`に移動します
 - プロキシ環境下では次のファイルにプロキシ設定を記載してください
   - `./deepops/scripts/deepops/proxy.sh`
   - no_proxy には`localhost,127.0.0.1,.cluster.local,使用する各マシンのIPアドレス・ホスト名`の記載を含めてください
-  - OSのno_proxy設定にも上記と同様のno_proxy設定が含まれるように設定してください。`/etc/environment`で指定することを推奨します
+  - OS の no_proxy 設定にも上記と同様の no_proxy 設定が含まれるように設定してください。`/etc/environment`で指定することを推奨します
 - `./deploy-kamonohashi.sh prepare`を実行して構築に必要なソフトウェアをインストールします
   - ansible でエラーが出る場合は ansible のアンインストールを実行してから`prepare`を実行してください
     - スクリプト実行中に適切な ansible がインストールされます
@@ -79,6 +79,7 @@ cd /var/lib/kamonohashi/deploy-tools/
 
 構築には 20 分程かかります。
 
-構築完了のメッセージが出たらブラウザで次のURLにアクセスし、adminユーザーでログインして利用を開始してください
-* KAMONOHASHI: http://KAMONOHASHI用サーバー/kamonohashi
-* アクアリウム機能: http://KAMONOHASHI用サーバー/aquarium
+構築完了のメッセージが出たらブラウザで次の URL にアクセスし、admin ユーザーでログインして利用を開始してください
+
+- KAMONOHASHI: http://KAMONOHASHI 用サーバー/kamonohashi
+- アクアリウム機能: http://KAMONOHASHI 用サーバー/aquarium
