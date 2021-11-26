@@ -124,6 +124,11 @@ KAMONOHASHIはOSSであり、どなたでも使用することができます。
  <div id="newsBox" style="margin-bottom: 2rem;">
         <ul id="newsList">
           <li class="newsItem">
+            <div class="newsDate">2021/12/01</div>
+            <div class="newsLabel labelRelease">リリース</div>
+            <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v3.1.0をリリースしました</a></div>
+          </li>
+          <li class="newsItem">
             <div class="newsDate">2021/08/31</div>
             <div class="newsLabel labelRelease">リリース</div>
             <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v3.0.2をリリースしました</a></div>
@@ -152,16 +157,6 @@ KAMONOHASHIはOSSであり、どなたでも使用することができます。
             <div class="newsDate">2020/10/28</div>
             <div class="newsLabel labelRelease">リリース</div>
             <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v2.1.2をリリースしました</a></div>
-          </li>
-          <li class="newsItem">
-            <div class="newsDate">2020/08/14</div>
-            <div class="newsLabel labelRelease">リリース</div>
-            <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v2.1.1 をリリースしました</a></div>
-          </li>
-          <li class="newsItem">
-            <div class="newsDate">2020/06/26</div>
-            <div class="newsLabel labelRelease">リリース</div>
-            <div class="newsTitle"><a href="https://github.com/KAMONOHASHI/kamonohashi/releases">v2.1.0 をリリースしました</a></div>
           </li>
           <li class="newsItem">
               <div class="newsDate">2018/10/21</div>

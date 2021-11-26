@@ -31,12 +31,12 @@ cd /var/lib/kamonohashi/deploy-tools/
 
 ## KAMONOHASHI 3.x 構築
 
-### KAMONOHASHI バージョン 3.0.2 用の構築ツールを入手します
+### KAMONOHASHI バージョン 3.1.0 用の構築ツールを入手します
 
 ```
 cd /var/lib/kamonohashi/deploy-tools/
 git fetch --tags
-git checkout 3.0.2.0
+git checkout 3.1.0.0
 (cd deepops; git stash save "backup berfore verup KAMONOHASHI 3")
 git submodule update --init --recursive
 ```
@@ -48,7 +48,7 @@ echo KAMONOHASHI deploy tool: $(git tag --points-at HEAD)
 echo deepops: $(cd deepops; git tag --points-at HEAD)
 ```
 
-- KAMONOHASHI deploy tool: 3.0.2.0 , deepops: 21.03 　が表示されれば正常です。
+- KAMONOHASHI deploy tool: 3.1.0.0 , deepops: 21.03 　が表示されれば正常です。
 - 正常でない場合、`git submodule update --init --recursive`でエラーが出ていないかを確認してください
 
 ### 構築ツール依存パッケージの更新
