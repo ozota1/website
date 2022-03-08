@@ -43,7 +43,7 @@ KAMONOHASHI のクラスタは次の 4 種類のサーバーで構成されま�
 - Kubernetes master をインストールするマシンにログインします。
 - `sudo su -`を実行し、root ユーザーになります
 - `mkdir -p /var/lib/kamonohashi/ && cd /var/lib/kamonohashi/ `を実行します
-- `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 3.1.0.0 --recursive`を実行してデプロイスクリプトを入手します
+- `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 4.0.0.0 --recursive`を実行してデプロイスクリプトを入手します
 - `/var/lib/kamonohashi/deploy-tools/`に移動します
 - プロキシ環境下では次のファイルにプロキシ設定を記載してください
   - `./deepops/scripts/deepops/proxy.sh`
