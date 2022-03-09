@@ -102,11 +102,11 @@ docs:
       - title: "CLI Guide"
         url: /docs/how-to/cli
       - title: "Infra Guide"
-        url: /docs/how-to/infra
+        url: /docs/how-to/infra/
       - title: "・バックアップとリストア"
         url: /docs/how-to/infra/#バックアップとリストア
       - title: "・認証情報の更新"
-        url: /docs/how-to/infra/credentials
+        url: /docs/how-to/infra/#認証情報の更新
       - title: "アクアリウム概要"
         url: /docs/how-to/aquarium_intro
       - title: "・アクアリウムとは"
