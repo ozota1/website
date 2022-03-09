@@ -30,7 +30,7 @@ git fetch --tags
 git checkout 4.0.0.0
 ```
 
-### MinIO の root ユーザの認証情報更新
+### MinIO の認証情報更新
 
 * ツール入手後に root ユーザーで次の MinIO の認証情報更新コマンドを実行します
 * 「新しいStorage Secret Keyを入力」と表示されるため、既存のパスワードまたは新たに設定するパスワードを入力してください。
@@ -52,6 +52,11 @@ cd /var/lib/kamonohashi/deploy-tools
 * 新環境変数
   * `MINIO_ROOT_USER`
   * `MINIO_ROOT_PASSWORD`
+
+### Webhookの環境設定
+
+Slack通知機能を使用する場合は次を参照し、設定ファイルの編集を行ってください。
+* [カスタマイズ設定ガイド Webhookの環境設定](/docs/install-and-update/customize-4x/#webhookの環境設定)
 
 ### バージョンアップの実施
 

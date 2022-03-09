@@ -46,7 +46,7 @@ sidebar:
 - kamonohashi の設定ファイル(kamonohashi/conf/settings.yml)
 
 設定内容をカスタマイズする場合は次を参照し、設定ファイルの編集を行ってください。
-[カスタマイズ設定ガイド](/docs/install-and-update/customize-3x)
+[カスタマイズ設定ガイド](/docs/install-and-update/customize-4x)
 
 ## デプロイの実行
 
