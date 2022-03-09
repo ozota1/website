@@ -11,9 +11,9 @@ sidebar:
 ---
 
 ## バージョンアップ
-3.xから4.xへのバージョンアップの場合は[4.xへの移行](/docs/install-and-update/migrate3xto4x)を実施してください
-2.xを利用している場合は事前に[3.xへの移行](/docs/install-and-update/migrate2xto3x)を完了してください
-以下は 3.a　から 3.b へのバージョンアップの方法となります
+* 3.xから4.xへのバージョンアップの場合は[4.xへの移行](/docs/install-and-update/migrate3xto4x)を実施してください
+* 2.xを利用している場合は事前に[3.xへの移行](/docs/install-and-update/migrate2xto3x)を完了してください
+* 以下は 3.a　から 3.b へのバージョンアップの方法となります
 
 ### KAMONOHASHI Webアプリのみのバージョンアップ
 
