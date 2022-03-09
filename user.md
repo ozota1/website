@@ -79,12 +79,17 @@ Dockerレジストリサービスへのアクセスに認証が必要な場合�
 
 ### Webhookの設定
 
-KAMONOHASHIでは学習・推論の実行成否をSlackにメッセージで通知することができます。
+* KAMONOHASHIでは学習・推論の実行成否をSlackにメッセージで通知することができます。
 
-ユーザ情報設定画面にて [Webhook]タブを選択し、通知先情報を設定します。
+* ユーザ情報設定画面にて [Webhook]タブを選択し、通知先情報を設定します。
+  * 通知先URLには、事前にSlack APIで作成したWebhook URLを入力します。詳しくは[Slack APIのドキュメント](https://api.slack.com/messaging/webhooks#getting_started)を参照してください。  
+  * メンションには、通知したいSlackユーザのユーザIDを入力します。
 
-通知先URLには、事前にSlack APIで作成したWebhook URLを入力します。詳しくは[Slack APIのドキュメント](https://api.slack.com/messaging/webhooks#getting_started)を参照してください。  
-メンションには、通知したいSlackユーザのユーザIDを入力します。
+#### テスト通知
+* 入力された通知先URL宛てにテスト通知を送ることができます。
+* 通知に失敗した場合、
+  * 通知先URLの作成または入力に失敗している可能性があります。
+  * KAMONOHASHIのホスト名が登録されていない場合は通知をすることができないため、[カスタマイズ設定ガイド](/docs/install-and-update/customize-4x/#webhookの環境設定)を参照して設定してください。
 
 ## データ管理
 KAMONOHASHIでは Deep Learning等に利用するデータを管理することができます。データは画像やzipファイルなど、データ形式を問わず登録できます。
