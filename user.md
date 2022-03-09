@@ -83,7 +83,7 @@ KAMONOHASHIでは学習・推論の実行成否をSlackにメッセージで通�
 
 ユーザ情報設定画面にて [Webhook]タブを選択し、通知先情報を設定します。
 
-通知先URLには、事前にSlack APIで作成したWebhook URLを入力します。詳しくは[Slack APIのドキュメント](https://api.slack.com/messaging/webhooks)を参照してください。  
+通知先URLには、事前にSlack APIで作成したWebhook URLを入力します。詳しくは[Slack APIのドキュメント](https://api.slack.com/messaging/webhooks#getting_started)を参照してください。  
 メンションには、通知したいSlackユーザのユーザIDを入力します。
 
 ## データ管理
@@ -359,7 +359,7 @@ TensorBoardの項目から起動ボタンを押下することで、指定した
     - KAMONOHASHIの実行成否は、実行後の "$?" コマンドの結果で判断されます。
     - そのため、実行コマンド自体は改行して複数記述可能ですが、結果の成否判定が難しくなるため、単一コマンドを推奨します。
     - e.g. 評価スクリプトを裏で実行するなど、複数操作が必要な場合は modelリポジトリにその処理を行うスクリプトを置きます。
-2.  コンテナが停止し、リソースが開放される
+1.  コンテナが停止し、リソースが開放される
 
 #### フォルダ構造
 
