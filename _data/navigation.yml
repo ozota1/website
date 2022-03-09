@@ -87,6 +87,8 @@ docs:
         url: /docs/how-to/admin/#テナント
       - title: "・ユーザ"
         url: /docs/how-to/admin/#ユーザ
+      - title: "・ユーザグループ"
+        url: /docs/how-to/admin/#ユーザグループ
       - title: "・ノード"
         url: /docs/how-to/admin/#ノード
       - title: "・クォータ"
