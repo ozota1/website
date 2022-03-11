@@ -96,8 +96,8 @@ cat deepops/conf/settings.yml
 
 - アンインストールは ssh を用いて実行されます。冒頭のアンインストールと同様に`-K`,`-k`オプションを必要に応じ追加します
 - deepops のデフォルト GPU ドライバパッケージが`cuda-drivers`から`nvidia-headless-450-server`に変更になりました。これらに互換性がないため、古い gpu ドライバと依存パッケージを含め、全ての nvidia パッケージのアンインストールを実施します。これらは以前の KAMONOHASHI デプロイツールのアンインストールコマンドではアンインストールされませんでした。
-- このコマンド実行後、GPU サーバーは再起動します
-- コマンド実行後に k8s master サーバーを手動で再起動します
+- このコマンド実行後、GPU サーバは再起動します
+- コマンド実行後に k8s master サーバを手動で再起動します
 
 ```
 reboot
@@ -118,10 +118,10 @@ cd /var/lib/kamonohashi/deploy-tools
 ```
 
 - 構築は ssh を用いて実行されます。冒頭のアンインストールと同様に`-K`,`-k`オプションを必要に応じ追加します
-- シングルノード構成の場合はドライバインストールの際に k8s master サーバーが再起動されるため、
+- シングルノード構成の場合はドライバインストールの際に k8s master サーバが再起動されるため、
   再起動後に再度`./deploy-kamonohashi.sh deploy all`を実行してください
 
 構築完了のメッセージが出たらブラウザで次の URL にアクセスし、admin ユーザでログインして利用を開始してください
 
-- KAMONOHASHI: http://KAMONOHASHI 用サーバー/kamonohashi
-- アクアリウム機能: http://KAMONOHASHI 用サーバー/aquarium
+- KAMONOHASHI: http://KAMONOHASHI 用サーバ/kamonohashi
+- アクアリウム機能: http://KAMONOHASHI 用サーバ/aquarium

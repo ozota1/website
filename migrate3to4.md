@@ -71,7 +71,7 @@ cd /var/lib/kamonohashi/deploy-tools
 
 バージョンアップ完了のメッセージが出たらブラウザで次の URL にアクセスし、admin ユーザでログインしてください
 
-* KAMONOHASHI: http://KAMONOHASHI 用サーバー/kamonohashi
+* KAMONOHASHI: http://KAMONOHASHI 用サーバ/kamonohashi
 
 MinIO の root ユーザの認証情報更新時、既存のパスワードではなく新たに設定するパスワードを入力した場合、ストレージ管理画面から該当ストレージの詳細を開き、「シークレットキー」を更新してください。
 

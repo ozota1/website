@@ -12,22 +12,22 @@ sidebar:
 
 ## 構成について
 
-KAMONOHASHI のクラスタは次の 4 種類のサーバーで構成されます
+KAMONOHASHI のクラスタは次の 4 種類のサーバで構成されます
 
 ![マシーン](/assets/images/basic-cluster-machenes.png)
 
 - Kubernetes master: ディープラーニングの実行スケジューリング等に使用します
 - KAMONOHASHI: KAMONOHASHI の WEB システム(Web,DB コンテナ)で使用します
 - Storage: 学習用データと学習結果ファイルの保管に使用します
-- 計算ノード: ディープラーニングの実行に使用します。GPU サーバー・CPU サーバーを指定可能です
+- 計算ノード: ディープラーニングの実行に使用します。GPU サーバ・CPU サーバを指定可能です
 
 #### 構築の準備
 
 - マシンを用意します
-  - クラスタ構成では 4 種類のサーバーを別々のマシンにインストールする前提です
+  - クラスタ構成では 4 種類のサーバを別々のマシンにインストールする前提です
   - 同一マシンにインストールすることも可能ですが、テストしていません
 - [マシンの要件](/docs/install-and-update/prerequisite)に合わせた設定をしてください
-- 各サーバーの最小リソース要件は下記になります。
+- 各サーバの最小リソース要件は下記になります。
 
   - データ・ユーザ数・実施するディープラーニングの内容に応じて下記よりも多く必要になる場合があります
 
@@ -36,7 +36,7 @@ KAMONOHASHI のクラスタは次の 4 種類のサーバーで構成されま�
   | Kubernetes master | 2 コア | 2 GB   |                                                                                |
   | KAMONOHASHI       | 4 コア | 8 GB   | /var/lib/に 10GB 以上の空き容量                                                |
   | Storage           | 1 コア | 2 GB   | /var/lib/に学習データ・学習結果ファイル分の空き容量                            |
-  | GPU サーバー      | 2 コア | 2 GB   | Fermi (2.1)より後の世代の NVIDIA GPU, /var/lib に 1 学習分のデータが入る空容量 |
+  | GPU サーバ      | 2 コア | 2 GB   | Fermi (2.1)より後の世代の NVIDIA GPU, /var/lib に 1 学習分のデータが入る空容量 |
 
 ## 構築ツールのセットアップ
 
@@ -95,5 +95,5 @@ KAMONOHASHI のクラスタは次の 4 種類のサーバーで構成されま�
 
 構築完了のメッセージが出たらブラウザで次の URL にアクセスし、admin ユーザでログインして利用を開始してください
 
-- KAMONOHASHI: http://KAMONOHASHI 用サーバー/kamonohashi
-- アクアリウム機能: http://KAMONOHASHI 用サーバー/aquarium
+- KAMONOHASHI: http://KAMONOHASHI 用サーバ/kamonohashi
+- アクアリウム機能: http://KAMONOHASHI 用サーバ/aquarium

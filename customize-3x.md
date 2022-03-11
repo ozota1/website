@@ -17,9 +17,9 @@ sidebar:
 nvidia_driver_ubuntu_branch: "460"
 ```
 
-## 自動構築のNFSサーバーでなく既存のNFSサーバーを使用する
-例えばHWベンダーのNFSサーバーを使用する場合にこのカスタマイズを行います。
-NFSサーバーはrootユーザでの読み書きが可能であることが要件です
+## 自動構築のNFSサーバでなく既存のNFSサーバを使用する
+例えばHWベンダーのNFSサーバを使用する場合にこのカスタマイズを行います。
+NFSサーバはrootユーザでの読み書きが可能であることが要件です
 
 #### 1. 次の`deepops/config/inventry`の記述を削除します
 
@@ -39,8 +39,8 @@ appsettings:
 
 |yamlの項目|内容|
 |---|---|
-|appsettings.DeployOptions__NfsStorage|NFSサーバーのホスト名|
-|appsettings.DeployOptions__NfsPath|NFSサーバーのエクスポートパス|
+|appsettings.DeployOptions__NfsStorage|NFSサーバのホスト名|
+|appsettings.DeployOptions__NfsPath|NFSサーバのエクスポートパス|
 
 ## 自動構築のオブジェクトストレージではなく既存のものを使用する
 * オブジェクトストレージとNFSは同期されている必要があります。  

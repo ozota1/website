@@ -81,5 +81,5 @@ cd /var/lib/kamonohashi/deploy-tools/
 
 構築完了のメッセージが出たらブラウザで次の URL にアクセスし、admin ユーザでログインして利用を開始してください
 
-- KAMONOHASHI: http://KAMONOHASHI 用サーバー/kamonohashi
-- アクアリウム機能: http://KAMONOHASHI 用サーバー/aquarium
+- KAMONOHASHI: http://KAMONOHASHI 用サーバ/kamonohashi
+- アクアリウム機能: http://KAMONOHASHI 用サーバ/aquarium

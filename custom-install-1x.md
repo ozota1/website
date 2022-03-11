@@ -17,8 +17,8 @@
 * [nvidia-device-pluginをインストール](https://github.com/NVIDIA/k8s-device-plugin)します
 
 ## MinIO NAS Gatewayを構築
-* NFSサーバーを構築します
-* [MinIO NAS Gateway](https://docs.min.io/docs/minio-gateway-for-nas.html)を構築し、NFSサーバーのマウントポイントにMinIO NAS Gatewayがデータを書き込むようにします
+* NFSサーバを構築します
+* [MinIO NAS Gateway](https://docs.min.io/docs/minio-gateway-for-nas.html)を構築し、NFSサーバのマウントポイントにMinIO NAS Gatewayがデータを書き込むようにします
 * KubernetesクラスタのノードにNFSクライアントをインストールし、マウントコマンドでNFSが指定できるようにします
 
 ## KAMONOHASHIを Kubernetesクラスタにインストール
@@ -50,7 +50,7 @@ mkdir conf && cp -i conf-template/* conf/
 |${INGRESS_NODE_IP}|${INGRESS_NODE}で指定したマシンのIP|10.1.1.1|
 |${VIRTUAL_HOST}|ブラウザでアクセスさせるホスト名|kamonohashi.ai|
 |${KQI_NODE}|kamonohashiの各種コンテナの配置ノード|kqi-node1|
-|${NODES}|GPUサーバーホスト名。,区切りで複数指定可能|gpu-node1,gpu-node2|
+|${NODES}|GPUサーバホスト名。,区切りで複数指定可能|gpu-node1,gpu-node2|
 |${OBJECT_STORAGE}|MinIOのホスト名|minio-node|
 |${OBJECT_STORAGE_PORT}|MinIOのポート番号|9000|
 |${OBJECT_STORAGE_ACCESSKEY}|MinIOのアクセスキー||
