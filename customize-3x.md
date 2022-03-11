@@ -19,7 +19,7 @@ nvidia_driver_ubuntu_branch: "460"
 
 ## 自動構築のNFSサーバーでなく既存のNFSサーバーを使用する
 例えばHWベンダーのNFSサーバーを使用する場合にこのカスタマイズを行います。
-NFSサーバーはrootユーザーでの読み書きが可能であることが要件です
+NFSサーバーはrootユーザでの読み書きが可能であることが要件です
 
 #### 1. 次の`deepops/config/inventry`の記述を削除します
 

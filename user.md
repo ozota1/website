@@ -34,7 +34,7 @@ KAMONOHASHIの利用者は以下の操作を行えます。
 
 
 KAMONOHASHIの利用者の想定操作は以下です。
-![ユーザー手順概要](/assets/images/illust_userFlow.png)
+![ユーザ手順概要](/assets/images/illust_userFlow.png)
 
 ## ログイン
 KAMONOHASHIはブラウザ・SDK・コマンドラインツールから使用できます。
@@ -42,8 +42,8 @@ KAMONOHASHIはブラウザ・SDK・コマンドラインツールから使用で
 KAMONOHASHIのURLが分からない場合はシステム管理者に問い合わせてください。
 
 ### ログイン
-KAMONOHASHIにログインするにはログイン画面からユーザー名・パスワードを入力します。
-ユーザー名・パスワードはシステム管理者から提供されます。
+KAMONOHASHIにログインするにはログイン画面からユーザ名・パスワードを入力します。
+ユーザ名・パスワードはシステム管理者から提供されます。
 
 ![ログイン](/assets/images/figure2.png)
 

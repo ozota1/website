@@ -131,11 +131,11 @@ docker rm restore-postgres
   * MinIO ストレージのパスワード
     * ※自動構築されたオブジェクトストレージを利用している場合のみ更新されます。
 
-* KAMONOHASHI の Admin ユーザーのパスワードについては、KAMONOHASHI のユーザ管理画面から変更をしてください。
+* KAMONOHASHI の Admin ユーザのパスワードについては、KAMONOHASHI のユーザ管理画面から変更をしてください。
 
 ### DB のパスワード更新
 
-* root ユーザーで次の DB の認証情報更新用コマンドを実行します。
+* root ユーザで次の DB の認証情報更新用コマンドを実行します。
 
 ```
 cd /var/lib/kamonohashi/deploy-tools
@@ -146,7 +146,7 @@ cd /var/lib/kamonohashi/deploy-tools
 
 ### MinIO ストレージのパスワード更新
 
-* root ユーザーで次の MinIO ストレージの認証情報更新用コマンドを実行します。
+* root ユーザで次の MinIO ストレージの認証情報更新用コマンドを実行します。
 
 ```
 cd /var/lib/kamonohashi/deploy-tools
