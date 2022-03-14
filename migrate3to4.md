@@ -46,12 +46,10 @@ cd /var/lib/kamonohashi/deploy-tools
 * KAMONOHASHI v4.x から MinIO のバージョンが `RELEASE.2020-03-09T18-26-53Z` から `RELEASE.2021-12-10T23-03-39Z` に更新されます。
 * これに伴い、 MinIO の認証情報を設定している環境変数が以下のように変わります。
 
-* 旧環境変数
-  * `MINIO_ACCESS_KEY`
-  * `MINIO_SECRET_KEY`
-* 新環境変数
-  * `MINIO_ROOT_USER`
-  * `MINIO_ROOT_PASSWORD`
+| 旧環境変数         | 新環境変数            | 概要                              | 
+| :----------------- | :-------------------- | :-------------------------------- |
+| `MINIO_ACCESS_KEY` | `MINIO_ROOT_USER`     | MinIO の 管理者ユーザ名           |
+| `MINIO_SECRET_KEY` | `MINIO_ROOT_PASSWORD` | MinIO の 管理者ユーザのパスワード |
 
 ### Webhookの環境設定
 
