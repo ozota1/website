@@ -55,7 +55,7 @@ cd /var/lib/kamonohashi/deploy-tools
 
 ### Webhookの環境設定
 
-Slack通知機能を使用する場合は次を参照し、設定ファイルの編集を行ってください。
+Slack 通知機能を使用する場合は次を参照し、設定ファイルの編集を行ってください。
 * [カスタマイズ設定ガイド Webhookの環境設定](/docs/install-and-update/customize-4x/#webhookの環境設定)
 
 ### バージョンアップの実施
