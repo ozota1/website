@@ -425,6 +425,7 @@ TensorBoardの項目から起動ボタンを押下することで、指定した
 |COMMIT_ID|<学習ごと>|不可|kamonohashiが学習の制御に使用|
 |KQI_SERVER|<学習ごと>|不可|kamonohashiが学習の制御に使用|
 |KQI_TOKEN|<学習ごと>|不可|kamonohashiが学習の制御に使用|
+|KQI_VERSION|<デプロイ環境ごと>|不可|kamonohashiのバージョンが設定される|
 |ENTRY_POINT|<学習ごと>|不可|kamonohashiが学習の制御に使用|
 |ZIP_FILE_CREATED|<学習ごと>|不可|kamonohashiが学習の制御に使用|
 
