@@ -78,7 +78,7 @@ appsettings:
 #### データベースの復元
 ##### Kubernetes Masterマシンでの作業
 * Kubernetes Masterマシンにrootでログインします。
-* 次を実行し、kamonohashiを停止します
+* 次を実行し、KAMONOHASHI を停止します
 `/var/lib/kamonohashi/deploy-tools/deploy-kamonohashi.sh clean app`
 
 ##### KAMONOHASHIマシンでの作業
@@ -113,7 +113,7 @@ docker rm restore-postgres
 
 ##### Kubernetes Masterマシンでの作業
 * Kubernetes Masterマシンにrootでログインします。
-* 次を実行し、kamonohashiを起動します
+* 次を実行し、KAMONOHASHI を起動します
 `/var/lib/kamonohashi/deploy-tools/deploy-kamonohashi.sh deploy app`
 
 

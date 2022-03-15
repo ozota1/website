@@ -49,7 +49,7 @@ mkdir conf && cp -i conf-template/* conf/
 |${INGRESS_NODE}|k8s ingress controllerの配置ノード|kqi-node1|
 |${INGRESS_NODE_IP}|${INGRESS_NODE}で指定したマシンのIP|10.1.1.1|
 |${VIRTUAL_HOST}|ブラウザでアクセスさせるホスト名|kamonohashi.ai|
-|${KQI_NODE}|kamonohashiの各種コンテナの配置ノード|kqi-node1|
+|${KQI_NODE}|KAMONOHASHIの各種コンテナの配置ノード|kqi-node1|
 |${NODES}|GPUサーバホスト名。,区切りで複数指定可能|gpu-node1,gpu-node2|
 |${OBJECT_STORAGE}|MinIOのホスト名|minio-node|
 |${OBJECT_STORAGE_PORT}|MinIOのポート番号|9000|
