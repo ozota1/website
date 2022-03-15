@@ -78,7 +78,7 @@ appsettings:
 #### データベースの復元
 ##### Kubernetes Masterマシンでの作業
 * Kubernetes Masterマシンにrootでログインします。
-* 次を実行し、kamonohashiを停止します
+* 次を実行し、KAMONOHASHI を停止します
 `/var/lib/kamonohashi/deploy-tools/deploy-kamonohashi.sh clean app`
 
 ##### KAMONOHASHIマシンでの作業
@@ -113,7 +113,7 @@ docker rm restore-postgres
 
 ##### Kubernetes Masterマシンでの作業
 * Kubernetes Masterマシンにrootでログインします。
-* 次を実行し、kamonohashiを起動します
+* 次を実行し、KAMONOHASHI を起動します
 `/var/lib/kamonohashi/deploy-tools/deploy-kamonohashi.sh deploy app`
 
 
@@ -131,11 +131,11 @@ docker rm restore-postgres
   * MinIO ストレージのパスワード
     * ※自動構築されたオブジェクトストレージを利用している場合のみ更新されます。
 
-* KAMONOHASHI の Admin ユーザーのパスワードについては、KAMONOHASHI のユーザ管理画面から変更をしてください。
+* KAMONOHASHI の admin ユーザのパスワードについては、KAMONOHASHI のユーザ管理画面から変更をしてください。
 
 ### DB のパスワード更新
 
-* root ユーザーで次の DB の認証情報更新用コマンドを実行します。
+* root ユーザで次の DB の認証情報更新用コマンドを実行します。
 
 ```
 cd /var/lib/kamonohashi/deploy-tools
@@ -146,7 +146,7 @@ cd /var/lib/kamonohashi/deploy-tools
 
 ### MinIO ストレージのパスワード更新
 
-* root ユーザーで次の MinIO ストレージの認証情報更新用コマンドを実行します。
+* root ユーザで次の MinIO ストレージの認証情報更新用コマンドを実行します。
 
 ```
 cd /var/lib/kamonohashi/deploy-tools

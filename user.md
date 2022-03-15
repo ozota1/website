@@ -34,7 +34,7 @@ KAMONOHASHIの利用者は以下の操作を行えます。
 
 
 KAMONOHASHIの利用者の想定操作は以下です。
-![ユーザー手順概要](/assets/images/illust_userFlow.png)
+![ユーザ手順概要](/assets/images/illust_userFlow.png)
 
 ## ログイン
 KAMONOHASHIはブラウザ・SDK・コマンドラインツールから使用できます。
@@ -42,8 +42,8 @@ KAMONOHASHIはブラウザ・SDK・コマンドラインツールから使用で
 KAMONOHASHIのURLが分からない場合はシステム管理者に問い合わせてください。
 
 ### ログイン
-KAMONOHASHIにログインするにはログイン画面からユーザー名・パスワードを入力します。
-ユーザー名・パスワードはシステム管理者から提供されます。
+KAMONOHASHIにログインするにはログイン画面からユーザ名・パスワードを入力します。
+ユーザ名・パスワードはシステム管理者から提供されます。
 
 ![ログイン](/assets/images/figure2.png)
 
@@ -205,7 +205,7 @@ KAMONOHASHIで前処理を実行するためは、以下3つのフローのい�
 1. リソース上にコンテナがデプロイされる
     - コンテナ内に環境変数が設定されます。
 1. 学習結果ファイル保存用ディレクトリ /kqi/output を作成する
-1. kamonohashiの学習制御に必要なツールをインストールする
+1. KAMONOHASHI の学習制御に必要なツールをインストールする
     - git, python, pip, kamonohashi-cli がコンテナにインストールされます
     - コンテナに既にこれらのツールがインストール済みだった場合はスキップされます
 1. 前処理スクリプトを /kqi/git/ に git clone する
@@ -350,7 +350,7 @@ TensorBoardの項目から起動ボタンを押下することで、指定した
 1. 親学習の指定があった場合、/kqi/parent に親学習の出力結果を読み取り専用でマウントする
 1. テナントのデータを /kqi/raw にマウントする
 1. 学習結果ファイル保存用ディレクトリ /kqi/output を作成する
-1. kamonohashiの学習制御に必要なツールをインストールする
+1. KAMONOHASHI の学習制御に必要なツールをインストールする
     - git, zip, python, pip, kamonohashi-cli がコンテナにインストールされます。
     - コンテナに既にこれらのツールがインストール済みだった場合はスキップされます。
 1. モデルを /kqi/git/ に git clone する
@@ -408,7 +408,7 @@ TensorBoardの項目から起動ボタンを押下することで、指定した
 
 #### 学習実行環境で設定される環境変数
 
-* 下記環境変数がkamonohashiによって設定されます。
+* 下記環境変数が KAMONOHASHI によって設定されます。
 * 上書き可の環境変数は学習新規登録時に環境変数入力フォームから上書き可能です。
 
 |環境変数名|値|上書き可否|説明|
@@ -422,17 +422,17 @@ TensorBoardの項目から起動ボタンを押下することで、指定した
 |https_proxy|<デプロイ環境ごと>|可|プロキシ設定。システム管理者が指定したデフォルト値が設定される|
 |no_proxy|<デプロイ環境ごと>|可|プロキシ設定。システム管理者が指定したデフォルト値が設定される|
 |COLUMNS|<学習ごと>|可|ターミナルの列数設定。システム管理者が指定したデフォルト値が設定される|
-|TRAINING_ID|<学習ごと>|不可|kamonohashiが学習の制御に使用|
-|DATASET_ID|<学習ごと>|不可|kamonohashiが学習の制御に使用|
-|PARENT_ID|<学習ごと>|不可|kamonohashiが学習の制御に使用|
-|MODEL_REPOSITORY|<学習ごと>|不可|kamonohashiが学習の制御に使用|
-|MODEL_REPOSITORY_TOKEN|<学習ごと>|不可|kamonohashiが学習の制御に使用|
-|COMMIT_ID|<学習ごと>|不可|kamonohashiが学習の制御に使用|
-|KQI_SERVER|<学習ごと>|不可|kamonohashiが学習の制御に使用|
-|KQI_TOKEN|<学習ごと>|不可|kamonohashiが学習の制御に使用|
-|KQI_VERSION|<デプロイ環境ごと>|不可|kamonohashiのバージョンが設定される|
-|ENTRY_POINT|<学習ごと>|不可|kamonohashiが学習の制御に使用|
-|ZIP_FILE_CREATED|<学習ごと>|不可|kamonohashiが学習の制御に使用|
+|TRAINING_ID|<学習ごと>|不可| KAMONOHASHI が学習の制御に使用|
+|DATASET_ID|<学習ごと>|不可| KAMONOHASHI が学習の制御に使用|
+|PARENT_ID|<学習ごと>|不可| KAMONOHASHI が学習の制御に使用|
+|MODEL_REPOSITORY|<学習ごと>|不可| KAMONOHASHI が学習の制御に使用|
+|MODEL_REPOSITORY_TOKEN|<学習ごと>|不可| KAMONOHASHI が学習の制御に使用|
+|COMMIT_ID|<学習ごと>|不可| KAMONOHASHI が学習の制御に使用|
+|KQI_SERVER|<学習ごと>|不可| KAMONOHASHI が学習の制御に使用|
+|KQI_TOKEN|<学習ごと>|不可| KAMONOHASHI が学習の制御に使用|
+|KQI_VERSION|<デプロイ環境ごと>|不可| KAMONOHASHI のバージョンが設定される|
+|ENTRY_POINT|<学習ごと>|不可| KAMONOHASHI が学習の制御に使用|
+|ZIP_FILE_CREATED|<学習ごと>|不可| KAMONOHASHI が学習の制御に使用|
 
 #### 注意事項
 

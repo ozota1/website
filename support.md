@@ -20,7 +20,7 @@ permalink: /support/
     <div class="support support__text">
         <h3 class="support__text-title">導入サポート</h3>
         <div class="support__text-excerpt">
-            <p>KAMONOHASHIの導入にあたって対象環境の導入可否事前調査や管理サーバやストレージの容量の試算支援、ユーザートレーニングなどのサポートをいたします。<br>
+            <p>KAMONOHASHIの導入にあたって対象環境の導入可否事前調査や管理サーバやストレージの容量の試算支援、ユーザトレーニングなどのサポートをいたします。<br>
             <a href="/posts/support">詳細はこちら</a>
             </p>
         </div>

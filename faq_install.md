@@ -64,7 +64,7 @@ DNSがない場合、構築に用いる各マシンの「/etc/hosts」で名前�
 
 | 導入SW・パッケージ|SW・パッケージ説明 |導入理由  |
 |---|---|---|
-|Ansible	 |構成管理ツール	|kubernetesの構築で利用するkubesprayが、本構成管理ツールを利用するため導入します。最新バージョンを利用します。  |
+|Ansible	 |構成管理ツール	|Kubernetesの構築で利用するkubesprayが、本構成管理ツールを利用するため導入します。最新バージョンを利用します。  |
 |kubernetes	worker |コンテナオーケストレーションツール|	KAMONOHASHIを利用する上で必須ツール。etcd,kube-apiserver,kube-scheduler,kube-controller-managerweave-net,nvidia-device-plugin-daemonsetなど。 |
 |docker		 |コンテナ管理ツール|		KAMONOHASHIでコンテナを利用するために導入します。|
 |nfs-common		 |NFSマウントを行うために利用するパッケージ|	KAMONOHASHI環境で共通で導入します。最新バージョンを利用します。|

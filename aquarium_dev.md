@@ -13,7 +13,7 @@ sidebar:
 本書はAI開発者を対象としてアクアリウムの機能や手順を説明する事を目的としています。
 
 ## 前提
-読者がLinux、Git、Dockerの基本的な知識を持つこと、KAMONOHASIで学習を行った経験があること、を前提としています。
+読者がLinux、Git、Dockerの基本的な知識を持つこと、KAMONOHASHIで学習を行った経験があること、を前提としています。
 
 * Dockerが初めての方はリンク先を選択してください。以下のリソースは、Dockerについて学ぶのに役立ちます。
     - [Dockerとはなにか](https://www.docker.com/why-docker)<i class="material-icons" class="material-icons blue">launch</i>
@@ -137,7 +137,7 @@ Dockerレジストリ、Gitリポジトリの公開設定によっては、ア�
 
 ### フォルダ構造
 
-アクアリウム学習・推論実行時のフォルダ構造は、KAMONOHAHIのそれを基にしています。
+アクアリウム学習・推論実行時のフォルダ構造は、KAMONOHASHIのそれを基にしています。
 
 * 前処理なしテンプレートの学習・前処理ありテンプレートの前処理
 
