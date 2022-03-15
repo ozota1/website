@@ -35,6 +35,13 @@ OSには動作確認済みの Python および pip がインストールされ�
 > pip install kamonohashi-cli
 ```
 
+* なお、KAMONOHASHI のサーバのバージョンにあった CLI のバージョンをインストールすることが望ましいです。
+* 上のコマンドでは、リリースされている最新バージョンの CLI がインストールされるため、バージョンを指定したインストールを行う場合は以下のコマンドを実行します。
+
+```bash
+> pip install kamonohashi-cli==<任意のバージョン>
+```
+
 #### 初期設定
 CLIを利用するために、KAMONOHASHI にログインします。
 ```bash

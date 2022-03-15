@@ -13,7 +13,7 @@ sidebar:
 ## インストールするGPUドライババージョンの指定
 * `deepops/config/settings.yml`に`nvidia_driver_ubuntu_branch: <version>`のフォーマットで記載します
 * 460の場合の例
-```
+```yaml
 nvidia_driver_ubuntu_branch: "460"
 ```
 
@@ -73,26 +73,24 @@ minio_deploy: false
 
 ## insecure-registryを設定する
 `deepops/config/settings.yml`に次の記述を追記します
-```
+```yaml
 docker_insecure_registries: ["<host名:ポート>"]
 ```
 
 ## Webhookの環境設定
 
-* Slack通知機能を使用する場合、/var/lib/kamonohashi/deploy-tools/kamonohashi/conf/settings.ymlを開きます。
+* Slack 通知機能を使用する場合、`/var/lib/kamonohashi/deploy-tools/kamonohashi/conf/settings.yml` を開きます。
 * 以下のプロパティを追加します。
 
-|プロパティ名|解説|設定例|
-|:---|:---|:---|
-|ContainerManageOptions__WebEndPoint|KAMONOHASHIノードのホスト名を指定します。|kqi-node1|
+| プロパティ名                        | 解説                                                                                                         | 設定例    |
+| :---------------------------------- | :----------------------------------------------------------------------------------------------------------- | :-------- |
+| ContainerManageOptions__WebEndPoint | KAMONOHASHI の Web エンドポイントを設定します。<br>設定例は KAMONOHASHI ノードのホスト名を指定する場合です。 | kqi-node1 |
 
-* 追加例は以下になります。インデントをDeployOptionsとそろえて記載してください。
+* 追加例は以下になります。インデントを DeployOptions とそろえて記載してください。
 
-```yml
+```yaml
 appsettings:
   DeployOptions__GpuNodes: ...
   ...
   ContainerManageOptions__WebEndPoint: "kqi-node1"
 ```
-
-
