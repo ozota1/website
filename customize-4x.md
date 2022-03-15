@@ -77,12 +77,37 @@ minio_deploy: false
 docker_insecure_registries: ["<host名:ポート>"]
 ```
 
+## LDAP (AD: Active Directory)の設定
+* LDAP 認証として使用できるのは、Active Directory(AD) のみになります。
+* LDAP 認証を使用する場合、`/var/lib/kamonohashi/deploy-tools/kamonohashi/conf/settings.yml` を開きます。
+* 以下のプロパティを追加します。
+
+| プロパティ名                   | 内容          | 設定例                                |
+| :----------------------------- | :------------ | :------------------------------------ |
+| ActiveDirectoryOptions__Domain | LDAP ドメイン | "my-org.my-corp.co.local"             |
+| ActiveDirectoryOptions__BaseDn | LDAP DN       | "DC=my-org,DC=my-corp,DC=co,DC=local" |
+| ActiveDirectoryOptions__BaseOu | LDAP OU       | "\\"\\"" (OUなしの場合)               |
+| ActiveDirectoryOptions__Server | LDAP サーバ   | "ad-server"                           |
+
+
+* 追加例は以下になります。インデントを DeployOptions とそろえて記載してください。
+
+```yaml
+appsettings:
+  DeployOptions__GpuNodes: ...
+  ...
+  ActiveDirectoryOptions__Domain: "my-org.my-corp.co.local"
+  ActiveDirectoryOptions__BaseDn: "DC=my-org,DC=my-corp,DC=co,DC=local"
+  ActiveDirectoryOptions__BaseOu: "\"\""
+  ActiveDirectoryOptions__Server: "ad-server"
+```
+
 ## Webhookの環境設定
 
 * Slack 通知機能を使用する場合、`/var/lib/kamonohashi/deploy-tools/kamonohashi/conf/settings.yml` を開きます。
 * 以下のプロパティを追加します。
 
-| プロパティ名                        | 解説                                                                                                         | 設定例    |
+| プロパティ名                        | 内容                                                                                                         | 設定例    |
 | :---------------------------------- | :----------------------------------------------------------------------------------------------------------- | :-------- |
 | ContainerManageOptions__WebEndPoint | KAMONOHASHI の Web エンドポイントを設定します。<br>設定例は KAMONOHASHI ノードのホスト名を指定する場合です。 | kqi-node1 |
 
