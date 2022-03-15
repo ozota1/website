@@ -20,6 +20,7 @@ sidebar:
 
 
 ## バージョンアップ
+  - <a href="/docs/install-and-update/migrate3xto4x">KAMONOHASHI 3.xから4.xへの移行</a>
   - <a href="/docs/install-and-update/update">KAMONOHASHI 3.xのバージョンアップ</a>
   - <a href="/docs/install-and-update/migrate2xto3x">KAMONOHASHI 2.xから3.xへの移行</a>
 
@@ -32,6 +33,7 @@ sidebar:
 
 |KAMONOHASHI|GitLab|MinIO| LDAP|Kubernetes |Ubuntu |
 |---|---|---|---|---|---|
+|v4.0.0 ~|11.8以降|RELEASE.2021-12-10T23-03-39Z|version 3| v1.18.9 |Ubuntu 18.04|
 |v3.0.0 ~|11.8以降|RELEASE.2020-03-09T18-26-53Z|version 3| v1.18.9 |Ubuntu 18.04|
 |v2.0.0 ~|11.8以降|RELEASE.2020-03-09T18-26-53Z|version 3| v1.15.3 |Ubuntu 18.04|
 
