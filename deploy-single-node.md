@@ -18,7 +18,6 @@ sidebar:
 ## 構築ツールのセットアップ
 
 - インストール対象マシンにログインします。
-- `sudo su -`を実行し、root ユーザになります
 - `mkdir -p /var/lib/kamonohashi/ && cd /var/lib/kamonohashi/ `を実行します
 - `git clone https://github.com/KAMONOHASHI/deploy-tools.git -b 4.0.0.0 --recursive`を実行してデプロイスクリプトを入手します
 - `/var/lib/kamonohashi/deploy-tools/`に移動します
@@ -70,7 +69,8 @@ sidebar:
 入力後に構築が始まります。
 
 初回は GPU ドライバのインストール後に再起動されます。  
-再起動後 root ユーザでログインしなおし、再度デプロイスクリプトを実行してください。
+再起動後、再度デプロイスクリプトを実行してください。
+
 
 ```bash
 cd /var/lib/kamonohashi/deploy-tools/
@@ -78,6 +78,7 @@ cd /var/lib/kamonohashi/deploy-tools/
 ```
 
 構築には 20 分程かかります。
+途中で既知の不具合で構築エラーが発生することがあるため、その際は再度実行してください
 
 構築完了のメッセージが出たらブラウザで次の URL にアクセスし、admin ユーザでログインして利用を開始してください
 
