@@ -10,6 +10,13 @@ sidebar:
   nav: "docs"
 ---
 
+## 概要
+
+KAMONOHASHI のシステム運用について以下を説明します。
+* [バックアップとリストア](/docs/how-to/infra/#バックアップとリストア)
+* [認証情報の更新](/docs/how-to/infra/#認証情報の更新)
+
+
 ## バックアップとリストア
 
 KAMONOHASHIのバックアップ・リストアには、
@@ -71,7 +78,7 @@ appsettings:
 #### データベースの復元
 ##### Kubernetes Masterマシンでの作業
 * Kubernetes Masterマシンにrootでログインします。
-* 次を実行し、kamonohashiを停止します
+* 次を実行し、KAMONOHASHI を停止します
 `/var/lib/kamonohashi/deploy-tools/deploy-kamonohashi.sh clean app`
 
 ##### KAMONOHASHIマシンでの作業
@@ -106,7 +113,7 @@ docker rm restore-postgres
 
 ##### Kubernetes Masterマシンでの作業
 * Kubernetes Masterマシンにrootでログインします。
-* 次を実行し、kamonohashiを起動します
+* 次を実行し、KAMONOHASHI を起動します
 `/var/lib/kamonohashi/deploy-tools/deploy-kamonohashi.sh deploy app`
 
 
@@ -114,3 +121,51 @@ docker rm restore-postgres
 * NFSの中身をrsyncやバックアップ製品で保護してください
 * ベーシッククラスタではstorageの/var/lib/kamonohashi/nfsを保護します
 * 保護した方法に合わせてリストアしてください
+
+
+## 認証情報の更新
+
+* v4.x 以降のデプロイツールに認証情報更新用のコマンドを用意しています。
+* このコマンドで、更新可能な認証情報は以下になります。
+  * DB のパスワード
+  * MinIO ストレージのパスワード
+    * ※自動構築されたオブジェクトストレージを利用している場合のみ更新されます。
+
+* KAMONOHASHI の admin ユーザのパスワードについては、KAMONOHASHI のユーザ管理画面から変更をしてください。
+
+### DB のパスワード更新
+
+* root ユーザで次の DB の認証情報更新用コマンドを実行します。
+
+```
+cd /var/lib/kamonohashi/deploy-tools
+./deploy-kamonohashi.sh credentials db
+```
+
+* 「DB Passwordを入力」と表示されるため、新たに設定するパスワードを入力してください。
+
+### MinIO ストレージのパスワード更新
+
+* root ユーザで次の MinIO ストレージの認証情報更新用コマンドを実行します。
+
+```
+cd /var/lib/kamonohashi/deploy-tools
+./deploy-kamonohashi.sh credentials storage
+```
+
+* 「新しいStorage Secret Keyを入力」と表示されるため、新たに設定するパスワードを入力してください。
+* 新たに設定したパスワードを、KAMONOHASHI のストレージ管理画面から該当ストレージの「シークレットキー」を更新してください。
+
+### KAMONOHASHI の各パスワード更新
+
+* DB と MinIO ストレージのパスワードの両方を更新するため、次の更新用コマンドを実行します。
+
+```
+cd /var/lib/kamonohashi/deploy-tools
+./deploy-kamonohashi.sh credentials all
+```
+
+* 「DB Passwordを入力」と表示されるため、新たに設定するパスワードを入力してください。
+* 「新しいStorage Secret Keyを入力」と表示されるため、新たに設定するパスワードを入力してください。
+* 新たに設定したパスワードを、KAMONOHASHI のストレージ管理画面から該当ストレージの「シークレットキー」を更新してください。
+

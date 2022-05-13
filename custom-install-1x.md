@@ -6,7 +6,7 @@
 # 手順概要
 
 1. GPU機能を有効化したKubernetesを構築します
-2. Minio NAS Gatewayを構築します
+2. MinIO NAS Gatewayを構築します
 3. KAMONOHASHIを Kubernetesクラスタにインストールします
 
 ## GPU機能を有効化したKubernetesを構築
@@ -16,16 +16,16 @@
 * [nvidia-docker2をインストール](https://github.com/NVIDIA/nvidia-docker)します。そして、デフォルトのdockerランタイムとして設定します
 * [nvidia-device-pluginをインストール](https://github.com/NVIDIA/k8s-device-plugin)します
 
-## Minio NAS Gatewayを構築
-* NFSサーバーを構築します
-* [Minio NAS Gateway](https://docs.min.io/docs/minio-gateway-for-nas.html)を構築し、NFSサーバーのマウントポイントにMinio NAS Gatewayがデータを書き込むようにします
+## MinIO NAS Gatewayを構築
+* NFSサーバを構築します
+* [MinIO NAS Gateway](https://docs.min.io/docs/minio-gateway-for-nas.html)を構築し、NFSサーバのマウントポイントにMinIO NAS Gatewayがデータを書き込むようにします
 * KubernetesクラスタのノードにNFSクライアントをインストールし、マウントコマンドでNFSが指定できるようにします
 
 ## KAMONOHASHIを Kubernetesクラスタにインストール
 
 ### インストール準備
 
-* Kubernetesマスターにrootユーザーでログインします
+* Kubernetesマスターにrootユーザでログインします
 * 次のコマンドを実行し、インストールスクリプトを取得します
 
 ```
@@ -49,12 +49,12 @@ mkdir conf && cp -i conf-template/* conf/
 |${INGRESS_NODE}|k8s ingress controllerの配置ノード|kqi-node1|
 |${INGRESS_NODE_IP}|${INGRESS_NODE}で指定したマシンのIP|10.1.1.1|
 |${VIRTUAL_HOST}|ブラウザでアクセスさせるホスト名|kamonohashi.ai|
-|${KQI_NODE}|kamonohashiの各種コンテナの配置ノード|kqi-node1|
-|${NODES}|GPUサーバーホスト名。,区切りで複数指定可能|gpu-node1,gpu-node2|
-|${OBJECT_STORAGE}|Minioのホスト名|minio-node|
-|${OBJECT_STORAGE_PORT}|Minioのポート番号|9000|
-|${OBJECT_STORAGE_ACCESSKEY}|Minioのアクセスキー||
-|${NFS_STORAGE}|MinioのマウントしているNFSのホスト名|nfs-node|
+|${KQI_NODE}|KAMONOHASHIの各種コンテナの配置ノード|kqi-node1|
+|${NODES}|GPUサーバホスト名。,区切りで複数指定可能|gpu-node1,gpu-node2|
+|${OBJECT_STORAGE}|MinIOのホスト名|minio-node|
+|${OBJECT_STORAGE_PORT}|MinIOのポート番号|9000|
+|${OBJECT_STORAGE_ACCESSKEY}|MinIOのアクセスキー||
+|${NFS_STORAGE}|MinIOのマウントしているNFSのホスト名|nfs-node|
 |${NFS_PATH}|NFSのエクスポートパス|/nfs/share|
 
 ##### オプション項目
@@ -65,7 +65,7 @@ settings.ymlのコメントアウトをはずして設定します
 |:---|:---|:---|
 |http_proxy|http_proxy|"http://proxy.my-corp.local"|
 |https_proxy|https_proxy|"http://proxy.my-corp.local"|
-|no_proxy|no_proxy。localhost,127.0.0.1,k8s,.local, Minio NAS Gatewayを必須で含める|"localhost,127.0.0.1,k8s,minio,.local,.my-corp.domain"|
+|no_proxy|no_proxy。localhost,127.0.0.1,k8s,.local, MinIO NAS Gatewayを必須で含める|"localhost,127.0.0.1,k8s,minio,.local,.my-corp.domain"|
 
 ###### active directory(LDAP)の設定
 ```
