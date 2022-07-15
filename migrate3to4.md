@@ -64,7 +64,7 @@ chown -R deploy-user:deploy-user /var/lib/kamonohashi/
 chown -R deploy-user:deploy-user /var/log/kamonohashi/
 ```
 
-- /var/lib/kamonohashi/deepops/config/inventory を編集し、ansible_user の値を deploy-user に変更してください
+- /var/lib/kamonohashi/deploy-tools/deepops/config/inventory を編集し、ansible_user の値を deploy-user に変更してください
 
 ### 構築に必要なパッケージを入手
 
