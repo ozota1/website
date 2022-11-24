@@ -32,12 +32,12 @@ cd /var/lib/kamonohashi/deploy-tools/
   - 設定されている ssh ユーザは`deepops/config/inventory`の`ansible_user`の項目で確認できます。
   - ssh ユーザでの SSH にパスワードが必要な場合は、clean all に`-k`オプションを追加します。sudo にパスワードが必要な場合は`-K`のオプションを指定します。
 
-### KAMONOHASHI バージョン 4.0.1 用の構築ツールを入手します
+### KAMONOHASHI バージョン 4.0.2 用の構築ツールを入手します
 
 ```
 cd /var/lib/kamonohashi/deploy-tools/
 git fetch --tags
-git checkout 4.0.1.0
+git checkout 4.0.2.0
 git submodule update --init --recursive
 ```
 
@@ -48,7 +48,7 @@ echo KAMONOHASHI deploy tool: $(git tag --points-at HEAD)
 echo deepops: $(cd deepops; git tag --points-at HEAD)
 ```
 
-- KAMONOHASHI deploy tool: 4.0.1.0 , deepops: 22.01 　が表示されれば正常です。
+- KAMONOHASHI deploy tool: 4.0.2.0 , deepops: 22.01 　が表示されれば正常です。
 - 正常でない場合、`git submodule update --init --recursive`でエラーが出ていないかを確認してください
 
 ### 構築ツールの実行ユーザーの移行
