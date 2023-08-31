@@ -20,6 +20,8 @@ sidebar:
 |v3|end of support|[v3.1.0](https://v3-1-0.kamonohashi.ai/docs/)|2021-05-31|2022-03-31|2022-06-30|
 |v2|end of support|[v2.2.1](https://v2-2-1.kamonohashi.ai/docs/)|2020-05-08|2021-03-31|2021-06-30|
 
+- 現行の構成でのメジャーバージョンリリースは今回の 5.x が最後となります。
+
 #### サポートの種類
 
 - Active
