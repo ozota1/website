@@ -16,7 +16,7 @@ sidebar:
 
 |Release|Status|Latest Maintenanced version|Initial Release|End-of-Active|End-of-support|
 |v5|active support|[v5.0.0](https://v5-0-0.kamonohashi.ai/docs/)|2023-08-31|2024-08-31|2023-08-31|
-|v4|end of support|[v4.0.2](https://v4-0-2.kamonohashi.ai/docs/)|2022-04-30|2022-03-31|2023-06-30|
+|v4|end of support|[v4.0.2](https://v4-0-2.kamonohashi.ai/docs/)|2022-04-30|2023-03-31|2023-06-30|
 |v3|end of support|[v3.1.0](https://v3-1-0.kamonohashi.ai/docs/)|2021-05-31|2022-03-31|2022-06-30|
 |v2|end of support|[v2.2.1](https://v2-2-1.kamonohashi.ai/docs/)|2020-05-08|2021-03-31|2021-06-30|
 
