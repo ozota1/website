@@ -47,8 +47,9 @@ sidebar:
 
 #### v4.0
 
-- [v4.0.0](https://v4-0-0.kamonohashi.ai/docs/)
+- [v4.0.2](https://v4-0-2.kamonohashi.ai/docs/)
 - [v4.0.1](https://v4-0-1.kamonohashi.ai/docs/)
+- [v4.0.0](https://v4-0-0.kamonohashi.ai/docs/)
 
 #### v3.1
 
