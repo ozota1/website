@@ -66,7 +66,7 @@ echo deepops: $(cd deepops; git tag --points-at HEAD)
 ```
 ./deploy-kamonohashi.sh configure verup
 ```
-- 上記実行後にdeepops/settings.ymlに次の設定を追加します
+- 上記実行後にdeepops/config/settings.ymlに次の設定を追加します
 ```
 kube_feature_gates:
         - "LegacyServiceAccountTokenNoAutoGeneration=False"
