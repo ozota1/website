@@ -30,6 +30,11 @@ cd /var/lib/kamonohashi/deploy-tools/
   - 設定されている ssh ユーザは`deepops/config/inventory`の`ansible_user`の項目で確認できます。
   - ssh ユーザでの SSH にパスワードが必要な場合は、clean all に`-k`オプションを追加します。sudo にパスワードが必要な場合は`-K`のオプションを指定します。
 
+```
+pip uninstall ansible
+```
+* ansibleのバージョンアップのために、現行のansibleをアンインストールします
+
 ### KAMONOHASHI バージョン 5.0.0 用の構築ツールを入手します
 
 ```
@@ -57,12 +62,14 @@ echo deepops: $(cd deepops; git tag --points-at HEAD)
 ./deploy-kamonohashi.sh prepare
 ```
 
-### 移行設定の生成
-
-- 次のコマンドを実行し、設定ファイルの生成を行います
-
+### 移行の設定
 ```
 ./deploy-kamonohashi.sh configure verup
+```
+- 上記実行後にdeepops/settings.ymlに次の設定を追加します
+```
+kube_feature_gates:
+        - "LegacyServiceAccountTokenNoAutoGeneration=False"
 ```
 
 ### 構築の実施
