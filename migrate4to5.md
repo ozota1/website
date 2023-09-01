@@ -30,6 +30,11 @@ cd /var/lib/kamonohashi/deploy-tools/
   - 設定されている ssh ユーザは`deepops/config/inventory`の`ansible_user`の項目で確認できます。
   - ssh ユーザでの SSH にパスワードが必要な場合は、clean all に`-k`オプションを追加します。sudo にパスワードが必要な場合は`-K`のオプションを指定します。
 
+```
+pip uninstall ansible
+```
+* ansibleのバージョンアップのために、現行のansibleをアンインストールします
+
 ### KAMONOHASHI バージョン 5.0.0 用の構築ツールを入手します
 
 ```
