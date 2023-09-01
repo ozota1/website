@@ -62,12 +62,11 @@ echo deepops: $(cd deepops; git tag --points-at HEAD)
 ./deploy-kamonohashi.sh prepare
 ```
 
-### 移行設定の生成
-
-- 次のコマンドを実行し、設定ファイルの生成を行います
-
+### 設定の追加
+- deepops/settings.ymlに次の設定を追加します
 ```
-./deploy-kamonohashi.sh configure verup
+kube_feature_gates:
+        - "LegacyServiceAccountTokenNoAutoGeneration=False"
 ```
 
 ### 構築の実施
